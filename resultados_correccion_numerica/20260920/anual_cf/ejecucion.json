@@ -1,0 +1,83 @@
+{
+  "horas": 8760,
+  "parametros_termicos": {
+    "pmin": {
+      "__array__": [
+        2.4,
+        2.4,
+        1.8,
+        0.96
+      ],
+      "dtype": "float64"
+    },
+    "pmax": {
+      "__array__": [
+        8.0,
+        8.0,
+        6.0,
+        3.2
+      ],
+      "dtype": "float64"
+    },
+    "hr": {
+      "__array__": [
+        9.638,
+        9.638,
+        11.089,
+        12.24
+      ],
+      "dtype": "float64"
+    },
+    "cvom": {
+      "__array__": [
+        9.28,
+        9.28,
+        15.32,
+        15.32
+      ],
+      "dtype": "float64"
+    },
+    "gas": 20.0,
+    "cv": {
+      "__array__": [
+        202.04,
+        202.04,
+        237.1,
+        260.12
+      ],
+      "dtype": "float64"
+    }
+  },
+  "bess": {
+    "P_MW": 45.0,
+    "E_MWh": 280.0,
+    "eta_c": 0.9486832980505138,
+    "eta_d": 0.9486832980505138,
+    "soc_min_pu": 0.19999999999999996,
+    "soc_max_pu": 1.0,
+    "soc0_pu": 0.6,
+    "DoD": 0.8,
+    "RTE": 0.9
+  },
+  "cargo_arranque_USD": 100.0,
+  "P_EXP_MAX": 134.52584433555177,
+  "max_iter": 25,
+  "tol_ciclo": 0.0001,
+  "segundos_solver": 600,
+  "brecha_solicitada": 1e-06,
+  "benchmarks_fuente": "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918",
+  "benchmarks_metadata_SHA256": "ad1d6efffb20b907d9876854d8f7f6dfecf310389d3883d18f71aca473e626d2",
+  "fuentes": {
+    "C:\\Users\\natal\\OneDrive\\Maestria\\2_Codigos\\Operación\\resultados_correccion_numerica\\20260920\\anual_abd\\ejecucion.json": "328e4a9c0051677f60ab01b64c43804202f9ee02969664c4fdb58fab445ebb6b"
+  },
+  "codigo": {
+    "termica_cf_anual.py": "ac31c4721264a5a1f66470bfa5c4527cb76974beb3e99d5002b0e233b7a74abd",
+    "termica_cf.py": "59e0ea508fa811aed91841547262ee2dbede1200e4c13303bb62c50fe01c147e",
+    "termica_cf_piloto.py": "0b67cc2286c75ca5445bd2fb518fda21d3d664b7cb1639aa8b35b52c43b80fc9",
+    "termica_pypsa.py": "9ddb4ac8403b8f8392110f7fc36c97838e4b350ee7fec196e9e8e5daf6b628a7",
+    "termica_politicas.py": "3966427655edeb53e92c8c13d3c871cac7f6b878b62e2db45f93b06c93ea48b3",
+    "termica.py": "97f256458d3e4ed07d2ea727a2ad1ffb8b3bc5466d2393fa34e1acd2618d964e",
+    "termica_politicas_anual.py": "b9231bf1c8d7724b806d684f3f338b5de0b156051ba1c3a52685b526ba70e993"
+  },
+  "convencion": "SOC cíclico anual; estado térmico inicial libre; benchmarks conservados"
+}

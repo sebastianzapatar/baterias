@@ -1,0 +1,16 @@
+Prueba,Minutos_evento,Inicial,Error_DP_MILP_USD,Estado
+medianoche,0,libre,3.637978807091713e-12,OK
+medianoche,0,apagado,3.637978807091713e-12,OK
+medianoche,10,libre,3.637978807091713e-12,OK
+medianoche,10,apagado,3.637978807091713e-12,OK
+medianoche,20,libre,0.0,OK
+medianoche,20,apagado,0.0,OK
+dos_dias,0,libre,1.4551915228366852e-11,OK
+dos_dias,0,apagado,2.9103830456733704e-11,OK
+dos_dias,10,libre,1.4551915228366852e-11,OK
+dos_dias,10,apagado,2.9103830456733704e-11,OK
+dos_dias,20,libre,1.4551915228366852e-11,OK
+dos_dias,20,apagado,4.3655745685100555e-11,OK
+ambos_eventos_una_hora,20,libre,,OK
+inicial_libre_sin_evento,20,libre,,OK
+inicial_apagado_cuenta_arranque,20,apagado,,OK

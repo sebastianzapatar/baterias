@@ -1,0 +1,24 @@
+{
+  "estado": "CONVERGE",
+  "iteraciones": 2,
+  "soc_inicial": 250.0356000372369,
+  "soc_final": 250.0356000372369,
+  "residuo": 0.0,
+  "historial": [
+    {
+      "iteracion": 1,
+      "soc_inicial": 55.999999999999986,
+      "soc_final": 250.0356000372369,
+      "residuo": 194.03560003723692
+    },
+    {
+      "iteracion": 2,
+      "soc_inicial": 250.0356000372369,
+      "soc_final": 250.0356000372369,
+      "residuo": 0.0
+    }
+  ],
+  "max_iter": 25,
+  "segundos": 75.32938469998771,
+  "segundos_total": 75.32938469998771
+}

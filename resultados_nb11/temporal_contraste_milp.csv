@@ -1,0 +1,9 @@
+Prueba,Minimo_h,Inicial,Error_DP_MILP_USD,Estado
+cambios_y_minima,1,libre,3.637978807091713e-12,OK
+cambios_y_minima,1,apagado,3.637978807091713e-12,OK
+cambios_y_minima,2,libre,3.637978807091713e-12,OK
+cambios_y_minima,2,apagado,3.637978807091713e-12,OK
+dos_dias,1,libre,1.4551915228366852e-11,OK
+dos_dias,1,apagado,1.4551915228366852e-11,OK
+dos_dias,2,libre,1.4551915228366852e-11,OK
+dos_dias,2,apagado,1.4551915228366852e-11,OK

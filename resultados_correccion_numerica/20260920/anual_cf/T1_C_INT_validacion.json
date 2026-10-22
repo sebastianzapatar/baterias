@@ -1,0 +1,9 @@
+{
+  "Estado": "OK",
+  "Residuo_PV_MW": 0.0,
+  "Residuo_demanda_MW": 3.552713678800501e-15,
+  "Residuo_SOC_MWh": 2.842170943040401e-14,
+  "Cierre_SOC_MWh": 0.0,
+  "Error_costo_USD": 0.0,
+  "Eventos_dia_max": 1
+}

@@ -1,0 +1,73 @@
+Gas_USD_MMBtu,Senal,Minutos_evento,Tipo_cargo,Cargo_unidad,Objetivo,Arranques_cargo_cero,Limite_inferior,Limite_superior,Estado
+8.0,T0,0,uniforme,USD/arranque,Primera reduccion de arranques,377,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T0,0,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,377,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T0,0,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,377,10.0,25.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T0,10,uniforme,USD/arranque,Primera reduccion de arranques,378,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T0,10,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,378,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T0,10,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,378,10.0,25.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T0,20,uniforme,USD/arranque,Primera reduccion de arranques,383,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T0,20,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,383,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T0,20,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,383,10.0,25.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T0,0,por_MW,USD/MW/arranque,Primera reduccion de arranques,377,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T0,0,por_MW,USD/MW/arranque,Reduccion de al menos 10 pct de arranques,377,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T0,0,por_MW,USD/MW/arranque,Reduccion de al menos 50 pct de arranques,377,1.0,5.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T1,0,uniforme,USD/arranque,Primera reduccion de arranques,371,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T1,0,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,371,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T1,0,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,371,10.0,25.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T1,10,uniforme,USD/arranque,Primera reduccion de arranques,371,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T1,10,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,371,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T1,10,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,371,10.0,25.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T1,20,uniforme,USD/arranque,Primera reduccion de arranques,375,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T1,20,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,375,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T1,20,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,375,10.0,25.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T1,0,por_MW,USD/MW/arranque,Primera reduccion de arranques,371,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T1,0,por_MW,USD/MW/arranque,Reduccion de al menos 10 pct de arranques,371,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+8.0,T1,0,por_MW,USD/MW/arranque,Reduccion de al menos 50 pct de arranques,371,1.0,5.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T0,0,uniforme,USD/arranque,Primera reduccion de arranques,294,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T0,0,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,294,1.0,5.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T0,0,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,294,25.0,100.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T0,10,uniforme,USD/arranque,Primera reduccion de arranques,297,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T0,10,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,297,1.0,5.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T0,10,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,297,25.0,100.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T0,20,uniforme,USD/arranque,Primera reduccion de arranques,301,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T0,20,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,301,1.0,5.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T0,20,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,301,25.0,100.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T0,0,por_MW,USD/MW/arranque,Primera reduccion de arranques,294,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T0,0,por_MW,USD/MW/arranque,Reduccion de al menos 10 pct de arranques,294,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T0,0,por_MW,USD/MW/arranque,Reduccion de al menos 50 pct de arranques,294,10.0,25.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T1,0,uniforme,USD/arranque,Primera reduccion de arranques,318,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T1,0,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,318,1.0,5.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T1,0,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,318,100.0,250.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T1,10,uniforme,USD/arranque,Primera reduccion de arranques,327,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T1,10,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,327,1.0,5.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T1,10,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,327,100.0,250.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T1,20,uniforme,USD/arranque,Primera reduccion de arranques,332,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T1,20,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,332,1.0,5.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T1,20,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,332,100.0,250.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T1,0,por_MW,USD/MW/arranque,Primera reduccion de arranques,318,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T1,0,por_MW,USD/MW/arranque,Reduccion de al menos 10 pct de arranques,318,1.0,5.0,Umbral acotado por barrido; extremos sujetos a empates
+16.0,T1,0,por_MW,USD/MW/arranque,Reduccion de al menos 50 pct de arranques,318,25.0,100.0,Umbral acotado por barrido; extremos sujetos a empates
+20.0,T0,0,uniforme,USD/arranque,Primera reduccion de arranques,37,1000.0,,No alcanzado hasta el máximo explorado; no demuestra imposibilidad
+20.0,T0,0,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,37,1000.0,,No alcanzado hasta el máximo explorado; no demuestra imposibilidad
+20.0,T0,0,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,37,1000.0,,No alcanzado hasta el máximo explorado; no demuestra imposibilidad
+20.0,T0,10,uniforme,USD/arranque,Primera reduccion de arranques,37,1000.0,,No alcanzado hasta el máximo explorado; no demuestra imposibilidad
+20.0,T0,10,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,37,1000.0,,No alcanzado hasta el máximo explorado; no demuestra imposibilidad
+20.0,T0,10,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,37,1000.0,,No alcanzado hasta el máximo explorado; no demuestra imposibilidad
+20.0,T0,20,uniforme,USD/arranque,Primera reduccion de arranques,37,1000.0,,No alcanzado hasta el máximo explorado; no demuestra imposibilidad
+20.0,T0,20,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,37,1000.0,,No alcanzado hasta el máximo explorado; no demuestra imposibilidad
+20.0,T0,20,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,37,1000.0,,No alcanzado hasta el máximo explorado; no demuestra imposibilidad
+20.0,T0,0,por_MW,USD/MW/arranque,Primera reduccion de arranques,37,100.0,,No alcanzado hasta el máximo explorado; no demuestra imposibilidad
+20.0,T0,0,por_MW,USD/MW/arranque,Reduccion de al menos 10 pct de arranques,37,100.0,,No alcanzado hasta el máximo explorado; no demuestra imposibilidad
+20.0,T0,0,por_MW,USD/MW/arranque,Reduccion de al menos 50 pct de arranques,37,100.0,,No alcanzado hasta el máximo explorado; no demuestra imposibilidad
+20.0,T1,0,uniforme,USD/arranque,Primera reduccion de arranques,592,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+20.0,T1,0,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,592,25.0,100.0,Umbral acotado por barrido; extremos sujetos a empates
+20.0,T1,0,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,592,250.0,1000.0,Umbral acotado por barrido; extremos sujetos a empates
+20.0,T1,10,uniforme,USD/arranque,Primera reduccion de arranques,642,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+20.0,T1,10,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,642,25.0,100.0,Umbral acotado por barrido; extremos sujetos a empates
+20.0,T1,10,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,642,250.0,1000.0,Umbral acotado por barrido; extremos sujetos a empates
+20.0,T1,20,uniforme,USD/arranque,Primera reduccion de arranques,628,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+20.0,T1,20,uniforme,USD/arranque,Reduccion de al menos 10 pct de arranques,628,25.0,100.0,Umbral acotado por barrido; extremos sujetos a empates
+20.0,T1,20,uniforme,USD/arranque,Reduccion de al menos 50 pct de arranques,628,250.0,1000.0,Umbral acotado por barrido; extremos sujetos a empates
+20.0,T1,0,por_MW,USD/MW/arranque,Primera reduccion de arranques,592,0.0,1.0,Umbral acotado por barrido; extremos sujetos a empates
+20.0,T1,0,por_MW,USD/MW/arranque,Reduccion de al menos 10 pct de arranques,592,10.0,25.0,Umbral acotado por barrido; extremos sujetos a empates
+20.0,T1,0,por_MW,USD/MW/arranque,Reduccion de al menos 50 pct de arranques,592,25.0,100.0,Umbral acotado por barrido; extremos sujetos a empates

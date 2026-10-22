@@ -1,0 +1,23 @@
+{
+  "Senal": "T0",
+  "Caso": "OPT_CF",
+  "Anio": 1,
+  "Escala_PV": 1.0,
+  "Origen": "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T0_OPT_CF.json.gz",
+  "Segundos": 0.10913550003897399,
+  "Estado": "OK",
+  "Condicion": "ok/time_limit",
+  "Cota_USD": 4564334.48667502,
+  "Brecha_solver": 0.0007819714311708909,
+  "SHA256_npz": "10d46b6672caace9913ebea36e317c9d53f1c0ea7aae5990b982861c87997eb6",
+  "Costo_operativo_USD": 4567906.459026206,
+  "Gas_USD": 6485188.308037496,
+  "CVOM_USD": 312214.9175066817,
+  "Compras_red_USD": 215724.48017832858,
+  "Arranques_USD": 36200.0,
+  "Ingreso_exportacion_USD": 2481421.2466962994,
+  "Arranques": 362,
+  "Descarga_MWh": 63390.51641557838,
+  "PV_MWh": 158742.56500000003,
+  "Cierre_SOC_MWh": 0.0
+}

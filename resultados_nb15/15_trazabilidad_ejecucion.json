@@ -1,0 +1,43 @@
+{
+  "cuaderno": "15_Sintesis_integral_tesis_V2.ipynb",
+  "rama": "tesis-v2-parametros",
+  "numba_activo": true,
+  "simulaciones_en_vivo": {
+    "etapa_1_multianual_20_anios_casos": 12,
+    "etapa_2_anual_8760h_casos": 10,
+    "etapa_2_demostracion_CF_72h": 2,
+    "etapa_3_anual_carbono_8760h_casos": 20,
+    "etapa_3_recalculo_capex_B4_B3_configs": 12
+  },
+  "figuras_generadas": [
+    "15_1_etapa1_factorial_sin_termica.png",
+    "15_1_etapa1_factorial_sin_termica.svg",
+    "15_2_etapa1_benchmarks_gaps.png",
+    "15_2_etapa1_benchmarks_gaps.svg",
+    "15_3_etapa2_comparacion_anual_termica.png",
+    "15_3_etapa2_comparacion_anual_termica.svg",
+    "15_4_etapa2_despacho_semanal_T0.png",
+    "15_4_etapa2_despacho_semanal_T0.svg",
+    "15_5_etapa2_factorial_y_vpn_k3.png",
+    "15_5_etapa2_factorial_y_vpn_k3.svg",
+    "15_6_etapa3_piloto_carbono_k3.png",
+    "15_6_etapa3_piloto_carbono_k3.svg",
+    "15_7_etapa3_malla_dimensionamiento.png",
+    "15_7_etapa3_malla_dimensionamiento.svg",
+    "15_8_etapa3_sensibilidad_b4_b3.png",
+    "15_8_etapa3_sensibilidad_b4_b3.svg"
+  ],
+  "fuentes_sha256_verificadas": {
+    "/Users/sebastianzapata/Documents/tesis nati/OperacionBESS/resultados_nb08/factorial_operativo_TRM_actual.csv": "3fdc31e281fd11b71eb6ddbc4af637ed68c4ddb3f6422ed9a145c871453c0397",
+    "/Users/sebastianzapata/Documents/tesis nati/OperacionBESS/resultados_nb08/benchmarks_operativos_TRM_actual.csv": "fd20b1c53d3a65b6a7462f38d5626892c01ec40cee4429d904f10e9fd7fb8b4b",
+    "/Users/sebastianzapata/Documents/tesis nati/OperacionBESS/resultados_nb08/gaps_benchmark_TRM_actual.csv": "0c280dd2ea701372184f318b9b415204d0a366ebe0a6401ac4ecbae0eb6d906b",
+    "/Users/sebastianzapata/Documents/tesis nati/OperacionBESS/resultados_correccion_numerica/20260920/notebook14/14_comparacion_conjunta.csv": "436d778b301ca8db93fe1e7c6d015e0558f0c945d9a7d0fd9abcb2e8958e370a",
+    "/Users/sebastianzapata/Documents/tesis nati/OperacionBESS/resultados_correccion_numerica/20260920/factorial/resumen.csv": "6fe96bb559141aacc8dd0a7ca6eab7a877e10d909ce18c340a45be38e0919bb9",
+    "/Users/sebastianzapata/Documents/tesis nati/OperacionBESS/resultados_correccion_numerica/20260920/vpn/vpn_resumen.csv": "2dddf81d919299b6347dda0aa995425f6b4fde166ac70531ee142d0b01aaae51",
+    "/Users/sebastianzapata/Documents/tesis nati/OperacionBESS/resultados_carbono_v2/piloto_K3_20260926_tablas_v2/resumen_anual.csv": "cc1499ae9a42fcf167dbdc354fc3bc982e1ee7f533ab6656c8c98f2f1b3f506d",
+    "/Users/sebastianzapata/Documents/tesis nati/OperacionBESS/resultados_carbono_v2/vpn_K3_20260926/vpn.csv": "d3e975a46eb3060f6347632216b8e29cb9b09978beb75418dfc4a0b2a4e20ff9",
+    "/Users/sebastianzapata/Documents/tesis nati/OperacionBESS/resultados_carbono_v2/malla_20260926/resultados_por_configuracion.csv": "de2dfdd6156c28db4156497cb51e2e67baff2c6f3a18a3eb8cb279bb6f691cd6",
+    "/Users/sebastianzapata/Documents/tesis nati/OperacionBESS/resultados_carbono_v2/sensibilidad_capex_bess_20260927/capex_opex_por_configuracion.csv": "89924cc9ea3c1dcdc42a1f0ef2163afacfb6ffba3e4a9081c3aa49350396fef9"
+  },
+  "fuentes_intactas": true
+}

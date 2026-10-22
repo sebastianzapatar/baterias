@@ -1,0 +1,12 @@
+,T0,T1
+Energia_termica_MWh,158742.565,157246.675
+Participacion_termica_pct,100.0,99.0577
+Energia_red_MWh,0.0,1495.89
+Participacion_red_pct,0.0,0.9423
+Gas_total_MMBtu,1280868.5507,1265909.6507
+Costo_combustible_USD,20493896.8113,20254554.4113
+Costo_variable_adicional_USD,1473131.0032,1459249.144
+Costo_total_termico_USD,21967027.8145,21713803.5553
+Costo_compras_red_USD,0.0,249370.7081
+Costo_total_abastecimiento_USD,21967027.8145,21963174.2634
+Costo_medio_USD_MWh,138.3815,138.3572

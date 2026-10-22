@@ -1,0 +1,3 @@
+Senal,Caso,Residuo_PV_MW,Residuo_demanda_MW,Residuo_SOC_MWh,Cierre_SOC_MWh,Error_frontera_SOC_MWh,Horas_simultaneas,Horas_export_BESS_con_deficit,Ingreso_reconstruido_USD,Eventos_dia_max,Error_costo_USD,Estado
+T0,SIN_BESS,0.0,3.552713678800501e-15,0.0,0.0,,0,0,4876536.807895577,1,1.862645149230957e-08,OK
+T1,SIN_BESS,0.0,3.552713678800501e-15,0.0,0.0,,0,0,4876536.807895577,1,1.862645149230957e-08,OK

@@ -1,0 +1,125 @@
+{
+  "horizonte": 20,
+  "wacc": 0.1,
+  "degradacion_pv": 0.005,
+  "ciclos": 7200,
+  "calendario": 20,
+  "pv_MWp": 114.41501912374943,
+  "segundos": 600,
+  "brecha": 0.001,
+  "TRM": 3126.08,
+  "codigo": {
+    "termica_vpn.py": "31639389dfc96b70f91a7b617d16ca828f9083264c956431c0a05d1828c5c5ac",
+    "motor_multianual.py": "0a3058890e754115e9887b18f16338b91c87bb5fa113dddaa83ed311d846a7de",
+    "termica_dp_acelerada.py": "eb024e2452d7e5f507b0948efbca7fa1bba81f3e19f96f19fa7e6e3fff04850a",
+    "termica_politicas.py": "3966427655edeb53e92c8c13d3c871cac7f6b878b62e2db45f93b06c93ea48b3",
+    "termica_cf.py": "59e0ea508fa811aed91841547262ee2dbede1200e4c13303bb62c50fe01c147e",
+    "termica_reglas.py": "6a399e1e5e6368d5c953f9a5c129ccbc2cd7ef19d41bc4239ce5b664e38faf3b",
+    "termica_pypsa.py": "9ddb4ac8403b8f8392110f7fc36c97838e4b350ee7fec196e9e8e5daf6b628a7",
+    "termica_pv.py": "230044de7203090cc18e32cc608cc28519b588319416f4991c64498106a21a10",
+    "termica_bess.py": "b5d13c0e929ec6ae48374b33e6805b6c77795590bb2fe1dbba536ffef599d5ac",
+    "termica.py": "d9bd3027f9f9ad3d980e7d7342bf7cbabbdd421be471e6402072778ae0afe6a5",
+    "costos.py": "4a50a661bea5ee7572c56359c8cd728a95fd3e2c5f293924654852794e32bf8a",
+    "costos_curvas.py": "8b246c08febf25a0a2f03b868448ae7f0a874b5a3632f83f01bdf9999adf83bc",
+    "02_Optimizacion_portafolio_PV_BESS.ipynb": "5bc90b5609a707d2289e951ae216f802b75db773280cf74f1c00028ee1ddd6be",
+    "CurvasCapexPVBESS.xlsx": "fd6b7ebce0b7a6b63c8e9f3e95b65636f40bab04c6ba57da5682dc3c359d1def"
+  },
+  "fuentes": {
+    "resultados_politicas\\anual_gas20_cvom_unidades_20260918\\ejecucion.json": "c1da237daf71e4de9d04be533ee36e03b2866838b9dd8f81fcc44c88bbcc5d6c",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\ejecucion.json": "ad1d6efffb20b907d9876854d8f7f6dfecf310389d3883d18f71aca473e626d2",
+    "resultados_reglas_termica\\sin_bess_gas20_cvom_unidades_20260918\\resumen.csv": "b817a1c8b17a4eab0ee01252a7aa2279b14302d0f4d70663c348836fbecdfab9",
+    "resultados_politicas\\anual_gas20_cvom_unidades_20260918\\T0_A_INT.json.gz": "d3c1460d6b50583774218b7802f29aa3e5ff945c16f7b7f073d92209a9440831",
+    "resultados_politicas\\anual_gas20_cvom_unidades_20260918\\T0_B_INT.json.gz": "ce868567394f2a654ecd2e75eebadd1bbd202780ce35dec503a995cbb3445880",
+    "resultados_politicas\\anual_gas20_cvom_unidades_20260918\\T0_D_INT.json.gz": "97d0318d12b0c9425d40c9e1d63bc348a1aa17e0bcef0ba983d085aa4b3a7188",
+    "resultados_politicas\\anual_gas20_cvom_unidades_20260918\\T0_OPT_AB.json.gz": "b7163addd0a28927cfd80fe060ef367d6974fab3e005d470da2dac832aa5bddf",
+    "resultados_politicas\\anual_gas20_cvom_unidades_20260918\\T0_OPT_D.json.gz": "d2ec2a6ee9ad8efde9dc8b784c678d669d6e2f9c5746ece1e8d9535f3b6c34a7",
+    "resultados_politicas\\anual_gas20_cvom_unidades_20260918\\T1_A_INT.json.gz": "329b05e72319705515264a5f55ecd1ab55178e34921f8c674357326431213f49",
+    "resultados_politicas\\anual_gas20_cvom_unidades_20260918\\T1_B_INT.json.gz": "cd7c4f1f67c3402e423a723af2d8d9946118c9b4885a91cd0c6339e082145840",
+    "resultados_politicas\\anual_gas20_cvom_unidades_20260918\\T1_D_INT.json.gz": "bfe13458ab5fd5188dcdc71eb31fb5cff385bf592b5496b0393bbbce5564f632",
+    "resultados_politicas\\anual_gas20_cvom_unidades_20260918\\T1_OPT_AB.json.gz": "4b93538c9f1a93a019f41b49ab738d368f0277f6aeccbd0459a83e50a558744a",
+    "resultados_politicas\\anual_gas20_cvom_unidades_20260918\\T1_OPT_D.json.gz": "c574f64ef3656adc2593942e67a3fab0ec9433727877ab129cce69f523bf9d27",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T0_C_INT.json.gz": "9686417b7344c02f8bd6a41ca5be98aa59164b6a8727d1778326c1d7ecb87eee",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T0_C_INT_fijado.json.gz": "f4dabda577addc9251e235693feab17609c232ec447877df69f0c8e71ec366c1",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T0_F_INT.json.gz": "7b14e07a6083a3a4d0bcaffc50afca3f552734ae7c1ab99c117b1446eddf4914",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T0_F_INT_fijado.json.gz": "c2d54179bc0be0ef7f0dc5487b0ff838ca062b7621f20e6e8607378a49bd3719",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T0_OPT_CF.json.gz": "b83aceb4c3d5c780ed468c3ab467d021d701c1b586bca1adf1275f3d4999f768",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T0_OPT_D.json.gz": "93ff4bdd254ddd330ef350cbb16eb5736ec67189bdde89c172425670692adae4",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T0_OPT_D_fijado.json.gz": "90ffeb7b07eb76c5f8034d37cf41e587f403c57547b1f17d52c44ea37013e58b",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T1_C_INT.json.gz": "61eab109fd089e98cb09732ddd5a369eb94c1b51d563e05ded555f44f51a59b3",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T1_C_INT_fijado.json.gz": "e16eb1128b4391b71072d2e1e719469e14d6096a4d38119e2b5b21730b0d36da",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T1_F_INT.json.gz": "e5cfd916f3e64d743389806254b1b127bb616a4de3f38e93af982578387b4c91",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T1_F_INT_fijado.json.gz": "5f56686c964f41cfef81c00faf4e4191051faf33f3251ee30b5bef16ac64800b",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T1_OPT_CF.json.gz": "599240ae00cc03ecb972a8364e8521bd380e462717d8bd281de645ff61b7f8d4",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T1_OPT_D.json.gz": "3f47f8e1ffc55362e90c8736b5b83afecb52b0d3ecd23130f7ab73d93d3176f0",
+    "resultados_politicas\\cf_anual_gas20_cvom_unidades_20260918\\T1_OPT_D_fijado.json.gz": "a0b9808195ac9c1467c601541ea7bf41ee7b884a7e3ddd5d19334193da65bf95"
+  },
+  "convencion": "20 años representativos explícitos con SOC cíclico anual; térmica libre al inicio de cada año",
+  "parametros_termicos": {
+    "pmin": {
+      "__array__": [
+        2.4,
+        2.4,
+        1.8,
+        0.96
+      ],
+      "dtype": "float64"
+    },
+    "pmax": {
+      "__array__": [
+        8.0,
+        8.0,
+        6.0,
+        3.2
+      ],
+      "dtype": "float64"
+    },
+    "hr": {
+      "__array__": [
+        9.638,
+        9.638,
+        11.089,
+        12.24
+      ],
+      "dtype": "float64"
+    },
+    "cvom": {
+      "__array__": [
+        9.28,
+        9.28,
+        15.32,
+        15.32
+      ],
+      "dtype": "float64"
+    },
+    "gas": 20.0,
+    "cv": {
+      "__array__": [
+        202.04,
+        202.04,
+        237.1,
+        260.12
+      ],
+      "dtype": "float64"
+    }
+  },
+  "bess": {
+    "P_MW": 45.0,
+    "E_MWh": 280.0,
+    "eta_c": 0.9486832980505138,
+    "eta_d": 0.9486832980505138,
+    "soc_min_pu": 0.19999999999999996,
+    "soc_max_pu": 1.0,
+    "soc0_pu": 0.6,
+    "DoD": 0.8,
+    "RTE": 0.9
+  },
+  "reutilizacion": {
+    "configuracion_origen": "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\benchmarks_600s\\configuracion.json",
+    "SHA256": "99f1c8686d46b03678ba00f8fbb301db019872c28f28c2246b7ba34ed443c9b5",
+    "cambios_solo_dp": [
+      "termica.py",
+      "termica_dp_acelerada.py"
+    ],
+    "explicacion": "codigo conserva los hashes de ejecución original del solver; la configuración principal registra el código de la nueva auditoría"
+  }
+}

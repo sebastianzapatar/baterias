@@ -1,0 +1,22 @@
+{
+  "Caso": "D_INT",
+  "Residuo_PV_MW": 0.0,
+  "Residuo_demanda_MW": 3.552713678800501e-15,
+  "Residuo_SOC_MWh": 0.0,
+  "Horas_simultaneas": 0,
+  "Dias": 365,
+  "Cierre_SOC_MWh": NaN,
+  "Error_combustible_CVOM_USD": 0.0,
+  "Error_red_USD": 0.0,
+  "Error_arranques_USD": 0.0,
+  "Error_costo_termica_USD": 0.0,
+  "Error_segmentos_USD": 0.0,
+  "Error_ingreso_USD": 0.0,
+  "Error_objetivo_USD": 0.0,
+  "Estado": "OK",
+  "Valor_atribuido_USD": 12739108.169378905,
+  "Ahorro_redespacho_USD": 12777206.111277048,
+  "Exportaciones_BESS_MWh": 4567.5,
+  "Horas_exportacion_BESS": 119,
+  "Ingreso_export_BESS_USD": 350022.6842483238
+}

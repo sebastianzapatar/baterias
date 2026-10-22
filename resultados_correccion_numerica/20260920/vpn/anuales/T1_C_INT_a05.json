@@ -1,0 +1,23 @@
+{
+  "Senal": "T1",
+  "Caso": "C_INT",
+  "Anio": 5,
+  "Escala_PV": 0.980149500625,
+  "Origen": "despacho_explicito_precision",
+  "Segundos": 69.71413569996366,
+  "Estado": "OK",
+  "Condicion": "politica/CONVERGE",
+  "Cota_USD": NaN,
+  "Brecha_solver": NaN,
+  "SHA256_npz": "25373b6a3a699fc6165c117fc06c68979f59e1da220d5ea9ad568f4ba7f90cb8",
+  "Costo_operativo_USD": 8295276.364996109,
+  "Gas_USD": 5084670.926561542,
+  "CVOM_USD": 248099.93207034722,
+  "Compras_red_USD": 6584181.651276808,
+  "Arranques_USD": 41600.0,
+  "Ingreso_exportacion_USD": 3663276.144912589,
+  "Arranques": 416,
+  "Descarga_MWh": 32189.728109979045,
+  "PV_MWh": 155591.44581268163,
+  "Cierre_SOC_MWh": 0.0
+}

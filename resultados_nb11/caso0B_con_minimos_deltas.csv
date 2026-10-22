@@ -1,0 +1,3 @@
+Senal,Horas_despacho_distinto,Horas_bloques_distintos,Horas_solo_reparto_G1_G2,Delta_costo_USD,Delta_costo_pct,Delta_red_MWh,Delta_gas_MMBtu,Demanda_min_cambio_MW,Demanda_max_cambio_MW
+T0,4151,4133,18,63919.515410829335,0.29097935301352074,656.2299999999998,-4244.487375992816,0.13,20.99
+T1,2952,2934,18,39501.40950739756,0.17985291667652614,625.4200000000019,-4604.597135992255,0.13,20.99

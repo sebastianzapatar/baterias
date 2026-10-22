@@ -1,0 +1,84 @@
+{
+  "parametros": {
+    "termica": {
+      "pmin": [
+        2.4,
+        2.4,
+        1.8,
+        0.96
+      ],
+      "pmax": [
+        8.0,
+        8.0,
+        6.0,
+        3.2
+      ],
+      "hr": [
+        9.638,
+        9.638,
+        11.089,
+        12.24
+      ],
+      "cvom": [
+        9.28,
+        9.28,
+        15.32,
+        15.32
+      ],
+      "gas": 20.0,
+      "cv": [
+        202.04,
+        202.04,
+        237.1,
+        260.12
+      ]
+    },
+    "cargo_arranque_USD": 100.0,
+    "minutos_eventos": 0,
+    "limite_anual_arranques": null,
+    "limite_diario": "un arranque y una parada por unidad y día",
+    "bess": {
+      "P_MW": 45.0,
+      "E_MWh": 280.0,
+      "eta_c": 0.9486832980505138,
+      "eta_d": 0.9486832980505138,
+      "soc_min_pu": 0.19999999999999996,
+      "soc_max_pu": 1.0,
+      "soc0_pu": 0.6,
+      "DoD": 0.8,
+      "RTE": 0.9
+    },
+    "PV_max_MW": 89.52584433555178,
+    "PV_MWh": 158742.56500000003,
+    "demanda_MWh": 158742.565,
+    "P_EXP_MAX_MW": 134.52584433555177,
+    "c_deg": 0.0,
+    "TRM": 3126.08,
+    "exclusion_OPT_D": "binaria",
+    "tolerancias": {
+      "TOL_MW": 1e-06,
+      "TOL_MWh": 1e-05,
+      "TOL_CIERRE_MWh": 0.001,
+      "TOL_USD": 0.001,
+      "TOL_DEFICIT_MW": 1e-09
+    }
+  },
+  "fuente_factorial": "C:\\Users\\natal\\OneDrive\\Maestria\\2_Codigos\\Operación\\resultados_correccion_numerica\\20260920\\factorial",
+  "codigo": {
+    "termica_vpn.py": "31639389dfc96b70f91a7b617d16ca828f9083264c956431c0a05d1828c5c5ac",
+    "motor_multianual.py": "0a3058890e754115e9887b18f16338b91c87bb5fa113dddaa83ed311d846a7de",
+    "termica_dp_acelerada.py": "3c3681f023e60df8ab96a3809173f7f159869888f4725c7438bc39e9825b12e9",
+    "termica_politicas.py": "3966427655edeb53e92c8c13d3c871cac7f6b878b62e2db45f93b06c93ea48b3",
+    "termica_cf.py": "59e0ea508fa811aed91841547262ee2dbede1200e4c13303bb62c50fe01c147e",
+    "termica_reglas.py": "6a399e1e5e6368d5c953f9a5c129ccbc2cd7ef19d41bc4239ce5b664e38faf3b",
+    "termica_pypsa.py": "9ddb4ac8403b8f8392110f7fc36c97838e4b350ee7fec196e9e8e5daf6b628a7",
+    "termica_pv.py": "230044de7203090cc18e32cc608cc28519b588319416f4991c64498106a21a10",
+    "termica_bess.py": "b5d13c0e929ec6ae48374b33e6805b6c77795590bb2fe1dbba536ffef599d5ac",
+    "termica.py": "97f256458d3e4ed07d2ea727a2ad1ffb8b3bc5466d2393fa34e1acd2618d964e",
+    "costos.py": "4a50a661bea5ee7572c56359c8cd728a95fd3e2c5f293924654852794e32bf8a",
+    "costos_curvas.py": "8b246c08febf25a0a2f03b868448ae7f0a874b5a3632f83f01bdf9999adf83bc",
+    "02_Optimizacion_portafolio_PV_BESS.ipynb": "5bc90b5609a707d2289e951ae216f802b75db773280cf74f1c00028ee1ddd6be",
+    "CurvasCapexPVBESS.xlsx": "fd6b7ebce0b7a6b63c8e9f3e95b65636f40bab04c6ba57da5682dc3c359d1def"
+  },
+  "descripcion": "DP anual exacta sin BESS; térmica inicialmente libre; sin evento inicial"
+}

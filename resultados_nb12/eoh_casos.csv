@@ -1,0 +1,11 @@
+Senal,Caso,Limite_anual_por_unidad,Archivo,Estado_solucion,Brecha_costo,Gas_USD_MMBtu,Cargo_USD_arranque,Minutos_evento,Estado_inicial,Nota,Error_costo_horario_USD,Error_costo_total_USD,Unidades_encendidas_hora_0
+T0,sin_PV,,resultados_nb11/pypsa_anual_T0.npz,PRECISION_SOLICITADA,0.0,16.0,100.0,0,libre,"trayectoria PyPSA anual del cuaderno 11, 0 minutos (no pypsa_eventos_)",4.547473508864641e-13,0.0,3
+T0,con_PV,365.0,resultados_nb12/pv_anual_T0.npz,PRECISION_SOLICITADA,0.0,16.0,100.0,0,libre,"caso PV sin límite anual adicional; el límite 365 lo reutiliza, no es otro experimento",9.094947017729282e-13,0.0,3
+T0,limite_180,180.0,resultados_nb12/limites_T0_180.npz,PRECISION_SOLICITADA,5.625470734053575e-15,16.0,100.0,0,libre,brecha relativa ≤ 1e−6 solicitada,9.094947017729282e-13,3.725290298461914e-09,3
+T0,limite_60,60.0,resultados_nb12/limites_T0_60.npz,FACTIBLE_LIMITE_TIEMPO,0.0016020901014483576,16.0,100.0,0,libre,"Métricas de la trayectoria factible guardada. La brecha acota el costo, no las horas, los arranques ni la EOH.",4.547473508864641e-13,3.725290298461914e-09,3
+T0,limite_0,0.0,resultados_nb12/limites_T0_0.npz,PRECISION_SOLICITADA,2.30244104442623e-07,16.0,100.0,0,libre,brecha relativa ≤ 1e−6 solicitada,9.094947017729282e-13,0.0,3
+T1,sin_PV,,resultados_nb11/pypsa_anual_T1.npz,PRECISION_SOLICITADA,0.0,16.0,100.0,0,libre,"trayectoria PyPSA anual del cuaderno 11, 0 minutos (no pypsa_eventos_)",9.094947017729282e-13,0.0,3
+T1,con_PV,365.0,resultados_nb12/pv_anual_T1.npz,PRECISION_SOLICITADA,0.0,16.0,100.0,0,libre,"caso PV sin límite anual adicional; el límite 365 lo reutiliza, no es otro experimento",4.547473508864641e-13,1.862645149230957e-09,3
+T1,limite_180,180.0,resultados_nb12/limites_T1_180.npz,PRECISION_SOLICITADA,0.0,16.0,100.0,0,libre,brecha relativa ≤ 1e−6 solicitada,1.8189894035458565e-12,0.0,3
+T1,limite_60,60.0,resultados_nb12/limites_T1_60.npz,PRECISION_SOLICITADA,9.209279055724284e-07,16.0,100.0,0,libre,brecha relativa ≤ 1e−6 solicitada,1.8189894035458565e-12,3.725290298461914e-09,3
+T1,limite_0,0.0,resultados_nb12/limites_T1_0.npz,PRECISION_SOLICITADA,0.0,16.0,100.0,0,libre,brecha relativa ≤ 1e−6 solicitada,2.7284841053187847e-12,0.0,3

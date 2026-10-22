@@ -1,0 +1,28 @@
+# Ambientes virtuales: cada persona crea el suyo con requirements.txt
+.venv/
+venv/
+env/
+.env/
+.conda/
+conda-env/
+
+# Archivos que genera Python al ejecutar
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+.virtual_documents/
+
+# Editores
+.vscode/
+.idea/
+*.swp
+
+# Archivos temporales de Excel y del sistema
+~$*
+.~lock.*#
+.DS_Store
+Thumbs.db
+desktop.ini

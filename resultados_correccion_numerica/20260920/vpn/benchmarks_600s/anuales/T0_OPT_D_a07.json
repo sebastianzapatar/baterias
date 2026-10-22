@@ -1,0 +1,23 @@
+{
+  "Senal": "T0",
+  "Caso": "OPT_D",
+  "Anio": 7,
+  "Escala_PV": 0.9703725093562656,
+  "Origen": "despacho_explicito",
+  "Segundos": 127.94446869997773,
+  "Estado": "OK",
+  "Condicion": "ok/optimal",
+  "Cota_USD": 5038096.710794842,
+  "Brecha_solver": 0.0006134874372267572,
+  "SHA256_npz": "747129210bdbc161bf42c5550b9998d1dfdc26d84a05a1d9e4fc30f973342d46",
+  "Costo_operativo_USD": 5041189.417170956,
+  "Gas_USD": 6733179.074700696,
+  "CVOM_USD": 324153.87950416305,
+  "Compras_red_USD": 215905.23262629198,
+  "Arranques_USD": 36400.0,
+  "Ingreso_exportacion_USD": 2268448.7696601953,
+  "Arranques": 364,
+  "Descarga_MWh": 62175.292102731364,
+  "PV_MWh": 154039.4211407001,
+  "Cierre_SOC_MWh": 0.0
+}

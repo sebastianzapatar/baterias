@@ -1,0 +1,23 @@
+{
+  "Senal": "T1",
+  "Caso": "RED_TERMICA",
+  "Anio": 1,
+  "Escala_PV": 0.0,
+  "Origen": "factorial_corregido_K3:27d4d8b10721c4d73f418e7564baee35307ec97dab9a8b8b4519b74cfcba5d9b",
+  "Segundos": 0.0,
+  "Estado": "OK",
+  "Condicion": "DP/optimo",
+  "Cota_USD": 29661368.39374391,
+  "Brecha_solver": 0.0,
+  "SHA256_npz": "4a69cce8336c0f856f4c2cf817a3982da7dff0e32d9bb81b3b36c1f198a6bc5b",
+  "Costo_operativo_USD": 29661368.393743943,
+  "Gas_USD": 11439435.45240002,
+  "CVOM_USD": 575794.6608000011,
+  "Compras_red_USD": 17595138.280543923,
+  "Arranques_USD": 51000.0,
+  "Ingreso_exportacion_USD": 0.0,
+  "Arranques": 510,
+  "Descarga_MWh": 0.0,
+  "PV_MWh": 0.0,
+  "Cierre_SOC_MWh": 0.0
+}

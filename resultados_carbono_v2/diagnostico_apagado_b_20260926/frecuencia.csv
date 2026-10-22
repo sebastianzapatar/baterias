@@ -1,0 +1,7 @@
+Escenario,Senal,N1_unidad_heredada,N2_cerca_del_minimo,N3_con_BESS_disponible,N4_sustitucion_sin_reasignar,N4_y_BESS_satura_ese_dia,Dias_distintos_N3,Energia_mediana_N3_MWh,Unidades
+V2_p0,T0,350,200,200,56,45,200,14.4,"G1,G2"
+V2_p0,T1,98,40,38,11,9,38,13.200000000000001,"G1,G2,G3"
+V2_p10,T0,294,167,167,24,20,167,12.0,"G1,G2"
+V2_p10,T1,83,35,35,10,9,35,14.4,"G1,G2"
+V2_p20,T1,70,31,31,7,6,31,12.000000000000002,"G2,G3"
+V2_p50,T1,50,21,21,7,7,21,12.000000000000002,"G2,G3"

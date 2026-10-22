@@ -1,0 +1,14 @@
+{
+  "estado": "CONVERGE",
+  "iteraciones": null,
+  "residuo": 0.0,
+  "soc_inicial": 131.97723405761735,
+  "soc_final": 131.97723405761735,
+  "procedimiento": "Ciclo original de A del cuaderno 02",
+  "atributos_regla_A": {
+    "SOC_inicial_MWh": 131.97723405761735,
+    "cierre_ciclico_MWh": 0.0
+  },
+  "segundos": 0.5909410000313073,
+  "segundos_total": 0.5909410000313073
+}

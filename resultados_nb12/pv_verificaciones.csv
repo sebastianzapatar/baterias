@@ -1,0 +1,5 @@
+Senal,Caso,Control,Valor,Estado
+T0,sin_PV,"Referencia reutilizada: supuestos, validación y DP",3.725290298461914e-09,OK
+T0,con_PV,"Óptimo certificado, validación independiente y costo ≤ sin PV",0.0,OK
+T1,sin_PV,"Referencia reutilizada: supuestos, validación y DP",0.0,OK
+T1,con_PV,"Óptimo certificado, validación independiente y costo ≤ sin PV",0.0,OK

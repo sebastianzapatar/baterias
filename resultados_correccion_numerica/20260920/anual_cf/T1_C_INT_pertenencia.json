@@ -1,0 +1,10 @@
+{
+  "Senal": "T1",
+  "Caso": "C_INT",
+  "Estado": "OK",
+  "Condicion": "ok/optimal",
+  "Diferencia_USD": 0.005141496658325195,
+  "Banda_objetivo_USD": 1.248515378913207,
+  "Banda_flujos": 1e-07,
+  "Max_diferencia_flujo": 1.0000013617172954e-07
+}

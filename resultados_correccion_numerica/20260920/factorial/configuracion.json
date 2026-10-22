@@ -1,0 +1,170 @@
+{
+  "diseno": {
+    "K1": {
+      "f_PV": 1.0,
+      "P_MW": 50.0,
+      "E_MWh": 400.0
+    },
+    "K2": {
+      "f_PV": 0.918,
+      "P_MW": 45.0,
+      "E_MWh": 180.0
+    },
+    "K3": {
+      "f_PV": 1.0,
+      "P_MW": 45.0,
+      "E_MWh": 280.0
+    },
+    "K4": {
+      "f_PV": 0.83,
+      "P_MW": 50.0,
+      "E_MWh": 100.0
+    }
+  },
+  "senales": [
+    "T0",
+    "T1"
+  ],
+  "casos": [
+    "A_INT",
+    "B_INT",
+    "D_INT",
+    "C_INT",
+    "F_INT",
+    "OPT_AB",
+    "OPT_D",
+    "OPT_CF"
+  ],
+  "region": "Oriente",
+  "anio": 2025,
+  "horas": 8760,
+  "pv_k3_MWp": 114.41501912374943,
+  "TRM": 3126.08,
+  "parametros_termicos": {
+    "pmin": {
+      "__array__": [
+        2.4,
+        2.4,
+        1.8,
+        0.96
+      ],
+      "dtype": "float64"
+    },
+    "pmax": {
+      "__array__": [
+        8.0,
+        8.0,
+        6.0,
+        3.2
+      ],
+      "dtype": "float64"
+    },
+    "hr": {
+      "__array__": [
+        9.638,
+        9.638,
+        11.089,
+        12.24
+      ],
+      "dtype": "float64"
+    },
+    "cvom": {
+      "__array__": [
+        9.28,
+        9.28,
+        15.32,
+        15.32
+      ],
+      "dtype": "float64"
+    },
+    "gas": 20.0,
+    "cv": {
+      "__array__": [
+        202.04,
+        202.04,
+        237.1,
+        260.12
+      ],
+      "dtype": "float64"
+    }
+  },
+  "cargo_arranque_USD": 100.0,
+  "segundos_solver": 600.0,
+  "brecha_solver": 0.001,
+  "hilos_solver": 1,
+  "procesos_pypsa": 2,
+  "procesos_reglas": 2,
+  "total_archivos": 72,
+  "p_exp": "max(PV_K)+P_BESS_K; mismo límite por K para regla y benchmark",
+  "frontera": "SOC cíclico libre por trayectoria; térmica libre solo al comenzar el año",
+  "alcance": "operativo anual; K categórico, sin VPN ni redimensionamiento",
+  "codigo": {
+    "termica_vpn.py": "31639389dfc96b70f91a7b617d16ca828f9083264c956431c0a05d1828c5c5ac",
+    "motor_multianual.py": "0a3058890e754115e9887b18f16338b91c87bb5fa113dddaa83ed311d846a7de",
+    "termica_dp_acelerada.py": "3c3681f023e60df8ab96a3809173f7f159869888f4725c7438bc39e9825b12e9",
+    "termica_politicas.py": "3966427655edeb53e92c8c13d3c871cac7f6b878b62e2db45f93b06c93ea48b3",
+    "termica_cf.py": "59e0ea508fa811aed91841547262ee2dbede1200e4c13303bb62c50fe01c147e",
+    "termica_reglas.py": "6a399e1e5e6368d5c953f9a5c129ccbc2cd7ef19d41bc4239ce5b664e38faf3b",
+    "termica_pypsa.py": "9ddb4ac8403b8f8392110f7fc36c97838e4b350ee7fec196e9e8e5daf6b628a7",
+    "termica_pv.py": "230044de7203090cc18e32cc608cc28519b588319416f4991c64498106a21a10",
+    "termica_bess.py": "b5d13c0e929ec6ae48374b33e6805b6c77795590bb2fe1dbba536ffef599d5ac",
+    "termica.py": "97f256458d3e4ed07d2ea727a2ad1ffb8b3bc5466d2393fa34e1acd2618d964e",
+    "costos.py": "4a50a661bea5ee7572c56359c8cd728a95fd3e2c5f293924654852794e32bf8a",
+    "costos_curvas.py": "8b246c08febf25a0a2f03b868448ae7f0a874b5a3632f83f01bdf9999adf83bc",
+    "02_Optimizacion_portafolio_PV_BESS.ipynb": "5bc90b5609a707d2289e951ae216f802b75db773280cf74f1c00028ee1ddd6be",
+    "CurvasCapexPVBESS.xlsx": "fd6b7ebce0b7a6b63c8e9f3e95b65636f40bab04c6ba57da5682dc3c359d1def",
+    "termica_factorial.py": "e5f3ff816a589a1fc628b5dab7474fa0a31e68a21a44acd507f5db7d5538fcee"
+  },
+  "fuentes": {
+    "resultados_politicas\\anual_gas20_cvom_unidades_20260918\\ejecucion.json": "c1da237daf71e4de9d04be533ee36e03b2866838b9dd8f81fcc44c88bbcc5d6c",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\configuracion.json": "693d0744d05fb7a12304d9b14184a9652730ae5316cfe75c9d5ee6f15a856fd2",
+    ".build\\factorial_R.py": "d683b2105756f7c5b705f92e437afa8f6a464b346434be2a503ccdf032d0b7b0",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T0_A_INT_a01.npz": "41aeed9fd1dd7c306e551057eaf78b26c08252443fd6299a37d2ec2114103325",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T0_A_INT_a01.json": "729d33718cc8b41e4cdda51c4924dea602c890bef2c0dbc8529c96fb3ca6bdd1",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T0_B_INT_a01.npz": "45cd973866e3245ef0df10954dd144ea539f0d91dfba86c6a2656208cb1f9073",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T0_B_INT_a01.json": "a6ac618e83d9f4aebbab05824a56d5aa6cb5b58e67be10e71b943de55e08987a",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T0_D_INT_a01.npz": "bd2931b7dcaf0058f5b02657320239174adc1c08ef59f10fca96acc6bb8c18c2",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T0_D_INT_a01.json": "1d52c7c9e75264439e621506f9d8bd8e601678611f9c219b72b2ac73c87fdd4d",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T0_C_INT_a01.npz": "86a0d7273c14ae920f2ee4bea38996fbdd48e653df282f13a709f62120a2546c",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T0_C_INT_a01.json": "b1e8631ef2299f91db445e087a7010cdb8da871d2a7c9ba39539ffd6d56a836a",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T0_F_INT_a01.npz": "86a0d7273c14ae920f2ee4bea38996fbdd48e653df282f13a709f62120a2546c",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T0_F_INT_a01.json": "729058a2655892620947468e3dec2f18e82c0597592d15ca1f46866c7bac1e8c",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\benchmarks_600s\\anuales\\T0_OPT_AB_a01.npz": "6b800a9e2ee79afe4554aaf3ee67fccd904312eeb2c7f87a40514f51cc9c8d44",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\benchmarks_600s\\anuales\\T0_OPT_AB_a01.json": "67a7afed7328880f1a13c8b0b647241670a84f274f8cde458624f0841c413348",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\benchmarks_600s\\anuales\\T0_OPT_D_a01.npz": "1243ab5f6934e8c9469b7ec2b07899be81b996dccad9d29a30c54f770160e725",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\benchmarks_600s\\anuales\\T0_OPT_D_a01.json": "08f6947cec6c727bd07b90e62c02ea66f7060a3a47d46b16e6cc4ae1de2d0552",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\benchmarks_600s\\anuales\\T0_OPT_CF_a01.npz": "10d46b6672caace9913ebea36e317c9d53f1c0ea7aae5990b982861c87997eb6",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\benchmarks_600s\\anuales\\T0_OPT_CF_a01.json": "1fad8ca0b98e41b5d5a737f3c0a36b7c12dddace6c0f7509847ab00a755abab1",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T0_RED_TERMICA_a01.npz": "f87704cb6a641ad81f6146876bc5671bcd621ca6df1195d685dd73442313a4bc",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T0_RED_TERMICA_a01.json": "5e7f55eef3c84a871a7e05fffdd6216bfe142bd29b927fc261dd88534b5e5dfd",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T0_PV_SIN_BESS_a01.npz": "baeac1a0e77d986b6a14ec5938c679493607be287dc8cc62fc12e2c42c86e69b",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T0_PV_SIN_BESS_a01.json": "9f1c4bb50e1c1cfe7959fead718360a8059a3fda7e08a9b617db599f5df2618b",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T1_A_INT_a01.npz": "fa0049864b21125b1a66c54d1338e224ac103b7291fa51019beb4ef100a1d816",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T1_A_INT_a01.json": "ed0207af0b032555da7289001c03d8cb968b5d16f60e14e6d781ad13573b7ce9",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T1_B_INT_a01.npz": "6465c5e7294377f0631a0d25cf84858b1e9d77f65d634d32dace72c4b62f1461",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T1_B_INT_a01.json": "0c7449b4aa6c7a9ec7c9958c3c514c116b0729ae282b61a3bdec8cc96963f051",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T1_D_INT_a01.npz": "fa6a66be963fa65e419eed78449b7613256578198c7dae8485d67c754eac6dd3",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T1_D_INT_a01.json": "ccec94ce4d493f2500e34d3383bf9a122437c981ca3a28b141e36eff253b3aa2",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T1_C_INT_a01.npz": "0df82c1e15c93f7b37e3dd535e8674326c3e7d49ff23749a538341a0243668ab",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T1_C_INT_a01.json": "bc705ad9ae83f35f0b771719be466e1890ef0a4cf71961aad02d45706db6d5e3",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T1_F_INT_a01.npz": "7aaf5ff40c7328470f8abc233bd4798a26ac50fefd7876d2ec30c3e4120310d5",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T1_F_INT_a01.json": "02176cf944e801625858ffa37c3567e5a0fa60556133167e5f66d665587ef357",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\benchmarks_600s\\anuales\\T1_OPT_AB_a01.npz": "a6d5de0f870a28d40864a1534696f17991a99e5c780b0718772e497585f52baf",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\benchmarks_600s\\anuales\\T1_OPT_AB_a01.json": "6e2f5b76320c9e7723f4f16a16e098748688849c6fc61c34cc17d2f84fa49616",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\benchmarks_600s\\anuales\\T1_OPT_D_a01.npz": "8a37b8095a111182a8a74d7b4c929b5d91bc21a4533c16ec6a7e7658c1d021c7",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\benchmarks_600s\\anuales\\T1_OPT_D_a01.json": "61e356ae3838dfb31bafe858c87659f810f1d9c172ba1b8919c7594a619f7f71",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\benchmarks_600s\\anuales\\T1_OPT_CF_a01.npz": "e0193a19d22334f10993db1bfe469e347dfa8b8a5b43228f3b4c866f4c902a04",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\benchmarks_600s\\anuales\\T1_OPT_CF_a01.json": "596c883c1c6cb228671a20af9d00588371c26bc88a255d530bbd8b42e7070bd4",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T1_RED_TERMICA_a01.npz": "4a69cce8336c0f856f4c2cf817a3982da7dff0e32d9bb81b3b36c1f198a6bc5b",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T1_RED_TERMICA_a01.json": "48fa29ef6cdf5ee4d4ea591af64c99493b189164bf55efc86adec3fa81167bb4",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T1_PV_SIN_BESS_a01.npz": "87dc753bc6ccdcb19ff7d300b36e86663a4b20ae26b9f94e6f096501229d38f6",
+    "resultados_vpn_termica\\gas20_cvom_unidades_20260918\\anuales\\T1_PV_SIN_BESS_a01.json": "f0cac0d56369c0769c9a38efb38212228a1f5218fbc33c606a51af7979520733"
+  },
+  "correccion_numerica": {
+    "revision_base": "085658f",
+    "fecha": "2026-09-20T14:47:41.400783+00:00",
+    "fuente": "resultados_factorial_termica\\gas20_cvom_unidades_20260919\\configuracion.json",
+    "SHA256": "3d152c919e878b2e42e0ed471f38b35983d5ce4c9c876324555c95467ba70e39",
+    "alcance": "48 despachos nuevos; 24 benchmarks sin cambios, copiados con hashes"
+  }
+}

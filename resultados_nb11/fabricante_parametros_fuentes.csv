@@ -1,0 +1,5 @@
+Unidad,P_disp_MW,HeatRate_MMBtu_MWh,CV_adicional_USD_MWh,P_min_MW,CV_USD_MWh,Costo_combustible_USD_MWh,Origen_HR,HR_publicado_Btu_kWh,Fecha_consulta,Base_calorifica_documento,Convencion_precio_gas,Calibrado_sitio,HR_constante
+G1,8.0,9.638,9.28,2.4,163.488,154.208,Referencia documental de fabricante; identidad omitida por confidencialidad,9638.0,2026-09-12,No explicita en poster,Misma base energetica que HR; facturacion real no verificada,False,True
+G2,8.0,9.638,9.28,2.4,163.488,154.208,Referencia documental de fabricante; identidad omitida por confidencialidad,9638.0,2026-09-12,No explicita en poster,Misma base energetica que HR; facturacion real no verificada,False,True
+G3,6.0,11.089,9.28,1.8,186.704,177.424,Referencia documental de fabricante; identidad omitida por confidencialidad,11089.0,2026-09-12,No explicita en poster,Misma base energetica que HR; facturacion real no verificada,False,True
+G4,3.2,12.24,9.28,0.96,205.12,195.84,Referencia documental de fabricante; identidad omitida por confidencialidad,12240.0,2026-09-12,PCI/LHV,Misma base energetica que HR; facturacion real no verificada,False,True

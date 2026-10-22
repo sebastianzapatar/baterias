@@ -1,0 +1,38 @@
+Tipo,Prueba,Estado,Detalle
+sintética,Estado inicial encendido no cuenta como arranque,OK,"arranques [1, 1]"
+sintética,Sin parada terminal inventada,OK,"paradas [1, 0]"
+sintética,Horas encendida = suma del compromiso × paso,OK,
+sintética,Energía por unidad,OK,
+sintética,Unidad siempre encendida: cero arranques,OK,
+sintética,Compromiso no binario rechazado,OK,
+sintética,EOH(f=0) = H,OK,
+sintética,EOH = H + f·N,OK,
+sintética,ΔEOH = ΔH + f·ΔN,OK,
+sintética,"Umbral ΔH=-100, ΔN=10: cruce",OK,f* = 10.0
+sintética,"Umbral ΔH=50, ΔN=-5: cruce",OK,f* = 10.0
+sintética,"Umbral ΔH=0, ΔN=0: sin_cambio",OK,f* = nan
+sintética,"Umbral ΔH=-3, ΔN=0: sin_cambio_en_arranques",OK,f* = nan
+sintética,"Umbral ΔH=8, ΔN=0: sin_cambio_en_arranques",OK,f* = nan
+sintética,"Umbral ΔH=-100, ΔN=-4: sin_cruce",OK,f* = -25.0
+sintética,"Umbral ΔH=30, ΔN=6: sin_cruce",OK,f* = -5.0
+sintética,"Umbral ΔH=0, ΔN=3: umbral_cero",OK,f* = 0.0
+sintética,"Umbral ΔH=0, ΔN=-3: umbral_cero",OK,f* = 0.0
+sintética,ΔEOH(f*) = 0 y signos opuestos a ambos lados,OK,
+sintética,Umbral de bloque no es el promedio de umbrales,OK,"f*A = 10.0, f*B = 5.0, bloque = 9.1667, promedio = 7.5"
+sintética,ΔEOH de bloque = suma de ΔEOH de unidades,OK,
+resultados,"Conteos, energía y costo T0 sin_PV",OK,"arranques, paradas, horas y energía iguales al resumen; error de costo horario 4.5e-13 USD"
+resultados,"Conteos, energía y costo T0 con_PV",OK,"arranques, paradas, horas y energía iguales al resumen; error de costo horario 9.1e-13 USD"
+resultados,"Conteos, energía y costo T0 limite_180",OK,"arranques, paradas, horas y energía iguales al resumen; error de costo horario 9.1e-13 USD"
+resultados,"Conteos, energía y costo T0 limite_60",OK,"arranques, paradas, horas y energía iguales al resumen; error de costo horario 4.5e-13 USD"
+resultados,"Conteos, energía y costo T0 limite_0",OK,"arranques, paradas, horas y energía iguales al resumen; error de costo horario 9.1e-13 USD"
+resultados,"Conteos, energía y costo T1 sin_PV",OK,"arranques, paradas, horas y energía iguales al resumen; error de costo horario 9.1e-13 USD"
+resultados,"Conteos, energía y costo T1 con_PV",OK,"arranques, paradas, horas y energía iguales al resumen; error de costo horario 4.5e-13 USD"
+resultados,"Conteos, energía y costo T1 limite_180",OK,"arranques, paradas, horas y energía iguales al resumen; error de costo horario 1.8e-12 USD"
+resultados,"Conteos, energía y costo T1 limite_60",OK,"arranques, paradas, horas y energía iguales al resumen; error de costo horario 1.8e-12 USD"
+resultados,"Conteos, energía y costo T1 limite_0",OK,"arranques, paradas, horas y energía iguales al resumen; error de costo horario 2.7e-12 USD"
+resultados,EOH con f = 0 igual a horas encendida,OK,60 filas
+resultados,Bloques G1+G2 y Total iguales a la suma de unidades,OK,error máximo 0.0e+00
+resultados,Identidad ΔEOH = ΔH + f·ΔN,OK,error máximo 0.0e+00 h
+resultados,ΔEOH(f*) = 0 cuando hay cruce,OK,18 umbrales; residuo máximo 9.1e-13 h
+resultados,"Signo de ΔEOH antes, en y después del umbral",OK,0 discrepancias
+resultados,Umbral de bloque desde ΔH y ΔN agregados,OK,error máximo 0.0e+00

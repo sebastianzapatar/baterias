@@ -1,0 +1,18 @@
+Bloque,Control,Valor,Estado
+pruebas,enumeracion: 18 casos; error máximo DP-MILP [USD],,OK
+pruebas,temporal: 8 casos; error máximo DP-MILP [USD],1.4551915228366852e-11,OK
+pruebas,eventos: 15 casos; error máximo DP-MILP [USD],4.3655745685100555e-11,OK
+pruebas,cargo: 38 casos; error máximo DP-MILP [USD],2.6193447411060333e-10,OK
+entradas,"Huella de demanda, señales y parámetros igual a la de las referencias 0A/0B",,OK
+0A,Demanda anual [MWh],158742.565,OK
+0A,T0 ocho validaciones de mérito; residuo de balance [MW],0.0,OK
+0A,T1 ocho validaciones de mérito; residuo de balance [MW],3.552713678800501e-15,OK
+0A,"Regresión independiente: 4 CSV de 0A iguales a las referencias fijadas el 2026-09-13T21:25:49 (columnas, índice, dimensiones y valores; rtol 1e-09, atol 1e-06); diferencia máxima",0.0,OK
+0B,Contraste LP de estados (1206 problemas); error máximo [USD/h],9.094947017729282e-13,OK
+0B,"Regresión independiente: 14 CSV de 0B iguales a las referencias fijadas el 2026-09-13T21:25:49 (columnas, índice, dimensiones y valores; rtol 1e-09, atol 1e-06); diferencia máxima",7.450580596923828e-09,OK
+fabricante,Contraste LP de estados (1295 problemas); error máximo [USD/h],1.8189894035458565e-12,OK
+fabricante,Doce escenarios validados; 18 CSV escritos,,OK
+0C,Doce trayectorias validadas; jerarquía 0B ≤ 0C diario ≤ 0C diario + 2 h,,OK
+eventos,Regresión con 0 minutos contra el 0C diario y costo(0) ≤ costo(10) ≤ costo(20),,OK
+cargo,180 combinaciones validadas; monotonía de arranques y costos,,OK
+total,Tiempo de ejecución [min],13.335946393333142,OK
