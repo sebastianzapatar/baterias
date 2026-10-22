@@ -1,6 +1,7 @@
 # Entorno acelerado verificado; usar instalación aislada para conservar el base.
 # requirements.txt fija NumPy 2.5.2; las corridas aceleradas usaron NumPy 2.5.3.
-# Es opcional (solo acelera el cuaderno 15). Instalación en README.md.
+# Es opcional: solo acelera el cuaderno 15. Instalación en README.md (sección 6)
+# de la entrega; en la rama de desarrollo, PYTHONPATH en REPRODUCCION.md.
 numpy==2.5.3
 numba==0.67.0
 llvmlite==0.49.0

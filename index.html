@@ -359,7 +359,7 @@ footer .in { max-width: 1240px; margin: 0 auto; padding: 18px 16px; display: fle
       <div class="kicker">Universidad EIA · Escuela de Ingeniería y Ciencias</div>
       <h1 id="h-inicio">¿Cuánto vale agregar baterías a una planta solar industrial con generación a gas?</h1>
       <p>Esta plataforma resume la tesis sobre operación horaria y dimensionamiento de un sistema fotovoltaico con almacenamiento
-        en baterías (BESS), conectado a la red y a una flota térmica a gas. Todos los valores provienen de las tablas congeladas
+        en baterías (BESS), conectado a la red y a una flota térmica a gas. Todos los valores provienen de las tablas ya calculadas
         que producen los cuadernos; aquí no se recalcula nada.</p>
       <div class="cta">
         <a class="btn btn-claro" href="#decidir">Abrir el asistente de decisión →</a>
@@ -1443,10 +1443,10 @@ const RESPUESTA = [
   ["01", "s", "Recalcula todo con los datos nuevos. Parámetros en la sección 3."],
   ["01B", "s", "Recalcula. Toma los datos y parámetros del 01 guardado."],
   ["02", "s", "Recalcula el barrido completo (15–35 min)."],
-  ["08 y 09", "n", "Leen resultados congelados: siguen mostrando la tesis."],
-  ["11 a 13", "n", "Leen resultados congelados: siguen mostrando la tesis."],
-  ["14", "n", "Lee resultados congelados: sigue mostrando la tesis."],
-  ["15", "x", "Compara una muestra con las tablas congeladas y se detiene con «AssertionError: Discrepancia…». Es lo esperado."],
+  ["08 y 09", "n", "Leen resultados ya calculados: siguen mostrando la tesis."],
+  ["11 a 13", "n", "Leen resultados ya calculados: siguen mostrando la tesis."],
+  ["14", "n", "Lee resultados ya calculados: sigue mostrando la tesis."],
+  ["15", "x", "Compara una muestra con las tablas ya calculadas y se detiene con «AssertionError: Discrepancia…». Es lo esperado."],
 ];
 const ESTADO = {s: ["p-rapido", "✓ Recalcula"], n: ["p-igual", "= No cambia"], x: ["p-largo", "✕ Se detiene"]};
 $("#dat-resp").innerHTML = RESPUESTA.map(([n, e, t]) => `<div class="r"><div style="display:flex;justify-content:space-between;gap:8px;align-items:center;">

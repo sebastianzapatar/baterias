@@ -148,8 +148,10 @@ principal; el cuaderno la detecta solo.
 | «Kernel died» o falta de memoria | Poca RAM libre | Cierre otros programas y ejecute un cuaderno a la vez |
 | Excel no deja guardar o el cuaderno no ve los cambios | El libro sigue abierto en Excel | Guarde, cierre Excel y vuelva a ejecutar |
 
-## 8. Publicar la plataforma en GitHub Pages
+## 8. Plataforma en GitHub Pages
 
-El flujo `.github/workflows/pages.yml` publica `index.html` y el manual cada vez que
-cambian en `main`. Requisito de una sola vez: en **Settings → Pages**, poner
-**Source = GitHub Actions**.
+La plataforma pública se despliega solo desde el repositorio
+[`sebastianzapatar/baterias`](https://github.com/sebastianzapatar/baterias), con el
+flujo `.github/workflows/pages.yml`: publica `index.html` y el manual cada vez que
+cambian en `main`. Requisito de una sola vez en ese repositorio: en
+**Settings → Pages**, poner **Source = GitHub Actions**.
