@@ -1,9 +1,9 @@
 # Journal of Energy Storage article: additional experiments and figures
 
-Material for the article *Economic Comparison of Heuristic Dispatch Rules and
-Optimization Benchmarks for an Industrial Behind-the-Meter Energy System*. The
-base study (rules, annual MILP benchmarks, integrated factorial, 20-year NPV and
-carbon extension) is the rest of this repository; this folder adds the
+Material for a journal article on the dispatch of an industrial behind-the-meter
+PV–battery system with on-site gas units. The base study (rules, annual MILP
+benchmarks, integrated factorial, 20-year NPV and carbon extension) is the rest
+of this repository; this folder adds the
 experiments run for the article and the scripts that draw its figures and the
 tables of its supplementary material. The manuscript itself is not included.
 
