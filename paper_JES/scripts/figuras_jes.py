@@ -5,7 +5,7 @@ Fuentes (solo lectura):
 - VPN y bandas: paper_JES/fuentes/vpn_resumen.csv y OperacionBESS/.../vpn/vpn_intervalos.csv
 - Distancias del factorial: paper_JES/fuentes/factorial_comparacion.csv
 - Carbono (año 1, M01): OperacionBESS/resultados_carbono_v2/malla_20260926/benchmarks_finalistas.csv
-- Refuerzos R1–R3: paper_JES/resultados_refuerzos/consolidado/*.csv
+- Refuerzos R1–R4: paper_JES/resultados_refuerzos/consolidado/*.csv
 
 Paleta categórica validada con el validador de la guía de visualización (orden y CVD):
 azul #2a78d6, naranja #eb6834, aqua #1baf7a, amarillo #eda100 (modo claro, superficie #fcfcfb).
@@ -331,9 +331,10 @@ def fig6():
 def fig7():
     r1 = pd.read_csv(REF/'R1_horizonte_rodante.csv')
     r2 = pd.read_csv(REF/'R2_precio_gas.csv'); r3 = pd.read_csv(REF/'R3_cargo_arranque.csv')
+    r4 = pd.read_csv(REF/'R4_mpc_pronosticos.csv')
     fig = plt.figure(figsize=(DOBLE, 120*MM))
     gs = fig.add_gridspec(2, 4, height_ratios=[1.05, 1], hspace=0.62, wspace=0.42)
-    ax = fig.add_subplot(gs[0, :])
+    ax = fig.add_subplot(gs[0, :3])
     filas = []
     for regla in ('SC', 'DM', 'DMX'):
         for sen in ('FLAT', 'WMI'):
@@ -362,12 +363,24 @@ def fig7():
     ax.axvline(0, color=TXT2, lw=0.6)
     ax.set_yticks(y); ax.set_yticklabels([f[0] for f in filas]); ax.tick_params(axis='y', length=0)
     ax.set_xlabel('Gap to the annual optimum (kUSD/year, C280)'); ax.set_xlim(-20, 650)
-    ejes_limpios(ax, 'x'); ax.legend(loc='upper left', bbox_to_anchor=(0, 1.2), ncol=3, handlelength=1.2)
-    etiqueta_panel(ax, 'a', x=-0.04)
-    paneles = [(r2, 'Gas_USD_MMBtu', 'FLAT', 'Gas price (USD/MMBtu)', 'b'),
-               (r2, 'Gas_USD_MMBtu', 'WMI', 'Gas price (USD/MMBtu)', 'c'),
-               (r3, 'Cargo_USD', 'FLAT', 'Start-up charge (USD)', 'd'),
-               (r3, 'Cargo_USD', 'WMI', 'Start-up charge (USD)', 'e')]
+    ejes_limpios(ax, 'x'); ax.legend(loc='upper right', ncol=1, handlelength=1.2)
+    etiqueta_panel(ax, 'a', x=-0.05)
+    # (b) R4: MPC-48 re-optimizado cada hora frente a SC según la calidad del pronóstico.
+    ax = fig.add_subplot(gs[0, 3])
+    ax.axhline(0, color=REGLA['SC'], lw=1.0)
+    ax.text(1.0, 6, 'SC', color=REGLA['SC'], fontsize=6.5, ha='right', va='bottom')
+    for sen, estilo, marca in (('FLAT', '-', 'o'), ('WMI', '--', 's')):
+        d = r4[(r4.Senal == sen) & (r4.Caso == 'MPC-48 horario')].sort_values('Alfa')
+        ax.plot(d.Alfa, d.Ahorro_vs_SC_kUSD, color=TXT, ls=estilo, lw=1.3, marker=marca, ms=3.6, mec='white',
+                mew=0.7, label=sen)
+    ax.set_xticks([0, 0.5, 1]); ax.set_xticklabels(['0\nperfect', '0.5', '1\npersistence'])
+    ax.set_xlabel('Forecast error level α'); ax.set_ylabel('MPC-48 saving vs SC (kUSD/year)')
+    ax.set_ylim(-400, 200); ejes_limpios(ax); ax.legend(loc='lower left', handlelength=2.2)
+    etiqueta_panel(ax, 'b', x=-0.08)
+    paneles = [(r2, 'Gas_USD_MMBtu', 'FLAT', 'Gas price (USD/MMBtu)', 'c'),
+               (r2, 'Gas_USD_MMBtu', 'WMI', 'Gas price (USD/MMBtu)', 'd'),
+               (r3, 'Cargo_USD', 'FLAT', 'Start-up charge (USD)', 'e'),
+               (r3, 'Cargo_USD', 'WMI', 'Start-up charge (USD)', 'f')]
     for j, (df, campo, sen, xl, letra) in enumerate(paneles):
         ax = fig.add_subplot(gs[1, j])
         for regla in ('SC', 'DM', 'DMX'):

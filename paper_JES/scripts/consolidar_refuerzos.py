@@ -103,6 +103,37 @@ def tabla_r1():
     return pd.DataFrame(filas)
 
 
+def tabla_r4():
+    """R4: MPC-48 con pronósticos (familia α) frente a OPT-B, SC, DM y RH-48 (previsión perfecta, R1)."""
+    filas = []
+    for s in ('T0', 'T1'):
+        b = cerrado(s, 'OPT_AB')
+        sc, dm = cerrado(s, 'A_INT')['Costo'], cerrado(s, 'B_INT')['Costo']
+        rh48 = C.leer_json(C.SALIDA/'R1'/'casos'/f'R1_RH48_B_{s}.json')['Costo_operativo_USD']
+        brecha_sc = (max(0., sc-b['U']), max(0., sc-b['L']))
+        for pref, caso in (('MPC48', 'MPC-48 plan diario'), ('MPC48S', 'MPC-48 diario holgura'),
+                           ('MPC48H', 'MPC-48 horario')):
+            for js in sorted((C.SALIDA/'R4'/'casos').glob(f'R4_{pref}_a*_{s}.json')):
+                f = C.leer_json(js)
+                c = f['Costo_operativo_USD']
+                ahorro_sc = sc - c
+                filas.append(dict(
+                    Senal=SENAL[s], Caso=caso, Alfa=f['Alfa'], Costo_MUSD=c/1e6, Arranques=f['Arranques'], EFC=f['EFC'],
+                    FP_termico_pct=100*f['Termica_MWh']/(POT_TERMICA_MW*8760),
+                    Dist_pct_min=fl(100*max(0., c/b['U']-1)), Dist_pct_max=ce(100*max(0., c/b['L']-1)),
+                    Dist_kUSD_min=fl(max(0., c-b['U'])/1e3, 1), Dist_kUSD_max=ce(max(0., c-b['L'])/1e3, 1),
+                    Ahorro_vs_SC_kUSD=ahorro_sc/1e3, Ahorro_vs_DM_kUSD=(dm - c)/1e3, Exceso_vs_RH48_kUSD=(c - rh48)/1e3,
+                    Cierra_brecha_SC_pct_min=fl(100*ahorro_sc/brecha_sc[1]) if brecha_sc[1] > 0 else None,
+                    Cierra_brecha_SC_pct_max=ce(100*ahorro_sc/brecha_sc[0]) if brecha_sc[0] > 0 else None,
+                    nMAE_carga_24h_pct=100*f['nMAE_Carga_24h'], nMAE_PV_24h_pct=100*f['nMAE_PV_24h'],
+                    nMAE_compra_24h_pct=100*f['nMAE_C_imp_24h'], nMAE_export_24h_pct=100*f['nMAE_C_exp_24h'],
+                    Descarga_recortada_MWh=f['Descarga_recortada_MWh'], Horas_recorte=f['Horas_recorte'],
+                    Iteraciones_ciclo=f['Iteraciones_ciclo'], Condiciones_ventanas=str(f['Condiciones_ventanas']),
+                    Brecha_ventana_max=f['Brecha_ventana_max'], Segundos=f['Segundos'],
+                    Cota_valida=bool(c >= b['L'] - 1e-6), Pertenencia=f.get('Pertenencia')))
+    return pd.DataFrame(filas)
+
+
 def main():
     salida = C.SALIDA/'consolidado'
     salida.mkdir(parents=True, exist_ok=True)
@@ -123,7 +154,9 @@ def main():
             ('RED_TERMICA', 'PV_SIN_BESS', 'A_INT', 'B_INT', 'D_INT', 'OPT_AB'))
     except FileNotFoundError as e:
         print('R3 incompleto:', e)
-    md = ['# Refuerzos R1–R3: resultados consolidados', '',
+    if (C.SALIDA/'R4'/'casos').is_dir():
+        partes['R4_mpc_pronosticos'] = tabla_r4()
+    md = ['# Experimentos R1–R4: resultados consolidados', '',
           'Generado por `paper_JES/scripts/consolidar_refuerzos.py`. Niveles base leídos de la corrida cerrada.', '']
     for nombre, df in partes.items():
         df.to_csv(salida/f'{nombre}.csv', index=False)

@@ -1,0 +1,4017 @@
+[
+  {
+    "dia": 1,
+    "t0": 0,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.678122800870154e-13,
+    "respaldos": 0,
+    "descarga_plan_MWh": 151.58278753925885,
+    "descarga_real_MWh": 159.73798209502633
+  },
+  {
+    "dia": 2,
+    "t0": 24,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.325884665811692e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 116.36933195777635,
+    "descarga_real_MWh": 123.81463454407131
+  },
+  {
+    "dia": 3,
+    "t0": 48,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.3643497544253077e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 115.08027694603423,
+    "descarga_real_MWh": 116.6836646031952
+  },
+  {
+    "dia": 4,
+    "t0": 72,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.946742490139907e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 214.17644969588395,
+    "descarga_real_MWh": 153.29858639559527
+  },
+  {
+    "dia": 5,
+    "t0": 96,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.0285662201296754e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 190.48762884405204,
+    "descarga_real_MWh": 204.84645368034992
+  },
+  {
+    "dia": 6,
+    "t0": 120,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 187.96292538109222,
+    "descarga_real_MWh": 183.91590194327276
+  },
+  {
+    "dia": 7,
+    "t0": 144,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.506186334344351e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 186.05463857541804,
+    "descarga_real_MWh": 203.6790665545028
+  },
+  {
+    "dia": 8,
+    "t0": 168,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.9509230719711635e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 169.37602754742676,
+    "descarga_real_MWh": 186.63582550813817
+  },
+  {
+    "dia": 9,
+    "t0": 192,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.6639372825937246e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 162.38080545984994,
+    "descarga_real_MWh": 169.2977536263236
+  },
+  {
+    "dia": 10,
+    "t0": 216,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.744428338733909e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 199.37982648916744,
+    "descarga_real_MWh": 198.17831164224046
+  },
+  {
+    "dia": 11,
+    "t0": 240,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.331219846486157e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 218.6618834113952,
+    "descarga_real_MWh": 208.462132392758
+  },
+  {
+    "dia": 12,
+    "t0": 264,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.3955398014663057e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 208.4305527219913,
+    "descarga_real_MWh": 230.744064694217
+  },
+  {
+    "dia": 13,
+    "t0": 288,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 186.60877652525687,
+    "descarga_real_MWh": 186.15043350152416
+  },
+  {
+    "dia": 14,
+    "t0": 312,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.91982553091222e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 210.75034527391483,
+    "descarga_real_MWh": 218.35101858401066
+  },
+  {
+    "dia": 15,
+    "t0": 336,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.3017550292392133e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 203.04418177902983,
+    "descarga_real_MWh": 208.0968361383828
+  },
+  {
+    "dia": 16,
+    "t0": 360,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.6818278903419618e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 206.6338621080105,
+    "descarga_real_MWh": 214.60978528942735
+  },
+  {
+    "dia": 17,
+    "t0": 384,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 7.323146265320369e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 120.85055235305839,
+    "descarga_real_MWh": 122.81288941167644
+  },
+  {
+    "dia": 18,
+    "t0": 408,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.2259851117060955e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 131.81143512809564,
+    "descarga_real_MWh": 131.4807001411657
+  },
+  {
+    "dia": 19,
+    "t0": 432,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 7.926624955437835e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 179.48634047094197,
+    "descarga_real_MWh": 204.55997891216106
+  },
+  {
+    "dia": 20,
+    "t0": 456,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.914437819499492e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 202.79111414979468,
+    "descarga_real_MWh": 206.21315930447892
+  },
+  {
+    "dia": 21,
+    "t0": 480,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.811297078286643e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 155.74018533970263,
+    "descarga_real_MWh": 155.8250435129698
+  },
+  {
+    "dia": 22,
+    "t0": 504,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.673565982358441e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 82.42126045863108,
+    "descarga_real_MWh": 69.69705123152976
+  },
+  {
+    "dia": 23,
+    "t0": 528,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.2871892915969316e-13,
+    "respaldos": 0,
+    "descarga_plan_MWh": 66.16664246741104,
+    "descarga_real_MWh": 71.46566832279473
+  },
+  {
+    "dia": 24,
+    "t0": 552,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.059439652708496e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 65.22002788599039,
+    "descarga_real_MWh": 75.74230729402332
+  },
+  {
+    "dia": 25,
+    "t0": 576,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.1144157607199503e-08,
+    "respaldos": 0,
+    "descarga_plan_MWh": 84.08521899891406,
+    "descarga_real_MWh": 79.9384943188648
+  },
+  {
+    "dia": 26,
+    "t0": 600,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.685358164415339e-12,
+    "respaldos": 0,
+    "descarga_plan_MWh": 65.0719246825995,
+    "descarga_real_MWh": 66.56393540372662
+  },
+  {
+    "dia": 27,
+    "t0": 624,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.278737907438033e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 127.6807977209195,
+    "descarga_real_MWh": 136.46434421771295
+  },
+  {
+    "dia": 28,
+    "t0": 648,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.979510418331685e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 171.18415269824928,
+    "descarga_real_MWh": 166.55856034421066
+  },
+  {
+    "dia": 29,
+    "t0": 672,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.238296595617212e-12,
+    "respaldos": 0,
+    "descarga_plan_MWh": 138.17997234395892,
+    "descarga_real_MWh": 141.9415116524815
+  },
+  {
+    "dia": 30,
+    "t0": 696,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.980241098206643e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 120.93872039950583,
+    "descarga_real_MWh": 111.35278878852876
+  },
+  {
+    "dia": 31,
+    "t0": 720,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.148809631692502e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 214.58822436459963,
+    "descarga_real_MWh": 218.32058516695307
+  },
+  {
+    "dia": 32,
+    "t0": 744,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.03842902134434e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 199.91139241015978,
+    "descarga_real_MWh": 209.75872514987194
+  },
+  {
+    "dia": 33,
+    "t0": 768,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.191622448751198e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 199.10391790724594,
+    "descarga_real_MWh": 192.59497291076082
+  },
+  {
+    "dia": 34,
+    "t0": 792,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.0678073863558706e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 192.95120964319472,
+    "descarga_real_MWh": 173.82343401025275
+  },
+  {
+    "dia": 35,
+    "t0": 816,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.502053928557202e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 89.63597571748414,
+    "descarga_real_MWh": 139.03393830596602
+  },
+  {
+    "dia": 36,
+    "t0": 840,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.5402929592581627e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 53.31935994200062,
+    "descarga_real_MWh": 49.983303492152615
+  },
+  {
+    "dia": 37,
+    "t0": 864,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.4392387744543304e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 55.53404724069261,
+    "descarga_real_MWh": 50.437071461359054
+  },
+  {
+    "dia": 38,
+    "t0": 888,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.902620634661389e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 171.16400793760533,
+    "descarga_real_MWh": 173.37659796887584
+  },
+  {
+    "dia": 39,
+    "t0": 912,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.167554329487088e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 191.74676776729007,
+    "descarga_real_MWh": 176.7895285198959
+  },
+  {
+    "dia": 40,
+    "t0": 936,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.1703013090380846e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 223.97704523127408,
+    "descarga_real_MWh": 222.347534853803
+  },
+  {
+    "dia": 41,
+    "t0": 960,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.1460182071628242e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 205.04376662132293,
+    "descarga_real_MWh": 205.1864037783488
+  },
+  {
+    "dia": 42,
+    "t0": 984,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.3633958049232132e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 158.14449869051424,
+    "descarga_real_MWh": 197.70693788317737
+  },
+  {
+    "dia": 43,
+    "t0": 1008,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.1792917234459043e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 123.43080688249053,
+    "descarga_real_MWh": 110.51817135228171
+  },
+  {
+    "dia": 44,
+    "t0": 1032,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.0460710934780224e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 184.8595401278647,
+    "descarga_real_MWh": 192.13615919534266
+  },
+  {
+    "dia": 45,
+    "t0": 1056,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.520044890270985e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 230.98901352881313,
+    "descarga_real_MWh": 220.75541209264512
+  },
+  {
+    "dia": 46,
+    "t0": 1080,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.2513028041415905e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 206.81008788854012,
+    "descarga_real_MWh": 210.29249618736054
+  },
+  {
+    "dia": 47,
+    "t0": 1104,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.2932529871032846e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 208.61059033416257,
+    "descarga_real_MWh": 209.37547819881138
+  },
+  {
+    "dia": 48,
+    "t0": 1128,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.548796102495885e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 199.25582548976675,
+    "descarga_real_MWh": 200.06555661482463
+  },
+  {
+    "dia": 49,
+    "t0": 1152,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.0421645451003916e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 207.81480602002586,
+    "descarga_real_MWh": 209.55736036627934
+  },
+  {
+    "dia": 50,
+    "t0": 1176,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.610446255473759e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 223.28666756103888,
+    "descarga_real_MWh": 220.49482135124003
+  },
+  {
+    "dia": 51,
+    "t0": 1200,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.640052309760959e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 220.4128976237724,
+    "descarga_real_MWh": 220.57615747190195
+  },
+  {
+    "dia": 52,
+    "t0": 1224,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.9240954003657417e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 188.3766799937736,
+    "descarga_real_MWh": 193.0572365423987
+  },
+  {
+    "dia": 53,
+    "t0": 1248,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.2656852908390352e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 207.41886145527963,
+    "descarga_real_MWh": 209.99441787455777
+  },
+  {
+    "dia": 54,
+    "t0": 1272,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.556981123338895e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 233.4882474158333,
+    "descarga_real_MWh": 234.00462629859598
+  },
+  {
+    "dia": 55,
+    "t0": 1296,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.8923037336772365e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 188.9931374519377,
+    "descarga_real_MWh": 189.09144827865657
+  },
+  {
+    "dia": 56,
+    "t0": 1320,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.9614008069759852e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 211.68786973176913,
+    "descarga_real_MWh": 215.10520142237473
+  },
+  {
+    "dia": 57,
+    "t0": 1344,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.9747530681662716e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 188.7787820422811,
+    "descarga_real_MWh": 209.3889325694105
+  },
+  {
+    "dia": 58,
+    "t0": 1368,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.287374028550232e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 153.7388075196205,
+    "descarga_real_MWh": 177.41141591909022
+  },
+  {
+    "dia": 59,
+    "t0": 1392,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.825316778412539e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 144.87939892866703,
+    "descarga_real_MWh": 152.29033312628923
+  },
+  {
+    "dia": 60,
+    "t0": 1416,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.1020634878480637e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 213.89832891828047,
+    "descarga_real_MWh": 205.3532566195513
+  },
+  {
+    "dia": 61,
+    "t0": 1440,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.0857863335529456e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 216.38851876000496,
+    "descarga_real_MWh": 210.68929579748126
+  },
+  {
+    "dia": 62,
+    "t0": 1464,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.139076563131936e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 219.50177772934967,
+    "descarga_real_MWh": 221.80833666069333
+  },
+  {
+    "dia": 63,
+    "t0": 1488,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.416033328239308e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 203.93805447277168,
+    "descarga_real_MWh": 205.56412822398647
+  },
+  {
+    "dia": 64,
+    "t0": 1512,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.721928588815456e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 208.15699019555632,
+    "descarga_real_MWh": 211.61318835923004
+  },
+  {
+    "dia": 65,
+    "t0": 1536,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.7238302161049975e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 216.90307441913302,
+    "descarga_real_MWh": 216.3773902748286
+  },
+  {
+    "dia": 66,
+    "t0": 1560,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.3304668168310794e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 182.6977094764047,
+    "descarga_real_MWh": 182.45524049032306
+  },
+  {
+    "dia": 67,
+    "t0": 1584,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.0333694722030982e-13,
+    "respaldos": 0,
+    "descarga_plan_MWh": 120.14925305460591,
+    "descarga_real_MWh": 142.3631096387955
+  },
+  {
+    "dia": 68,
+    "t0": 1608,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.2025464171149567e-08,
+    "respaldos": 0,
+    "descarga_plan_MWh": 68.44717039661236,
+    "descarga_real_MWh": 103.79547544463054
+  },
+  {
+    "dia": 69,
+    "t0": 1632,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.2007231629040492e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 77.94759749317677,
+    "descarga_real_MWh": 100.73076036283956
+  },
+  {
+    "dia": 70,
+    "t0": 1656,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.021590371787497e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 139.1716433569456,
+    "descarga_real_MWh": 140.33206217410486
+  },
+  {
+    "dia": 71,
+    "t0": 1680,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.339159534194521e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 216.20857600202086,
+    "descarga_real_MWh": 213.18369132623167
+  },
+  {
+    "dia": 72,
+    "t0": 1704,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.966165671924727e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 205.481347450405,
+    "descarga_real_MWh": 207.99430064680513
+  },
+  {
+    "dia": 73,
+    "t0": 1728,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.9907103317514698e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 214.9527313254243,
+    "descarga_real_MWh": 207.40390441539705
+  },
+  {
+    "dia": 74,
+    "t0": 1752,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.2931600347486338e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 220.1791972971705,
+    "descarga_real_MWh": 219.94473978612362
+  },
+  {
+    "dia": 75,
+    "t0": 1776,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.3395689263564484e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 203.7448780919873,
+    "descarga_real_MWh": 207.6829275203294
+  },
+  {
+    "dia": 76,
+    "t0": 1800,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.637329005484114e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 152.9009801894891,
+    "descarga_real_MWh": 167.09905229528079
+  },
+  {
+    "dia": 77,
+    "t0": 1824,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.942833508606571e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 74.37580501618237,
+    "descarga_real_MWh": 74.43967409835332
+  },
+  {
+    "dia": 78,
+    "t0": 1848,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.575736415267759e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 60.577191636046976,
+    "descarga_real_MWh": 73.12969430486862
+  },
+  {
+    "dia": 79,
+    "t0": 1872,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.3988323625857634e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 150.61753609551482,
+    "descarga_real_MWh": 156.92291854051945
+  },
+  {
+    "dia": 80,
+    "t0": 1896,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.0306866856939605e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 164.55619870007743,
+    "descarga_real_MWh": 182.11516489969512
+  },
+  {
+    "dia": 81,
+    "t0": 1920,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.911046695457334e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 213.65369102368015,
+    "descarga_real_MWh": 203.51927124307642
+  },
+  {
+    "dia": 82,
+    "t0": 1944,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.5662931804709274e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 202.73242071775985,
+    "descarga_real_MWh": 175.03761728588503
+  },
+  {
+    "dia": 83,
+    "t0": 1968,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.096888336894193e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 178.40290021063444,
+    "descarga_real_MWh": 211.84027939138392
+  },
+  {
+    "dia": 84,
+    "t0": 1992,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.875143495448386e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 209.90557291899745,
+    "descarga_real_MWh": 194.88178754117058
+  },
+  {
+    "dia": 85,
+    "t0": 2016,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.78319447754344e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 181.61531677366236,
+    "descarga_real_MWh": 191.6679434287094
+  },
+  {
+    "dia": 86,
+    "t0": 2040,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.0316965035380886e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 223.90169161409898,
+    "descarga_real_MWh": 228.4459004170023
+  },
+  {
+    "dia": 87,
+    "t0": 2064,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.9979952483754133e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 131.36344842877725,
+    "descarga_real_MWh": 116.63910692783357
+  },
+  {
+    "dia": 88,
+    "t0": 2088,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.737824930035862e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 139.11486109386902,
+    "descarga_real_MWh": 186.55885936937506
+  },
+  {
+    "dia": 89,
+    "t0": 2112,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.0210205385504126e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 108.86373677270012,
+    "descarga_real_MWh": 110.56858451847592
+  },
+  {
+    "dia": 90,
+    "t0": 2136,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.406308695571029e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 232.48597657780826,
+    "descarga_real_MWh": 224.25094876634375
+  },
+  {
+    "dia": 91,
+    "t0": 2160,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 7.574472762013976e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 189.80744688391206,
+    "descarga_real_MWh": 192.31970680977716
+  },
+  {
+    "dia": 92,
+    "t0": 2184,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.627900248518591e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 99.15633381241625,
+    "descarga_real_MWh": 106.78918249134222
+  },
+  {
+    "dia": 93,
+    "t0": 2208,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.08415207993595e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 150.76144222677857,
+    "descarga_real_MWh": 171.94274977002402
+  },
+  {
+    "dia": 94,
+    "t0": 2232,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.029936235686565e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 193.6583131443349,
+    "descarga_real_MWh": 195.05367404382517
+  },
+  {
+    "dia": 95,
+    "t0": 2256,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.0966795526854178e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 208.7658954381535,
+    "descarga_real_MWh": 198.7877870326108
+  },
+  {
+    "dia": 96,
+    "t0": 2280,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.625732040890962e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 168.31754614877872,
+    "descarga_real_MWh": 177.0025067466841
+  },
+  {
+    "dia": 97,
+    "t0": 2304,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.1433121093577403e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 188.2037922311909,
+    "descarga_real_MWh": 206.52116813560949
+  },
+  {
+    "dia": 98,
+    "t0": 2328,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.4700127057833339e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 174.30754093101217,
+    "descarga_real_MWh": 168.85101833928746
+  },
+  {
+    "dia": 99,
+    "t0": 2352,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.684231921899005e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 102.21192899783483,
+    "descarga_real_MWh": 150.84709479876386
+  },
+  {
+    "dia": 100,
+    "t0": 2376,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.2889889448087648e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 74.94020708807344,
+    "descarga_real_MWh": 5.46
+  },
+  {
+    "dia": 101,
+    "t0": 2400,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.015542842734088e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 73.90230417201386,
+    "descarga_real_MWh": 9.83999999999993
+  },
+  {
+    "dia": 102,
+    "t0": 2424,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 78.74323266154572,
+    "descarga_real_MWh": 149.7856639060504
+  },
+  {
+    "dia": 103,
+    "t0": 2448,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.111701134849418e-08,
+    "respaldos": 0,
+    "descarga_plan_MWh": 110.43966493025124,
+    "descarga_real_MWh": 157.95635699535086
+  },
+  {
+    "dia": 104,
+    "t0": 2472,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.4793456590645753e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 57.81823052751035,
+    "descarga_real_MWh": 74.57980600344396
+  },
+  {
+    "dia": 105,
+    "t0": 2496,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.632775335996127e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 111.74635724053022,
+    "descarga_real_MWh": 108.54851231659447
+  },
+  {
+    "dia": 106,
+    "t0": 2520,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.4025594886174288e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 143.62644664102686,
+    "descarga_real_MWh": 179.9003288968632
+  },
+  {
+    "dia": 107,
+    "t0": 2544,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.5526849298405662e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 184.05644554142827,
+    "descarga_real_MWh": 173.36598274123511
+  },
+  {
+    "dia": 108,
+    "t0": 2568,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.6560761105980909e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 193.91833140175981,
+    "descarga_real_MWh": 194.74358298603062
+  },
+  {
+    "dia": 109,
+    "t0": 2592,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.2854173337241194e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 183.0793999992415,
+    "descarga_real_MWh": 212.21558678117944
+  },
+  {
+    "dia": 110,
+    "t0": 2616,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.126372518992934e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 126.09985231139692,
+    "descarga_real_MWh": 122.72192014891007
+  },
+  {
+    "dia": 111,
+    "t0": 2640,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.377474436927365e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 119.25402928072648,
+    "descarga_real_MWh": 119.14761142732817
+  },
+  {
+    "dia": 112,
+    "t0": 2664,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.1093870987674577e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 211.80150749218842,
+    "descarga_real_MWh": 210.27198723695255
+  },
+  {
+    "dia": 113,
+    "t0": 2688,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.357809696402486e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 199.4272238199986,
+    "descarga_real_MWh": 217.79585945761016
+  },
+  {
+    "dia": 114,
+    "t0": 2712,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.975591665413342e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 200.84884069404006,
+    "descarga_real_MWh": 188.74324382515897
+  },
+  {
+    "dia": 115,
+    "t0": 2736,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.798049491946492e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 209.96764727469582,
+    "descarga_real_MWh": 218.1231796994155
+  },
+  {
+    "dia": 116,
+    "t0": 2760,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.5209633498290536e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 192.99127107921245,
+    "descarga_real_MWh": 200.0409226999829
+  },
+  {
+    "dia": 117,
+    "t0": 2784,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.233327479072406e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 176.18580186989135,
+    "descarga_real_MWh": 157.22068564575625
+  },
+  {
+    "dia": 118,
+    "t0": 2808,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.3567309601687784e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 160.96291447497893,
+    "descarga_real_MWh": 205.02976045193554
+  },
+  {
+    "dia": 119,
+    "t0": 2832,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.2822843736913588e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 161.80718576172768,
+    "descarga_real_MWh": 157.86415599258487
+  },
+  {
+    "dia": 120,
+    "t0": 2856,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 7.096505314898673e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 198.11117216705503,
+    "descarga_real_MWh": 194.06421612939022
+  },
+  {
+    "dia": 121,
+    "t0": 2880,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.194865046405157e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 167.59671653382972,
+    "descarga_real_MWh": 192.1667793472287
+  },
+  {
+    "dia": 122,
+    "t0": 2904,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.2551474750203155e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 213.04459357001173,
+    "descarga_real_MWh": 198.6856430404554
+  },
+  {
+    "dia": 123,
+    "t0": 2928,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.10372818214162e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 158.697488380013,
+    "descarga_real_MWh": 173.6144703653526
+  },
+  {
+    "dia": 124,
+    "t0": 2952,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.7307592948515817e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 162.4379112620795,
+    "descarga_real_MWh": 152.01381040261154
+  },
+  {
+    "dia": 125,
+    "t0": 2976,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.7871693321808908e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 199.61817519208955,
+    "descarga_real_MWh": 207.2098193393304
+  },
+  {
+    "dia": 126,
+    "t0": 3000,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.2242552064606214e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 209.9017850638727,
+    "descarga_real_MWh": 214.30181448329392
+  },
+  {
+    "dia": 127,
+    "t0": 3024,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.381226046821166e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 178.0183767869368,
+    "descarga_real_MWh": 161.48378889550384
+  },
+  {
+    "dia": 128,
+    "t0": 3048,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.512174852902488e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 170.68524400997472,
+    "descarga_real_MWh": 153.65641331922475
+  },
+  {
+    "dia": 129,
+    "t0": 3072,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.0841875432871056e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 68.45487938675,
+    "descarga_real_MWh": 79.6577251632184
+  },
+  {
+    "dia": 130,
+    "t0": 3096,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.4182681909691473e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 55.781606605526434,
+    "descarga_real_MWh": 63.76234692199664
+  },
+  {
+    "dia": 131,
+    "t0": 3120,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.6170449378984123e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 113.90942086142121,
+    "descarga_real_MWh": 118.45111643126361
+  },
+  {
+    "dia": 132,
+    "t0": 3144,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.6916945074437978e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 163.95585209072783,
+    "descarga_real_MWh": 176.49371829884166
+  },
+  {
+    "dia": 133,
+    "t0": 3168,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.612952853461397e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 196.07582061278143,
+    "descarga_real_MWh": 190.25699768173402
+  },
+  {
+    "dia": 134,
+    "t0": 3192,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 194.0616037629681,
+    "descarga_real_MWh": 198.01161178758042
+  },
+  {
+    "dia": 135,
+    "t0": 3216,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.860333735051772e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 171.05605899373066,
+    "descarga_real_MWh": 184.25456257964981
+  },
+  {
+    "dia": 136,
+    "t0": 3240,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 194.617453507195,
+    "descarga_real_MWh": 195.98252269362362
+  },
+  {
+    "dia": 137,
+    "t0": 3264,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.0843200002704642e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 194.9374862447027,
+    "descarga_real_MWh": 205.54387306861628
+  },
+  {
+    "dia": 138,
+    "t0": 3288,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 195.03836642675128,
+    "descarga_real_MWh": 192.1166412221379
+  },
+  {
+    "dia": 139,
+    "t0": 3312,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 188.54725228909584,
+    "descarga_real_MWh": 184.5316444146948
+  },
+  {
+    "dia": 140,
+    "t0": 3336,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 188.22282783276606,
+    "descarga_real_MWh": 191.91401125083735
+  },
+  {
+    "dia": 141,
+    "t0": 3360,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 196.69201772049743,
+    "descarga_real_MWh": 217.325604193828
+  },
+  {
+    "dia": 142,
+    "t0": 3384,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.164946224189281e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 203.71717563442917,
+    "descarga_real_MWh": 195.96334206385285
+  },
+  {
+    "dia": 143,
+    "t0": 3408,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.561077117685894e-13,
+    "respaldos": 0,
+    "descarga_plan_MWh": 179.36200023412556,
+    "descarga_real_MWh": 177.5509799936955
+  },
+  {
+    "dia": 144,
+    "t0": 3432,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 189.0952732956742,
+    "descarga_real_MWh": 188.7646010329657
+  },
+  {
+    "dia": 145,
+    "t0": 3456,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 189.0696642352412,
+    "descarga_real_MWh": 194.82236573076977
+  },
+  {
+    "dia": 146,
+    "t0": 3480,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.3607352983614148e-13,
+    "respaldos": 0,
+    "descarga_plan_MWh": 183.47692563245295,
+    "descarga_real_MWh": 192.81812577072958
+  },
+  {
+    "dia": 147,
+    "t0": 3504,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.4419054627727107e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 136.0324052639442,
+    "descarga_real_MWh": 142.32542271500117
+  },
+  {
+    "dia": 148,
+    "t0": 3528,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.3733565328235775e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 82.409501987684,
+    "descarga_real_MWh": 83.88579332044227
+  },
+  {
+    "dia": 149,
+    "t0": 3552,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.090420993611096e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 103.39900308567749,
+    "descarga_real_MWh": 101.62304303076507
+  },
+  {
+    "dia": 150,
+    "t0": 3576,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.1838681158728383e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 114.34524637586577,
+    "descarga_real_MWh": 138.5458840560719
+  },
+  {
+    "dia": 151,
+    "t0": 3600,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 142.49404406495375,
+    "descarga_real_MWh": 134.3877842004789
+  },
+  {
+    "dia": 152,
+    "t0": 3624,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 188.20575024938452,
+    "descarga_real_MWh": 195.72618588232461
+  },
+  {
+    "dia": 153,
+    "t0": 3648,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.3855600325959268e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 145.32401712267097,
+    "descarga_real_MWh": 146.43100514133
+  },
+  {
+    "dia": 154,
+    "t0": 3672,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.604952309506583e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 91.84538152305853,
+    "descarga_real_MWh": 107.48643750742235
+  },
+  {
+    "dia": 155,
+    "t0": 3696,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.044249586563318e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 77.93606256306808,
+    "descarga_real_MWh": 89.47386700934356
+  },
+  {
+    "dia": 156,
+    "t0": 3720,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.4062893707964913e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 151.26464183781832,
+    "descarga_real_MWh": 148.59548187427015
+  },
+  {
+    "dia": 157,
+    "t0": 3744,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.5630364416943935e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 193.36588333171028,
+    "descarga_real_MWh": 195.6667026266425
+  },
+  {
+    "dia": 158,
+    "t0": 3768,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.0267568093005563e-13,
+    "respaldos": 0,
+    "descarga_plan_MWh": 163.35065886935877,
+    "descarga_real_MWh": 172.70178619234588
+  },
+  {
+    "dia": 159,
+    "t0": 3792,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.2599762137900055e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 99.96197386233476,
+    "descarga_real_MWh": 96.8122977945722
+  },
+  {
+    "dia": 160,
+    "t0": 3816,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.770585883939974e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 131.91446362541504,
+    "descarga_real_MWh": 156.02291395763555
+  },
+  {
+    "dia": 161,
+    "t0": 3840,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.4051110690238665e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 114.3235334533334,
+    "descarga_real_MWh": 147.41802535989757
+  },
+  {
+    "dia": 162,
+    "t0": 3864,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.3098076323885713e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 199.66335703891775,
+    "descarga_real_MWh": 207.77678317945015
+  },
+  {
+    "dia": 163,
+    "t0": 3888,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.197271982282834e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 182.07372011338953,
+    "descarga_real_MWh": 172.27760671124636
+  },
+  {
+    "dia": 164,
+    "t0": 3912,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.107451766542756e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 171.64050780110986,
+    "descarga_real_MWh": 147.03667592152522
+  },
+  {
+    "dia": 165,
+    "t0": 3936,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.034065299086567e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 181.6751044858216,
+    "descarga_real_MWh": 171.9044016787966
+  },
+  {
+    "dia": 166,
+    "t0": 3960,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.928837903886781e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 94.70747749168025,
+    "descarga_real_MWh": 110.66143042705113
+  },
+  {
+    "dia": 167,
+    "t0": 3984,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.7308077931418152e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 126.33373462013364,
+    "descarga_real_MWh": 128.5284375047489
+  },
+  {
+    "dia": 168,
+    "t0": 4008,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 200.68658479172933,
+    "descarga_real_MWh": 206.09603056822556
+  },
+  {
+    "dia": 169,
+    "t0": 4032,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.571204867186811e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 187.0979884259952,
+    "descarga_real_MWh": 204.5829978999828
+  },
+  {
+    "dia": 170,
+    "t0": 4056,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.9024227703153603e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 136.11831094462445,
+    "descarga_real_MWh": 146.50741060654227
+  },
+  {
+    "dia": 171,
+    "t0": 4080,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.5362889565700302e-13,
+    "respaldos": 0,
+    "descarga_plan_MWh": 80.91665746917188,
+    "descarga_real_MWh": 114.22102407981315
+  },
+  {
+    "dia": 172,
+    "t0": 4104,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.580963615864637e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 110.29294926228636,
+    "descarga_real_MWh": 112.11741919545756
+  },
+  {
+    "dia": 173,
+    "t0": 4128,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.556717212230292e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 178.14730249792157,
+    "descarga_real_MWh": 178.8645985716155
+  },
+  {
+    "dia": 174,
+    "t0": 4152,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.7400892323092177e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 125.67749281566468,
+    "descarga_real_MWh": 149.12971920452281
+  },
+  {
+    "dia": 175,
+    "t0": 4176,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.3629962639998884e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 156.55729507368474,
+    "descarga_real_MWh": 153.3307579348209
+  },
+  {
+    "dia": 176,
+    "t0": 4200,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.162438767602192e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 199.269738400905,
+    "descarga_real_MWh": 185.68142466065115
+  },
+  {
+    "dia": 177,
+    "t0": 4224,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.046029972457252e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 163.72849823459308,
+    "descarga_real_MWh": 174.50644690889555
+  },
+  {
+    "dia": 178,
+    "t0": 4248,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.356845784627976e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 125.03362091044319,
+    "descarga_real_MWh": 125.47466909468855
+  },
+  {
+    "dia": 179,
+    "t0": 4272,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.0952822063658875e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 55.30373312362992,
+    "descarga_real_MWh": 45.42955711740679
+  },
+  {
+    "dia": 180,
+    "t0": 4296,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.939507695706429e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 136.0883020377496,
+    "descarga_real_MWh": 134.98744852308073
+  },
+  {
+    "dia": 181,
+    "t0": 4320,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.038191022473863e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 177.8899411799813,
+    "descarga_real_MWh": 176.89600980331375
+  },
+  {
+    "dia": 182,
+    "t0": 4344,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 162.93378743967423,
+    "descarga_real_MWh": 165.4713628840035
+  },
+  {
+    "dia": 183,
+    "t0": 4368,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.1416737098856902e-12,
+    "respaldos": 0,
+    "descarga_plan_MWh": 197.52930864479714,
+    "descarga_real_MWh": 199.30113550613711
+  },
+  {
+    "dia": 184,
+    "t0": 4392,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.582001200729181e-13,
+    "respaldos": 0,
+    "descarga_plan_MWh": 192.20132934391253,
+    "descarga_real_MWh": 189.48275937538747
+  },
+  {
+    "dia": 185,
+    "t0": 4416,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.2244045807683957e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 169.22343097736797,
+    "descarga_real_MWh": 187.9859693238272
+  },
+  {
+    "dia": 186,
+    "t0": 4440,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.021397108252728e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 159.24058258563818,
+    "descarga_real_MWh": 159.9543184726507
+  },
+  {
+    "dia": 187,
+    "t0": 4464,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.776851816558322e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 143.5314450858848,
+    "descarga_real_MWh": 169.56090743212843
+  },
+  {
+    "dia": 188,
+    "t0": 4488,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.059188970602094e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 161.63863158642448,
+    "descarga_real_MWh": 163.92241584062538
+  },
+  {
+    "dia": 189,
+    "t0": 4512,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.7326516663285605e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 167.24280475152273,
+    "descarga_real_MWh": 169.22822291441958
+  },
+  {
+    "dia": 190,
+    "t0": 4536,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.4774324810162158e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 192.1976199908264,
+    "descarga_real_MWh": 206.80860968908817
+  },
+  {
+    "dia": 191,
+    "t0": 4560,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.3613524303881946e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 106.5300970882606,
+    "descarga_real_MWh": 120.36876386675229
+  },
+  {
+    "dia": 192,
+    "t0": 4584,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 7.227945743073743e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 123.92881220875122,
+    "descarga_real_MWh": 136.32314944950798
+  },
+  {
+    "dia": 193,
+    "t0": 4608,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.116383943412677e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 196.58917237826864,
+    "descarga_real_MWh": 198.6113282805165
+  },
+  {
+    "dia": 194,
+    "t0": 4632,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.041814551647776e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 159.6138335569197,
+    "descarga_real_MWh": 164.67772159993848
+  },
+  {
+    "dia": 195,
+    "t0": 4656,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 7.522668625549836e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 112.55049420540777,
+    "descarga_real_MWh": 103.93053194007197
+  },
+  {
+    "dia": 196,
+    "t0": 4680,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.4099918062539164e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 159.37484590019318,
+    "descarga_real_MWh": 156.2870310468268
+  },
+  {
+    "dia": 197,
+    "t0": 4704,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.1888311350502e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 147.20487070598986,
+    "descarga_real_MWh": 167.34555323567093
+  },
+  {
+    "dia": 198,
+    "t0": 4728,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.5521792080417907e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 179.21467174348027,
+    "descarga_real_MWh": 189.6347393006095
+  },
+  {
+    "dia": 199,
+    "t0": 4752,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.867122144638476e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 154.72378470352436,
+    "descarga_real_MWh": 167.99919936893903
+  },
+  {
+    "dia": 200,
+    "t0": 4776,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.637073781375019e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 110.07464457830677,
+    "descarga_real_MWh": 118.70302907452036
+  },
+  {
+    "dia": 201,
+    "t0": 4800,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.467028767712022e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 58.942153647994374,
+    "descarga_real_MWh": 74.31208041660878
+  },
+  {
+    "dia": 202,
+    "t0": 4824,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.336542578944271e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 135.4736409151717,
+    "descarga_real_MWh": 130.27498677524977
+  },
+  {
+    "dia": 203,
+    "t0": 4848,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.080165177907981e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 203.699644939988,
+    "descarga_real_MWh": 204.81555893071865
+  },
+  {
+    "dia": 204,
+    "t0": 4872,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.108511993254715e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 136.6598330145085,
+    "descarga_real_MWh": 153.02759751886705
+  },
+  {
+    "dia": 205,
+    "t0": 4896,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.4410852079433722e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 110.55648961217237,
+    "descarga_real_MWh": 114.37336641564521
+  },
+  {
+    "dia": 206,
+    "t0": 4920,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.16938459110352e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 176.42225191742799,
+    "descarga_real_MWh": 171.65598322169296
+  },
+  {
+    "dia": 207,
+    "t0": 4944,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.1368992558877694e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 172.69341735430788,
+    "descarga_real_MWh": 170.0525345020809
+  },
+  {
+    "dia": 208,
+    "t0": 4968,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.204866911195748e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 132.66364293356253,
+    "descarga_real_MWh": 135.16761427832216
+  },
+  {
+    "dia": 209,
+    "t0": 4992,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.826269561716673e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 139.88646082341174,
+    "descarga_real_MWh": 147.38076713203816
+  },
+  {
+    "dia": 210,
+    "t0": 5016,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.954196035102378e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 152.49359832325106,
+    "descarga_real_MWh": 157.5775542316558
+  },
+  {
+    "dia": 211,
+    "t0": 5040,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.988382934384604e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 170.46654986221296,
+    "descarga_real_MWh": 172.86952830706034
+  },
+  {
+    "dia": 212,
+    "t0": 5064,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.3141618301273078e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 154.86296933271086,
+    "descarga_real_MWh": 164.8941265796303
+  },
+  {
+    "dia": 213,
+    "t0": 5088,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.274282513293374e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 137.4665364438688,
+    "descarga_real_MWh": 154.24241666539456
+  },
+  {
+    "dia": 214,
+    "t0": 5112,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.1198777646750222e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 177.7063442152569,
+    "descarga_real_MWh": 168.302816324638
+  },
+  {
+    "dia": 215,
+    "t0": 5136,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.6968564170206173e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 194.65276282409855,
+    "descarga_real_MWh": 194.5477758344691
+  },
+  {
+    "dia": 216,
+    "t0": 5160,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.6830179170024665e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 209.72399375054826,
+    "descarga_real_MWh": 211.42504828447994
+  },
+  {
+    "dia": 217,
+    "t0": 5184,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.1695835889497825e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 169.51518860515344,
+    "descarga_real_MWh": 180.4965748100124
+  },
+  {
+    "dia": 218,
+    "t0": 5208,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.5530682149551784e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 164.77371788211707,
+    "descarga_real_MWh": 176.36245430131754
+  },
+  {
+    "dia": 219,
+    "t0": 5232,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.73544018534365e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 111.9342760580841,
+    "descarga_real_MWh": 155.67978253465225
+  },
+  {
+    "dia": 220,
+    "t0": 5256,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.3765932399318057e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 116.87483644212969,
+    "descarga_real_MWh": 126.64931808703317
+  },
+  {
+    "dia": 221,
+    "t0": 5280,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.8941522819464486e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 168.37727771794485,
+    "descarga_real_MWh": 170.34659210166708
+  },
+  {
+    "dia": 222,
+    "t0": 5304,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.535430827871566e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 123.78088386975796,
+    "descarga_real_MWh": 141.48694425860134
+  },
+  {
+    "dia": 223,
+    "t0": 5328,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.3778523675324006e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 131.78170899750063,
+    "descarga_real_MWh": 139.38305913885887
+  },
+  {
+    "dia": 224,
+    "t0": 5352,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.398623071423739e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 127.06092799322755,
+    "descarga_real_MWh": 123.82897304089266
+  },
+  {
+    "dia": 225,
+    "t0": 5376,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.920167694356391e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 139.47589278404828,
+    "descarga_real_MWh": 115.01750977241849
+  },
+  {
+    "dia": 226,
+    "t0": 5400,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.1815333472880462e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 213.0265084318403,
+    "descarga_real_MWh": 218.31137107833825
+  },
+  {
+    "dia": 227,
+    "t0": 5424,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.844657666314373e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 117.9975101374277,
+    "descarga_real_MWh": 167.53369789517245
+  },
+  {
+    "dia": 228,
+    "t0": 5448,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.765842776681045e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 158.11083734694174,
+    "descarga_real_MWh": 163.99544658631964
+  },
+  {
+    "dia": 229,
+    "t0": 5472,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.662964146036188e-08,
+    "respaldos": 0,
+    "descarga_plan_MWh": 103.35270848260834,
+    "descarga_real_MWh": 101.2713985183006
+  },
+  {
+    "dia": 230,
+    "t0": 5496,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.5872266987135234e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 152.72900567213833,
+    "descarga_real_MWh": 154.67454876174065
+  },
+  {
+    "dia": 231,
+    "t0": 5520,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.96538350472756e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 174.0528555696261,
+    "descarga_real_MWh": 183.63171855026462
+  },
+  {
+    "dia": 232,
+    "t0": 5544,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.651936629964746e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 188.62997067222912,
+    "descarga_real_MWh": 170.29151677658172
+  },
+  {
+    "dia": 233,
+    "t0": 5568,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.2643722601150997e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 184.88114038759755,
+    "descarga_real_MWh": 186.08174250680108
+  },
+  {
+    "dia": 234,
+    "t0": 5592,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.8046998523086306e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 203.45591132949775,
+    "descarga_real_MWh": 199.762153680449
+  },
+  {
+    "dia": 235,
+    "t0": 5616,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.4459600081094365e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 207.74902703250592,
+    "descarga_real_MWh": 217.21943315397004
+  },
+  {
+    "dia": 236,
+    "t0": 5640,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.4324818536046778e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 140.24941210625434,
+    "descarga_real_MWh": 153.8177033505109
+  },
+  {
+    "dia": 237,
+    "t0": 5664,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.8470239951947123e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 167.7929995130176,
+    "descarga_real_MWh": 182.887234963421
+  },
+  {
+    "dia": 238,
+    "t0": 5688,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.6343734996658126e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 213.5865210464766,
+    "descarga_real_MWh": 185.80009983124688
+  },
+  {
+    "dia": 239,
+    "t0": 5712,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.0433400478652405e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 215.23587646701117,
+    "descarga_real_MWh": 214.30423771322774
+  },
+  {
+    "dia": 240,
+    "t0": 5736,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.846874931032314e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 168.2278236695238,
+    "descarga_real_MWh": 186.54248450777732
+  },
+  {
+    "dia": 241,
+    "t0": 5760,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 215.17423941552676,
+    "descarga_real_MWh": 193.2243732480107
+  },
+  {
+    "dia": 242,
+    "t0": 5784,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 199.1762715155976,
+    "descarga_real_MWh": 178.62416767312027
+  },
+  {
+    "dia": 243,
+    "t0": 5808,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 177.88873129914862,
+    "descarga_real_MWh": 177.15329492517697
+  },
+  {
+    "dia": 244,
+    "t0": 5832,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 0.0,
+    "respaldos": 0,
+    "descarga_plan_MWh": 180.70960940334984,
+    "descarga_real_MWh": 184.26592388152275
+  },
+  {
+    "dia": 245,
+    "t0": 5856,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.952678852425582e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 191.97121330756764,
+    "descarga_real_MWh": 202.2999947097885
+  },
+  {
+    "dia": 246,
+    "t0": 5880,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.383266630488882e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 191.76373321721331,
+    "descarga_real_MWh": 208.3049385532993
+  },
+  {
+    "dia": 247,
+    "t0": 5904,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.0295068519502308e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 176.84088999376303,
+    "descarga_real_MWh": 181.4203578417505
+  },
+  {
+    "dia": 248,
+    "t0": 5928,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.26925394097183e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 212.22389400712385,
+    "descarga_real_MWh": 208.35885634454587
+  },
+  {
+    "dia": 249,
+    "t0": 5952,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.664579611065223e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 213.31990109429637,
+    "descarga_real_MWh": 208.26417332187253
+  },
+  {
+    "dia": 250,
+    "t0": 5976,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.0588536833315212e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 211.33273272716227,
+    "descarga_real_MWh": 223.63760875602864
+  },
+  {
+    "dia": 251,
+    "t0": 6000,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.599093399020166e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 204.28857949410704,
+    "descarga_real_MWh": 213.02262574103062
+  },
+  {
+    "dia": 252,
+    "t0": 6024,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.448884704593945e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 195.65965065772755,
+    "descarga_real_MWh": 203.048136524445
+  },
+  {
+    "dia": 253,
+    "t0": 6048,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.3998236981142505e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 168.64691186341804,
+    "descarga_real_MWh": 203.11373490702744
+  },
+  {
+    "dia": 254,
+    "t0": 6072,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.180412050097215e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 197.28261267917657,
+    "descarga_real_MWh": 186.7953572335227
+  },
+  {
+    "dia": 255,
+    "t0": 6096,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.0472159484797678e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 212.02410916298385,
+    "descarga_real_MWh": 218.13707465461832
+  },
+  {
+    "dia": 256,
+    "t0": 6120,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.7955788188041623e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 175.5307582826298,
+    "descarga_real_MWh": 172.33817431311655
+  },
+  {
+    "dia": 257,
+    "t0": 6144,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.569115105354951e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 164.68146360077984,
+    "descarga_real_MWh": 188.95806446092
+  },
+  {
+    "dia": 258,
+    "t0": 6168,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.276398815663223e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 174.9910214214759,
+    "descarga_real_MWh": 163.21737726039902
+  },
+  {
+    "dia": 259,
+    "t0": 6192,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.6528158078922072e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 222.01983498344404,
+    "descarga_real_MWh": 209.80542646355718
+  },
+  {
+    "dia": 260,
+    "t0": 6216,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.1858663698029407e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 176.02447585838394,
+    "descarga_real_MWh": 174.91305220299785
+  },
+  {
+    "dia": 261,
+    "t0": 6240,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.7767741164364605e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 138.65812499966677,
+    "descarga_real_MWh": 161.04329424604506
+  },
+  {
+    "dia": 262,
+    "t0": 6264,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.4753006207965705e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 148.14108544543572,
+    "descarga_real_MWh": 140.92898577214072
+  },
+  {
+    "dia": 263,
+    "t0": 6288,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.408127134805381e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 235.49496592732277,
+    "descarga_real_MWh": 209.81691707468178
+  },
+  {
+    "dia": 264,
+    "t0": 6312,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.6327227872900378e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 187.46362679409543,
+    "descarga_real_MWh": 196.89802715136454
+  },
+  {
+    "dia": 265,
+    "t0": 6336,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.6601381698104985e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 207.55084554430297,
+    "descarga_real_MWh": 229.11026888968217
+  },
+  {
+    "dia": 266,
+    "t0": 6360,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.603222227853923e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 197.0385445694577,
+    "descarga_real_MWh": 191.13020426412925
+  },
+  {
+    "dia": 267,
+    "t0": 6384,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.2921168159758577e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 211.48121310852642,
+    "descarga_real_MWh": 219.17881034373033
+  },
+  {
+    "dia": 268,
+    "t0": 6408,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.652416700171511e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 126.51792098468309,
+    "descarga_real_MWh": 154.41300086049336
+  },
+  {
+    "dia": 269,
+    "t0": 6432,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.64967249474617e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 70.78914330322746,
+    "descarga_real_MWh": 73.66117674350315
+  },
+  {
+    "dia": 270,
+    "t0": 6456,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.352996138483594e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 115.08897040382857,
+    "descarga_real_MWh": 153.51536669913585
+  },
+  {
+    "dia": 271,
+    "t0": 6480,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.2121580839812082e-13,
+    "respaldos": 0,
+    "descarga_plan_MWh": 195.4457770267539,
+    "descarga_real_MWh": 197.06888064779184
+  },
+  {
+    "dia": 272,
+    "t0": 6504,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.9838328628820216e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 215.69837143797162,
+    "descarga_real_MWh": 207.66546200265844
+  },
+  {
+    "dia": 273,
+    "t0": 6528,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.0909015018979771e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 211.57352935682948,
+    "descarga_real_MWh": 206.62521634304784
+  },
+  {
+    "dia": 274,
+    "t0": 6552,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.5538859463985586e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 118.70922932257861,
+    "descarga_real_MWh": 167.6758516990668
+  },
+  {
+    "dia": 275,
+    "t0": 6576,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.132493040533579e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 148.4212133076152,
+    "descarga_real_MWh": 130.0235301607472
+  },
+  {
+    "dia": 276,
+    "t0": 6600,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.473114005737075e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 178.1212040584333,
+    "descarga_real_MWh": 187.15831044320703
+  },
+  {
+    "dia": 277,
+    "t0": 6624,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.6032034358704955e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 207.42485822326682,
+    "descarga_real_MWh": 212.8360305594332
+  },
+  {
+    "dia": 278,
+    "t0": 6648,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 7.53259494685445e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 130.70461324525684,
+    "descarga_real_MWh": 139.04172781001012
+  },
+  {
+    "dia": 279,
+    "t0": 6672,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.0342166928006064e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 87.8621845824507,
+    "descarga_real_MWh": 91.56658625083286
+  },
+  {
+    "dia": 280,
+    "t0": 6696,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 9.729391336248284e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 174.9920369942642,
+    "descarga_real_MWh": 169.62071093082844
+  },
+  {
+    "dia": 281,
+    "t0": 6720,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.042341229480938e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 156.5504353297984,
+    "descarga_real_MWh": 185.1374449732612
+  },
+  {
+    "dia": 282,
+    "t0": 6744,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.38565494209694e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 199.8755500718896,
+    "descarga_real_MWh": 192.83141355477176
+  },
+  {
+    "dia": 283,
+    "t0": 6768,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.0227730683118945e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 204.08022945591574,
+    "descarga_real_MWh": 195.91606523795195
+  },
+  {
+    "dia": 284,
+    "t0": 6792,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.6927425823314744e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 204.30149632820346,
+    "descarga_real_MWh": 217.90863054387682
+  },
+  {
+    "dia": 285,
+    "t0": 6816,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.9414421306753737e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 216.3066337267834,
+    "descarga_real_MWh": 207.70384127056985
+  },
+  {
+    "dia": 286,
+    "t0": 6840,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.6387232891589242e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 206.6477411744607,
+    "descarga_real_MWh": 193.6662568093393
+  },
+  {
+    "dia": 287,
+    "t0": 6864,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.606571373931805e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 214.4724091851922,
+    "descarga_real_MWh": 251.5632165732561
+  },
+  {
+    "dia": 288,
+    "t0": 6888,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.108483570565182e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 203.14719423303558,
+    "descarga_real_MWh": 197.69458130558996
+  },
+  {
+    "dia": 289,
+    "t0": 6912,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.1793161939969046e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 189.74170589227083,
+    "descarga_real_MWh": 189.76671792062226
+  },
+  {
+    "dia": 290,
+    "t0": 6936,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.238162009277715e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 237.29184795567002,
+    "descarga_real_MWh": 248.51765452850907
+  },
+  {
+    "dia": 291,
+    "t0": 6960,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.4088615296225471e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 190.7325734381041,
+    "descarga_real_MWh": 187.60198140014512
+  },
+  {
+    "dia": 292,
+    "t0": 6984,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.704465366783776e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 221.0469468723445,
+    "descarga_real_MWh": 230.19248411522264
+  },
+  {
+    "dia": 293,
+    "t0": 7008,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.070250160598867e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 97.56890100485339,
+    "descarga_real_MWh": 124.38449110728257
+  },
+  {
+    "dia": 294,
+    "t0": 7032,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.5552449666981918e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 119.82313533235077,
+    "descarga_real_MWh": 121.57309703556461
+  },
+  {
+    "dia": 295,
+    "t0": 7056,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.1642084603627604e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 198.0250986102667,
+    "descarga_real_MWh": 189.85414362282478
+  },
+  {
+    "dia": 296,
+    "t0": 7080,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.963554192937754e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 211.32303266463697,
+    "descarga_real_MWh": 210.02907716027966
+  },
+  {
+    "dia": 297,
+    "t0": 7104,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.3937923915179094e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 220.7660744881558,
+    "descarga_real_MWh": 239.6674578985456
+  },
+  {
+    "dia": 298,
+    "t0": 7128,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.874788948025988e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 186.10889794299078,
+    "descarga_real_MWh": 187.60952040243143
+  },
+  {
+    "dia": 299,
+    "t0": 7152,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.3408504901916796e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 207.1852620838579,
+    "descarga_real_MWh": 210.1737717589781
+  },
+  {
+    "dia": 300,
+    "t0": 7176,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.0257647052418833e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 214.41277215226097,
+    "descarga_real_MWh": 206.0833329960472
+  },
+  {
+    "dia": 301,
+    "t0": 7200,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.095967230651706e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 91.1086602753362,
+    "descarga_real_MWh": 124.38133639535594
+  },
+  {
+    "dia": 302,
+    "t0": 7224,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.447635396837706e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 111.6840291514174,
+    "descarga_real_MWh": 105.63093742638719
+  },
+  {
+    "dia": 303,
+    "t0": 7248,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.7245937944072077e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 207.82546118554097,
+    "descarga_real_MWh": 221.8106133387061
+  },
+  {
+    "dia": 304,
+    "t0": 7272,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.962079343782346e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 159.66592226136322,
+    "descarga_real_MWh": 177.04746417114575
+  },
+  {
+    "dia": 305,
+    "t0": 7296,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.550623143996259e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 168.4246681151323,
+    "descarga_real_MWh": 152.09589397783284
+  },
+  {
+    "dia": 306,
+    "t0": 7320,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 7.33300197999484e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 230.09973192424104,
+    "descarga_real_MWh": 224.94505123255723
+  },
+  {
+    "dia": 307,
+    "t0": 7344,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.049255207966889e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 197.12191160882895,
+    "descarga_real_MWh": 203.85982457881977
+  },
+  {
+    "dia": 308,
+    "t0": 7368,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.289756276470865e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 213.9944280782182,
+    "descarga_real_MWh": 232.66113362559892
+  },
+  {
+    "dia": 309,
+    "t0": 7392,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.2826020515842028e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 199.62999999999994,
+    "descarga_real_MWh": 199.62999999999994
+  },
+  {
+    "dia": 310,
+    "t0": 7416,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.687683518741643e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 192.90114599618374,
+    "descarga_real_MWh": 213.7550032163104
+  },
+  {
+    "dia": 311,
+    "t0": 7440,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.269336131009539e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 194.6031326100413,
+    "descarga_real_MWh": 192.1357006522964
+  },
+  {
+    "dia": 312,
+    "t0": 7464,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.155136313225816e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 220.62380375567565,
+    "descarga_real_MWh": 224.01663569616485
+  },
+  {
+    "dia": 313,
+    "t0": 7488,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.1030755394531232e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 178.42091204685292,
+    "descarga_real_MWh": 175.1206940894812
+  },
+  {
+    "dia": 314,
+    "t0": 7512,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.92261886495308e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 180.7022614974576,
+    "descarga_real_MWh": 195.89898283599715
+  },
+  {
+    "dia": 315,
+    "t0": 7536,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.683763681115333e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 196.36859046979936,
+    "descarga_real_MWh": 190.36115202746763
+  },
+  {
+    "dia": 316,
+    "t0": 7560,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.142217246540204e-07,
+    "respaldos": 0,
+    "descarga_plan_MWh": 112.02967203503289,
+    "descarga_real_MWh": 151.4144019020065
+  },
+  {
+    "dia": 317,
+    "t0": 7584,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.9199294189843263e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 48.39107971529529,
+    "descarga_real_MWh": 54.129240292451826
+  },
+  {
+    "dia": 318,
+    "t0": 7608,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.5784301385808365e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 158.734111437261,
+    "descarga_real_MWh": 170.45989768545257
+  },
+  {
+    "dia": 319,
+    "t0": 7632,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.31795033928328e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 195.22315944250352,
+    "descarga_real_MWh": 188.74099405153208
+  },
+  {
+    "dia": 320,
+    "t0": 7656,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.4986350516939472e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 195.37176695633224,
+    "descarga_real_MWh": 192.90361347085587
+  },
+  {
+    "dia": 321,
+    "t0": 7680,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.9305547230264133e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 207.6712066514366,
+    "descarga_real_MWh": 212.5966474849817
+  },
+  {
+    "dia": 322,
+    "t0": 7704,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.2589835754169085e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 203.80499212968093,
+    "descarga_real_MWh": 220.01210245272145
+  },
+  {
+    "dia": 323,
+    "t0": 7728,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.060956766081539e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 134.7879823422281,
+    "descarga_real_MWh": 157.05786389190837
+  },
+  {
+    "dia": 324,
+    "t0": 7752,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.1427071610715067e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 115.1775203438897,
+    "descarga_real_MWh": 107.2832032372227
+  },
+  {
+    "dia": 325,
+    "t0": 7776,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.6244373620661765e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 167.93584329462658,
+    "descarga_real_MWh": 180.4761132683795
+  },
+  {
+    "dia": 326,
+    "t0": 7800,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.2338850910289012e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 222.18669022384628,
+    "descarga_real_MWh": 217.4778749222864
+  },
+  {
+    "dia": 327,
+    "t0": 7824,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.992901785023136e-09,
+    "respaldos": 0,
+    "descarga_plan_MWh": 144.76696624576152,
+    "descarga_real_MWh": 183.21464400250426
+  },
+  {
+    "dia": 328,
+    "t0": 7848,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.015590049479213e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 175.98347412922016,
+    "descarga_real_MWh": 175.50095801545075
+  },
+  {
+    "dia": 329,
+    "t0": 7872,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.16426129591222e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 135.56850007681442,
+    "descarga_real_MWh": 155.62683314276373
+  },
+  {
+    "dia": 330,
+    "t0": 7896,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.1232550779587022e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 155.52221527719468,
+    "descarga_real_MWh": 160.85259296071354
+  },
+  {
+    "dia": 331,
+    "t0": 7920,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.49272219347577e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 200.0230347612835,
+    "descarga_real_MWh": 180.44844055178464
+  },
+  {
+    "dia": 332,
+    "t0": 7944,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 7.931577326372929e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 225.1876894254238,
+    "descarga_real_MWh": 253.2520132817889
+  },
+  {
+    "dia": 333,
+    "t0": 7968,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.883201269408584e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 186.1536442582393,
+    "descarga_real_MWh": 137.71750563885092
+  },
+  {
+    "dia": 334,
+    "t0": 7992,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.48259023773638e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 154.45187446121838,
+    "descarga_real_MWh": 251.9231600399595
+  },
+  {
+    "dia": 335,
+    "t0": 8016,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.1749045534929479e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 124.4136374972688,
+    "descarga_real_MWh": 120.9642302392862
+  },
+  {
+    "dia": 336,
+    "t0": 8040,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.4504805892387458e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 141.17371427526962,
+    "descarga_real_MWh": 144.75924608558404
+  },
+  {
+    "dia": 337,
+    "t0": 8064,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.025065836544469e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 62.59087560636139,
+    "descarga_real_MWh": 100.75320081106375
+  },
+  {
+    "dia": 338,
+    "t0": 8088,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.585259756373803e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 114.4729057553843,
+    "descarga_real_MWh": 105.24387694968925
+  },
+  {
+    "dia": 339,
+    "t0": 8112,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.3134263608529685e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 209.95659175965972,
+    "descarga_real_MWh": 200.17896195333043
+  },
+  {
+    "dia": 340,
+    "t0": 8136,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.5270194608371818e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 176.91599653469277,
+    "descarga_real_MWh": 168.6912681257848
+  },
+  {
+    "dia": 341,
+    "t0": 8160,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.6170638057764547e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 131.21130024790546,
+    "descarga_real_MWh": 151.66895453149147
+  },
+  {
+    "dia": 342,
+    "t0": 8184,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.9916797433330644e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 161.90533255793605,
+    "descarga_real_MWh": 161.93472263158137
+  },
+  {
+    "dia": 343,
+    "t0": 8208,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.2829466662363633e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 216.30988910818817,
+    "descarga_real_MWh": 219.00975190280636
+  },
+  {
+    "dia": 344,
+    "t0": 8232,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.6699705976033104e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 238.08159618307155,
+    "descarga_real_MWh": 235.97981739890008
+  },
+  {
+    "dia": 345,
+    "t0": 8256,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.6141157643139865e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 173.4214925915485,
+    "descarga_real_MWh": 185.59894121046608
+  },
+  {
+    "dia": 346,
+    "t0": 8280,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.462877347238244e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 175.51374357772391,
+    "descarga_real_MWh": 177.75086025149477
+  },
+  {
+    "dia": 347,
+    "t0": 8304,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.305458529086655e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 105.70174226175217,
+    "descarga_real_MWh": 141.8726757852716
+  },
+  {
+    "dia": 348,
+    "t0": 8328,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.9638382694852925e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 137.61121461876922,
+    "descarga_real_MWh": 138.80366808755764
+  },
+  {
+    "dia": 349,
+    "t0": 8352,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.1966512715404185e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 186.943444771019,
+    "descarga_real_MWh": 180.8137669544247
+  },
+  {
+    "dia": 350,
+    "t0": 8376,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.821491647925207e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 203.38280611708984,
+    "descarga_real_MWh": 207.949849806428
+  },
+  {
+    "dia": 351,
+    "t0": 8400,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.5426249036985206e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 187.79097200832757,
+    "descarga_real_MWh": 175.07216733953328
+  },
+  {
+    "dia": 352,
+    "t0": 8424,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 8.742536665397772e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 243.14668762626735,
+    "descarga_real_MWh": 248.79944259004787
+  },
+  {
+    "dia": 353,
+    "t0": 8448,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.39413827247127e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 189.9858837096719,
+    "descarga_real_MWh": 137.63613987889798
+  },
+  {
+    "dia": 354,
+    "t0": 8472,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.114111167780113e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 129.23598241892756,
+    "descarga_real_MWh": 179.2370272896838
+  },
+  {
+    "dia": 355,
+    "t0": 8496,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.5862738896394015e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 202.6691640909555,
+    "descarga_real_MWh": 201.37542162642654
+  },
+  {
+    "dia": 356,
+    "t0": 8520,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 3.2080312342788823e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 237.35384324913156,
+    "descarga_real_MWh": 232.2207887746918
+  },
+  {
+    "dia": 357,
+    "t0": 8544,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 6.306545371733416e-16,
+    "respaldos": 0,
+    "descarga_plan_MWh": 198.61125583611312,
+    "descarga_real_MWh": 192.63314750860945
+  },
+  {
+    "dia": 358,
+    "t0": 8568,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 5.046907908375358e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 209.89608454608708,
+    "descarga_real_MWh": 219.07441753398388
+  },
+  {
+    "dia": 359,
+    "t0": 8592,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 2.5013707459421122e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 207.7071395002337,
+    "descarga_real_MWh": 210.72211532375357
+  },
+  {
+    "dia": 360,
+    "t0": 8616,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.42294064564439e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 182.35379009582368,
+    "descarga_real_MWh": 177.04920725904444
+  },
+  {
+    "dia": 361,
+    "t0": 8640,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.9395629896305364e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 223.25882050790065,
+    "descarga_real_MWh": 240.96527677318187
+  },
+  {
+    "dia": 362,
+    "t0": 8664,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.2638910342246212e-13,
+    "respaldos": 0,
+    "descarga_plan_MWh": 205.8479291164943,
+    "descarga_real_MWh": 204.10266422815138
+  },
+  {
+    "dia": 363,
+    "t0": 8688,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 7.823418307374683e-15,
+    "respaldos": 0,
+    "descarga_plan_MWh": 212.9483507437497,
+    "descarga_real_MWh": 212.0545221542621
+  },
+  {
+    "dia": 364,
+    "t0": 8712,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 1.451160865442514e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 225.6967445589254,
+    "descarga_real_MWh": 222.57992971314127
+  },
+  {
+    "dia": 365,
+    "t0": 8736,
+    "condiciones": {
+      "ok/optimal": 24
+    },
+    "brecha": 4.158154372318009e-14,
+    "respaldos": 0,
+    "descarga_plan_MWh": 181.76221943722342,
+    "descarga_real_MWh": 189.09931199996464
+  }
+]

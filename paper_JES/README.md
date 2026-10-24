@@ -1,36 +1,35 @@
-# Artículo para el Journal of Energy Storage: experimentos adicionales y figuras
+# Journal of Energy Storage article: additional experiments and figures
 
-Material del artículo *Economic Comparison of Heuristic Dispatch Rules and
-Optimization Benchmarks for an Industrial Behind-the-Meter Energy System*
-(N. Barros, E. Ángel, S. Zapata; Universidad EIA). El estudio base (reglas,
-benchmarks MILP anuales, factorial integrado, VPN a 20 años y extensión de
-carbono) es el resto de este repositorio; esta carpeta agrega los experimentos
-corridos para el artículo y los scripts que dibujan sus figuras y las tablas del
-material suplementario.
+Material for the article *Economic Comparison of Heuristic Dispatch Rules and
+Optimization Benchmarks for an Industrial Behind-the-Meter Energy System*. The
+base study (rules, annual MILP benchmarks, integrated factorial, 20-year NPV and
+carbon extension) is the rest of this repository; this folder adds the
+experiments run for the article and the scripts that draw its figures and the
+tables of its supplementary material. The manuscript itself is not included.
 
-*English: R1–R3 experiments (rolling horizon, gas price, start-up charge), figure
-and supplementary-table scripts of the article. Run from the repository root.*
+## Contents
 
-## Contenido
-
-| Ruta | Contenido |
+| Path | Contents |
 |---|---|
-| `scripts/comun.py` | Utilidades comunes; reutiliza los módulos del repositorio sin modificarlos |
-| `scripts/r1_horizonte_rodante.py` | R1: MILP de horizonte rodante (RH-24, RH-24S, RH-48) sobre C280 |
-| `scripts/r23_sensibilidades.py` | R2: precio del gas (12, 16, 24 USD/MMBtu); R3: cargo por arranque (0, 500, 1.000 USD) |
-| `scripts/correr_refuerzos.py` | Lanza cada caso de R1–R3 en un proceso aparte; no repite los ya guardados |
-| `scripts/consolidar_refuerzos.py` | Consolida R1–R3 en CSV y en `RESUMEN.md` |
-| `scripts/figuras_jes.py` | Figuras y *graphical abstract* del artículo (PDF y PNG) |
-| `scripts/suplementario_jes.py` | Tablas LaTeX y figura S1 del material suplementario |
-| `fuentes/` | Tablas agregadas del estudio base que usan las figuras (distancias del factorial, resumen del VPN) |
-| `resultados_refuerzos/` | Resultados de R1–R3: trayectorias horarias (`.npz`), metadatos de cada caso (`.json`) y `consolidado/*.csv` |
+| `scripts/comun.py` | Shared utilities; reuses the repository modules without modifying them |
+| `scripts/r1_horizonte_rodante.py` | R1: rolling-horizon MILP (RH-24, RH-24S, RH-48) on C280 |
+| `scripts/r23_sensibilidades.py` | R2: gas price (12, 16, 24 USD/MMBtu); R3: start-up charge (0, 500, 1,000 USD) |
+| `scripts/r4_mpc_pronosticos.py` | R4: 48-h model predictive control (MPC-48) with forecasts ranging from perfect foresight to persistence (α = 0–1); hourly or daily re-optimization |
+| `scripts/correr_refuerzos.py` | Runs each R1–R3 case in a separate process; skips cases already saved |
+| `scripts/consolidar_refuerzos.py` | Consolidates R1–R4 into CSV files and `RESUMEN.md` |
+| `scripts/figuras_jes.py` | Article figures and graphical abstract (PDF and PNG) |
+| `scripts/suplementario_jes.py` | LaTeX tables and Fig. S1 of the supplementary material |
+| `fuentes/` | Aggregated base-study tables used by the figures (factorial distances, NPV summary) |
+| `resultados_refuerzos/` | R1–R4 results: hourly trajectories (`.npz`), per-case metadata (`.json`) and `consolidado/*.csv` |
 
-Los niveles base (gas a 20 USD/MMBtu, cargo por arranque de 100 USD) se leen de
-la corrida cerrada `resultados_correccion_numerica/20260920/` y no se recalculan.
+Base levels (gas at 20 USD/MMBtu, start-up charge of 100 USD) are read from the
+closed run `resultados_correccion_numerica/20260920/` and are not recomputed.
 
-## Nombres en el código
+## Names in the code
 
-| Artículo | Código |
+The code and its comments are in Spanish. Article names map to code names as follows:
+
+| Article | Code |
 |---|---|
 | C280 | `K3` |
 | FLAT / WMI | `T0` / `T1` |
@@ -38,33 +37,37 @@ la corrida cerrada `resultados_correccion_numerica/20260920/` y no se recalculan
 | OPT-B / OPT-X | `OPT_AB` / `OPT_D` |
 | Grid+Gas / PV-only | `RED_TERMICA` / `PV_SIN_BESS` |
 | RH-24 / RH-24S / RH-48 | `RH24` / `RH24A6` / `RH48` |
-| Conjuntos de acciones de OPT-B / OPT-X | `B` / `X` |
+| MPC-48 hourly / daily with slack / daily with plan | `MPC48H` / `MPC48S` / `MPC48` |
+| Action sets of OPT-B / OPT-X | `B` / `X` |
 
-## Reproducción
+## Reproduction
 
-Crear el entorno del repositorio (`requirements.txt`) y agregar `psutil`, que el
-coordinador usa para limitar la memoria. Desde la raíz del repositorio:
+Create the repository environment (`requirements.txt`) and add `psutil`, which
+the runner uses to limit memory. From the repository root:
 
 ```sh
-# Figuras y tablas del suplemento a partir de los resultados guardados
+# Figures and supplementary tables from the saved results
 .venv/bin/python paper_JES/scripts/figuras_jes.py
 .venv/bin/python paper_JES/scripts/suplementario_jes.py
 
-# Tablas consolidadas de R1–R3
+# Consolidated R1–R4 tables
 .venv/bin/python paper_JES/scripts/consolidar_refuerzos.py
 
-# Un caso: RH-48 con el conjunto B bajo FLAT, u OPT-B a 12 USD/MMBtu bajo FLAT
+# One case: RH-48 with action set B under FLAT, or OPT-B at 12 USD/MMBtu under FLAT
 .venv/bin/python paper_JES/scripts/r1_horizonte_rodante.py --caso 48 B T0
 .venv/bin/python paper_JES/scripts/r23_sensibilidades.py --caso R2 g12 T0 OPT_AB
+
+# R4: MPC-48 re-optimized every hour with pure persistence (α = 1) under FLAT (about 2 h)
+.venv/bin/python paper_JES/scripts/r4_mpc_pronosticos.py --caso 1 T0 --ejecucion horario
 ```
 
-`correr_refuerzos.py` repite el conjunto completo (90 trayectorias anuales; los
-benchmarks anuales usan HiGHS con un límite de 600 s, así que toma varias horas).
-Como no repite los casos presentes en `resultados_refuerzos/`, para recalcular
-todo hay que mover antes esa carpeta. Las salidas van a `paper_JES/manuscript/`
-y `paper_JES/resultados_refuerzos/`.
+`correr_refuerzos.py` reruns the full R1–R3 set (90 annual trajectories; the
+annual benchmarks use HiGHS with a 600 s limit, so it takes several hours).
+Because it skips cases already present in `resultados_refuerzos/`, move that
+folder first to recompute everything. Outputs go to `paper_JES/manuscript/` and
+`paper_JES/resultados_refuerzos/`.
 
-No se publican los registros de ejecución ni una primera versión descartada de
-RH-24S (sin el cierre seguro al final de la ventana; ver la sección S3 del
-material suplementario). No se divulgan la identidad ni la ubicación de la
-instalación industrial.
+Run logs and a discarded first version of RH-24S (without the conservative
+terminal condition; see Section S3 of the supplementary material) are not
+published. The identity and location of the industrial facility are not
+disclosed.

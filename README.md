@@ -102,7 +102,7 @@ baterias/
 ├── *.py                               biblioteca interna que importan los cuadernos
 ├── .build/                            biblioteca interna de los cuadernos 11, 14 y 15
 ├── resultados_*/                      resultados calculados que leen los cuadernos 08–15
-├── paper_JES/                         artículo para el Journal of Energy Storage: experimentos R1–R3,
+├── paper_JES/                         artículo para el Journal of Energy Storage: experimentos R1–R4,
 │                                      figuras y tablas del suplemento (ver paper_JES/README.md)
 └── figuras_*/                         figuras que generan los cuadernos
 ```

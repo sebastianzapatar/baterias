@@ -2,7 +2,7 @@
 
 Genera fragmentos LaTeX en manuscript/sup_tablas/ y la figura S1 en manuscript/figures/.
 Fuentes: series auditadas de K3 (20260920), CSV cerrados, resultados de carbono (malla 20260926),
-resultados R1–R3 y tablas de la tesis transcritas (etapa sin gas y extensión; valores en mil millones COP,
+resultados R1–R4 y tablas de la tesis transcritas (etapa sin gas y extensión; valores en mil millones COP,
 convertidos con TRM = 3.126,08 COP/USD).
 Uso: OperacionBESS/.venv/bin/python paper_JES/scripts/suplementario_jes.py
 """
@@ -123,9 +123,9 @@ def s3():
     escribir('S3_solver', filas)
     # Pertenencia de las trayectorias nuevas
     filas = []
-    for rf in ('R1', 'R2', 'R3'):
+    for rf in ('R1', 'R2', 'R3', 'R4'):
         js = [json.loads(p.read_text()) for p in sorted((REF / rf / 'casos').glob('R*.json')) if not p.name.endswith('_ventanas.json')]
-        js = [j for j in js if j['Caso'] in ('A_INT', 'B_INT', 'D_INT') or j['Caso'].startswith('RH')]
+        js = [j for j in js if j['Caso'] in ('A_INT', 'B_INT', 'D_INT') or j['Caso'].startswith(('RH', 'MPC'))]
         ok = sum(j.get('Pertenencia') == 'OK' for j in js)
         dif = max(j['Pertenencia_dif_objetivo_USD'] for j in js); err = max(j['Pertenencia_error_flujos'] for j in js)
         filas.append(fr'{rf} & {len(js)} & {ok} & {dif:.2e} & {err:.2e}\\')
@@ -187,6 +187,27 @@ def s5():
             cost = f'{f.Costo_MUSD:.4f}' if not f.Caso.startswith('OPT') else f'[{math.floor(f.L_MUSD*1e4)/1e4:.4f}, {math.ceil(f.U_MUSD*1e4)/1e4:.4f}]'
             filas.append(fr'{fmt(f[campo])} & {f.Senal} & {f.Caso} & {cost} & {int(f.Arranques)} & {abs(f.FP_termico_pct):.1f} & {f.EFC:.1f} & {dist}\\')
         escribir(nm, filas)
+    # R4: MPC-48 con pronósticos, por ejecución y nivel de error α
+    r4 = pd.read_csv(c / 'R4_mpc_pronosticos.csv')
+    ejec = {'MPC-48 horario': 'Hourly', 'MPC-48 diario holgura': 'Daily, slack', 'MPC-48 plan diario': 'Daily, plan'}
+    filas = []
+    for caso, nombre in ejec.items():
+        for sen in ('FLAT', 'WMI'):
+            for _, f in r4[(r4.Caso == caso) & (r4.Senal == sen)].sort_values('Alfa').iterrows():
+                ahorro = f'{f.Ahorro_vs_SC_kUSD:,.1f}'.replace('-', '$-$')
+                filas.append(fr'{nombre} & {f.Alfa:g} & {sen} & {f.Costo_MUSD:.4f} & {ahorro} & '
+                             fr'{f.Dist_pct_min:.2f}--{f.Dist_pct_max:.2f} & {int(f.Arranques)} & {f.EFC:.1f} & '
+                             fr'{f.Descarga_recortada_MWh:,.0f}\\')
+        filas.append(r'\midrule')
+    escribir('S5_r4', filas[:-1])
+    # Error de los pronósticos (nMAE de las 24 h siguientes) por nivel α
+    h = r4[r4.Caso == 'MPC-48 horario']
+    filas = []
+    for a in sorted(h.Alfa.unique()):
+        t0 = h[(h.Alfa == a) & (h.Senal == 'FLAT')].iloc[0]; t1 = h[(h.Alfa == a) & (h.Senal == 'WMI')].iloc[0]
+        filas.append(fr'{a:g} & {t0.nMAE_carga_24h_pct:.1f} & {t0.nMAE_PV_24h_pct:.1f} & {t1.nMAE_compra_24h_pct:.1f} & '
+                     fr'{t0.nMAE_export_24h_pct:.1f}\\')
+    escribir('S5_r4_nmae', filas)
 
 
 if __name__ == '__main__':
