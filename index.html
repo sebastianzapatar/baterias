@@ -394,6 +394,71 @@ table.cfg-t td.dif { font-weight: 800; color: var(--accent); }
 table.cfg-t tr.grp td { background: var(--surface-2); font-weight: 700; font-size: .78rem; color: var(--ink-2); white-space: normal; }
 table.cfg-t tr.base td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
 @media (max-width: 640px) { .anat { font-size: 1.05rem; } }
+
+/* ---------- Rutas después de instalar ---------- */
+.rutas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+@media (max-width: 980px) { .rutas { grid-template-columns: minmax(0, 1fr); } }
+.ruta { border: 1px solid var(--line); border-radius: 12px; padding: 14px; background: var(--surface); min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+#tras-instalar { scroll-margin-top: 96px; }
+.ruta.rec { border-color: var(--accent); box-shadow: inset 0 3px 0 var(--accent); }
+.ruta .r-top { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; }
+.ruta .r-n { font-size: .72rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+.ruta h4 { margin: 0; font-size: 1rem; }
+.ruta p { margin: 0; font-size: .84rem; color: var(--ink-2); }
+.cadena { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; margin: 2px 0; }
+.cadena .c { font-family: ui-monospace, Menlo, Consolas, monospace; font-weight: 800; font-size: .82rem; padding: 3px 8px; border-radius: 7px;
+  background: var(--chip); color: var(--ink); border: 1px solid var(--line); }
+.cadena .c.opc { background: transparent; border-style: dashed; color: var(--ink-2); }
+.cadena .c.no { background: transparent; color: var(--ink-3); text-decoration: line-through; }
+.cadena .fl { color: var(--ink-3); font-size: .8rem; }
+.ruta .ok { font-size: .8rem; color: var(--ink-2); border-top: 1px dashed var(--line); padding-top: 8px; margin-top: auto; }
+/* ---------- Archivos de datos ---------- */
+table.archivos td { white-space: normal; vertical-align: top; }
+table.archivos td:first-child { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: .78rem; font-weight: 700; min-width: 170px; overflow-wrap: anywhere; }
+table.archivos td.acc { min-width: 120px; }
+table.archivos td.des { min-width: 200px; }
+table.archivos td:last-child { white-space: nowrap; }
+@media (max-width: 640px) {
+  table.archivos thead { display: none; }
+  table.archivos, table.archivos tbody, table.archivos tr, table.archivos td { display: block; width: auto; }
+  table.archivos tr { padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  table.archivos tr:last-child { border-bottom: 0; }
+  table.archivos td { border: 0; padding: 2px 0; min-width: 0 !important; }
+  table.archivos td.acc, table.archivos td:last-child { display: inline-block; margin: 4px 10px 0 0; }
+  table.archivos td:last-child::before { content: "Lo leen: "; color: var(--ink-3); }
+}
+.pill.p-editar { background: var(--x-in-bg); color: var(--x-in); }
+.pill.p-reempl { background: var(--chip); color: var(--accent); }
+.pill.p-notocar { background: var(--surface-2); color: var(--ink-3); }
+/* ---------- Hojas de Excel simuladas ---------- */
+:root { --x-in-bg: #fff2a8; --x-in: #1a1aa6; --x-fx-bg: #e3f2ec; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --x-in-bg: #4a4416; --x-in: #b8c8ff; --x-fx-bg: #173a2c; } }
+:root[data-theme="dark"] { --x-in-bg: #4a4416; --x-in: #b8c8ff; --x-fx-bg: #173a2c; }
+.hoja-ley { display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: .8rem; color: var(--ink-2); margin: 4px 0 6px; }
+.hoja-ley span { display: inline-flex; align-items: center; gap: 6px; }
+.hoja-ley i { width: 18px; height: 14px; border-radius: 3px; border: 1px solid var(--line); display: inline-block; }
+.hoja-ley i.in { background: var(--x-in-bg); }
+.hoja-ley i.no { background: var(--x-in-bg); opacity: .45; border-style: dashed; border-color: var(--ink-3); }
+.hoja-ley i.fx { background: var(--x-fx-bg); }
+.hoja-ley i.ig { background: var(--surface); }
+.hoja-tab { display: inline-flex; gap: 8px; align-items: center; font-size: .8rem; font-weight: 700; padding: 5px 12px; margin-top: 14px;
+  border: 1px solid var(--line); border-bottom: 0; border-radius: 8px 8px 0 0; background: var(--surface-2); color: var(--ink); }
+.hoja-tab .muted { font-weight: 500; }
+.hoja-wrap { border-top-left-radius: 0; }
+table.hoja { font-size: .8rem; border-collapse: collapse; width: auto; min-width: 100%; }
+table.hoja th, table.hoja td { border: 1px solid var(--line); padding: 5px 9px; }
+table.hoja thead th { text-align: center; text-transform: none; letter-spacing: 0; font-weight: 600; font-size: .74rem; position: static; }
+table.hoja th.rn { text-align: center; min-width: 34px; color: var(--ink-3); background: var(--surface-2); font-weight: 600; font-size: .74rem; }
+table.hoja td { font-variant-numeric: tabular-nums; }
+table.hoja td.in { background: var(--x-in-bg); color: var(--x-in); font-weight: 700; }
+table.hoja td.no { background: var(--x-in-bg); color: var(--x-in); opacity: .45; outline: 1px dashed var(--ink-3); outline-offset: -3px; }
+table.hoja td.fx { background: var(--x-fx-bg); color: var(--ink-2); font-style: italic; }
+table.hoja td.hd { font-weight: 700; }
+table.hoja td.ig { color: var(--ink-3); }
+table.hoja td.gap { text-align: center; color: var(--ink-3); }
+table.hoja td.txt { white-space: normal; min-width: 200px; }
+.hoja-nota { font-size: .82rem; color: var(--ink-2); margin: 8px 0 0; padding-left: 18px; }
+.hoja-nota li { margin: 3px 0; }
 </style>
 </head>
 <body>
@@ -755,7 +820,8 @@ source .venv/bin/activate</pre></div></div>
           <pre class="cmd">python -m pip install --upgrade pip
 python -m pip install -r requirements.txt</pre></div></div>
         <div class="paso"><div><b>Abra JupyterLab</b> con <code>jupyter lab</code> y ejecute cada cuaderno con
-          <i>Kernel → Restart Kernel and Run All Cells</i>. Las siguientes veces solo hay que activar el ambiente y abrir JupyterLab.</div></div>
+          <i>Kernel → Restart Kernel and Run All Cells</i>. Las siguientes veces solo hay que activar el ambiente y abrir JupyterLab.
+          Vea abajo <a href="#tras-instalar" data-ancla="tras-instalar">qué cuadernos correr primero</a>.</div></div>
       </div>
     </div>
     <div class="card">
@@ -770,6 +836,38 @@ python -m pip install -r requirements.txt</pre></div></div>
         <li>Para estudiar otro caso con datos propios, vea <a href="#datos">Cambiar datos</a>: solo el 01, el 01B y el 02 recalculan.</li>
       </ul>
       <div class="aviso mt">Esta página no necesita instalación: es un archivo HTML con los datos incluidos. Está en la raíz de la entrega como <code>index.html</code>.</div>
+    </div>
+  </div>
+
+  <div class="card mt" id="tras-instalar">
+    <h3>Después de instalar: ¿qué cuadernos corro?</h3>
+    <p class="small muted" style="margin-top:0;">Elija según lo que necesite. Cada cuaderno se ejecuta con <i>Kernel → Restart Kernel and Run All Cells</i>
+      y se espera a que termine antes de abrir el siguiente.</p>
+    <div class="rutas">
+      <div class="ruta">
+        <div class="r-top"><span class="r-n">Ruta 1 · ≈ 1 min</span><span class="pill p-rapido">Primero</span></div>
+        <h4>Comprobar que la instalación funciona</h4>
+        <div class="cadena"><span class="c">01</span><span class="fl">→</span><span class="c">08</span></div>
+        <p>El 01 calcula de verdad (≈ 11 s) y usa todos los datos de entrada; el 08 solo lee resultados (≈ 4 s).</p>
+        <div class="ok"><b>Funciona si</b> ninguna celda muestra un recuadro rojo y el 01 termina con la tabla «¿Se paga la batería?».</div>
+      </div>
+      <div class="ruta rec">
+        <div class="r-top"><span class="r-n">Ruta 2 · ≈ 5–10 min</span><span class="pill p-rapido">Recomendada</span></div>
+        <h4>Revisar los resultados de la tesis</h4>
+        <div class="cadena"><span class="c">01</span><span class="fl">→</span><span class="c">01B</span><span class="fl">→</span><span class="c">08</span><span class="fl">→</span><span class="c">09</span><span class="fl">→</span><span class="c">11</span><span class="fl">→</span><span class="c">12</span><span class="fl">→</span><span class="c">13</span><span class="fl">→</span><span class="c">14</span><span class="fl">→</span><span class="c">15</span></div>
+        <p>Recorre las tres etapas en el orden del estudio. El 15 tarda de 2 a 5 minutos; los demás, segundos.</p>
+        <p><span class="cadena" style="display:inline-flex;"><span class="c opc">02</span></span> es opcional: tarda 15–35 min y, con los datos originales,
+          vuelve a obtener lo que ya está guardado. Si quiere correrlo, déjelo para el final.</p>
+        <div class="ok"><b>Funciona si</b> las cifras coinciden con las <a href="presentacion.html#20">cifras de control</a> (diapositiva 20 de la presentación).</div>
+      </div>
+      <div class="ruta">
+        <div class="r-top"><span class="r-n">Ruta 3 · 20–40 min</span><span class="pill p-largo">Datos propios</span></div>
+        <h4>Estudiar un caso con datos propios</h4>
+        <div class="cadena"><span class="c">copia</span><span class="fl">→</span><span class="c">datos</span><span class="fl">→</span><span class="c">01</span><span class="fl">→</span><span class="c">01B</span><span class="fl">→</span><span class="c">02</span></div>
+        <p>Haga una copia de la carpeta, cambie los archivos de <code>datos/</code> como se indica en <a href="#datos">Cambiar datos</a> y corra solo estos tres.</p>
+        <p><span class="cadena" style="display:inline-flex;"><span class="c no">08–14</span> <span class="c no">15</span></span> no recalculan: siguen mostrando la tesis, y el 15 se detiene a propósito con <code>AssertionError</code>.</p>
+        <div class="ok"><b>Funciona si</b> el 02 termina e imprime «Mejor configuración encontrada en la malla».</div>
+      </div>
     </div>
   </div>
 
@@ -793,6 +891,20 @@ python -m pip install -r requirements.txt</pre></div></div>
     Conserve siempre el nombre de cada archivo, el de sus hojas y el orden de filas y columnas: se leen por nombre y por posición.</div>
 
   <div class="card mt">
+    <h3>Los archivos de la carpeta <code>datos/</code></h3>
+    <p class="small muted" style="margin-top:0;">Solo tres se editan. Los demás se reemplazan completos o no se tocan.</p>
+    <div class="tabla-wrap"><table class="archivos"><thead><tr><th>Archivo</th><th>Qué contiene</th><th>Qué hacer</th><th>Lo leen</th></tr></thead><tbody>
+      <tr><td>load variable.csv</td><td class="des">Demanda horaria de 2025 en MW (columna <code>Porvenir</code>), 8.760 filas.</td><td class="acc"><span class="pill p-editar">Editar</span></td><td>01 · 01B · 02</td></tr>
+      <tr><td>Precio_Bolsa_Nacional_($kwh)_2025.xlsx</td><td class="des">Precio de bolsa de XM en COP/kWh: un día por fila y una hora por columna.</td><td class="acc"><span class="pill p-editar">Editar</span></td><td>01 · 01B · 02</td></tr>
+      <tr><td>CurvasCapexPVBESS.xlsx</td><td class="des">Costos de inversión del campo solar y de la batería. Solo se leen algunas celdas amarillas.</td><td class="acc"><span class="pill p-editar">Editar celdas</span></td><td>01 · 01B · 02</td></tr>
+      <tr><td>Oriental_tmy-2025.csv y otros cuatro *_tmy-2025.csv</td><td class="des">Clima típico horario de cada región (NSRDB): radiación, temperatura, viento.</td><td class="acc"><span class="pill p-reempl">Reemplazar</span></td><td>01 · 01B · 02</td></tr>
+      <tr><td>NREL_TP-6A40-93281_tabla2.csv</td><td class="des">Trayectoria publicada del costo de las baterías hasta 2050; fija la reposición.</td><td class="acc"><span class="pill p-notocar">No tocar</span></td><td>02</td></tr>
+      <tr><td>Oriente.xlsx</td><td class="des">Serie solar histórica anterior. Ya no alimenta el modelo; el 02 la usa solo como contraste, así que <b>no la borre</b>.</td><td class="acc"><span class="pill p-notocar">No tocar</span></td><td>02</td></tr>
+    </tbody></table></div>
+    <p class="nota">«Editar»: se cambian valores dentro del archivo. «Reemplazar»: se cambia el archivo entero por otro del mismo formato, con el mismo nombre.</p>
+  </div>
+
+  <div class="card mt">
     <h3>¿Qué cuadernos responden a un cambio?</h3>
     <div class="resp" id="dat-resp"></div>
   </div>
@@ -814,6 +926,16 @@ python -m pip install -r requirements.txt</pre></div></div>
       <h3 class="mt">Si aparece un error</h3>
       <ul class="err" id="dat-err"></ul>
     </div>
+  </div>
+  <div class="card mt" id="dat-hoja-card" hidden>
+    <h3 id="dat-htit"></h3>
+    <div class="hoja-ley">
+      <span><i class="in"></i>Se cambia (amarillo con letra azul, como en el libro)</span>
+      <span><i class="no"></i>Amarilla, pero los cuadernos no la leen</span>
+      <span><i class="fx"></i>Fórmula o cálculo: no la toque</span>
+      <span><i class="ig"></i>Se ignora</span>
+    </div>
+    <div id="dat-hoja"></div>
   </div>
 
   <div class="card mt">
@@ -1752,6 +1874,137 @@ Year,Month,Day,Hour,Minute,Temperature,…,DHI,DNI,…,GHI,…
     ],
   },
 };
+// --- Hojas de Excel simuladas: cada celda es "texto" o [texto, clase] ---
+function hojaX(nombre, sub, cols, filas, notas) {
+  const celda = c => { const [t, k] = Array.isArray(c) ? c : [c, ""]; return `<td class="${k}">${t}</td>`; };
+  return `<div class="hoja-tab">${nombre}${sub ? ` <span class="muted">${sub}</span>` : ""}</div>
+    <div class="tabla-wrap hoja-wrap"><table class="hoja"><thead><tr><th class="rn"></th>${cols.map(c => `<th>${c}</th>`).join("")}</tr></thead>
+    <tbody>${filas.map(([n, cs]) => `<tr><th class="rn">${n}</th>${cs.map(celda).join("")}</tr>`).join("")}</tbody></table></div>
+    ${notas ? `<ul class="hoja-nota">${notas.map(n => `<li>${n}</li>`).join("")}</ul>` : ""}`;
+}
+const G = ["…", "gap"];
+const I = v => [v, "in"], N = v => [v, "no"], F = v => [v, "fx"], H = v => [v, "hd"], X = v => [v, "ig"];
+
+TEMAS.demanda.htit = "Si abre el CSV en Excel, se ve así";
+TEMAS.demanda.hoja = hojaX("load variable.csv", "texto separado por «;»", ["A", "B"], [
+  [1, [H("period"), H("Porvenir")]],
+  [2, [I("1/01/2025 0:00"), I("20.76")]],
+  [3, [I("1/01/2025 1:00"), I("20.94")]],
+  ["…", [G, G]],
+  [8761, [I("31/12/2025 23:00"), I("19.74")]],
+], ["La fila 1 son los encabezados; no cambie <code>period</code> ni <code>Porvenir</code>.",
+    "Columna A: fecha y hora de inicio de cada hora, con el día primero. Columna B: demanda en MW.",
+    "Son 8.760 horas: de la fila 2 (1 de enero, 0:00) a la 8761 (31 de diciembre, 23:00). Sin huecos ni filas repetidas.",
+    "Si todo aparece en la columna A, su Excel usa otro separador: edite el archivo con un editor de texto en lugar de Excel.",
+    "Después de guardar como CSV, ábralo en el Bloc de notas: debe verse como el ejemplo, con <code>;</code> entre columnas y <b>punto</b> decimal."]);
+
+TEMAS.precio.mtit = "Lo que debe cumplir";
+TEMAS.precio.muestra = tabla(["Dónde", "Qué va"], [
+  ["Hoja", "La primera del libro (el nombre no importa)"],
+  ["Filas 1–2", "Libres o con un título; se ignoran"],
+  ["Fila 3", "<code>Fecha</code> en A y las horas <code>0</code> a <code>23</code> de B a Y, <b>como texto</b>"],
+  ["Filas 4–368", "Un día por fila, del 1/01/2025 al 31/12/2025"],
+  ["B a Y", "Precio en COP/kWh de la hora que empieza en esa columna"],
+  ["Z en adelante", "Se ignora (por ejemplo, <code>Versión</code>)"],
+]);
+TEMAS.precio.errores.push(["KeyError: … value_vars are not present in the DataFrame",
+  "Los encabezados 0 a 23 de la fila 3 quedaron como número. Escríbalos como texto: en Excel, con un apóstrofo delante (<code>'0</code>, <code>'1</code>…)."]);
+TEMAS.precio.htit = "Así debe verse la hoja en Excel";
+TEMAS.precio.hoja = hojaX("Precio_Bolsa_Nacional_($kwh)_2025.xlsx", "primera hoja", ["A", "B", "C", "D", "…", "Y", "Z"], [
+  [1, [X(""), X(""), X(""), X(""), G, X(""), X("")]],
+  [2, [X("Precio Bolsa Nacional ($/kWh) 2025"), X(""), X(""), X(""), G, X(""), X("")]],
+  [3, [H("Fecha"), H("0"), H("1"), H("2"), G, H("23"), X("Versión")]],
+  [4, [I("1/01/2025"), I("202,28"), I("202,28"), I("202,28"), G, I("228,78"), X("TX4")]],
+  [5, [I("2/01/2025"), I("440,17"), I("253,85"), I("440,17"), G, I("501,30"), X("TX4")]],
+  ["…", [G, G, G, G, G, G, G]],
+  [368, [I("31/12/2025"), I("271,26"), I("271,26"), I("271,26"), G, I("271,26"), X("TX3")]],
+], ["Los encabezados de la fila 3 se leen por nombre: <code>Fecha</code>, <code>0</code>, <code>1</code> … <code>23</code>, escritos como texto (así vienen en el archivo original).",
+    "La columna A debe ser una fecha de Excel, no texto. Las horas no van en la fecha: la hora la da la columna.",
+    "Dentro de Excel los decimales pueden verse con coma; en un .xlsx eso no importa porque se guardan como número.",
+    "El reporte de precio de bolsa nacional de XM, de donde sale este archivo, trae esta disposición: puede pegar el de otro periodo encima, desde la fila 3."]);
+
+TEMAS.capex.usan = ["01", "01B", "02"];
+TEMAS.precio.usan = ["01", "01B", "02"];
+TEMAS.capex.pasos = [
+  "Abra el libro en Excel o LibreOffice Calc. Las celdas que se pueden editar están en <b>amarillo con letra azul</b>, pero <b>no todas las amarillas cambian los resultados</b>: abajo se marcan las que leen los cuadernos.",
+  "Cambie solo números. No escriba unidades ni deje celdas vacías, y no inserte ni borre filas o columnas: se leen por su posición (por ejemplo, <code>Parametros_PV!C18</code>).",
+  "En <code>Parametros_PV</code> cambie las líneas del desglose (C6 a C15), <b>no C16 ni C17</b>: son sumas. La columna B (Global o Local) decide en cuál de las dos suma entra cada línea.",
+  "Guarde como <code>.xlsx</code> con el mismo nombre <b>desde Excel o LibreOffice</b>: los cuadernos leen el valor ya calculado de las fórmulas. Cierre el libro y corra 01 → 01B → 02.",
+];
+TEMAS.capex.muestra = tabla(["Hoja", "Celdas", "Qué son"], [
+  ["Parametros_PV", "C6–C15", "Desglose del costo solar a 8 MWp [USD/kWp]"],
+  ["", "C18 · C20", "Interconexión [USD/kWp] y factor de indirectos, IVA y AIU"],
+  ["", "C33 · C34", "Exponentes de escala del hardware y del contenido local"],
+  ["Parametros_BESS", "D5:J8", "Costos por segmento de energía B1–B4"],
+  ["Suministro_BESS", "A13 · B13", "Prima por C-rate: quiebre y pendiente"],
+  ["Trayectorias", "D8 · G8", "Variación anual del contenido local (escenario Medio), para la reposición de la batería"],
+]);
+TEMAS.capex.extra += `<div class="aviso ambar mt"><b>Amarillas que no cambian los resultados.</b> Estas celdas son editables en el libro pero los cuadernos
+  no las leen; cambiarlas solo mueve las gráficas y tablas de consulta del propio Excel:
+  <code>Parametros_BESS</code> N5:N8 (el sobredimensionamiento está fijo en 1,0 en el código) y C14:G15 ·
+  <code>Suministro_BESS</code> D5:I7 y B19:B21 · <code>Parametros_PV</code> B27:D30 y C35 ·
+  <code>Trayectorias</code> filas 5 a 7 y las columnas Bajo y Alto de la fila 8 (la batería toma su trayectoria del CSV de NREL) ·
+  y todas las de <code>Curva_BESS</code>, <code>Curva_PV</code>, <code>Curva_Hibrido</code> y <code>Validacion</code>.</div>`;
+TEMAS.capex.errores.push(["Parametros_PV!C16: se esperaba un número y se obtuvo None",
+  "El libro se guardó con un programa que no recalcula las fórmulas. Ábralo en Excel o LibreOffice, guárdelo de nuevo y cierre."]);
+TEMAS.capex.htit = "Las cuatro hojas que leen los cuadernos";
+TEMAS.capex.hoja =
+  hojaX("Parametros_PV", "costo solar", ["A", "B", "C"], [
+    [5, [H("Componente"), H("Contenido"), H("USD/kWp")]],
+    [6, [X("Módulos"), "Global", I("154,3")]],
+    [7, [X("Estructura, hincas, correas y omegas"), "Global", I("67,1")]],
+    [8, [X("Inversores string"), "Global", I("21,9")]],
+    [9, [X("Transformación MT"), "Global", I("61,8")]],
+    [10, [X("BOP eléctrico"), "Global", I("41,8")]],
+    [11, [X("Montaje electromecánico"), "Local", I("87,1")]],
+    [12, [X("Obra civil y eléctrica"), "Local", I("92,1")]],
+    [13, [X("Ingeniería y estudios"), "Local", I("13,3")]],
+    [14, [X("Comisionamiento y puesta en marcha"), "Local", I("16,3")]],
+    [15, [X("Repuestos, pólizas, cerramiento y otros"), "Local", I("34,7")]],
+    [16, [X("Hardware global (HW)"), X(""), F("=SUMA.SI(… Global)")]],
+    [17, [X("Contenido local (LOC)"), X(""), F("=SUMA.SI(… Local)")]],
+    [18, [X("Línea de interconexión, subestación y bahía"), X(""), I("48,8")]],
+    [20, [X("Factor de indirectos, IVA no descontable y AIU"), X(""), I("1,2719")]],
+    ["…", [G, G, G]],
+    [33, [X("Exponente de escala del hardware (bHW)"), X(""), I("−0,0906")]],
+    [34, [X("Exponente de escala del contenido local (bLOC)"), X(""), I("−0,06")]],
+  ], ["Precios de una planta de 8 MWp, en USD/kWp DC sin IVA ni AIU. El modelo los escala al tamaño de cada caso con los exponentes de C33 y C34.",
+      "Para mover una línea de «Global» a «Local» cambie el texto de la columna B; la suma de C16 o C17 se ajusta sola."]) +
+  hojaX("Parametros_BESS", "costo de la batería por segmento", ["A", "C", "D", "E", "F", "G", "H", "I", "J", "…", "N"], [
+    [4, [H("Seg."), H("Rango (MWh)"), H("cSUP USD/kWh"), H("cE local USD/kWh"), H("cP local USD/kW"), H("cF USD"), H("Indir."), H("EPC"), H("Margen"), G, H("Sobredim.")]],
+    [5, [H("B1"), X("0,1 – 1"), I("320,1"), I("5"), I("20"), I("15.000"), I("0,054"), I("0,015"), I("0,2"), G, N("1")]],
+    [6, [H("B2"), X("1 – 20"), I("141,8"), I("5"), I("43,5"), I("200.000"), I("0,054"), I("0,015"), I("0,2"), G, N("1")]],
+    [7, [H("B3"), X("20 – 100"), I("93,4"), I("5,35"), I("86,6"), I("526.263"), I("0,054"), I("0,015"), I("0,2"), G, N("1")]],
+    [8, [H("B4"), X("> 100"), I("93,4"), I("5,35"), I("203,4"), I("900.000"), I("0,054"), I("0,015"), I("0,2"), G, N("1")]],
+  ], ["Cada fila es un tamaño de batería por energía. Las de más de 100 MWh, como todas las de la malla M01–M12, usan B4; el análisis H_B3 las costea con B3.",
+      "Los rangos de la columna C son informativos: los límites de 1, 20 y 100 MWh están fijos en el código.",
+      "Porcentajes como fracción: 5,4 % se escribe <code>0,054</code>."]) +
+  hojaX("Suministro_BESS", "prima por C-rate", ["A", "B", "C", "D"], [
+    [12, [H("C-rate de quiebre"), H("Pendiente de la prima"), H("Prima a 0,60C"), H("Prima a 1,00C")]],
+    [13, [I("0,5"), I("0,22"), F("=1+MAX(…)"), F("=1+MAX(…)")]],
+  ], ["Por encima del C-rate de quiebre (potencia ÷ energía) el suministro se encarece según la pendiente. Las cotizaciones de las filas 5 a 7 son de consulta."]) +
+  hojaX("Trayectorias", "variación anual de costos", ["A", "C", "D", "E", "F", "G", "H"], [
+    [4, [H("Componente"), H("Bajo 26–35"), H("Medio 26–35"), H("Alto 26–35"), H("Bajo 35–50"), H("Medio 35–50"), H("Alto 35–50")]],
+    [5, [X("Suministro de baterías"), N("−0,0745"), N("−0,029"), N("−0,0084"), N("−0,0662"), N("−0,021"), N("−0,0068")]],
+    [6, [X("Hardware solar — utility"), N("−0,1234"), N("−0,0788"), N("−0,0394"), N("−0,0206"), N("−0,0287"), N("−0,0302")]],
+    [7, [X("Hardware solar — comercial"), N("−0,0958"), N("−0,0531"), N("−0,0121"), N("−0,0215"), N("−0,03"), N("−0,0316")]],
+    [8, [X("Contenido local"), N("−0,0317"), I("−0,0199"), N("−0,0098"), N("−0,0051"), I("−0,0071"), N("−0,0075")]],
+    ["15…", [X("2026, 2027…"), F("=SI(…)"), F("=SI(…)"), F("=SI(…)"), F("=SI(…)"), F("=SI(…)"), F("=SI(…)")]],
+  ], ["Tasas anuales reales: <code>−0,0199</code> es una baja de 1,99 % por año. El modelo usa el escenario Medio.",
+      "Solo la fila 8 entra al cálculo, en el costo de reponer la batería. La parte de suministro de esa reposición sale del CSV de NREL, no de la fila 5.",
+      "Los índices anuales desde la fila 15 son fórmulas que se recalculan al guardar."]);
+
+TEMAS.sitio.htit = "";
+// Enlaces internos que no cambian de vista (la navegación usa el hash).
+document.addEventListener("click", e => {
+  const a = e.target.closest("[data-ancla]");
+  if (!a) return;
+  e.preventDefault();
+  const destino = document.getElementById(a.dataset.ancla);
+  if (destino) destino.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start"});
+});
+TEMAS.parametros.htit = "";
+
 const datos = {tema: "demanda"};
 segmentado($("#dat-tema"), Object.entries(TEMAS).map(([k, t]) => [k, t.nombre]), datos.tema, v => { datos.tema = v; RENDER.datos(); });
 RENDER.datos = function () {
@@ -1764,6 +2017,9 @@ RENDER.datos = function () {
   $("#dat-mtit").textContent = t.mtit;
   $("#dat-muestra").innerHTML = t.muestra;
   $("#dat-err").innerHTML = t.errores.map(([m, d]) => `<li><b>${m}</b>${d}</li>`).join("");
+  $("#dat-hoja-card").hidden = !t.hoja;
+  $("#dat-htit").textContent = t.htit || "";
+  $("#dat-hoja").innerHTML = t.hoja || "";
 };
 
 mostrarVista();
