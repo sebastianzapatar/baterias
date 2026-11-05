@@ -365,6 +365,35 @@ nav.tabs a { transition: color .15s, background-color .15s, border-color .15s; }
 .pres-card p { margin: 0; font-size: .88rem; color: rgba(255,255,255,.88); }
 .pres-card .btn:focus-visible { outline-color: #fff; }
 @media (max-width: 720px) { .pres-card { grid-template-columns: minmax(0, 1fr); } .pres-card .ic { display: none; } }
+
+/* ---------- Guía de configuraciones ---------- */
+:root { --c-pv: #a8650a; --c-pv-bg: #fdf1dc; --c-p: #0a6474; --c-p-bg: #e0f1f4; --c-e: #2e7d32; --c-e-bg: #e6f3e6; }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) { --c-pv: #f0b84a; --c-pv-bg: #3a2c12; --c-p: #5fd3e8; --c-p-bg: #10363d; --c-e: #86d283; --c-e-bg: #17361a; }
+}
+:root[data-theme="dark"] { --c-pv: #f0b84a; --c-pv-bg: #3a2c12; --c-p: #5fd3e8; --c-p-bg: #10363d; --c-e: #86d283; --c-e-bg: #17361a; }
+.cfg-guia { margin-bottom: 16px; }
+.cfg-guia h3 { margin: 2px 0 4px; }
+.anat { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 10px 0 14px;
+  font-family: ui-monospace, Menlo, Consolas, monospace; font-weight: 800; font-size: 1.3rem; color: var(--ink); }
+.anat .t { padding: 3px 10px; border-radius: 8px; border-bottom: 3px solid var(--line); background: var(--surface-2); }
+.anat .t.pv { border-color: var(--c-pv); background: var(--c-pv-bg); }
+.anat .t.p { border-color: var(--c-p); background: var(--c-p-bg); }
+.anat .t.e { border-color: var(--c-e); background: var(--c-e-bg); }
+.anat .sep { color: var(--ink-3); font-weight: 600; }
+dl.anat-dl { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 10px 16px; margin: 0; }
+dl.anat-dl div { border-left: 3px solid var(--line); padding-left: 10px; min-width: 0; }
+dl.anat-dl div.pv { border-color: var(--c-pv); }
+dl.anat-dl div.p { border-color: var(--c-p); }
+dl.anat-dl div.e { border-color: var(--c-e); }
+dl.anat-dl dt { font-weight: 700; font-size: .88rem; }
+dl.anat-dl dd { margin: 2px 0 0; font-size: .84rem; color: var(--ink-2); }
+table.cfg-t thead tr + tr th { top: auto; }
+table.cfg-t td.q { white-space: normal; min-width: 190px; color: var(--ink-2); }
+table.cfg-t td.dif { font-weight: 800; color: var(--accent); }
+table.cfg-t tr.grp td { background: var(--surface-2); font-weight: 700; font-size: .78rem; color: var(--ink-2); white-space: normal; }
+table.cfg-t tr.base td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
+@media (max-width: 640px) { .anat { font-size: 1.05rem; } }
 </style>
 </head>
 <body>
@@ -442,6 +471,10 @@ nav.tabs a { transition: color .15s, background-color .15s, border-color .15s; }
       <div><dt>C / F · Reglas de mercado</dt><dd>Arbitraje orientado a precios de bolsa; se comparan por separado.</dd></div>
       <div><dt>OPT_* · Benchmarks</dt><dd>Despacho con previsión perfecta (MILP). Son cotas de referencia, no reglas operables.</dd></div>
       <div><dt>T0 / T1 · Señal tarifaria</dt><dd>T0: tarifa regulada N3 casi plana. T1: tarifa indexada al precio de bolsa 2025.</dd></div>
+      <div><dt>114 MWp · Campo solar</dt><dd>Potencia pico de los paneles (DC). 114,4 MWp generan en un año lo mismo que consume la demanda (f_PV = 1).</dd></div>
+      <div><dt>45 / 280 · Batería</dt><dd>Potencia en MW / energía en MWh. 280 ÷ 45 = 6,2 h de descarga a plena potencia.</dd></div>
+      <div><dt>M01–M12 · Malla</dt><dd>Doce tamaños de planta: parten de M01 y cambian una sola cosa a la vez (energía, potencia o PV).</dd></div>
+      <div><dt>K1–K4 · Escalas</dt><dd>Cuatro tamaños de la Etapa I. K3 = M01 = 45 MW / 280 MWh con f_PV = 1.</dd></div>
       <div><dt>H_B4 / H_B3 · CAPEX BESS</dt><dd>Dos hipótesis de costos locales de la batería; H_B4 es la base.</dd></div>
       <div><dt>VPN ajustado</dt><dd>VPN financiero a 20 años más el valor de las emisiones evitadas al precio interno de carbono elegido.</dd></div>
     </dl>
@@ -453,6 +486,7 @@ nav.tabs a { transition: color .15s, background-color .15s, border-color .15s; }
   <h2 id="h-decidir">Asistente de decisión</h2>
   <p class="lead">Elija la pregunta y las condiciones. La recomendación, el gráfico y el detalle se actualizan al instante.
     Haga clic en cualquier fila del gráfico para ver el detalle de esa configuración.</p>
+  <div class="card cfg-guia" data-guia="M"></div>
 
   <div class="preguntas" id="dec-preguntas">
     <button class="preg" type="button" data-modo="C" aria-pressed="true"><span class="letra">C</span><b>¿Qué planta construir y cómo operarla?</b><span>Compara los 12 tamaños con sus tres reglas.</span></button>
@@ -481,7 +515,7 @@ nav.tabs a { transition: color .15s, background-color .15s, border-color .15s; }
       <h3 id="dec-graf-t">VPN ajustado por configuración y regla</h3>
       <div class="leyenda" id="dec-leyenda"></div>
       <div class="chart" id="dec-graf"></div>
-      <p class="nota">Cada punto es una regla; la barra tenue llega al mejor valor de la fila. Clic en una fila para ver su detalle.</p>
+      <p class="nota">Cada punto es una regla; la barra tenue llega al mejor valor de la fila. Clic en una fila para ver su detalle. Etiqueta: configuración · PV [MWp] · potencia [MW] / energía [MWh] de la batería.</p>
     </div>
     <div class="card">
       <div class="kicker">Detalle de la configuración</div>
@@ -500,7 +534,7 @@ nav.tabs a { transition: color .15s, background-color .15s, border-color .15s; }
     <div class="tabla-wrap"><table id="dec-tabla"><thead><tr>
       <th>Config.</th><th class="n">PV [MWp]</th><th class="n">BESS [MW/MWh]</th><th class="n">A_INT</th><th class="n">B_INT</th><th class="n">D_INT</th><th>Mejor</th><th class="n">ΔVPN BESS</th>
     </tr></thead><tbody></tbody></table></div>
-    <p class="nota">VPN ajustado en MUSD. ΔVPN BESS: valor de agregar la batería frente a instalar solo el PV.</p>
+    <p class="nota">VPN ajustado en MUSD. ΔVPN BESS: valor de agregar la batería frente a instalar solo el PV. PV en MWp (DC); BESS en potencia [MW] / energía [MWh].</p>
   </details>
 </section>
 
@@ -509,6 +543,7 @@ nav.tabs a { transition: color .15s, background-color .15s, border-color .15s; }
   <h2 id="h-malla">Malla de dimensionamiento M01–M12</h2>
   <p class="lead">Doce tamaños de planta en ocho contextos (dos señales × cuatro precios de carbono). Cada celda muestra la regla de mayor
     VPN ajustado y la métrica elegida. <b>Haga clic en una celda</b> para abrirla en el asistente de decisión.</p>
+  <div class="card cfg-guia" data-guia="M" data-abierta="1"></div>
   <div class="filtros">
     <div class="filtro"><span class="et">Métrica</span><div class="seg" id="mat-met"></div></div>
     <div class="filtro"><span class="et">CAPEX de la batería</span><div class="seg" id="mat-hip"></div></div>
@@ -568,6 +603,7 @@ nav.tabs a { transition: color .15s, background-color .15s, border-color .15s; }
       <div class="filtros" style="box-shadow:none;margin-bottom:8px;"><div class="filtro"><span class="et">Escala</span><div class="seg" id="e2-k"></div></div></div>
       <div class="chart" id="e2-fact"></div>
       <p class="nota" id="e2-fact-nota"></p>
+      <p class="nota">K1–K4 son las cuatro escalas de PV y batería de la Etapa I; K3 es la misma planta que M01. Vea qué significa cada una en <a href="#sin-termica">Sin térmica</a>.</p>
     </div>
   </div>
   <details class="ver card mt"><summary>Ver tablas de la Etapa II</summary>
@@ -582,6 +618,7 @@ nav.tabs a { transition: color .15s, background-color .15s, border-color .15s; }
 <section class="view" id="v-sin-termica" aria-labelledby="h-sin">
   <h2 id="h-sin">Etapa I · PV + BESS + red, sin generación térmica</h2>
   <p class="lead">200 casos: cinco regiones UPME × dos señales × cuatro escalas × cinco reglas, evaluados a 20 años.</p>
+  <div class="card cfg-guia" data-guia="K"></div>
   <div class="filtros">
     <div class="filtro"><span class="et">Región UPME</span><div class="seg" id="e1-sitio"></div></div>
     <div class="filtro"><span class="et">Señal</span><div class="seg" id="e1-senal"></div></div>
@@ -1102,6 +1139,75 @@ const fila = (cfg, senal, co2, regla) => MALLA.find(r => r.config === cfg && r.s
 const diseno = c => { const r = MALLA.find(x => x.config === c); return `${fmtEs(r.pv_mwp, 1)} MWp · ${fmtEs(r.p_mw, 0)} MW / ${fmtEs(r.e_mwh, 0)} MWh`; };
 const disenoCorto = c => { const r = MALLA.find(x => x.config === c); return `${c} · ${fmtEs(r.p_mw, 0)}/${fmtEs(r.e_mwh, 0)}`; };
 const TRM = DATA.meta.trm_cop_usd;
+
+// ===================== Guía de configuraciones =====================
+const CFG_QUE = {
+  M01: "Caso base. Es K3, el tamaño representativo de la tesis.",
+  M02: "Más energía, misma potencia.",
+  M03: "Menos energía, misma potencia.",
+  M04: "Mucha menos energía, misma potencia.",
+  M05: "Menos potencia, misma energía.",
+  M06: "Mucha menos potencia, misma energía.",
+  M07: "Batería más pequeña en potencia y en energía.",
+  M08: "La batería más pequeña de la malla.",
+  M09: "Campo solar al 75 %, con la batería de M01.",
+  M10: "Campo solar al 75 %, con la batería de M07.",
+  M11: "Campo solar a la mitad, con la batería de M01.",
+  M12: "Campo solar a la mitad, con la batería de M08."
+};
+const CFG_GRUPOS = [
+  [["M01", "M02", "M03", "M04"], "Campo solar completo (f_PV = 1) y 45 MW: cambia la energía de la batería"],
+  [["M05", "M06", "M07", "M08"], "Campo solar completo (f_PV = 1): baja la potencia de la batería"],
+  [["M09", "M10", "M11", "M12"], "Campo solar reducido (f_PV = 0,75 y 0,5)"]
+];
+const KQUE = {K1: "Batería grande y larga (8 h).", K2: "Batería corta (4 h) con PV algo menor.", K3: "Tamaño representativo; es la misma planta que M01.", K4: "Batería de 2 h, potente y con poca energía; PV menor."};
+function guiaConfig(caja) {
+  const modoK = caja.dataset.guia === "K";
+  const base = MALLA.find(r => r.config === "M01");
+  const dem = DATA.meta.demanda_anual_mwh / 1000;
+  const util = base.e_mwh * 0.8;
+  const anat = `<div class="anat" role="img" aria-label="Ejemplo: ${modoK ? "K3" : "M01"}, ${fmtEs(base.pv_mwp, 1)} megavatios pico de PV, batería de ${fmtEs(base.p_mw, 0)} megavatios y ${fmtEs(base.e_mwh, 0)} megavatios hora">
+      <span class="t">${modoK ? "K3" : "M01"}</span><span class="sep">·</span><span class="t pv">${fmtEs(base.pv_mwp, 0)} MWp</span><span class="sep">·</span><span class="t p">${fmtEs(base.p_mw, 0)}</span><span class="sep">/</span><span class="t e">${fmtEs(base.e_mwh, 0)}</span></div>
+    <dl class="anat-dl">
+      <div class="pv"><dt>${fmtEs(base.pv_mwp, 0)} MWp · campo solar</dt><dd>Potencia pico de los paneles en DC; con DC/AC de 1,20 son unos ${fmtEs(base.pv_mwp / 1.2, 0)} MW de inversores.
+        ${fmtEs(base.pv_mwp, 1)} MWp es el tamaño que en Oriente genera en un año lo mismo que consume la demanda (${fmtEs(dem, 1)} GWh): eso es <b>f_PV = 1</b>. Con f_PV = 0,5 el campo solar es la mitad.</dd></div>
+      <div class="p"><dt>${fmtEs(base.p_mw, 0)} · potencia de la batería [MW]</dt><dd>Cuánto puede cargar o descargar a la vez. Como referencia, el pico de la demanda es de ${fmtEs(DATA.meta.pico_mw, 1)} MW.</dd></div>
+      <div class="e"><dt>${fmtEs(base.e_mwh, 0)} · energía de la batería [MWh]</dt><dd>Cuánto almacena. Se usa el 80 % (profundidad de descarga): ${fmtEs(util, 0)} MWh útiles.</dd></div>
+      <div><dt>Duración = energía ÷ potencia</dt><dd>${fmtEs(base.e_mwh, 0)} ÷ ${fmtEs(base.p_mw, 0)} = ${fmtEs(base.dur_h, 1)} h descargando a plena potencia. Más horas: más energía para la noche; más MW: atiende picos más altos.</dd></div>
+    </dl>`;
+  let det;
+  if (!modoK) {
+    let filas = "";
+    for (const [cfgs, titulo] of CFG_GRUPOS) {
+      filas += `<tr class="grp"><td colspan="7">${titulo}</td></tr>`;
+      for (const c of cfgs) {
+        const r = MALLA.find(x => x.config === c);
+        const d = (campo, txt) => `<td class="n${c !== "M01" && r[campo] !== base[campo] ? " dif" : ""}">${txt}</td>`;
+        filas += `<tr${c === "M01" ? ' class="base"' : ""}><td><b>${c}</b></td>${d("pv_mwp", fmtEs(r.pv_mwp, 1))}${d("f_pv", fmtEs(r.f_pv, 2))}${d("p_mw", fmtEs(r.p_mw, 0))}${d("e_mwh", fmtEs(r.e_mwh, 0))}${d("dur_h", fmtEs(r.dur_h, 1))}<td class="q">${CFG_QUE[c]}</td></tr>`;
+      }
+    }
+    det = `<details class="ver"${caja.dataset.abierta ? " open" : ""}><summary>Qué cambia en cada configuración M01–M12</summary>
+      <p class="small muted" style="margin-top:0;">La malla parte de M01 y cambia una sola cosa a la vez, para ver qué pesa más en el resultado. En negrilla, lo que difiere de M01.</p>
+      <div class="tabla-wrap"><table class="cfg-t"><thead><tr><th>Config.</th><th class="n">PV [MWp]</th><th class="n">f_PV</th><th class="n">Potencia [MW]</th><th class="n">Energía [MWh]</th><th class="n">Duración [h]</th><th>Qué cambia frente a M01</th></tr></thead><tbody>${filas}</tbody></table></div>
+      <p class="nota">Todas están en Oriente, con la flota térmica G1–G4 fija y las mismas reglas A_INT, B_INT y D_INT.</p></details>`;
+  } else {
+    const sitios = ["Oriente", "Caribe", "Antioquia", "Suroccidente", "Nordeste"];
+    const caso = (k, s) => DATA.etapa1.casos.find(r => r.k === k && r.sitio === s);
+    let filas = "";
+    for (const k of ["K1", "K2", "K3", "K4"]) {
+      const r = caso(k, "Oriente");
+      filas += `<tr${k === "K3" ? ' class="base"' : ""}><td><b>${k}</b></td><td class="n">${fmtEs(r.f_pv, 3)}</td><td class="n">${fmtEs(r.p_mw, 0)}</td><td class="n">${fmtEs(r.e_mwh, 0)}</td><td class="n">${fmtEs(r.dur_h, 1)}</td>${sitios.map(s => `<td class="n">${fmtEs(caso(k, s).pv_mwp, 1)}</td>`).join("")}<td class="q">${KQUE[k]}</td></tr>`;
+    }
+    const k1 = sitios.map(s => caso("K1", s).pv_mwp);
+    det = `<details class="ver" open><summary>Qué es cada escala K1–K4</summary>
+      <p class="small muted" style="margin-top:0;">La batería es la misma en las cinco regiones. El campo solar en MWp sí cambia, porque f_PV se fija en energía y cada región tiene distinta radiación:
+        con f_PV = 1 va de ${fmtEs(Math.min(...k1), 1)} a ${fmtEs(Math.max(...k1), 1)} MWp.</p>
+      <div class="tabla-wrap"><table class="cfg-t"><thead><tr><th rowspan="2">Escala</th><th class="n" rowspan="2">f_PV</th><th class="n" rowspan="2">Potencia [MW]</th><th class="n" rowspan="2">Energía [MWh]</th><th class="n" rowspan="2">Duración [h]</th><th colspan="5" style="text-align:center;">PV por región [MWp]</th><th rowspan="2">Lectura</th></tr><tr>${sitios.map(s => `<th class="n">${s}</th>`).join("")}</tr></thead><tbody>${filas}</tbody></table></div></details>`;
+  }
+  caja.innerHTML = `<div class="kicker">Cómo leer una configuración</div>
+    <h3>${modoK ? "K3" : "M01"} · ${fmtEs(base.pv_mwp, 0)} MWp · ${fmtEs(base.p_mw, 0)}/${fmtEs(base.e_mwh, 0)}: campo solar, potencia y energía de la batería</h3>${anat}${det}`;
+}
+document.querySelectorAll(".cfg-guia").forEach(guiaConfig);
 
 // ===================== Navegación =====================
 const VISTAS = ["inicio", "decidir", "malla", "termica", "sin-termica", "carbono", "figuras", "cuadernos", "datos"];
