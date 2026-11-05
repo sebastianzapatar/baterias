@@ -393,7 +393,53 @@ table.cfg-t td.q { white-space: normal; min-width: 190px; color: var(--ink-2); }
 table.cfg-t td.dif { font-weight: 800; color: var(--accent); }
 table.cfg-t tr.grp td { background: var(--surface-2); font-weight: 700; font-size: .78rem; color: var(--ink-2); white-space: normal; }
 table.cfg-t tr.base td:first-child { box-shadow: inset 3px 0 0 var(--accent); }
+/* ---------- Guía de casos de la Etapa II ---------- */
+.casos-guia { margin-bottom: 16px; }
+.casos-guia h3 { margin: 2px 0 4px; }
+.casos-sub { margin: 18px 0 8px; font-size: .95rem; }
+ol.casos-base { margin: 0; padding-left: 1.3em; display: grid; gap: 6px; font-size: .86rem; color: var(--ink-2); }
+ol.casos-base b { color: var(--ink); }
+table.casos-t td:first-child { white-space: nowrap; }
+table.casos-t td.q { min-width: 120px; }
+table.casos-t td.q:nth-child(2) { min-width: 260px; }
+.formula { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin: 0 0 12px; font-weight: 700; color: var(--ink-3); font-size: .9rem; }
+.formula .f-t { padding: 3px 9px; border-radius: 8px; background: var(--surface-2); border: 1px solid var(--line); color: var(--ink); font-weight: 700; }
+.formula .f-t:first-child { border-color: var(--accent); }
 @media (max-width: 640px) { .anat { font-size: 1.05rem; } }
+/* ---------- Explicaciones desplegables ---------- */
+details.guia-desp > summary { list-style: none; cursor: pointer; display: flex; align-items: center; gap: 14px; border-radius: 10px; }
+details.guia-desp > summary::-webkit-details-marker { display: none; }
+details.guia-desp > summary:focus-visible { outline: 3px solid var(--focus, var(--accent)); outline-offset: 4px; }
+details.guia-desp > summary .gd-txt { flex: 1; min-width: 0; }
+details.guia-desp > summary h3 { margin: 2px 0 0; }
+details.guia-desp > summary .gd-btn { flex: none; display: inline-flex; align-items: center; gap: 6px; min-height: 36px; padding: 0 12px; border: 1px solid var(--line); border-radius: 999px; font-weight: 650; font-size: .82rem; color: var(--accent); background: var(--surface-2); white-space: nowrap; transition: background-color .15s; }
+details.guia-desp > summary:hover .gd-btn { border-color: var(--accent); }
+details.guia-desp > summary .gd-btn::after { content: ""; width: 7px; height: 7px; border-right: 2px solid currentColor; border-bottom: 2px solid currentColor; transform: translateY(-2px) rotate(45deg); transition: transform .2s; }
+details.guia-desp[open] > summary .gd-btn::after { transform: translateY(2px) rotate(-135deg); }
+details.guia-desp .gd-cerrar { display: none; }
+details.guia-desp[open] .gd-abrir { display: none; }
+details.guia-desp[open] .gd-cerrar { display: inline; }
+details.guia-desp[open] > summary { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px solid var(--line); }
+@media (prefers-reduced-motion: reduce) { details.guia-desp > summary .gd-btn::after { transition: none; } }
+@media (max-width: 520px) { details.guia-desp > summary { align-items: flex-start; } details.guia-desp > summary .gd-btn .gd-abrir, details.guia-desp > summary .gd-btn .gd-cerrar { display: none !important; } details.guia-desp > summary .gd-btn { padding: 0 12px; } }
+/* ---------- Guía de reglas (A_INT, B_INT, D_INT…) ---------- */
+.reglas-guia { margin-bottom: 16px; }
+.reglas-guia h3 { margin: 2px 0 4px; }
+.rg-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 12px; margin-top: 4px; }
+.rg-card { border: 1px solid var(--line); border-top: 4px solid var(--rc, var(--line)); border-radius: 12px; padding: 12px 14px; background: var(--surface); min-width: 0; display: flex; flex-direction: column; gap: 8px; }
+.rg-card .rg-top { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.rg-card .rg-cod { font-family: ui-monospace, Menlo, Consolas, monospace; font-weight: 800; font-size: 1.05rem; color: var(--ink); }
+.rg-card .rg-nom { font-weight: 700; font-size: .86rem; color: var(--ink-2); }
+.rg-card p { margin: 0; font-size: .84rem; color: var(--ink-2); }
+.rg-card dl { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: 4px 10px; margin: auto 0 0; padding-top: 8px; border-top: 1px dashed var(--line); font-size: .78rem; }
+.rg-card dt { color: var(--ink-3); font-weight: 600; }
+.rg-card dd { margin: 0; color: var(--ink); font-weight: 600; }
+.rg-pie { margin: 12px 0 0; font-size: .82rem; color: var(--ink-2); }
+.rg-pie a { font-weight: 700; }
+.rg-ref { display: grid; grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); gap: 8px 16px; margin: 12px 0 0; }
+.rg-ref div { border-left: 3px solid var(--line); padding-left: 10px; min-width: 0; }
+.rg-ref dt { font-weight: 700; font-size: .84rem; font-family: ui-monospace, Menlo, Consolas, monospace; }
+.rg-ref dd { margin: 2px 0 0; font-size: .8rem; color: var(--ink-2); }
 
 /* ---------- Rutas después de instalar ---------- */
 .rutas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
@@ -527,8 +573,8 @@ table.hoja td.txt { white-space: normal; min-width: 200px; }
   <p class="lead">Cada etapa agrega una pieza al sistema. Haga clic en una tarjeta para explorar sus resultados.</p>
   <div class="grid g3" id="ini-etapas"></div>
 
-  <div class="card mt">
-    <h3>Vocabulario mínimo</h3>
+  <details class="card mt guia-desp" id="vocabulario">
+    <summary><span class="gd-txt"><span class="kicker">Glosario</span><h3>Vocabulario mínimo: A_INT, B_INT, T0/T1, M01–M12, K1–K4…</h3></span><span class="gd-btn"><span class="gd-abrir">Ver explicación</span><span class="gd-cerrar">Ocultar</span></span></summary>
     <dl class="glosario">
       <div><dt>A_INT · Autoconsumo</dt><dd>La batería carga con excedente solar y descarga cuando hay déficit, sin mirar precios.</dd></div>
       <div><dt>B_INT · Mérito diario</dt><dd>Reparte la energía almacenada en las horas más caras del día frente a red y gas.</dd></div>
@@ -542,8 +588,10 @@ table.hoja td.txt { white-space: normal; min-width: 200px; }
       <div><dt>K1–K4 · Escalas</dt><dd>Cuatro tamaños de la Etapa I. K3 = M01 = 45 MW / 280 MWh con f_PV = 1.</dd></div>
       <div><dt>H_B4 / H_B3 · CAPEX BESS</dt><dd>Dos hipótesis de costos locales de la batería; H_B4 es la base.</dd></div>
       <div><dt>VPN ajustado</dt><dd>VPN financiero a 20 años más el valor de las emisiones evitadas al precio interno de carbono elegido.</dd></div>
+      <div><dt>_INT · Sufijo</dt><dd>La regla opera integrada con la red y las cuatro unidades a gas G1–G4. Sin sufijo (A, B, C, D, F) es la Etapa I, sin térmica.</dd></div>
     </dl>
-  </div>
+    <p class="rg-pie">¿Necesita más detalle? <a href="#termica" data-abrir="e2-casos">Guía completa de cada caso (A_INT, B_INT, D_INT, C_INT, F_INT, OPT_*) →</a></p>
+  </details>
 </section>
 
 <!-- ======================= DECIDIR ======================= -->
@@ -551,7 +599,8 @@ table.hoja td.txt { white-space: normal; min-width: 200px; }
   <h2 id="h-decidir">Asistente de decisión</h2>
   <p class="lead">Elija la pregunta y las condiciones. La recomendación, el gráfico y el detalle se actualizan al instante.
     Haga clic en cualquier fila del gráfico para ver el detalle de esa configuración.</p>
-  <div class="card cfg-guia" data-guia="M"></div>
+  <details class="card reglas-guia guia-desp" data-reglas="INT"></details>
+  <details class="card cfg-guia guia-desp" data-guia="M"></details>
 
   <div class="preguntas" id="dec-preguntas">
     <button class="preg" type="button" data-modo="C" aria-pressed="true"><span class="letra">C</span><b>¿Qué planta construir y cómo operarla?</b><span>Compara los 12 tamaños con sus tres reglas.</span></button>
@@ -608,7 +657,8 @@ table.hoja td.txt { white-space: normal; min-width: 200px; }
   <h2 id="h-malla">Malla de dimensionamiento M01–M12</h2>
   <p class="lead">Doce tamaños de planta en ocho contextos (dos señales × cuatro precios de carbono). Cada celda muestra la regla de mayor
     VPN ajustado y la métrica elegida. <b>Haga clic en una celda</b> para abrirla en el asistente de decisión.</p>
-  <div class="card cfg-guia" data-guia="M" data-abierta="1"></div>
+  <details class="card cfg-guia guia-desp" data-guia="M"></details>
+  <details class="card reglas-guia guia-desp" data-reglas="INT"></details>
   <div class="filtros">
     <div class="filtro"><span class="et">Métrica</span><div class="seg" id="mat-met"></div></div>
     <div class="filtro"><span class="et">CAPEX de la batería</span><div class="seg" id="mat-hip"></div></div>
@@ -641,6 +691,87 @@ table.hoja td.txt { white-space: normal; min-width: 200px; }
   <h2 id="h-termica">Etapa II · PV + BESS + red + cuatro unidades a gas</h2>
   <p class="lead">Planta K3 en Oriente con flota térmica de 25,2 MW disponibles (G1–G4), gas a 20 USD/MMBtu, sin precio de carbono.
     Se comparan cinco reglas de operación contra benchmarks con previsión perfecta.</p>
+
+  <details class="card casos-guia guia-desp" id="e2-casos">
+    <summary><span class="gd-txt"><span class="kicker">Guía completa de los casos</span><h3>¿Qué es cada caso? Cómo leer A_INT, B_INT, OPT_AB…</h3></span><span class="gd-btn"><span class="gd-abrir">Ver explicación</span><span class="gd-cerrar">Ocultar</span></span></summary>
+    <p class="small muted" style="margin:0;">Cada nombre tiene dos partes: la regla que decide qué hace la batería y el sistema donde opera.</p>
+    <div class="anat" role="img" aria-label="Ejemplos de nombre: B guion bajo INT, una regla integrada con térmica; OPT guion bajo AB, un benchmark que se compara con las reglas A y B">
+      <span class="t p">B</span><span class="sep">_</span><span class="t e">INT</span>
+      <span class="sep" style="margin:0 10px;">·</span>
+      <span class="t pv">OPT</span><span class="sep">_</span><span class="t p">AB</span>
+    </div>
+    <dl class="anat-dl">
+      <div class="p"><dt>A, B, C, D, F · la regla de la batería</dt><dd>Decide cuándo carga, cuándo descarga y si puede vender energía a la red. Son las mismas letras de la Etapa I (cuaderno 02).</dd></div>
+      <div class="e"><dt>_INT · integrada con térmica</dt><dd>La regla opera junto con la red y las cuatro unidades a gas G1–G4. La batería ya no compite solo contra el precio de la red: también contra el gas, los mínimos técnicos y los arranques.</dd></div>
+      <div class="pv"><dt>OPT_ · benchmark</dt><dd>Optimización del año completo con previsión perfecta (MILP en PyPSA). No es una regla que se pueda operar: es la referencia de lo mejor posible. Las letras dicen contra qué reglas se mide: <b>OPT_AB</b> ↔ A y B, <b>OPT_D</b> ↔ D, <b>OPT_CF</b> ↔ C y F.</dd></div>
+      <div><dt>RED_TERMICA · PV_SIN_BESS</dt><dd>Casos sin batería que sirven de punto de partida para el VPN. PV_SIN_BESS también aparece en el gráfico de escalas K1–K4, como referencia.</dd></div>
+    </dl>
+
+    <h4 class="casos-sub">Lo que tienen en común todos los casos</h4>
+    <ol class="casos-base">
+      <li><b>El sol atiende primero la demanda</b>: PV directo = mín(PV, demanda). Ninguna regla cambia esto.</li>
+      <li><b>El resto de la demanda (déficit)</b> lo cubren la batería, la red y G1–G4. La red y el gas solo atienden la demanda: nunca cargan la batería ni exportan.</li>
+      <li><b>Un gestor térmico diario común</b> decide qué unidades se encienden: respeta mínimos técnicos, permite como máximo un arranque y una parada por unidad y día, y cobra 100 USD por arranque (supuesto).</li>
+      <li><b>El PV sobrante se exporta</b> en todos los casos, con el mismo precio y el mismo límite.</li>
+      <li><b>La misma batería K3</b>: 45 MW / 280 MWh, 224 MWh útiles y 90 % de eficiencia ida y vuelta. Su carga termina el año en el mismo nivel en que lo empieza (SOC cíclico), para no regalar energía inicial a ninguna regla.</li>
+    </ol>
+
+    <details class="ver" open><summary>De qué está compuesto cada caso</summary>
+      <div class="tabla-wrap"><table class="cfg-t casos-t">
+        <thead><tr><th>Caso</th><th>Qué hace la batería</th><th>Carga desde</th><th>¿Vende energía de la batería?</th><th>Qué sabe al decidir</th><th>Se compara con</th></tr></thead>
+        <tbody>
+          <tr class="grp"><td colspan="6">Reglas operables que cargan solo con sol</td></tr>
+          <tr><td><b>A_INT</b><br><span class="muted">Autoconsumo</span></td>
+            <td class="q">Carga con el excedente solar y descarga hacia la demanda en cuanto aparece déficit, hasta llegar al mínimo. No mira precios ni el costo del gas.</td>
+            <td class="q">Excedente PV</td><td class="q">No</td><td class="q">Solo la hora actual</td><td class="q">OPT_AB</td></tr>
+          <tr><td><b>B_INT</b><br><span class="muted">Mérito diario</span></td>
+            <td class="q">Cada día parte del despacho térmico sin batería y busca dónde ahorra más cada MWh descargado: horas de red cara, gas por encima del mínimo técnico o bloques de horas que permiten apagar una unidad y ahorrar su operación y su arranque. Reparte la energía de lo más valioso a lo menos valioso, en una sola pasada.</td>
+            <td class="q">Excedente PV</td><td class="q">No, solo descarga a la demanda</td><td class="q">Precios, sol y demanda del día</td><td class="q">OPT_AB</td></tr>
+          <tr><td><b>D_INT</b><br><span class="muted">Mérito + exportación</span></td>
+            <td class="q">Igual que B_INT y, además, en horas sin déficit prueba vender 0, 25, 50, 75 o 100 % de lo posible. Vende solo si el ingreso supera lo que costaría no tener esa energía en la madrugada siguiente.</td>
+            <td class="q">Excedente PV</td><td class="q">Sí, en horas sin déficit y sin carga</td><td class="q">El día y la madrugada siguiente</td><td class="q">OPT_D</td></tr>
+          <tr class="grp"><td colspan="6">Reglas de mercado que también compran a la red</td></tr>
+          <tr><td><b>C_INT</b><br><span class="muted">Mérito con compra de red</span></td>
+            <td class="q">Mérito diario del sistema, pero puede comprar energía de la red para cargar en las horas baratas del día (precio en el 25 % más bajo, sin sol sobrante). Solo atiende los usos de mayor valor del día (25 % superior) y también puede vender energía almacenada.</td>
+            <td class="q">Excedente PV y red</td><td class="q">Sí</td><td class="q">Precios, sol y demanda del día</td><td class="q">OPT_CF</td></tr>
+          <tr><td><b>F_INT</b><br><span class="muted">C con reserva solar</span></td>
+            <td class="q">Como C_INT, pero pone un tope diario a lo que compra a la red para dejar espacio al excedente solar del día (tope = capacidad útil − excedente solar). En K3 dio prácticamente el mismo resultado que C_INT.</td>
+            <td class="q">Excedente PV y red, con tope</td><td class="q">Sí</td><td class="q">Precios, sol y demanda del día</td><td class="q">OPT_CF</td></tr>
+          <tr class="grp"><td colspan="6">Benchmarks con previsión perfecta (no operables)</td></tr>
+          <tr><td><b>OPT_AB</b></td>
+            <td class="q">Optimiza todo el año con las mismas acciones de A y B: carga solo con sol y descarga solo a la demanda, decidiendo junto con la red y G1–G4.</td>
+            <td class="q">Excedente PV</td><td class="q">No</td><td class="q">Todo el año</td><td class="q">Cota de A_INT y B_INT</td></tr>
+          <tr><td><b>OPT_D</b></td>
+            <td class="q">OPT_AB más la posibilidad de vender energía de la batería, con las mismas condiciones que D.</td>
+            <td class="q">Excedente PV</td><td class="q">Sí, como D</td><td class="q">Todo el año</td><td class="q">Cota de D_INT</td></tr>
+          <tr><td><b>OPT_CF</b></td>
+            <td class="q">OPT_D más carga desde la red, sin los cuartiles ni el tope de compras que usan C y F.</td>
+            <td class="q">Excedente PV y red</td><td class="q">Sí</td><td class="q">Todo el año</td><td class="q">Cota de C_INT y F_INT</td></tr>
+          <tr class="grp"><td colspan="6">Referencias sin batería (solo para el VPN)</td></tr>
+          <tr><td><b>RED_TERMICA</b></td>
+            <td class="q">Sin PV ni batería: toda la demanda la cubren la red y G1–G4 con despacho óptimo.</td>
+            <td class="q">—</td><td class="q">—</td><td class="q">Todo el año</td><td class="q">Base del VPN total</td></tr>
+          <tr><td><b>PV_SIN_BESS</b></td>
+            <td class="q">El mismo campo solar de 114 MWp, sin batería: PV directo, exportación del sobrante y red + gas para el resto.</td>
+            <td class="q">—</td><td class="q">—</td><td class="q">Todo el año</td><td class="q">Base del VPN incremental de la batería</td></tr>
+        </tbody>
+      </table></div>
+
+      <h4 class="casos-sub">De qué está compuesto el costo operativo neto</h4>
+      <div class="formula" role="note">
+        <span class="f-t">Costo neto</span> = <span class="f-t">Térmico</span> + <span class="f-t">Red para la demanda</span> + <span class="f-t">Arranques</span> + <span class="f-t">Red para cargar la batería</span> − <span class="f-t">Ingresos por exportación</span>
+      </div>
+      <dl class="glosario">
+        <div><dt>Térmico</dt><dd>Combustible (gas a 20 USD/MMBtu) y CVOM de G1–G4.</dd></div>
+        <div><dt>Red para la demanda</dt><dd>Energía comprada a la red para atender la demanda, al precio de la señal T0 o T1.</dd></div>
+        <div><dt>Arranques</dt><dd>100 USD por cada encendido de una unidad.</dd></div>
+        <div><dt>Red para cargar la batería</dt><dd>Solo existe en C_INT, F_INT y OPT_CF; en las demás vale cero.</dd></div>
+        <div><dt>Ingresos por exportación</dt><dd>PV sobrante en todos los casos y, en D, C, F, OPT_D y OPT_CF, también energía de la batería.</dd></div>
+        <div><dt>Qué no incluye</dt><dd>CAPEX, OPEX fijo, reposiciones ni degradación de la batería. Esos costos entran en el VPN a 20 años.</dd></div>
+      </dl>
+    </details>
+  </details>
+
   <div class="filtros">
     <div class="filtro"><span class="et">Señal tarifaria</span><div class="seg" id="e2-senal"></div></div>
   </div>
@@ -683,7 +814,8 @@ table.hoja td.txt { white-space: normal; min-width: 200px; }
 <section class="view" id="v-sin-termica" aria-labelledby="h-sin">
   <h2 id="h-sin">Etapa I · PV + BESS + red, sin generación térmica</h2>
   <p class="lead">200 casos: cinco regiones UPME × dos señales × cuatro escalas × cinco reglas, evaluados a 20 años.</p>
-  <div class="card cfg-guia" data-guia="K"></div>
+  <details class="card cfg-guia guia-desp" data-guia="K"></details>
+  <details class="card reglas-guia guia-desp" data-reglas="E1"></details>
   <div class="filtros">
     <div class="filtro"><span class="et">Región UPME</span><div class="seg" id="e1-sitio"></div></div>
     <div class="filtro"><span class="et">Señal</span><div class="seg" id="e1-senal"></div></div>
@@ -725,6 +857,7 @@ table.hoja td.txt { white-space: normal; min-width: 200px; }
   <h2 id="h-carb">Etapa III · Precio de carbono y disponibilidad térmica (piloto K3)</h2>
   <p class="lead">Año 1 de la planta K3 con calendario de disponibilidad térmica (8.323 h disponibles) y un precio interno de carbono
     aplicado al gas (0,0586 t CO₂/MMBtu) y a las compras de red (0,0970 t CO₂e/MWh, XM 2025). El cargo de carbono es una valoración, no un pago.</p>
+  <details class="card reglas-guia guia-desp" data-reglas="INT"></details>
   <div class="filtros">
     <div class="filtro"><span class="et">Escenario</span><div class="seg" id="v2-esc"></div></div>
     <div class="filtro"><span class="et">Señal</span><div class="seg" id="v2-senal"></div></div>
@@ -998,8 +1131,29 @@ const NOMBRE = {
   A: "Autoconsumo", B: "Mérito diario", C: "Mercado", D: "Mérito + exportación", F: "Mercado con reserva",
 };
 const FORMA = {A: "circulo", B: "cuadro", D: "rombo"};
+// Descripción corta de cada código: se muestra al pasar el cursor sobre chips y encabezados.
+const RESUMEN = {
+  A_INT: "Autoconsumo con térmica: carga con excedente solar y descarga a la demanda en cuanto hay déficit. No mira precios ni el gas.",
+  B_INT: "Mérito diario con térmica: carga con excedente solar y descarga en las horas del día en que más ahorra frente a red y gas.",
+  D_INT: "Mérito + exportación con térmica: como B_INT y además puede vender a la red energía de la batería.",
+  C_INT: "Mercado con térmica: también compra a la red en horas baratas para cargar y puede vender energía almacenada.",
+  F_INT: "Como C_INT, con un tope diario de compras a la red para dejar espacio al excedente solar.",
+  A: "Autoconsumo sin térmica: carga con excedente solar y descarga a la demanda en cuanto hay déficit.",
+  B: "Mérito diario sin térmica: carga con excedente solar y descarga en las horas de tarifa más cara del día.",
+  D: "Mérito + exportación sin térmica: como B y además exporta desde la batería si el precio supera un umbral.",
+  C: "Mercado sin térmica: carga con sol y con red barata; descarga a demanda cara y exporta.",
+  F: "Como C, pero limita la compra a la red para reservar espacio al excedente solar esperado.",
+  OPT_AB: "Benchmark con previsión perfecta de todo el año, con las acciones de A y B. Es una cota, no una regla operable.",
+  OPT_D: "Benchmark con previsión perfecta que además permite vender desde la batería, como D. Es una cota.",
+  OPT_CF: "Benchmark con previsión perfecta que además permite cargar desde la red, como C y F. Es una cota.",
+  OPT_B: "Etapa I: previsión perfecta con las acciones de B (carga solo con sol, sin exportar desde la batería).",
+  OPT_FULL: "Etapa I: previsión perfecta con todas las acciones (carga con red y exportación desde la batería).",
+  RED_TERMICA: "Referencia sin PV ni batería: la red y G1–G4 cubren toda la demanda.",
+  PV_SIN_BESS: "Referencia con el mismo campo solar pero sin batería.",
+};
 function chipRegla(r, grande = false) {
-  return `<span class="regla${grande ? " grande" : ""}"><i style="background:${colorDe(r)}"></i>${esc(r)}</span>`;
+  const t = RESUMEN[r] ? ` title="${esc(RESUMEN[r])}"` : "";
+  return `<span class="regla${grande ? " grande" : ""}"${t}><i style="background:${colorDe(r)}"></i>${esc(r)}</span>`;
 }
 function leyenda(cont, items) {
   cont.innerHTML = items.map(([n, c, tipo]) => `<span><i class="${tipo || ""}" style="background:${c}"></i>${esc(n)}</span>`).join("");
@@ -1262,6 +1416,15 @@ const diseno = c => { const r = MALLA.find(x => x.config === c); return `${fmtEs
 const disenoCorto = c => { const r = MALLA.find(x => x.config === c); return `${c} · ${fmtEs(r.p_mw, 0)}/${fmtEs(r.e_mwh, 0)}`; };
 const TRM = DATA.meta.trm_cop_usd;
 
+// ===================== Explicaciones desplegables =====================
+const cabeceraGuia = (kicker, titulo) => `<summary><span class="gd-txt"><span class="kicker">${kicker}</span><h3>${titulo}</h3></span><span class="gd-btn"><span class="gd-abrir">Ver explicación</span><span class="gd-cerrar">Ocultar</span></span></summary>`;
+// Un enlace con data-abrir lleva a la vista y despliega la explicación indicada.
+document.addEventListener("click", e => {
+  const a = e.target.closest("a[data-abrir]");
+  if (!a) return;
+  setTimeout(() => { const d = document.getElementById(a.dataset.abrir); if (d) { d.open = true; d.scrollIntoView({block: "start", behavior: "smooth"}); } }, 120);
+});
+
 // ===================== Guía de configuraciones =====================
 const CFG_QUE = {
   M01: "Caso base. Es K3, el tamaño representativo de la tesis.",
@@ -1308,7 +1471,7 @@ function guiaConfig(caja) {
         filas += `<tr${c === "M01" ? ' class="base"' : ""}><td><b>${c}</b></td>${d("pv_mwp", fmtEs(r.pv_mwp, 1))}${d("f_pv", fmtEs(r.f_pv, 2))}${d("p_mw", fmtEs(r.p_mw, 0))}${d("e_mwh", fmtEs(r.e_mwh, 0))}${d("dur_h", fmtEs(r.dur_h, 1))}<td class="q">${CFG_QUE[c]}</td></tr>`;
       }
     }
-    det = `<details class="ver"${caja.dataset.abierta ? " open" : ""}><summary>Qué cambia en cada configuración M01–M12</summary>
+    det = `<details class="ver" open><summary>Qué cambia en cada configuración M01–M12</summary>
       <p class="small muted" style="margin-top:0;">La malla parte de M01 y cambia una sola cosa a la vez, para ver qué pesa más en el resultado. En negrilla, lo que difiere de M01.</p>
       <div class="tabla-wrap"><table class="cfg-t"><thead><tr><th>Config.</th><th class="n">PV [MWp]</th><th class="n">f_PV</th><th class="n">Potencia [MW]</th><th class="n">Energía [MWh]</th><th class="n">Duración [h]</th><th>Qué cambia frente a M01</th></tr></thead><tbody>${filas}</tbody></table></div>
       <p class="nota">Todas están en Oriente, con la flota térmica G1–G4 fija y las mismas reglas A_INT, B_INT y D_INT.</p></details>`;
@@ -1326,10 +1489,73 @@ function guiaConfig(caja) {
         con f_PV = 1 va de ${fmtEs(Math.min(...k1), 1)} a ${fmtEs(Math.max(...k1), 1)} MWp.</p>
       <div class="tabla-wrap"><table class="cfg-t"><thead><tr><th rowspan="2">Escala</th><th class="n" rowspan="2">f_PV</th><th class="n" rowspan="2">Potencia [MW]</th><th class="n" rowspan="2">Energía [MWh]</th><th class="n" rowspan="2">Duración [h]</th><th colspan="5" style="text-align:center;">PV por región [MWp]</th><th rowspan="2">Lectura</th></tr><tr>${sitios.map(s => `<th class="n">${s}</th>`).join("")}</tr></thead><tbody>${filas}</tbody></table></div></details>`;
   }
-  caja.innerHTML = `<div class="kicker">Cómo leer una configuración</div>
-    <h3>${modoK ? "K3" : "M01"} · ${fmtEs(base.pv_mwp, 0)} MWp · ${fmtEs(base.p_mw, 0)}/${fmtEs(base.e_mwh, 0)}: campo solar, potencia y energía de la batería</h3>${anat}${det}`;
+  caja.innerHTML = cabeceraGuia("Cómo leer una configuración", `${modoK ? "K1–K4" : "M01–M12"} · ¿Qué significa «${modoK ? "K3" : "M01"} · ${fmtEs(base.pv_mwp, 0)} MWp · ${fmtEs(base.p_mw, 0)}/${fmtEs(base.e_mwh, 0)}»? Campo solar, potencia y energía de la batería`) + anat + det;
 }
 document.querySelectorAll(".cfg-guia").forEach(guiaConfig);
+
+// ===================== Guía de reglas =====================
+const REGLAS_INT = [
+  ["A_INT", "Autoconsumo", "Guarda el excedente solar y lo entrega a la demanda apenas aparece déficit, hasta llegar al mínimo. No mira precios ni el costo del gas: es la regla más simple.",
+    "Excedente PV", "No", "Solo la hora actual", "OPT_AB"],
+  ["B_INT", "Mérito diario", "Cada día parte del despacho térmico sin batería y busca dónde ahorra más cada MWh descargado: horas de red cara, gas por encima del mínimo técnico o bloques que permiten apagar una unidad y evitar su arranque. Reparte la energía de lo más valioso a lo menos valioso.",
+    "Excedente PV", "No, solo descarga a la demanda", "Precios, sol y demanda del día", "OPT_AB"],
+  ["D_INT", "Mérito + exportación", "Igual que B_INT y, además, en horas sin déficit puede vender a la red energía de la batería (0, 25, 50, 75 o 100 % de lo posible), solo si el ingreso supera lo que costaría no tenerla en la madrugada siguiente.",
+    "Excedente PV", "Sí, en horas sin déficit", "El día y la madrugada siguiente", "OPT_D"],
+];
+const REGLAS_E1 = [
+  ["A", "Autoconsumo", "Guarda el excedente solar y lo entrega a la demanda en cuanto hay déficit. Busca sustituir de inmediato las compras a la red.", "Excedente PV", "No"],
+  ["B", "Mérito diario", "Guarda el excedente solar y lo descarga en las horas de tarifa más cara del día, para desplazar el sol hacia donde la red cuesta más.", "Excedente PV", "No"],
+  ["D", "Mérito + exportación", "Como B, pero puede exportar desde la batería cuando el precio de exportación supera un umbral.", "Excedente PV", "Sí"],
+  ["C", "Mercado (carga de red)", "Además del sol, compra energía a la red en horas baratas para ciclar la batería; descarga a la demanda cara y exporta.", "Excedente PV y red barata", "Sí"],
+  ["F", "Mercado + reserva solar", "Como C, pero limita lo que compra a la red para dejar espacio en la batería al excedente solar esperado.", "Excedente PV y red, con tope", "Sí"],
+];
+function guiaReglas(caja) {
+  const e1 = caja.dataset.reglas === "E1";
+  const tarjeta = ([cod, nom, txt, carga, vende, sabe, bm]) => `<div class="rg-card" style="--rc:${colorDe(cod)}">
+      <div class="rg-top"><span class="rg-cod">${cod}</span><span class="rg-nom">${nom}</span></div>
+      <p>${txt}</p>
+      <dl><dt>Carga desde</dt><dd>${carga}</dd><dt>¿Vende energía de la batería?</dt><dd>${vende}</dd>${sabe ? `<dt>Qué sabe al decidir</dt><dd>${sabe}</dd>` : ""}${bm ? `<dt>Se compara con</dt><dd>${bm}</dd>` : ""}</dl>
+    </div>`;
+  let cuerpo;
+  if (!e1) {
+    cuerpo = `<div class="anat" role="img" aria-label="Ejemplo: B guion bajo INT. B es la regla de la batería; INT indica que opera integrada con la térmica">
+        <span class="t p">B</span><span class="sep">_</span><span class="t e">INT</span></div>
+      <dl class="anat-dl">
+        <div class="p"><dt>A, B, D · la regla de la batería</dt><dd>Decide cuándo carga, cuándo descarga y si puede vender energía a la red. Son las mismas letras de la Etapa I.</dd></div>
+        <div class="e"><dt>_INT · integrada con térmica</dt><dd>Opera junto con la red y las cuatro unidades a gas G1–G4. La batería compite contra el precio de la red y también contra el gas, los mínimos técnicos y los arranques.</dd></div>
+        <div><dt>Lo que no cambia entre reglas</dt><dd>La planta, el sol (que atiende primero la demanda), la exportación del PV sobrante y el gestor térmico diario. Solo cambia cómo se usa la batería.</dd></div>
+      </dl>
+      <h4 class="casos-sub">Las tres reglas que se comparan</h4>
+      <div class="rg-grid">${REGLAS_INT.map(tarjeta).join("")}</div>
+      <details class="ver"><summary>Otros códigos que aparecen en la plataforma</summary>
+        <dl class="rg-ref">
+          <div><dt>C_INT · F_INT</dt><dd>Reglas de mercado que también compran a la red para cargar. Solo se evaluaron en la planta K3 de la Etapa II.</dd></div>
+          <div><dt>OPT_AB · OPT_D · OPT_CF</dt><dd>Benchmarks con previsión perfecta de todo el año (MILP). No son reglas operables: marcan lo mejor posible. OPT_AB es la cota de A_INT y B_INT; OPT_D, de D_INT; OPT_CF, de C_INT y F_INT.</dd></div>
+          <div><dt>RED_TERMICA</dt><dd>Sin PV ni batería: la red y G1–G4 cubren toda la demanda. Es la base del VPN total.</dd></div>
+          <div><dt>PV_SIN_BESS</dt><dd>El mismo campo solar sin batería. Es la base del VPN incremental (ΔVPN) de la batería.</dd></div>
+        </dl>
+      </details>`;
+  } else {
+    cuerpo = `<div class="anat" role="img" aria-label="En la Etapa I la regla se escribe B, sin sufijo; en las etapas con térmica se escribe B guion bajo INT">
+        <span class="t p">B</span><span class="sep" style="margin:0 10px;">→ con térmica →</span><span class="t p">B</span><span class="sep">_</span><span class="t e">INT</span></div>
+      <dl class="anat-dl">
+        <div class="p"><dt>Sin sufijo · Etapa I</dt><dd>No hay generación a gas: la batería solo compite contra el precio de la red (señal T0 o T1).</dd></div>
+        <div class="e"><dt>Con _INT · Etapas II y III</dt><dd>Las mismas letras, integradas con las unidades a gas G1–G4. A_INT es la versión con térmica de A, y así con las demás.</dd></div>
+        <div><dt>A, B, D cargan solo con sol</dt><dd>C y F también compran a la red para cargar la batería.</dd></div>
+      </dl>
+      <h4 class="casos-sub">Las cinco reglas de la Etapa I</h4>
+      <div class="rg-grid">${REGLAS_E1.map(tarjeta).join("")}</div>
+      <dl class="rg-ref">
+        <div><dt>OPT_B</dt><dd>Previsión perfecta con las acciones de B: carga solo con sol y no exporta desde la batería. Brecha de decisión = OPT_B − B.</dd></div>
+        <div><dt>OPT_FULL</dt><dd>Previsión perfecta con todas las acciones: carga desde la red y exporta desde la batería. Brecha de flexibilidad = OPT_FULL − OPT_B.</dd></div>
+      </dl>`;
+  }
+  caja.innerHTML = cabeceraGuia("Cómo leer una regla de operación", `${e1 ? "A, B, C, D y F" : "A_INT, B_INT y D_INT"}: qué hace la batería en cada regla`) + `${cuerpo}
+    <p class="rg-pie">Pase el cursor sobre cualquier código de regla para ver su descripción. <a href="#termica" data-abrir="e2-casos">Guía completa de los casos de la Etapa II →</a></p>`;
+}
+document.querySelectorAll(".reglas-guia").forEach(guiaReglas);
+// Encabezados de tabla con el código de una regla: descripción al pasar el cursor.
+document.querySelectorAll("th").forEach(th => { const r = RESUMEN[th.textContent.trim()]; if (r) th.title = r; });
 
 // ===================== Navegación =====================
 const VISTAS = ["inicio", "decidir", "malla", "termica", "sin-termica", "carbono", "figuras", "cuadernos", "datos"];
@@ -1420,7 +1646,7 @@ function prepararFijo() {
     segmentado($("#dec-fijo"), CONFIGS.map(c => [c, c, diseno(c)]), dec.cfgFijo, v => { dec.cfgFijo = v; dec.detalle = v; RENDER.decidir(); });
   } else if (dec.modo === "B") {
     $("#dec-fijo-et").textContent = "Regla fija";
-    segmentado($("#dec-fijo"), REGLAS.map(r => [r, `${r} · ${NOMBRE[r]}`]), dec.reglaFija, v => { dec.reglaFija = v; RENDER.decidir(); });
+    segmentado($("#dec-fijo"), REGLAS.map(r => [r, `${r} · ${NOMBRE[r]}`, RESUMEN[r]]), dec.reglaFija, v => { dec.reglaFija = v; RENDER.decidir(); });
   }
 }
 
