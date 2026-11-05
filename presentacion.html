@@ -256,6 +256,40 @@ dialog#indice[open] { animation: entrar .2s var(--ease-in); }
 /* SO: mostrar solo los comandos del sistema elegido */
 body[data-os="win"] [data-os="mac"], body[data-os="mac"] [data-os="win"] { display: none; }
 
+/* Rutas después de instalar */
+.rutas { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 14px; }
+.rutas .card { display: flex; flex-direction: column; gap: 8px; border-top: 4px solid var(--line); }
+.rutas .card.rec { border-top-color: var(--accent); }
+.rutas .card h3 { margin: 0; }
+.rutas .card p { margin: 0; }
+.rutas .r-n { font-family: var(--f-head); font-size: .74rem; font-weight: 700; letter-spacing: .08em; text-transform: uppercase; color: var(--ink-3); }
+.cadena { display: flex; flex-wrap: wrap; align-items: center; gap: 4px; }
+.cadena .c { font-family: var(--f-mono); font-weight: 700; font-size: .84rem; padding: 3px 8px; border-radius: 7px; background: var(--chip); border: 1px solid var(--line); color: var(--ink); }
+.cadena .c.opc { background: transparent; border-style: dashed; color: var(--ink-2); }
+.cadena .c.no { background: transparent; color: var(--ink-3); text-decoration: line-through; }
+.cadena .fl { color: var(--ink-3); font-size: .8rem; }
+.rutas .ok { margin-top: auto; padding-top: 8px; border-top: 1px dashed var(--line); font-size: .86rem; color: var(--ink-2); }
+/* Hojas de Excel simuladas */
+:root { --x-in-bg: #fff2a8; --x-in: #1a1aa6; --x-fx-bg: #e3f2ec; }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --x-in-bg: #4a4416; --x-in: #b8c8ff; --x-fx-bg: #173a2c; } }
+:root[data-theme="dark"] { --x-in-bg: #4a4416; --x-in: #b8c8ff; --x-fx-bg: #173a2c; }
+.hoja-ley { display: flex; flex-wrap: wrap; gap: 6px 14px; font-size: .8rem; color: var(--ink-2); margin: 0 0 8px; }
+.hoja-ley span { display: inline-flex; align-items: center; gap: 6px; }
+.hoja-ley i { width: 16px; height: 12px; border-radius: 3px; border: 1px solid var(--line); display: inline-block; }
+.hoja-ley i.ed { background: var(--x-in-bg); } .hoja-ley i.fx { background: var(--x-fx-bg); } .hoja-ley i.ig { background: var(--surface); }
+table.hoja { font-size: .8rem; }
+table.hoja th, table.hoja td { border: 1px solid var(--line); padding: 5px 8px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+table.hoja thead th { text-align: center; text-transform: none; letter-spacing: 0; font-size: .74rem; }
+table.hoja th.rn { text-align: center; color: var(--ink-3); background: var(--surface-2); font-weight: 600; font-size: .74rem; }
+table.hoja td.ed { background: var(--x-in-bg); color: var(--x-in); font-weight: 700; }
+table.hoja td.fx { background: var(--x-fx-bg); color: var(--ink-2); font-style: italic; }
+table.hoja td.hd { font-weight: 700; }
+table.hoja td.ig { color: var(--ink-3); }
+table.hoja td.gap { text-align: center; color: var(--ink-3); }
+.hoja-tab { display: inline-block; font-size: .8rem; font-weight: 700; padding: 4px 12px; border: 1px solid var(--line); border-bottom: 0; border-radius: 8px 8px 0 0; background: var(--surface-2); }
+.hoja-tab + .tw { border-top-left-radius: 0; }
+@media (max-width: 900px) { .rutas { grid-template-columns: minmax(0, 1fr); } }
+
 /* Impresión: todas las diapositivas una tras otra */
 @media print {
   body { display: block; height: auto; overflow: visible; }
@@ -651,6 +685,40 @@ jupyter lab</pre></div>
   </div>
 </section>
 
+<!-- · Qué correr después de instalar -->
+<section class="slide" data-titulo="Qué cuadernos correr después de instalar" data-sec="Ejecutar">
+  <div class="in">
+    <div class="kicker"><b>05</b> Orden recomendado</div>
+    <h2>Después de instalar: ¿qué cuadernos corro?</h2>
+    <p class="lead">Elija según lo que necesite. Ejecute cada cuaderno con <i>Restart Kernel and Run All Cells</i> y espere a que termine antes de abrir el siguiente.</p>
+    <div class="rutas">
+      <div class="card">
+        <div class="r-n">Ruta 1 · ≈ 1 min</div>
+        <h3>Comprobar la instalación</h3>
+        <div class="cadena"><span class="c">01</span><span class="fl">→</span><span class="c">08</span></div>
+        <p class="small muted">El 01 calcula de verdad (≈ 11 s) y usa todos los datos de entrada; el 08 solo lee resultados (≈ 4 s).</p>
+        <div class="ok"><b>Funciona si</b> no hay recuadros rojos y el 01 muestra la tabla «¿Se paga la batería?».</div>
+      </div>
+      <div class="card rec">
+        <div class="r-n">Ruta 2 · ≈ 5–10 min · recomendada</div>
+        <h3>Revisar los resultados de la tesis</h3>
+        <div class="cadena"><span class="c">01</span><span class="fl">→</span><span class="c">01B</span><span class="fl">→</span><span class="c">08</span><span class="fl">→</span><span class="c">09</span><span class="fl">→</span><span class="c">11</span><span class="fl">→</span><span class="c">12</span><span class="fl">→</span><span class="c">13</span><span class="fl">→</span><span class="c">14</span><span class="fl">→</span><span class="c">15</span></div>
+        <p class="small muted">Recorre las tres etapas. El 15 tarda 2–5 min; los demás, segundos.
+          <span class="cadena" style="display:inline-flex;"><span class="c opc">02</span></span> es opcional (15–35 min): con los datos originales vuelve a obtener lo ya guardado. Si lo corre, déjelo para el final.</p>
+        <div class="ok"><b>Funciona si</b> las cifras coinciden con las <a href="#23">cifras de control</a>.</div>
+      </div>
+      <div class="card">
+        <div class="r-n">Ruta 3 · 20–40 min</div>
+        <h3>Estudiar un caso con datos propios</h3>
+        <div class="cadena"><span class="c">copia</span><span class="fl">→</span><span class="c">datos</span><span class="fl">→</span><span class="c">01</span><span class="fl">→</span><span class="c">01B</span><span class="fl">→</span><span class="c">02</span></div>
+        <p class="small muted">Copie la carpeta, cambie los archivos de entrada (diapositivas 15 a 21) y corra solo estos tres.
+          <span class="cadena" style="display:inline-flex;"><span class="c no">08–14</span> <span class="c no">15</span></span> no recalculan, y el 15 se detiene a propósito.</p>
+        <div class="ok"><b>Funciona si</b> el 02 termina e imprime «Mejor configuración encontrada en la malla».</div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- 14 · Qué recalcula -->
 <section class="slide" data-titulo="Qué cuadernos responden a un cambio" data-sec="Cambiar datos">
   <div class="in">
@@ -676,14 +744,14 @@ jupyter lab</pre></div>
       <thead><tr><th>Archivo</th><th>Contenido</th><th>Formato que se debe respetar</th><th>Lo usan</th></tr></thead>
       <tbody>
         <tr><td><code>datos/load variable.csv</code></td><td class="small">Demanda horaria [MW]</td><td class="small muted">Separado por <code>;</code>. Columnas <code>period</code> (día primero: <code>1/01/2025 0:00</code>) y <code>Porvenir</code> (punto decimal). 8.760 filas.</td><td class="nw small">01, 01B, 02</td></tr>
-        <tr><td><code>datos/Precio_Bolsa_Nacional_($kwh)_2025.xlsx</code></td><td class="small">Precio de bolsa XM [COP/kWh]</td><td class="small muted">Primera hoja. Título en filas 1–2; encabezados en la fila 3: <code>Fecha</code> y horas 0 a 23. Una fila por día.</td><td class="nw small">01, 02</td></tr>
+        <tr><td><code>datos/Precio_Bolsa_Nacional_($kwh)_2025.xlsx</code></td><td class="small">Precio de bolsa XM [COP/kWh]</td><td class="small muted">Primera hoja. Título en filas 1–2; encabezados en la fila 3: <code>Fecha</code> y horas 0 a 23 <b>como texto</b>. Una fila por día.</td><td class="nw small">01, 01B, 02</td></tr>
         <tr><td><code>datos/*_tmy-2025.csv</code></td><td class="small">Año meteorológico típico (NSRDB)</td><td class="small muted">CSV de NSRDB sin editar: dos filas de metadatos, encabezados en la fila 3 y 8.760 filas en hora UTC.</td><td class="nw small">01, 01B, 02</td></tr>
-        <tr><td><code>datos/CurvasCapexPVBESS.xlsx</code></td><td class="small">Curvas de CAPEX [USD 2026]</td><td class="small muted">Hojas <code>Parametros_PV</code>, <code>Parametros_BESS</code> y <code>Suministro_BESS</code>; solo ciertas celdas.</td><td class="nw small">01, 02</td></tr>
+        <tr><td><code>datos/CurvasCapexPVBESS.xlsx</code></td><td class="small">Curvas de CAPEX [USD 2026]</td><td class="small muted">Hojas <code>Parametros_PV</code>, <code>Parametros_BESS</code> y <code>Suministro_BESS</code> y <code>Trayectorias</code>; solo ciertas celdas amarillas (diapositiva 19).</td><td class="nw small">01, 01B, 02</td></tr>
       </tbody>
     </table></div>
     <div class="g2 mt">
       <div class="aviso"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><p class="small"><b>Un solo año de 8.760 horas, etiquetado 2025.</b> Si sus datos son de otro año, cambie el año a 2025 y, si es bisiesto, elimine el 29 de febrero.</p></div>
-      <div class="aviso ambar"><svg class="i" aria-hidden="true"><use href="#i-alerta"/></svg><p class="small"><b>No modifique</b> <code>datos/Oriente.xlsx</code>, <code>datos/NREL_TP-6A40-93281_tabla2.csv</code> ni las carpetas <code>resultados_*</code>.</p></div>
+      <div class="aviso ambar"><svg class="i" aria-hidden="true"><use href="#i-alerta"/></svg><p class="small"><b>No modifique</b> <code>datos/Oriente.xlsx</code>, <code>datos/NREL_TP-6A40-93281_tabla2.csv</code> ni las carpetas <code>resultados_*</code>. Tampoco borre <code>Oriente.xlsx</code>: ya no alimenta el modelo, pero el 02 lo busca para un contraste.</p></div>
     </div>
   </div>
 </section>
@@ -708,6 +776,7 @@ jupyter lab</pre></div>
         <ul class="lst small">
           <li>Pegue el reporte de XM de otro periodo con la misma disposición: una fila por día, horas 0 a 23.</li>
           <li>Conserve las dos filas de título y los encabezados en la fila 3. Fechas de 2025.</li>
+          <li>Los encabezados <code>0</code> a <code>23</code> deben quedar <b>como texto</b>; si los escribe, use <code>'0</code>, <code>'1</code>… (diapositiva 18).</li>
           <li>Guarde como <code>.xlsx</code> con el mismo nombre y cierre Excel. T1 se recalibra sola.</li>
         </ul>
       </div>
@@ -722,9 +791,91 @@ jupyter lab</pre></div>
         <h3>Costos de inversión · <code>datos/CurvasCapexPVBESS.xlsx</code></h3>
         <ul class="lst small">
           <li><code>Parametros_PV</code>: C6–C15, C18, C20, C33–C34 (no edite C16 ni C17, son fórmulas).</li>
-          <li><code>Parametros_BESS</code>: filas 5 a 8, columnas D a J. <code>Suministro_BESS</code>: A13 y B13.</li>
+          <li><code>Parametros_BESS</code>: filas 5 a 8, columnas D a J. <code>Suministro_BESS</code>: A13 y B13. <code>Trayectorias</code>: D8 y G8.</li>
+          <li><b>No todas las celdas amarillas cuentan</b> y hay que guardar desde Excel o LibreOffice (diapositiva 19).</li>
           <li>No inserte ni borre filas o columnas. El OPEX se deriva del CAPEX (2 % PV, 1,5 % BESS).</li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- · Cómo deben verse la demanda y el precio -->
+<section class="slide" data-titulo="Cómo deben verse la demanda y el precio" data-sec="Cambiar datos">
+  <div class="in">
+    <div class="kicker"><b>06</b> Cambiar los datos de entrada</div>
+    <h2>Cómo deben verse la demanda y el precio de bolsa</h2>
+    <div class="hoja-ley"><span><i class="ed"></i>Se cambia (amarillo, letra azul)</span><span><i class="fx"></i>Fórmula: no la toque</span><span><i class="ig"></i>Se ignora</span></div>
+    <div class="g2">
+      <div>
+        <span class="hoja-tab">load variable.csv · abierto en Excel</span>
+        <div class="tw"><table class="hoja">
+          <thead><tr><th class="rn"></th><th>A</th><th>B</th></tr></thead>
+          <tbody>
+            <tr><th class="rn">1</th><td class="hd">period</td><td class="hd">Porvenir</td></tr>
+            <tr><th class="rn">2</th><td class="ed">1/01/2025 0:00</td><td class="ed">20.76</td></tr>
+            <tr><th class="rn">3</th><td class="ed">1/01/2025 1:00</td><td class="ed">20.94</td></tr>
+            <tr><th class="rn">…</th><td class="gap">…</td><td class="gap">…</td></tr>
+            <tr><th class="rn">8761</th><td class="ed">31/12/2025 23:00</td><td class="ed">19.74</td></tr>
+          </tbody>
+        </table></div>
+        <ul class="lst small mt">
+          <li>8.760 horas, de la fila 2 a la 8761, sin huecos ni repetidas. Día antes que el mes; MW con <b>punto</b> decimal.</li>
+          <li>Si todo queda en la columna A, su Excel usa otro separador: edite el archivo con un editor de texto.</li>
+          <li>Después de guardar, ábralo en el Bloc de notas: debe verse <code>1/01/2025 0:00;20.76</code>.</li>
+        </ul>
+      </div>
+      <div>
+        <span class="hoja-tab">Precio_Bolsa_Nacional_($kwh)_2025.xlsx · primera hoja</span>
+        <div class="tw"><table class="hoja">
+          <thead><tr><th class="rn"></th><th>A</th><th>B</th><th>C</th><th>…</th><th>Y</th><th>Z</th></tr></thead>
+          <tbody>
+            <tr><th class="rn">2</th><td class="ig">Precio Bolsa Nacional…</td><td class="ig"></td><td class="ig"></td><td class="gap">…</td><td class="ig"></td><td class="ig"></td></tr>
+            <tr><th class="rn">3</th><td class="hd">Fecha</td><td class="hd">0</td><td class="hd">1</td><td class="gap">…</td><td class="hd">23</td><td class="ig">Versión</td></tr>
+            <tr><th class="rn">4</th><td class="ed">1/01/2025</td><td class="ed">202,28</td><td class="ed">202,28</td><td class="gap">…</td><td class="ed">228,78</td><td class="ig">TX4</td></tr>
+            <tr><th class="rn">5</th><td class="ed">2/01/2025</td><td class="ed">440,17</td><td class="ed">253,85</td><td class="gap">…</td><td class="ed">501,30</td><td class="ig">TX4</td></tr>
+            <tr><th class="rn">…</th><td class="gap">…</td><td class="gap">…</td><td class="gap">…</td><td class="gap">…</td><td class="gap">…</td><td class="gap">…</td></tr>
+            <tr><th class="rn">368</th><td class="ed">31/12/2025</td><td class="ed">271,26</td><td class="ed">271,26</td><td class="gap">…</td><td class="ed">271,26</td><td class="ig">TX3</td></tr>
+          </tbody>
+        </table></div>
+        <ul class="lst small mt">
+          <li>Fila 3: <code>Fecha</code> y las horas <code>0</code> a <code>23</code> <b>como texto</b>. Si quedan como número, el cuaderno falla con <code>KeyError</code>.</li>
+          <li>Columna A: fecha real de Excel, no texto. Precios de B a Y en COP/kWh; Z y las filas 1–2 se ignoran.</li>
+          <li>El reporte de XM trae esta disposición: puede pegar el de otro periodo desde la fila 3.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- · Libro de costos: qué celdas cuentan -->
+<section class="slide" data-titulo="Libro de costos: qué celdas cuentan" data-sec="Cambiar datos">
+  <div class="in">
+    <div class="kicker"><b>06</b> Cambiar los datos de entrada</div>
+    <h2>El libro de costos: qué celdas cuentan</h2>
+    <p class="lead" style="margin-bottom:14px;"><code>CurvasCapexPVBESS.xlsx</code> marca en amarillo con letra azul las celdas editables, pero <b>los cuadernos solo leen estas</b>.</p>
+    <div class="g-6-4">
+      <div>
+        <div class="tw"><table>
+          <thead><tr><th>Hoja</th><th>Celdas que se leen</th><th>Qué son</th></tr></thead>
+          <tbody>
+            <tr><td class="nw"><code>Parametros_PV</code></td><td class="nw">C6–C15</td><td class="small muted">Desglose del costo solar a 8 MWp [USD/kWp]. La columna B (Global o Local) decide en qué suma entra cada línea.</td></tr>
+            <tr><td></td><td class="nw">C18 · C20</td><td class="small muted">Interconexión [USD/kWp] y factor de indirectos, IVA y AIU</td></tr>
+            <tr><td></td><td class="nw">C33 · C34</td><td class="small muted">Exponentes de escala. C16 y C17 son sumas: no las toque.</td></tr>
+            <tr><td class="nw"><code>Parametros_BESS</code></td><td class="nw">D5:J8</td><td class="small muted">Costos por segmento B1–B4. Las baterías de más de 100 MWh usan B4. Porcentajes como fracción (<code>0,054</code>).</td></tr>
+            <tr><td class="nw"><code>Suministro_BESS</code></td><td class="nw">A13 · B13</td><td class="small muted">Prima por C-rate: quiebre y pendiente</td></tr>
+            <tr><td class="nw"><code>Trayectorias</code></td><td class="nw">D8 · G8</td><td class="small muted">Variación anual del contenido local, escenario Medio. Fija el costo de reponer la batería en el 02.</td></tr>
+          </tbody>
+        </table></div>
+      </div>
+      <div style="display:grid;gap:12px;align-content:start;">
+        <div class="aviso ambar"><svg class="i" aria-hidden="true"><use href="#i-alerta"/></svg><p class="small"><b>Amarillas que no cambian los resultados</b>
+          Solo mueven las gráficas del libro: <code>Parametros_BESS</code> N5:N8 (el sobredimensionamiento está fijo en 1,0 en el código) y C14:G15;
+          <code>Suministro_BESS</code> D5:I7 y B19:B21; <code>Parametros_PV</code> B27:D30 y C35; <code>Trayectorias</code> filas 5–7 y las columnas Bajo y Alto de la fila 8;
+          y las hojas <code>Curva_*</code> y <code>Validacion</code>.</p></div>
+        <div class="aviso"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><p class="small"><b>Guarde desde Excel o LibreOffice</b>
+          Los cuadernos leen el valor ya calculado de las fórmulas. Si el libro se guarda con un programa que no recalcula, aparece
+          <code>Parametros_PV!C16: se esperaba un número y se obtuvo None</code>.</p></div>
       </div>
     </div>
   </div>
@@ -777,8 +928,9 @@ jupyter lab</pre></div>
         <tr><td><code>Faltan … horas de demanda</code></td><td class="small">Faltan horas, decimales con coma, fechas que no son de 2025 o mes antes que el día.</td></tr>
         <tr><td><code>Hay horas sin precio de bolsa</code></td><td class="small">Faltan días en el Excel de precios o sus fechas no son de 2025.</td></tr>
         <tr><td><code>Faltan columnas horarias en el precio de bolsa</code></td><td class="small">Los encabezados 0 a 23 no están en la fila 3.</td></tr>
+        <tr><td><code>KeyError: … value_vars are not present</code></td><td class="small">Los encabezados 0 a 23 quedaron como número: escríbalos como texto (<code>'0</code>, <code>'1</code>…).</td></tr>
         <tr><td><code>Se esperaban 8.760 registros horarios</code></td><td class="small">El TMY no es el CSV horario de NSRDB o se editó.</td></tr>
-        <tr><td><code>…: se esperaba un número</code></td><td class="small">Una celda del libro de CAPEX quedó con texto o vacía.</td></tr>
+        <tr><td><code>…: se esperaba un número</code></td><td class="small">Una celda del libro de CAPEX quedó con texto o vacía. Si termina en <code>se obtuvo None</code> en C16 o C17, abra el libro en Excel y guárdelo de nuevo.</td></tr>
         <tr><td><code>La demanda de 02 no es identica a la de 01B</code></td><td class="small">La columna o el archivo de demanda difieren entre 01 y 02, o el 01 no se guardó.</td></tr>
         <tr><td><code>Pares fuera del dominio CAPEX</code></td><td class="small">Un par del barrido del 02 dura menos de 1 h o más de 8 h.</td></tr>
         <tr><td><code>AssertionError: Discrepancia</code> en el 15</td><td class="small">Esperado con datos nuevos: el 15 se compara con las tablas ya calculadas.</td></tr>
