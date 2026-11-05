@@ -9,6 +9,7 @@ red colombiana.
 |---|---|
 | **Plataforma de consulta** | <https://sebastianzapatar.github.io/baterias/>; también se abre `index.html` con doble clic, sin instalar nada |
 | **Manual completo** | [`Manual_Ejecucion_Cuadernos_EIA.pdf`](Manual_Ejecucion_Cuadernos_EIA.pdf) |
+| **Presentación del manual** | [`presentacion.html`](presentacion.html): los pasos y comandos en diapositivas (<https://sebastianzapatar.github.io/baterias/presentacion.html>); también se abre desde la plataforma |
 | **Cuadernos** | `01_…ipynb` a `15_…ipynb`, ya ejecutados: se pueden leer en GitHub sin correr nada |
 
 ---
@@ -89,6 +90,7 @@ baterias/
 ├── README.md                          este archivo
 ├── Manual_Ejecucion_Cuadernos_EIA.pdf manual completo
 ├── index.html                         plataforma web de consulta (GitHub Pages)
+├── presentacion.html                  presentación del manual en diapositivas
 ├── requirements.txt                   librerías y versiones fijadas
 ├── requirements-vpn.txt               aceleración opcional del cuaderno 15
 ├── 01_…ipynb … 15_…ipynb              los diez cuadernos
@@ -154,6 +156,6 @@ principal; el cuaderno la detecta solo.
 
 La plataforma pública se despliega solo desde el repositorio
 [`sebastianzapatar/baterias`](https://github.com/sebastianzapatar/baterias), con el
-flujo `.github/workflows/pages.yml`: publica `index.html` y el manual cada vez que
-cambian en `main`. Requisito de una sola vez en ese repositorio: en
+flujo `.github/workflows/pages.yml`: publica `index.html`, `presentacion.html` y el
+manual cada vez que cambian en `main`. Requisito de una sola vez en ese repositorio: en
 **Settings → Pages**, poner **Source = GitHub Actions**.

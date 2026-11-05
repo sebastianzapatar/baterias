@@ -1,6 +1,6 @@
 name: Desplegar página del proyecto
 
-# Publica index.html y el manual en PDF de la rama main en GitHub Pages.
+# Publica index.html, presentacion.html y el manual en PDF de la rama main en GitHub Pages.
 # La página es estática y lleva los datos y las figuras embebidos: no hay que
 # instalar nada ni recalcular.
 #
@@ -11,6 +11,7 @@ on:
     branches: [main]
     paths:
       - 'index.html'
+      - 'presentacion.html'
       - 'Manual_Ejecucion_Cuadernos_EIA.pdf'
       - '.github/workflows/pages.yml'
   workflow_dispatch:
@@ -36,7 +37,7 @@ jobs:
       - name: Preparar el sitio
         run: |
           mkdir -p _sitio
-          cp index.html Manual_Ejecucion_Cuadernos_EIA.pdf _sitio/
+          cp index.html presentacion.html Manual_Ejecucion_Cuadernos_EIA.pdf _sitio/
           touch _sitio/.nojekyll
 
       - uses: actions/configure-pages@v5

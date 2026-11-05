@@ -1,0 +1,1086 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manual de ejecución · Presentación</title>
+<meta name="description" content="Presentación del manual de instalación y ejecución de los cuadernos PV + BESS + térmica. Universidad EIA.">
+<link rel="icon" href="data:image/png;base64,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">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Exo:wght@500;600;700;800&family=Roboto+Mono:wght@400;500;700&display=swap">
+<style>
+:root {
+  --petrol: #054C58; --cyan: #21B8D2; --green: #50AF4D;
+  --bg: #f4f7f8; --surface: #ffffff; --surface-2: #eef3f4; --line: #d6e2e5;
+  --ink: #0d2a30; --ink-2: #3c5a61; --ink-3: #5f7a80;
+  --accent: #054C58; --accent-ink: #ffffff; --focus: #1595ab;
+  --pos: #2e7d32; --neg: #b3261e; --warn: #9a5a00; --warn-bg: #fff4e2; --info-bg: #e6f4f7;
+  --chip: #e6f4f7; --code-bg: #0d2328; --code-ink: #d9f3f8; --code-dim: #7fa6ae;
+  --shadow: 0 1px 2px rgba(5,40,48,.06), 0 6px 20px rgba(5,40,48,.06);
+  --f-head: "Exo", "Segoe UI", system-ui, -apple-system, Roboto, sans-serif;
+  --f-body: "Segoe UI", system-ui, -apple-system, Roboto, "Helvetica Neue", Arial, sans-serif;
+  --f-mono: "Roboto Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  --dur: .28s; --ease-in: cubic-bezier(.2,.8,.2,1);
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0b1c20; --surface: #10262b; --surface-2: #163238; --line: #24444b;
+    --ink: #eaf4f6; --ink-2: #b5ced3; --ink-3: #93b0b6;
+    --accent: #3cc3db; --accent-ink: #062228; --focus: #5fd3e8;
+    --pos: #6cc070; --neg: #f08a80; --warn: #f0b84a; --warn-bg: #2b2414; --info-bg: #143840;
+    --chip: #163a41; --code-bg: #071417; --code-ink: #d9f3f8; --code-dim: #7fa6ae;
+    --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0b1c20; --surface: #10262b; --surface-2: #163238; --line: #24444b;
+  --ink: #eaf4f6; --ink-2: #b5ced3; --ink-3: #93b0b6;
+  --accent: #3cc3db; --accent-ink: #062228; --focus: #5fd3e8;
+  --pos: #6cc070; --neg: #f08a80; --warn: #f0b84a; --warn-bg: #2b2414; --info-bg: #143840;
+  --chip: #163a41; --code-bg: #071417; --code-ink: #d9f3f8; --code-dim: #7fa6ae;
+  --shadow: 0 1px 2px rgba(0,0,0,.3), 0 8px 24px rgba(0,0,0,.25);
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 var(--f-body);
+  -webkit-font-smoothing: antialiased; display: grid; grid-template-rows: auto minmax(0, 1fr) auto;
+  height: 100vh; height: 100dvh; overflow: hidden;
+}
+a { color: var(--accent); }
+code, kbd { font-family: var(--f-mono); font-size: .88em; }
+code { background: var(--surface-2); padding: .08em .38em; border-radius: 5px; overflow-wrap: anywhere; }
+kbd { background: var(--surface); border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 5px; padding: .05em .4em; }
+:focus-visible { outline: 3px solid var(--focus); outline-offset: 2px; border-radius: 6px; }
+[hidden] { display: none !important; }
+.i { width: 20px; height: 20px; stroke: currentColor; fill: none; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; flex: none; }
+.i-sm { width: 16px; height: 16px; }
+.skip { position: absolute; left: 12px; top: -60px; z-index: 100; background: var(--surface); color: var(--ink); padding: 10px 14px; border-radius: 8px; box-shadow: var(--shadow); font-weight: 700; }
+.skip:focus { top: 12px; }
+
+/* ---------- Barra superior ---------- */
+.bar { background: linear-gradient(120deg, #043e48, #05576a 60%, #0a7489); color: #fff; }
+.bar-in { display: flex; align-items: center; gap: 12px; padding: 8px 16px; max-width: 1400px; margin: 0 auto; }
+.bar img { height: 40px; background: #fff; border-radius: 8px; padding: 3px 8px; display: block; }
+.bar .tt { min-width: 0; }
+.bar .tt1 { font-family: var(--f-head); font-weight: 700; font-size: 1rem; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.bar .tt2 { font-size: .78rem; opacity: .85; white-space: nowrap; }
+.bar .sp { flex: 1; }
+.hbtn {
+  display: inline-flex; align-items: center; justify-content: center; gap: 7px; min-height: 40px; min-width: 40px; padding: 0 12px;
+  background: rgba(255,255,255,.12); color: #fff; border: 1px solid rgba(255,255,255,.35); border-radius: 999px;
+  font: inherit; font-size: .86rem; font-weight: 600; cursor: pointer; text-decoration: none; white-space: nowrap;
+  transition: background-color .15s;
+}
+.hbtn:hover { background: rgba(255,255,255,.24); }
+.hbtn:focus-visible { outline-color: #fff; }
+.os { display: inline-flex; background: rgba(0,0,0,.18); border-radius: 999px; padding: 3px; gap: 2px; }
+.os button { border: 0; background: transparent; color: rgba(255,255,255,.85); font: inherit; font-size: .82rem; font-weight: 700; padding: 0 12px; min-height: 34px; border-radius: 999px; cursor: pointer; white-space: nowrap; }
+.os button[aria-pressed="true"] { background: #fff; color: #054C58; }
+.os button:focus-visible { outline-color: #fff; }
+.os .corto { display: none; }
+@media (max-width: 980px) { .bar .tt2, .hbtn .lbl { display: none; } .hbtn { padding: 0; width: 40px; } }
+@media (max-width: 640px) { .bar .tt, #btn-pantalla { display: none; } .os .largo { display: none; } .os .corto { display: inline; } .bar-in { gap: 6px; padding: 8px 12px; } .bar img { height: 34px; } .os button { padding: 0 10px; } }
+
+/* ---------- Diapositivas ---------- */
+#deck { position: relative; overflow: hidden; outline: none; }
+.slide {
+  position: absolute; inset: 0; overflow-y: auto; overscroll-behavior: contain; padding: clamp(20px, 4vh, 48px) 16px clamp(24px, 4vh, 48px);
+  visibility: hidden; opacity: 0; transform: translateX(28px);
+  transition: opacity var(--dur) var(--ease-in), transform var(--dur) var(--ease-in), visibility 0s linear var(--dur);
+}
+.slide.antes { transform: translateX(-28px); }
+.slide.activa { visibility: visible; opacity: 1; transform: none; transition: opacity var(--dur) var(--ease-in), transform var(--dur) var(--ease-in), visibility 0s; }
+@media (prefers-reduced-motion: reduce) { .slide, .slide.activa { transition: none; transform: none; } }
+.in { max-width: 1180px; margin: 0 auto; min-height: 100%; display: flex; flex-direction: column; justify-content: center; }
+.kicker { display: inline-flex; align-items: center; gap: 8px; font-family: var(--f-head); text-transform: uppercase; letter-spacing: .1em; font-size: .78rem; font-weight: 700; color: var(--ink-3); margin-bottom: 8px; }
+.kicker b { background: var(--accent); color: var(--accent-ink); border-radius: 6px; padding: 1px 8px; letter-spacing: .04em; }
+h1, h2, h3 { font-family: var(--f-head); letter-spacing: -.01em; text-wrap: balance; }
+h1 { font-size: clamp(2rem, 5vw, 3.6rem); line-height: 1.08; margin: .1em 0 .3em; font-weight: 800; }
+h2 { font-size: clamp(1.55rem, 3.2vw, 2.5rem); line-height: 1.12; margin: 0 0 .4em; font-weight: 700; }
+h3 { font-size: 1.12rem; line-height: 1.25; margin: 0 0 .45em; font-weight: 700; }
+.lead { font-size: clamp(1rem, 1.6vw, 1.2rem); color: var(--ink-2); max-width: 70ch; margin: 0 0 22px; }
+p { margin: 0 0 .7em; }
+.small { font-size: .9rem; }
+.muted { color: var(--ink-2); }
+ul.lst { margin: 0; padding-left: 1.2em; }
+ul.lst li { margin: .3em 0; }
+ul.lst li::marker { color: var(--accent); }
+
+.g2, .g3, .g4 { display: grid; gap: 16px; }
+.g2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.g3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.g4 { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+.g-6-4 { display: grid; gap: 16px; grid-template-columns: minmax(0, 6fr) minmax(0, 4fr); }
+@media (max-width: 1000px) { .g3, .g4 { grid-template-columns: repeat(2, minmax(0, 1fr)); } .g-6-4 { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 700px) { .g2, .g3, .g4 { grid-template-columns: minmax(0, 1fr); } }
+.mt { margin-top: 16px; }
+.card { background: var(--surface); border: 1px solid var(--line); border-radius: 16px; padding: 18px 20px; box-shadow: var(--shadow); min-width: 0; }
+.card > :last-child { margin-bottom: 0; }
+.card .ico { width: 40px; height: 40px; border-radius: 12px; background: var(--chip); color: var(--accent); display: grid; place-items: center; margin-bottom: 10px; }
+.tag { display: inline-block; font-size: .74rem; font-weight: 700; background: var(--chip); color: var(--ink-2); padding: 2px 10px; border-radius: 999px; }
+.pill { display: inline-block; font-size: .76rem; font-weight: 700; border-radius: 999px; padding: 3px 10px; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.p-rapido { background: rgba(80,175,77,.16); color: var(--pos); }
+.p-medio { background: rgba(230,159,0,.18); color: var(--warn); }
+.p-largo { background: rgba(179,38,30,.12); color: var(--neg); }
+
+/* Avisos */
+.aviso { display: flex; gap: 12px; align-items: flex-start; border-radius: 14px; padding: 14px 16px; background: var(--info-bg); color: var(--ink); border: 1px solid var(--line); }
+.aviso .i { color: var(--accent); margin-top: 2px; }
+.aviso.ambar { background: var(--warn-bg); }
+.aviso.ambar .i { color: var(--warn); }
+.aviso p:last-child { margin: 0; }
+.aviso b:first-child { display: block; margin-bottom: 2px; }
+
+/* Pasos */
+.pasos { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; counter-reset: paso; }
+.in > *, .g2 > *, .g3 > *, .g4 > *, .g-6-4 > *, .paso > * { min-width: 0; }
+.paso { display: grid; grid-template-columns: 36px minmax(0, 1fr); gap: 12px; align-items: start; }
+.paso::before { counter-increment: paso; content: counter(paso); width: 32px; height: 32px; border-radius: 50%; background: var(--accent); color: var(--accent-ink); display: grid; place-items: center; font-weight: 800; font-family: var(--f-head); }
+.paso.n3 { counter-set: paso 2; } .paso.n6 { counter-set: paso 5; }
+
+/* Código */
+.code { background: var(--code-bg); border-radius: 12px; margin: 8px 0 0; overflow: hidden; border: 1px solid rgba(255,255,255,.06); }
+.code-h { display: flex; align-items: center; justify-content: space-between; gap: 8px; padding: 4px 6px 4px 14px; border-bottom: 1px solid rgba(255,255,255,.08); }
+.code-h span { font-size: .74rem; font-weight: 700; color: var(--code-dim); letter-spacing: .04em; text-transform: uppercase; }
+.copiar { display: inline-flex; align-items: center; gap: 6px; min-height: 32px; padding: 0 10px; border: 0; border-radius: 8px; background: transparent; color: var(--code-ink); font: inherit; font-size: .8rem; font-weight: 600; cursor: pointer; transition: background-color .15s; }
+.copiar:hover { background: rgba(255,255,255,.1); }
+.copiar.ok { color: #8fdc8c; }
+.code pre { margin: 0; padding: 12px 14px; overflow-x: auto; color: var(--code-ink); font: .86rem/1.6 var(--f-mono); }
+.code pre .c { color: var(--code-dim); }
+
+/* Tablas */
+.tw { overflow-x: auto; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); box-shadow: var(--shadow); }
+table { width: 100%; border-collapse: collapse; font-size: .9rem; }
+th, td { padding: 9px 12px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+th { background: var(--surface-2); color: var(--ink-2); font-size: .74rem; text-transform: uppercase; letter-spacing: .04em; white-space: nowrap; }
+tr:last-child td { border-bottom: 0; }
+td.num { font-family: var(--f-mono); font-weight: 700; color: var(--accent); white-space: nowrap; }
+td.nw { white-space: nowrap; }
+
+/* Árbol de carpetas */
+.arbol { font: .84rem/1.75 var(--f-mono); background: var(--surface); border: 1px solid var(--line); border-radius: 14px; padding: 14px 16px; box-shadow: var(--shadow); overflow-x: auto; white-space: pre; }
+.arbol .d { color: var(--ink-3); }
+
+/* Etapas */
+.etapas { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 900px) { .etapas { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 560px) { .etapas { grid-template-columns: minmax(0, 1fr); } }
+.etapa { background: var(--surface); border: 1px solid var(--line); border-top: 4px solid var(--accent); border-radius: 14px; padding: 14px 16px; box-shadow: var(--shadow); }
+.etapa .nb { font-family: var(--f-mono); font-size: .8rem; font-weight: 700; color: var(--accent); }
+
+/* Glosario */
+dl.glos { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 12px 20px; margin: 0; }
+dl.glos div { border-left: 3px solid var(--accent); padding: 2px 0 2px 12px; }
+dl.glos dt { font-weight: 700; font-family: var(--f-head); }
+dl.glos dd { margin: 0; font-size: .9rem; color: var(--ink-2); }
+
+/* Respuesta a cambios */
+.resp { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 800px) { .resp { grid-template-columns: minmax(0, 1fr); } }
+.resp .card { border-top: 4px solid var(--pos); }
+.resp .card.igual { border-top-color: var(--ink-3); }
+.resp .card.error { border-top-color: var(--warn); }
+.resp .nbs { font-family: var(--f-mono); font-weight: 700; font-size: 1.15rem; color: var(--accent); }
+
+/* Lista de verificación */
+.check { display: grid; gap: 8px; }
+.check label { display: flex; gap: 12px; align-items: flex-start; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 12px 14px; cursor: pointer; transition: border-color .15s, background-color .15s; }
+.check label:hover { border-color: var(--accent); }
+.check input { width: 22px; height: 22px; margin: 1px 0 0; accent-color: var(--accent); flex: none; cursor: pointer; }
+.check input:checked + span { color: var(--ink-3); text-decoration: line-through; text-decoration-color: var(--ink-3); }
+.check-res { display: flex; align-items: center; gap: 12px; flex-wrap: wrap; margin-top: 12px; }
+.barra-av { flex: 1; min-width: 160px; height: 8px; border-radius: 4px; background: var(--surface-2); overflow: hidden; }
+.barra-av i { display: block; height: 100%; width: 0; background: var(--pos); transition: width .25s; }
+.btn-txt { border: 1px solid var(--line); background: var(--surface); color: var(--ink); border-radius: 999px; min-height: 40px; padding: 0 16px; font: inherit; font-size: .88rem; font-weight: 600; cursor: pointer; }
+.btn-txt:hover { border-color: var(--accent); }
+
+/* Portada y cierre */
+.slide.portada { background: linear-gradient(135deg, #043e48 0%, #05576a 55%, #0a7489 100%); color: #fff; }
+.portada .kicker, .portada .lead { color: rgba(255,255,255,.88); }
+.portada .lead { max-width: 62ch; }
+.portada .logo { background: #fff; border-radius: 14px; padding: 10px 14px; display: inline-block; margin-bottom: 18px; }
+.portada .logo img { height: 96px; display: block; }
+.portada .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 6px 0 22px; }
+.portada .chips span { border: 1px solid rgba(255,255,255,.4); border-radius: 999px; padding: 4px 12px; font-size: .86rem; font-weight: 600; }
+.cta { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn { display: inline-flex; align-items: center; gap: 8px; min-height: 46px; border-radius: 999px; padding: 0 20px; font: inherit; font-weight: 700; font-size: .95rem; text-decoration: none; cursor: pointer; border: 1px solid transparent; transition: background-color .15s, border-color .15s; }
+.btn-claro { background: #fff; color: #054C58; }
+.btn-claro:hover { background: #e3f6fa; }
+.btn-borde { background: transparent; color: #fff; border-color: rgba(255,255,255,.55); }
+.btn-borde:hover { background: rgba(255,255,255,.12); }
+.btn-prim { background: var(--accent); color: var(--accent-ink); }
+.btn-prim:hover { filter: brightness(1.08); }
+.btn-sec { background: var(--surface); color: var(--ink); border-color: var(--line); }
+.btn-sec:hover { border-color: var(--accent); }
+.portada .btn:focus-visible { outline-color: #fff; }
+.atajos { margin-top: 26px; font-size: .86rem; color: rgba(255,255,255,.8); display: flex; flex-wrap: wrap; gap: 6px 16px; }
+.atajos kbd { background: rgba(255,255,255,.14); border-color: rgba(255,255,255,.3); color: #fff; }
+
+/* ---------- Controles inferiores ---------- */
+.ctrl { background: var(--surface); border-top: 1px solid var(--line); }
+.ctrl-in { display: flex; align-items: center; gap: 12px; padding: 8px 16px; max-width: 1400px; margin: 0 auto; }
+.nbtn { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-width: 44px; min-height: 44px; padding: 0 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); color: var(--ink); font: inherit; font-weight: 700; font-size: .9rem; cursor: pointer; transition: border-color .15s, background-color .15s; }
+.nbtn:hover:not(:disabled) { border-color: var(--accent); background: var(--surface-2); }
+.nbtn.prim { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.nbtn.prim:hover:not(:disabled) { background: var(--accent); filter: brightness(1.08); }
+.nbtn:disabled { opacity: .4; cursor: default; }
+.pos-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 5px; }
+.pos-txt { display: flex; gap: 10px; align-items: baseline; font-size: .86rem; min-width: 0; }
+.pos-txt .cnt { font-family: var(--f-mono); font-weight: 700; color: var(--accent); white-space: nowrap; font-variant-numeric: tabular-nums; }
+.pos-txt .tit { color: var(--ink-2); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.prog { height: 4px; border-radius: 2px; background: var(--surface-2); overflow: hidden; }
+.prog i { display: block; height: 100%; width: 0; background: linear-gradient(90deg, var(--cyan), var(--green)); transition: width var(--dur) var(--ease-in); }
+@media (max-width: 640px) { .nbtn .lbl { display: none; } .nbtn { padding: 0; } }
+
+/* Índice */
+dialog#indice { border: 0; border-radius: 18px; padding: 0; width: min(720px, calc(100vw - 32px)); max-height: min(80vh, 760px); background: var(--surface); color: var(--ink); box-shadow: 0 24px 60px rgba(0,0,0,.3); }
+dialog#indice::backdrop { background: rgba(2, 18, 22, .6); }
+dialog#indice[open] { animation: entrar .2s var(--ease-in); }
+@keyframes entrar { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: none; } }
+@media (prefers-reduced-motion: reduce) { dialog#indice[open] { animation: none; } }
+.ind-h { display: flex; align-items: center; justify-content: space-between; padding: 14px 16px 10px 20px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--surface); }
+.ind-h h2 { font-size: 1.2rem; margin: 0; }
+.ind-l { list-style: none; margin: 0; padding: 8px; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2px 8px; }
+@media (max-width: 560px) { .ind-l { grid-template-columns: minmax(0, 1fr); } }
+.ind-l a { display: flex; gap: 10px; align-items: baseline; padding: 9px 12px; border-radius: 10px; text-decoration: none; color: var(--ink); font-size: .92rem; min-height: 40px; }
+.ind-l a:hover { background: var(--surface-2); }
+.ind-l a[aria-current="true"] { background: var(--chip); font-weight: 700; }
+.ind-l .n { font-family: var(--f-mono); font-size: .8rem; color: var(--accent); font-weight: 700; min-width: 2ch; text-align: right; }
+.ind-l .sec { grid-column: 1 / -1; font-family: var(--f-head); font-size: .74rem; text-transform: uppercase; letter-spacing: .08em; color: var(--ink-3); font-weight: 700; padding: 10px 12px 2px; }
+
+/* SO: mostrar solo los comandos del sistema elegido */
+body[data-os="win"] [data-os="mac"], body[data-os="mac"] [data-os="win"] { display: none; }
+
+/* Impresión: todas las diapositivas una tras otra */
+@media print {
+  body { display: block; height: auto; overflow: visible; }
+  .bar, .ctrl, .skip, dialog, .copiar { display: none !important; }
+  #deck { overflow: visible; }
+  .slide { position: static; visibility: visible; opacity: 1; transform: none; overflow: visible; break-after: page; min-height: 0; }
+  .slide.portada { background: none; color: #000; }
+  body[data-os] [data-os] { display: block !important; }
+}
+</style>
+</head>
+<body data-os="win">
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-izq" viewBox="0 0 24 24"><path d="m15 18-6-6 6-6"/></symbol>
+  <symbol id="i-der" viewBox="0 0 24 24"><path d="m9 18 6-6-6-6"/></symbol>
+  <symbol id="i-lista" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13M3 6h.01M3 12h.01M3 18h.01"/></symbol>
+  <symbol id="i-tema" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3a9 9 0 0 0 0 18z" fill="currentColor"/></symbol>
+  <symbol id="i-casa" viewBox="0 0 24 24"><path d="m3 10 9-7 9 7v10a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><path d="M9 22V12h6v10"/></symbol>
+  <symbol id="i-copiar" viewBox="0 0 24 24"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></symbol>
+  <symbol id="i-ok" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+  <symbol id="i-alerta" viewBox="0 0 24 24"><path d="m21.73 18-8-14a2 2 0 0 0-3.48 0l-8 14A2 2 0 0 0 4 21h16a2 2 0 0 0 1.73-3Z"/><path d="M12 9v4M12 17h.01"/></symbol>
+  <symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></symbol>
+  <symbol id="i-pantalla" viewBox="0 0 24 24"><path d="M8 3H5a2 2 0 0 0-2 2v3M21 8V5a2 2 0 0 0-2-2h-3M3 16v3a2 2 0 0 0 2 2h3M16 21h3a2 2 0 0 0 2-2v-3"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8M10 9H8"/></symbol>
+  <symbol id="i-terminal" viewBox="0 0 24 24"><path d="m4 17 6-6-6-6M12 19h8"/></symbol>
+  <symbol id="i-libro" viewBox="0 0 24 24"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></symbol>
+  <symbol id="i-play" viewBox="0 0 24 24"><path d="m6 3 14 9-14 9z"/></symbol>
+  <symbol id="i-db" viewBox="0 0 24 24"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M3 5v14a9 3 0 0 0 18 0V5M3 12a9 3 0 0 0 18 0"/></symbol>
+  <symbol id="i-lupa" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></symbol>
+  <symbol id="i-llave" viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></symbol>
+  <symbol id="i-carpeta" viewBox="0 0 24 24"><path d="M20 20a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-7.9a2 2 0 0 1-1.69-.9L9.6 3.9A2 2 0 0 0 7.93 3H4a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2Z"/></symbol>
+</svg>
+<a class="skip" href="#deck">Saltar a la presentación</a>
+
+<header class="bar">
+  <div class="bar-in">
+    <a href="index.html" title="Volver a la plataforma"><img src="data:image/png;base64,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" alt="Universidad EIA"></a>
+    <div class="tt">
+      <div class="tt1">Manual de ejecución de los cuadernos</div>
+      <div class="tt2">PV + BESS + térmica · Universidad EIA</div>
+    </div>
+    <div class="sp"></div>
+    <div class="os" role="group" aria-label="Mostrar comandos para">
+      <button type="button" data-set-os="win" aria-pressed="true"><span class="largo">Windows</span><span class="corto">Win</span></button>
+      <button type="button" data-set-os="mac" aria-pressed="false"><span class="largo">macOS · Linux</span><span class="corto">Mac</span></button>
+    </div>
+    <button class="hbtn" id="btn-indice" type="button" aria-haspopup="dialog" aria-label="Índice de diapositivas"><svg class="i" aria-hidden="true"><use href="#i-lista"/></svg><span class="lbl">Índice</span></button>
+    <button class="hbtn" id="btn-pantalla" type="button" aria-label="Pantalla completa"><svg class="i" aria-hidden="true"><use href="#i-pantalla"/></svg></button>
+    <button class="hbtn" id="btn-tema" type="button" aria-label="Cambiar tema claro u oscuro"><svg class="i" aria-hidden="true"><use href="#i-tema"/></svg></button>
+    <a class="hbtn" href="index.html#cuadernos" aria-label="Volver a la plataforma"><svg class="i" aria-hidden="true"><use href="#i-casa"/></svg><span class="lbl">Plataforma</span></a>
+  </div>
+</header>
+
+<main id="deck" tabindex="-1" aria-roledescription="presentación" aria-label="Manual de ejecución de los cuadernos">
+
+<!-- 1 · Portada -->
+<section class="slide portada" data-titulo="Portada" data-sec="Inicio">
+  <div class="in">
+    <div><span class="logo"><img src="data:image/png;base64,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" alt="Universidad EIA · Ser, Saber y Servir · Con Acreditación Institucional"></span></div>
+    <div class="kicker">Universidad EIA · Escuela de Ingeniería y Ciencias</div>
+    <h1>Instalar y ejecutar los cuadernos PV&nbsp;+&nbsp;BESS</h1>
+    <p class="lead">Operación horaria y dimensionamiento de portafolios fotovoltaicos con almacenamiento en baterías (BESS) e integración térmica a gas. Esta presentación resume el manual de ejecución, paso a paso.</p>
+    <div class="chips"><span>Etapa I · Cuadernos 08 y 09</span><span>Etapa II · Cuadernos 11 a 14</span><span>Etapa III (V2) · Cuaderno 15</span></div>
+    <div class="cta">
+      <button class="btn btn-claro" type="button" data-ir="2">Empezar <svg class="i" aria-hidden="true"><use href="#i-der"/></svg></button>
+      <a class="btn btn-borde" href="Manual_Ejecucion_Cuadernos_EIA.pdf"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg>Manual completo (PDF)</a>
+      <a class="btn btn-borde" href="index.html"><svg class="i" aria-hidden="true"><use href="#i-casa"/></svg>Plataforma de consulta</a>
+    </div>
+    <div class="atajos"><span><kbd>←</kbd> <kbd>→</kbd> navegar</span><span><kbd>I</kbd> índice</span><span><kbd>F</kbd> pantalla completa</span><span>En celular: deslice o use los botones</span></div>
+  </div>
+</section>
+
+<!-- 2 · Qué cubre -->
+<section class="slide" data-titulo="Qué cubre el manual" data-sec="Inicio">
+  <div class="in">
+    <div class="kicker"><b>00</b> Panorama</div>
+    <h2>Qué cubre este manual</h2>
+    <p class="lead">Diez cuadernos de Jupyter, ya ejecutados, son la puerta de entrada. Para usarlos basta con crear un ambiente de Python, abrir JupyterLab y ejecutarlos. No hace falta abrir ningún archivo <code>.py</code>.</p>
+    <div class="g3">
+      <div class="card"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-carpeta"/></svg></div><h3>La entrega</h3><p class="small muted">Cómo obtenerla del repositorio de GitHub, qué contiene y qué no se debe mover.</p></div>
+      <div class="card"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-terminal"/></svg></div><h3>El ambiente virtual</h3><p class="small muted">Instalar Python, crear y activar el ambiente e instalar <code>requirements.txt</code>.</p></div>
+      <div class="card"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-play"/></svg></div><h3>Ejecutar los cuadernos</h3><p class="small muted">JupyterLab, VS Code o terminal, y el recorrido de cada uno de los diez cuadernos.</p></div>
+      <div class="card"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-db"/></svg></div><h3>Cambiar los datos</h3><p class="small muted">Qué Excel y CSV reemplazar para estudiar otro caso y qué cuadernos recalculan.</p></div>
+      <div class="card"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-lupa"/></svg></div><h3>Leer y comprobar</h3><p class="small muted">Conceptos clave, resultados principales y cifras de control.</p></div>
+      <div class="card"><div class="ico"><svg class="i" aria-hidden="true"><use href="#i-llave"/></svg></div><h3>Resolver problemas</h3><p class="small muted">Errores frecuentes de instalación y ejecución, y cómo corregirlos.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3 · La entrega -->
+<section class="slide" data-titulo="La entrega y su contenido" data-sec="Inicio">
+  <div class="in">
+    <div class="kicker"><b>01</b> Qué se entrega</div>
+    <h2>Cómo obtener la entrega</h2>
+    <div class="g-6-4">
+      <div>
+        <div class="g2">
+          <div class="card"><span class="tag">Opción 1</span><h3 style="margin-top:8px;">Descargar el ZIP</h3><p class="small muted">En el <a href="https://github.com/sebastianzapatar/baterias" target="_blank" rel="noopener">repositorio público</a>, botón verde <b>Code → Download ZIP</b>. La carpeta descomprimida se llama <code>baterias-main</code>.</p></div>
+          <div class="card"><span class="tag">Opción 2</span><h3 style="margin-top:8px;">Clonar con Git</h3><p class="small muted">Con Git instalado, clone el repositorio; la carpeta se llama <code>baterias</code>. Las instrucciones son las mismas en ambos casos.</p></div>
+        </div>
+        <div class="code"><pre data-t="Con Git">git clone https://github.com/sebastianzapatar/baterias.git</pre></div>
+        <div class="aviso ambar mt"><svg class="i" aria-hidden="true"><use href="#i-alerta"/></svg><p><b>Copie la carpeta completa, con la misma estructura.</b> Los cuadernos importan solos los <code>.py</code> y la carpeta <code>.build/</code>, y leen los resultados ya calculados. Un cuaderno copiado aislado no se puede ejecutar.</p></div>
+      </div>
+      <div>
+        <h3>Contenido de la carpeta</h3>
+<div class="arbol">baterias-main/
+  README.md               <span class="d"># instalación y estructura</span>
+  Manual_Ejecucion_…pdf
+  presentacion.html       <span class="d"># esta presentación</span>
+  index.html              <span class="d"># plataforma de consulta</span>
+  requirements.txt        <span class="d"># librerías del ambiente</span>
+  requirements-vpn.txt    <span class="d"># Numba opcional (NB 15)</span>
+  01_ … 15_*.ipynb        <span class="d"># 10 cuadernos, ejecutados</span>
+  *.py  ·  .build/        <span class="d"># biblioteca interna</span>
+  datos/                  <span class="d"># entradas: CSV y Excel</span>
+  resultados_*/           <span class="d"># resultados ya calculados</span>
+  figuras_*/              <span class="d"># figuras que se regeneran</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4 · Tipos de cuaderno -->
+<section class="slide" data-titulo="Dos tipos de cuaderno" data-sec="Inicio">
+  <div class="in">
+    <div class="kicker"><b>01</b> Qué se entrega</div>
+    <h2>Dos tipos de cuaderno</h2>
+    <p class="lead">Los cuadernos se entregan ya ejecutados: al abrirlos se ven sus tablas y figuras aunque no se haya instalado nada. Volver a ejecutarlos sirve para comprobar que los resultados se reproducen.</p>
+    <div class="g2">
+      <div class="card">
+        <span class="pill p-rapido">Segundos</span>
+        <h3 style="margin-top:10px;">De lectura y análisis</h3>
+        <p class="muted"><code>01B</code> <code>08</code> <code>09</code> <code>11</code> <code>12</code> <code>13</code> <code>14</code></p>
+        <p class="small">Leen datos o resultados ya calculados, los presentan y regeneran sus figuras. Los 08, 09, 11, 12 y 13 tienen una <b>guarda</b>: si algo intentara recalcular una optimización larga, se detienen con un <code>RuntimeError</code>.</p>
+      </div>
+      <div class="card">
+        <span class="pill p-largo">Segundos a 35 min</span>
+        <h3 style="margin-top:10px;">De cálculo</h3>
+        <p class="muted"><code>01</code> <code>02</code> <code>15</code></p>
+        <p class="small">Simulan la operación horaria. El 01 tarda segundos; el 15, entre 2 y 5 minutos; el <b>02 es el único largo</b> (15–35 min).</p>
+      </div>
+    </div>
+    <div class="aviso mt"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><p>Solo <b>01, 01B y 02</b> recalculan cuando se cambian los datos de entrada. La plataforma <code>index.html</code> muestra los mismos resultados de forma interactiva, se abre con doble clic y no requiere instalación ni conexión.</p></div>
+  </div>
+</section>
+
+<!-- 5 · Sistema y etapas -->
+<section class="slide" data-titulo="El sistema y las tres etapas" data-sec="Conceptos">
+  <div class="in">
+    <div class="kicker"><b>02</b> Conceptos clave</div>
+    <h2>El sistema estudiado</h2>
+    <p class="lead">Un usuario industrial en Colombia con demanda de <b>158.742,57 MWh/año</b> (pico de 23,23 MW) se abastece de la red y, según la etapa, de un campo solar (PV), una batería (BESS) y cuatro unidades a gas (G1–G4, 25,2 MW disponibles). Se simulan las 8.760 horas de 2025 y se evalúa a 20 años con WACC de 10 %.</p>
+    <div class="etapas">
+      <div class="etapa"><div class="nb">01 · 01B · 02</div><h3 style="margin-top:6px;">Base</h3><p class="small muted">Cómo se modela la operación horaria de PV + BESS + red y qué tamaños tienen sentido.</p></div>
+      <div class="etapa"><div class="nb">08 · 09</div><h3 style="margin-top:6px;">Etapa I</h3><p class="small muted">Sin térmica, ¿cuánto vale la batería y de qué depende? ¿Qué tan cerca están las reglas de la previsión perfecta?</p></div>
+      <div class="etapa"><div class="nb">11 · 12 · 13 · 14</div><h3 style="margin-top:6px;">Etapa II</h3><p class="small muted">Con la flota a gas, ¿cómo cambia el valor de la batería cuando evita encendidos y mínimos técnicos?</p></div>
+      <div class="etapa"><div class="nb">15</div><h3 style="margin-top:6px;">Etapa III (V2)</h3><p class="small muted">Con disponibilidad térmica, precio de carbono y dos CAPEX de batería, ¿qué tamaño y qué regla convienen?</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 6 · Glosario -->
+<section class="slide" data-titulo="Glosario" data-sec="Conceptos">
+  <div class="in">
+    <div class="kicker"><b>02</b> Conceptos clave</div>
+    <h2>Glosario mínimo</h2>
+    <dl class="glos">
+      <div><dt>PV · BESS</dt><dd>Campo solar (MWp DC) y batería (MW de potencia, MWh de energía).</dd></div>
+      <div><dt>SOC · EFC</dt><dd>Estado de carga [MWh] y ciclos equivalentes completos, que miden el desgaste por uso.</dd></div>
+      <div><dt>Reglas A, B, D</dt><dd>A: autoconsumo. B: mérito diario (horas más caras). D: como B, con exportación.</dd></div>
+      <div><dt>Reglas C, F</dt><dd>Reglas de mercado orientadas al precio de bolsa; se comparan por separado.</dd></div>
+      <div><dt>Sufijo _INT</dt><dd>Versión de la regla integrada con la flota térmica (Etapas II y III).</dd></div>
+      <div><dt>OPT_*</dt><dd>Benchmarks con previsión perfecta (MILP). Cotas de referencia, no reglas operables.</dd></div>
+      <div><dt>T0 · T1</dt><dd>T0: tarifa regulada N3 casi plana. T1: tarifa indexada al precio de bolsa 2025.</dd></div>
+      <div><dt>K1–K4 · M01–M12</dt><dd>Configuraciones de referencia (K3 es la principal) y malla de doce tamaños de la Etapa III.</dd></div>
+      <div><dt>VPN · ΔVPN</dt><dd>Valor presente neto a 20 años; el ΔVPN compara con batería frente al mismo PV sin batería.</dd></div>
+      <div><dt>VPN ajustado</dt><dd>VPN financiero más el valor de las emisiones evitadas al precio de carbono elegido. No es caja.</dd></div>
+      <div><dt>H_B4 · H_B3</dt><dd>Dos hipótesis de CAPEX local de la batería; H_B4 es la base.</dd></div>
+    </dl>
+  </div>
+</section>
+
+<!-- 7 · Pasos 1 y 2 -->
+<section class="slide" data-titulo="Instalar Python y abrir la terminal" data-sec="Ambiente">
+  <div class="in">
+    <div class="kicker"><b>03</b> Ambiente virtual · una sola vez</div>
+    <h2>Pasos 1 y 2: Python y la terminal</h2>
+    <p class="lead">Un ambiente virtual (<code>.venv</code>) es una carpeta con su propio Python y las versiones exactas de <code>requirements.txt</code>, sin alterar otras instalaciones. Se crea una vez; después solo se activa.</p>
+    <div class="g2">
+      <div class="card">
+        <h3>1 · Instalar Python 3.12 o superior</h3>
+        <div data-os="win">
+          <p class="small">Descargue el instalador de <b>python.org/downloads</b>. En la primera pantalla marque <b>Add python.exe to PATH</b> y luego <b>Install Now</b>.</p>
+          <div class="code"><pre data-t="PowerShell · comprobar">py --version</pre></div>
+          <p class="small muted mt">Si tiene varias versiones, <code>py --list</code> las muestra todas.</p>
+        </div>
+        <div data-os="mac">
+          <p class="small">Descargue el instalador para macOS de <b>python.org/downloads</b> y ejecútelo.</p>
+          <div class="code"><pre data-t="Terminal · comprobar">python3 --version</pre></div>
+        </div>
+        <p class="small muted mt">Verificado con Python 3.12.13 en macOS y 3.14.5 en Windows.</p>
+      </div>
+      <div class="card">
+        <h3>2 · Abrir una terminal dentro de la carpeta de entrega</h3>
+        <p class="small" data-os="win">Abra la carpeta de entrega (<code>baterias-main</code> o <code>baterias</code>) en el Explorador, clic derecho en un espacio vacío y <b>Abrir en Terminal</b>. También puede escribir <code>powershell</code> en la barra de direcciones y pulsar Enter.</p>
+        <p class="small" data-os="mac">Abra Terminal, escriba <code>cd</code> y un espacio, arrastre la carpeta de entrega (<code>baterias-main</code> o <code>baterias</code>) desde el Finder a la ventana y pulse Enter.</p>
+        <div class="aviso"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><p class="small">Para confirmar, <code data-os="win">dir</code><code data-os="mac">ls</code> debe listar <code>requirements.txt</code> y los cuadernos.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8 · Pasos 3 a 5 -->
+<section class="slide" data-titulo="Crear, activar e instalar" data-sec="Ambiente">
+  <div class="in">
+    <div class="kicker"><b>03</b> Ambiente virtual · una sola vez</div>
+    <h2>Pasos 3 a 5: crear, activar e instalar</h2>
+    <div class="g-6-4">
+      <div class="pasos">
+        <div class="paso n3"><div><b>Crear el ambiente</b>
+          <div class="code" data-os="win"><pre data-t="Windows · PowerShell">py -3.12 -m venv .venv</pre></div>
+          <div class="code" data-os="mac"><pre data-t="macOS · Linux">python3 -m venv .venv</pre></div>
+          <p class="small muted" data-os="win" style="margin-top:6px;">Con otra versión, cambie <code>-3.12</code> por la suya (p. ej. <code>-3.14</code>) o use <code>py -m venv .venv</code>.</p>
+          <p class="small muted" data-os="mac" style="margin-top:6px;">La carpeta <code>.venv</code> puede quedar oculta en el Finder porque empieza con punto.</p></div></div>
+        <div class="paso"><div><b>Activarlo</b>: la terminal debe empezar con <code>(.venv)</code>
+          <div class="code" data-os="win"><pre data-t="Windows · PowerShell">.venv\Scripts\Activate.ps1</pre></div>
+          <div class="code" data-os="win"><pre data-t="Windows · cmd">.venv\Scripts\activate.bat</pre></div>
+          <div class="code" data-os="mac"><pre data-t="macOS · Linux">source .venv/bin/activate</pre></div></div></div>
+        <div class="paso"><div><b>Instalar las librerías</b> (cientos de MB; varios minutos)
+          <div class="code"><pre data-t="Con el ambiente activado">python -m pip install --upgrade pip
+python -m pip install -r requirements.txt</pre></div></div></div>
+      </div>
+      <div>
+        <div class="aviso ambar" data-os="win"><svg class="i" aria-hidden="true"><use href="#i-alerta"/></svg><div><b>Si PowerShell bloquea la activación</b><p class="small">Mensaje «la ejecución de scripts está deshabilitada». Ejecute una vez, responda <kbd>S</kbd> y vuelva a activar:</p>
+          <div class="code"><pre data-t="PowerShell">Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</pre></div>
+          <p class="small" style="margin-top:8px;">Solo afecta al usuario actual. Alternativa: cmd con <code>activate.bat</code>.</p></div></div>
+        <div class="card" style="margin-top:12px;">
+          <h3>Qué instala <code>requirements.txt</code></h3>
+          <table><tbody>
+            <tr><td class="nw"><code>numpy</code> · <code>pandas</code></td><td class="small muted">Series horarias y tablas</td></tr>
+            <tr><td class="nw"><code>matplotlib</code> · <code>seaborn</code></td><td class="small muted">Figuras</td></tr>
+            <tr><td class="nw"><code>openpyxl</code></td><td class="small muted">Lectura de Excel</td></tr>
+            <tr><td class="nw"><code>pvlib</code></td><td class="small muted">Generación solar horaria</td></tr>
+            <tr><td class="nw"><code>pypsa</code> · <code>highspy</code></td><td class="small muted">Despachos óptimos (HiGHS)</td></tr>
+            <tr><td class="nw"><code>jupyterlab</code></td><td class="small muted">Entorno de cuadernos</td></tr>
+          </tbody></table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9 · Pasos 6 a 8 -->
+<section class="slide" data-titulo="Verificar, registrar kernel y abrir JupyterLab" data-sec="Ambiente">
+  <div class="in">
+    <div class="kicker"><b>03</b> Ambiente virtual · una sola vez</div>
+    <h2>Pasos 6 a 8: verificar y abrir JupyterLab</h2>
+    <div class="g-6-4">
+      <div class="pasos">
+        <div class="paso n6"><div><b>Verificar la instalación</b>: debe imprimir <code>Ambiente listo</code>
+          <div class="code"><pre data-t="Terminal">python --version
+python -c "import numpy, pandas, matplotlib, pvlib, pypsa, highspy; print('Ambiente listo')"</pre></div></div></div>
+        <div class="paso"><div><b>Registrar el kernel</b> (recomendado): aparecerá como <i>Python (PV-BESS)</i>
+          <div class="code"><pre data-t="Terminal">python -m ipykernel install --user --name pv-bess --display-name "Python (PV-BESS)"</pre></div></div></div>
+        <div class="paso"><div><b>Abrir JupyterLab</b> con el ambiente activado y en la carpeta de entrega
+          <div class="code"><pre data-t="Terminal">jupyter lab</pre></div>
+          <p class="small muted" style="margin-top:6px;">La terminal debe quedar abierta. Para terminar, cierre la pestaña y pulse <kbd>Ctrl</kbd>+<kbd>C</kbd>.</p></div></div>
+      </div>
+      <div class="aviso ambar" style="align-self:start;"><svg class="i" aria-hidden="true"><use href="#i-alerta"/></svg><div><b>La regla más importante</b>
+        <p>Todos los cuadernos buscan sus datos a partir de la carpeta desde la que se abrió Jupyter. Si se abre desde otra carpeta, fallan con <code>FileNotFoundError</code>.</p>
+        <p class="small">Solución: cierre Jupyter, abra la terminal en la carpeta de entrega, active el ambiente y vuelva a ejecutar <code>jupyter lab</code>.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 10 · Siguientes veces -->
+<section class="slide" data-titulo="Las siguientes veces y opciones" data-sec="Ambiente">
+  <div class="in">
+    <div class="kicker"><b>03</b> Ambiente virtual</div>
+    <h2>Las siguientes veces, y si algo sale mal</h2>
+    <div class="g2">
+      <div class="card">
+        <h3>Las siguientes veces: solo activar y abrir</h3>
+        <div class="code" data-os="win"><pre data-t="Windows · en la carpeta de entrega">.venv\Scripts\Activate.ps1
+jupyter lab</pre></div>
+        <div class="code" data-os="mac"><pre data-t="macOS · Linux · en la carpeta de entrega">source .venv/bin/activate
+jupyter lab</pre></div>
+        <p class="small muted mt">Para salir del ambiente sin cerrar la terminal: <code>deactivate</code>.</p>
+      </div>
+      <div class="card">
+        <h3>Rehacer el ambiente desde cero</h3>
+        <p class="small">Si la instalación quedó incompleta o cambió la versión de Python, borre <code>.venv</code> y repita los pasos 3 a 7. No afecta cuadernos ni datos.</p>
+        <div class="code" data-os="win"><pre data-t="PowerShell · ambiente desactivado">Remove-Item -Recurse -Force .venv</pre></div>
+        <div class="code" data-os="mac"><pre data-t="macOS · Linux">rm -rf .venv</pre></div>
+      </div>
+      <div class="card">
+        <h3>Aceleración opcional del cuaderno 15</h3>
+        <p class="small">Numba baja el 15 de unos 5 a unos 2 minutos, con el mismo resultado. Se instala aparte para no cambiar NumPy; el cuaderno la detecta solo.</p>
+        <div class="code" data-os="win"><pre data-t="PowerShell">python -m pip install --no-deps --target .venv\numba -r requirements-vpn.txt</pre></div>
+        <div class="code" data-os="mac"><pre data-t="macOS · Linux">python -m pip install --no-deps --target .venv/numba -r requirements-vpn.txt</pre></div>
+      </div>
+      <div class="card">
+        <h3>¿Tiene Anaconda o Miniconda?</h3>
+        <p class="small">Cree igualmente el ambiente con <code>venv</code> a partir del Python de python.org. Mezclar paquetes de conda y pip en el mismo ambiente puede producir versiones distintas de las fijadas.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11 · JupyterLab -->
+<section class="slide" data-titulo="Ejecutar un cuaderno en JupyterLab" data-sec="Ejecutar">
+  <div class="in">
+    <div class="kicker"><b>04</b> Ejecutar un cuaderno</div>
+    <h2>Ejecutar todo un cuaderno en JupyterLab</h2>
+    <div class="g-6-4">
+      <div class="pasos">
+        <div class="paso"><div><b>Abra el cuaderno</b> con doble clic en el explorador de la izquierda.</div></div>
+        <div class="paso"><div><b>Compruebe el kernel</b> arriba a la derecha; debe ser el del ambiente, p. ej. <i>Python (PV-BESS)</i>.</div></div>
+        <div class="paso"><div><b>Kernel → Restart Kernel and Run All Cells.</b> Reiniciar garantiza que no queden variables de una corrida anterior.</div></div>
+        <div class="paso"><div><b>Espere</b> a que todas las celdas muestren un número y el indicador del kernel quede vacío.</div></div>
+        <div class="paso"><div><b>Revise</b> que no haya recuadros rojos de error y compare con las cifras de control.</div></div>
+        <div class="paso"><div><b>Guarde</b> con <kbd>Ctrl</kbd>+<kbd>S</kbd> si quiere conservar las salidas.</div></div>
+      </div>
+      <div class="card">
+        <h3>La interfaz en un minuto</h3>
+        <ul class="lst small">
+          <li>Cada cuaderno es una lista de celdas: las de texto explican y las de código calculan.</li>
+          <li><code>[ ]</code> sin ejecutar · <code>[*]</code> ejecutándose · <code>[12]</code> terminada.</li>
+          <li>Un círculo junto al kernel se rellena mientras está ocupado.</li>
+        </ul>
+        <h3 class="mt">Otras acciones útiles</h3>
+        <ul class="lst small">
+          <li><b>Kernel → Interrupt Kernel</b> detiene una ejecución.</li>
+          <li><kbd>Shift</kbd>+<kbd>Enter</kbd> ejecuta una sola celda.</li>
+          <li><b>File → Save and Export Notebook As → HTML</b> genera una copia para quien no tenga Python.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 12 · VS Code y terminal -->
+<section class="slide" data-titulo="VS Code y terminal" data-sec="Ejecutar">
+  <div class="in">
+    <div class="kicker"><b>04</b> Ejecutar un cuaderno</div>
+    <h2>Otras formas: VS Code y la terminal</h2>
+    <div class="g2">
+      <div class="card">
+        <h3>Con Visual Studio Code</h3>
+        <div class="pasos">
+          <div class="paso"><div>Instale las extensiones <b>Python</b> y <b>Jupyter</b> de Microsoft.</div></div>
+          <div class="paso"><div>Abra la carpeta de entrega con <b>File → Open Folder</b>.</div></div>
+          <div class="paso"><div>En <b>Select Kernel</b> elija <code>.venv</code> o <i>Python (PV-BESS)</i>.</div></div>
+          <div class="paso"><div>Pulse <b>Run All</b>. VS Code ejecuta desde la carpeta abierta: se cumple la regla de la carpeta raíz.</div></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>Desde la terminal, sin navegador</h3>
+        <p class="small">Útil para ejecutar varios seguidos; el resultado queda guardado dentro del cuaderno.</p>
+        <div class="code"><pre data-t="Ambiente activado">jupyter nbconvert --to notebook --execute --inplace 14_Comparacion_anual_reglas_integradas.ipynb</pre></div>
+        <ul class="lst small mt">
+          <li>Para el 02 añada <code>--ExecutePreprocessor.timeout=-1</code>.</li>
+          <li>Los nombres con espacios van entre comillas: <code>"01_Modelo base PV_BESS.ipynb"</code>.</li>
+          <li>Para una copia en HTML cambie <code>--to notebook --inplace</code> por <code>--to html</code>.</li>
+        </ul>
+      </div>
+    </div>
+    <div class="aviso ambar mt"><svg class="i" aria-hidden="true"><use href="#i-alerta"/></svg><p><b>Ejecutar sobrescribe figuras y algunas tablas de salida.</b> Los datos de entrada y los resultados ya calculados no se modifican. Si una corrida anterior importa, copie antes sus carpetas de salida.</p></div>
+  </div>
+</section>
+
+<!-- 13 · Diez cuadernos -->
+<section class="slide" data-titulo="Los diez cuadernos en orden" data-sec="Ejecutar">
+  <div class="in">
+    <div class="kicker"><b>05</b> Orden recomendado</div>
+    <h2>Los diez cuadernos</h2>
+    <p class="lead" style="margin-bottom:14px;">Se pueden ejecutar en cualquier orden; este sigue la lógica del estudio. Tiempos medidos en macOS (Apple Silicon) con un ambiente recién creado.</p>
+    <div class="tw"><table>
+      <thead><tr><th>N.º</th><th>Cuaderno</th><th>Tipo</th><th>Duración</th><th>Qué mirar</th></tr></thead>
+      <tbody>
+        <tr><td class="num">01</td><td>Modelo base PV + BESS</td><td>Cálculo</td><td><span class="pill p-rapido">≈ 11 s</span></td><td class="small muted">Tabla «¿Se paga la batería?»</td></tr>
+        <tr><td class="num">01B</td><td>Caracterización para el dimensionamiento</td><td>Análisis</td><td><span class="pill p-rapido">≈ 5 s</span></td><td class="small muted">Cuatro figuras y la malla propuesta</td></tr>
+        <tr><td class="num">02</td><td>Optimización de portafolio PV + BESS</td><td>Cálculo</td><td><span class="pill p-largo">15–35 min</span></td><td class="small muted">«Mejor configuración encontrada en la malla»</td></tr>
+        <tr><td class="num">08</td><td>Sensibilidad en 5 regiones (Etapa I)</td><td>Lectura</td><td><span class="pill p-rapido">≈ 4 s</span></td><td class="small muted">Contribuciones del subconjunto A/B/D</td></tr>
+        <tr><td class="num">09</td><td>Reglas frente a previsión perfecta</td><td>Lectura</td><td><span class="pill p-rapido">≈ 3 s</span></td><td class="small muted">Tabla de brechas</td></tr>
+        <tr><td class="num">11</td><td>Integración de generación térmica</td><td>Lectura</td><td><span class="pill p-rapido">≈ 4 s</span></td><td class="small muted">Figuras 11_*</td></tr>
+        <tr><td class="num">12</td><td>Red + térmica + PV</td><td>Lectura</td><td><span class="pill p-rapido">≈ 2 s</span></td><td class="small muted">Comparación anual; arranques en T1</td></tr>
+        <tr><td class="num">13</td><td>Red + térmica + PV + BESS</td><td>Lectura</td><td><span class="pill p-rapido">≈ 4 s</span></td><td class="small muted">Comparación anual y ventana en T1</td></tr>
+        <tr><td class="num">14</td><td>Comparación anual de reglas integradas</td><td>Lectura</td><td><span class="pill p-rapido">≈ 5 s</span></td><td class="small muted">Comparación conjunta (secc. 9) y VPN (secc. 12)</td></tr>
+        <tr><td class="num">15</td><td>Síntesis integral V2 (Etapa III)</td><td>Cálculo</td><td><span class="pill p-medio">2–5 min</span></td><td class="small muted">Comparaciones A, B y C (secc. 10) y trazabilidad</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- 14 · Qué recalcula -->
+<section class="slide" data-titulo="Qué cuadernos responden a un cambio" data-sec="Cambiar datos">
+  <div class="in">
+    <div class="kicker"><b>06</b> Cambiar los datos de entrada</div>
+    <h2>¿Qué cuadernos responden a un cambio?</h2>
+    <p class="lead">Para estudiar otro caso se reemplazan los Excel y CSV de la carpeta <code>datos/</code> o se cambian unos pocos parámetros en una celda. No hace falta abrir los <code>.py</code>.</p>
+    <div class="resp">
+      <div class="card"><div class="nbs">01 · 01B · 02</div><h3 style="margin-top:6px;">Recalculan todo</h3><p class="small muted">El 01 usa demanda, bolsa, recurso solar y costos. El 01B ejecuta por dentro las celdas del 01 guardadas en disco. El 02 (15–35 min) sobrescribe <code>resultados_nb02/C3B_multianual.csv</code>.</p></div>
+      <div class="card igual"><div class="nbs">08 · 09 · 11–14</div><h3 style="margin-top:6px;">No cambian</h3><p class="small muted">Leen los resultados ya calculados, que vienen de horas de cómputo. Con datos nuevos siguen mostrando las cifras originales, sin error.</p></div>
+      <div class="card error"><div class="nbs">15</div><h3 style="margin-top:6px;">Se detiene con un error</h3><p class="small muted">Recalcula una muestra y la compara con las tablas ya calculadas: <code>AssertionError: Discrepancia…</code> es la señal esperada, no una falla.</p></div>
+    </div>
+    <div class="aviso ambar mt"><svg class="i" aria-hidden="true"><use href="#i-alerta"/></svg><p><b>Antes de cambiar nada, haga una copia de seguridad.</b> Copie la carpeta completa con otro nombre (p. ej. <code>baterias-main_original</code>) o, como mínimo, los archivos que va a modificar.</p></div>
+  </div>
+</section>
+
+<!-- 15 · Archivos de entrada -->
+<section class="slide" data-titulo="Los archivos de entrada" data-sec="Cambiar datos">
+  <div class="in">
+    <div class="kicker"><b>06</b> Cambiar los datos de entrada</div>
+    <h2>Los archivos de entrada</h2>
+    <p class="lead" style="margin-bottom:14px;">Se leen <b>por nombre y por posición</b>: conserve el nombre del archivo, el de sus hojas y el orden de filas y columnas. Cambie solo los valores.</p>
+    <div class="tw"><table>
+      <thead><tr><th>Archivo</th><th>Contenido</th><th>Formato que se debe respetar</th><th>Lo usan</th></tr></thead>
+      <tbody>
+        <tr><td><code>datos/load variable.csv</code></td><td class="small">Demanda horaria [MW]</td><td class="small muted">Separado por <code>;</code>. Columnas <code>period</code> (día primero: <code>1/01/2025 0:00</code>) y <code>Porvenir</code> (punto decimal). 8.760 filas.</td><td class="nw small">01, 01B, 02</td></tr>
+        <tr><td><code>datos/Precio_Bolsa_Nacional_($kwh)_2025.xlsx</code></td><td class="small">Precio de bolsa XM [COP/kWh]</td><td class="small muted">Primera hoja. Título en filas 1–2; encabezados en la fila 3: <code>Fecha</code> y horas 0 a 23. Una fila por día.</td><td class="nw small">01, 02</td></tr>
+        <tr><td><code>datos/*_tmy-2025.csv</code></td><td class="small">Año meteorológico típico (NSRDB)</td><td class="small muted">CSV de NSRDB sin editar: dos filas de metadatos, encabezados en la fila 3 y 8.760 filas en hora UTC.</td><td class="nw small">01, 01B, 02</td></tr>
+        <tr><td><code>datos/CurvasCapexPVBESS.xlsx</code></td><td class="small">Curvas de CAPEX [USD 2026]</td><td class="small muted">Hojas <code>Parametros_PV</code>, <code>Parametros_BESS</code> y <code>Suministro_BESS</code>; solo ciertas celdas.</td><td class="nw small">01, 02</td></tr>
+      </tbody>
+    </table></div>
+    <div class="g2 mt">
+      <div class="aviso"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><p class="small"><b>Un solo año de 8.760 horas, etiquetado 2025.</b> Si sus datos son de otro año, cambie el año a 2025 y, si es bisiesto, elimine el 29 de febrero.</p></div>
+      <div class="aviso ambar"><svg class="i" aria-hidden="true"><use href="#i-alerta"/></svg><p class="small"><b>No modifique</b> <code>datos/Oriente.xlsx</code>, <code>datos/NREL_TP-6A40-93281_tabla2.csv</code> ni las carpetas <code>resultados_*</code>.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 16 · Cómo cambiar cada dato -->
+<section class="slide" data-titulo="Cómo cambiar cada dato" data-sec="Cambiar datos">
+  <div class="in">
+    <div class="kicker"><b>06</b> Cambiar los datos de entrada</div>
+    <h2>Cómo cambiar cada dato</h2>
+    <div class="g2">
+      <div class="card">
+        <h3>Demanda · <code>datos/load variable.csv</code></h3>
+        <ul class="lst small">
+          <li>Edite con un editor de texto o pegue la serie en la columna <code>Porvenir</code>.</li>
+          <li>8.760 filas, día antes que el mes, MW sin negativos y con punto decimal (<code>22.84</code>).</li>
+          <li><b>Excel en español guarda coma decimal</b>: desmarque <i>Usar separadores del sistema</i> antes de guardar y verifique en el Bloc de notas.</li>
+          <li>Las horas en 0 MW se tratan como cortes de medidor y se imputan con la mediana (±7 días).</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Precio de bolsa · <code>.xlsx</code></h3>
+        <ul class="lst small">
+          <li>Pegue el reporte de XM de otro periodo con la misma disposición: una fila por día, horas 0 a 23.</li>
+          <li>Conserve las dos filas de título y los encabezados en la fila 3. Fechas de 2025.</li>
+          <li>Guarde como <code>.xlsx</code> con el mismo nombre y cierre Excel. T1 se recalibra sola.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Sitio o recurso solar · TMY</h3>
+        <ul class="lst small">
+          <li>Región incluida: cambie <code>sitio = 'Oriente'</code> (01, secc. 3) y <code>REGION_SOLAR = 'Oriente'</code> (02, secc. 2). Opciones: Caribe, Antioquia, Suroccidente, Oriente, Nordeste.</li>
+          <li>Sitio nuevo: descargue el TMY horario del <a href="https://nsrdb.nrel.gov/data-viewer" target="_blank" rel="noopener">visor de NSRDB</a> y reemplace uno de los cinco archivos de <code>datos/</code> conservando el nombre.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Costos de inversión · <code>datos/CurvasCapexPVBESS.xlsx</code></h3>
+        <ul class="lst small">
+          <li><code>Parametros_PV</code>: C6–C15, C18, C20, C33–C34 (no edite C16 ni C17, son fórmulas).</li>
+          <li><code>Parametros_BESS</code>: filas 5 a 8, columnas D a J. <code>Suministro_BESS</code>: A13 y B13.</li>
+          <li>No inserte ni borre filas o columnas. El OPEX se deriva del CAPEX (2 % PV, 1,5 % BESS).</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 17 · Parámetros y orden -->
+<section class="slide" data-titulo="Parámetros y orden de ejecución" data-sec="Cambiar datos">
+  <div class="in">
+    <div class="kicker"><b>06</b> Cambiar los datos de entrada</div>
+    <h2>Parámetros en los cuadernos y orden de ejecución</h2>
+    <div class="g-6-4">
+      <div>
+        <div class="tw"><table>
+          <thead><tr><th>Dónde</th><th>Variable (valor actual)</th><th>Qué controla</th></tr></thead>
+          <tbody>
+            <tr><td class="nw small">01 · secc. 3</td><td><code>pv_nominal_MW</code> (100.0)</td><td class="small muted">Tamaño del PV [MWp DC]</td></tr>
+            <tr><td class="nw small">01 · secc. 3</td><td><code>power_MW</code>, <code>capacity_MWh</code> (30, 120)</td><td class="small muted">Potencia y energía de la batería</td></tr>
+            <tr><td class="nw small">01 · secc. 3</td><td><code>DoD</code>, <code>eff_rt</code> (0.80, 0.90)</td><td class="small muted">Profundidad de descarga y eficiencia</td></tr>
+            <tr><td class="nw small">02 · secc. 3</td><td><code>TARIFA_CARA_COP_kWh</code>, …</td><td class="small muted">Señal T0 (T1 se recalibra sola)</td></tr>
+            <tr><td class="nw small">02 · secc. 7</td><td><code>PV_OPCIONES</code>, <code>PARES_MW_MWH</code></td><td class="small muted">Tamaños que recorre el barrido</td></tr>
+          </tbody>
+        </table></div>
+        <ul class="lst small mt">
+          <li>Use punto decimal de Python (<code>0.90</code>, no <code>0,90</code>) y mantenga iguales en el 01 y el 02 los parámetros compartidos.</li>
+          <li>En <code>PARES_MW_MWH</code> la duración debe quedar entre 1 y 8 h; conserve los pares 20/40, 20/80, 20/120, 30/120 y 40/80.</li>
+          <li>Horizonte, WACC y TRM se cambian en <code>costos.py</code>, no en el 02.</li>
+        </ul>
+      </div>
+      <div class="card">
+        <h3>Después de cambiar</h3>
+        <div class="pasos">
+          <div class="paso"><div><b>Guarde y cierre</b> los archivos editados (Excel o editor).</div></div>
+          <div class="paso"><div><b>Ejecute el 01</b> con <i>Restart Kernel and Run All Cells</i> y guárdelo con <kbd>Ctrl</kbd>+<kbd>S</kbd>.</div></div>
+          <div class="paso"><div><b>Ejecute el 01B y luego el 02</b>, reiniciando el kernel.</div></div>
+          <div class="paso"><div><b>Revise que no haya errores.</b> Las cifras de control ya no aplican; las validaciones físicas siguen activas.</div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 18 · Mensajes al cambiar datos -->
+<section class="slide" data-titulo="Mensajes frecuentes al cambiar datos" data-sec="Cambiar datos">
+  <div class="in">
+    <div class="kicker"><b>06</b> Cambiar los datos de entrada</div>
+    <h2>Mensajes frecuentes al cambiar los datos</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Mensaje</th><th>Qué revisar</th></tr></thead>
+      <tbody>
+        <tr><td><code>Faltan … horas de demanda</code></td><td class="small">Faltan horas, decimales con coma, fechas que no son de 2025 o mes antes que el día.</td></tr>
+        <tr><td><code>Hay horas sin precio de bolsa</code></td><td class="small">Faltan días en el Excel de precios o sus fechas no son de 2025.</td></tr>
+        <tr><td><code>Faltan columnas horarias en el precio de bolsa</code></td><td class="small">Los encabezados 0 a 23 no están en la fila 3.</td></tr>
+        <tr><td><code>Se esperaban 8.760 registros horarios</code></td><td class="small">El TMY no es el CSV horario de NSRDB o se editó.</td></tr>
+        <tr><td><code>…: se esperaba un número</code></td><td class="small">Una celda del libro de CAPEX quedó con texto o vacía.</td></tr>
+        <tr><td><code>La demanda de 02 no es identica a la de 01B</code></td><td class="small">La columna o el archivo de demanda difieren entre 01 y 02, o el 01 no se guardó.</td></tr>
+        <tr><td><code>Pares fuera del dominio CAPEX</code></td><td class="small">Un par del barrido del 02 dura menos de 1 h o más de 8 h.</td></tr>
+        <tr><td><code>AssertionError: Discrepancia</code> en el 15</td><td class="small">Esperado con datos nuevos: el 15 se compara con las tablas ya calculadas.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- 19 · Resultados -->
+<section class="slide" data-titulo="Cómo leer los resultados" data-sec="Comprobar">
+  <div class="in">
+    <div class="kicker"><b>07</b> Leer los resultados</div>
+    <h2>Qué buscar en los resultados</h2>
+    <div class="g3">
+      <div class="etapa"><div class="nb">Cuadernos 08 · 09</div><h3 style="margin-top:6px;">Etapa I · sin térmica</h3>
+        <ul class="lst small"><li>Con A, B y D la batería crea valor en los 120 casos: ΔVPN de <b>+14,71 a +43,92 MUSD</b>.</li><li>Dentro de A/B/D, el tamaño K explica el 66,38 % y la señal el 28,02 %; la regla, 0,07 %.</li><li>La brecha de flexibilidad es 2,33 a 5,83 veces la de decisión.</li></ul></div>
+      <div class="etapa"><div class="nb">Cuadernos 11 a 14</div><h3 style="margin-top:6px;">Etapa II · con gas</h3>
+        <ul class="lst small"><li>En K3, A_INT tiene el menor costo: <b>4,74 MUSD/año</b> en T0, ≈ 3,2 % sobre OPT_AB.</li><li>578 arranques en T0 y 245 en T1, frente a 678 y 414 de C/F_INT.</li><li>VPN incremental del BESS: <b>+26,06 MUSD</b> (T0) y +19,24 MUSD (T1).</li></ul></div>
+      <div class="etapa"><div class="nb">Cuaderno 15</div><h3 style="margin-top:6px;">Etapa III · carbono y malla</h3>
+        <ul class="lst small"><li><b>M01</b> (114,4 MWp + 45 MW / 280 MWh) queda primero en los ocho contextos, con ambos CAPEX.</li><li>Gana A_INT en seis contextos y B_INT en T0 con 20 y 50 USD/t.</li><li>Con 20 USD/t y T0: 93,60 MUSD (H_B4) y 102,09 MUSD (H_B3).</li></ul></div>
+    </div>
+    <div class="cta mt"><a class="btn btn-sec" href="index.html#decidir"><svg class="i" aria-hidden="true"><use href="#i-casa"/></svg>Explorar en la plataforma interactiva</a></div>
+  </div>
+</section>
+
+<!-- 20 · Cifras de control -->
+<section class="slide" data-titulo="Cifras de control" data-sec="Comprobar">
+  <div class="in">
+    <div class="kicker"><b>08</b> ¿Salió bien la ejecución?</div>
+    <h2>Cifras de control por cuaderno</h2>
+    <p class="lead" style="margin-bottom:14px;">Una ejecución correcta termina sin celdas de error y muestra estos valores redondeados. Sirven para reconocer una ejecución sana, no como tolerancias.</p>
+    <div class="tw"><table>
+      <thead><tr><th>N.º</th><th>Dónde mirar</th><th>Valor esperado</th></tr></thead>
+      <tbody>
+        <tr><td class="num">01</td><td class="small">Tabla «¿Se paga la batería?»</td><td class="small">Costo sin BESS <b>94,12</b> mil MM COP/año; ahorro E1 <b>16,16</b> y óptimo PyPSA <b>16,29</b></td></tr>
+        <tr><td class="num">01B</td><td class="small">Final del cuaderno</td><td class="small">Sin errores y cuatro figuras regeneradas</td></tr>
+        <tr><td class="num">02</td><td class="small">«Mejor configuración encontrada en la malla»</td><td class="small">PV 150 MW + BESS 40 MW / 320 MWh, regla B; VPN <b>315,5</b> (T0) y <b>325,0</b> (T1) mil MM COP</td></tr>
+        <tr><td class="num">08</td><td class="small">Resumen de 200 casos y contribuciones A/B/D</td><td class="small">ΔVPN máximo <b>43,92 MUSD</b>; escala K 66,38 % y señal 28,02 %</td></tr>
+        <tr><td class="num">09</td><td class="small">Brechas, contexto R1 (Oriente, T0, K3)</td><td class="small">Decisión <b>0,67 %</b>; flexibilidad <b>2,24 %</b></td></tr>
+        <tr><td class="num">11–13</td><td class="small">Final del cuaderno</td><td class="small">Sin errores y figuras regeneradas</td></tr>
+        <tr><td class="num">14</td><td class="small">Comparación conjunta, K3</td><td class="small">A_INT <b>4,74 MUSD/año</b>, 578 arranques (T0) y 245 (T1); VPN total 259,49 y 209,49 mil MM COP</td></tr>
+        <tr><td class="num">15</td><td class="small">Malla M01–M12, 20 USD/t, T0, H_B4</td><td class="small">M01 con B_INT: VPN ajustado <b>93,60 MUSD</b></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- 21 · Problemas de instalación -->
+<section class="slide" data-titulo="Problemas de instalación" data-sec="Problemas">
+  <div class="in">
+    <div class="kicker"><b>09</b> Problemas frecuentes</div>
+    <h2>Durante la instalación</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Síntoma</th><th>Causa probable</th><th>Solución</th></tr></thead>
+      <tbody>
+        <tr><td class="small"><code>python</code> abre la Microsoft Store o no se reconoce</td><td class="small muted">Python no está en el PATH o está activo el alias de la Store</td><td class="small">Use <code>py</code>, o reinstale marcando <i>Add python.exe to PATH</i>. Desactive los alias de ejecución de <code>python.exe</code>.</td></tr>
+        <tr><td class="small">«La ejecución de scripts está deshabilitada»</td><td class="small muted">Política de ejecución de PowerShell</td><td class="small"><code>Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser</code> o use cmd con <code>activate.bat</code>.</td></tr>
+        <tr><td class="small">pip no encuentra una versión fijada</td><td class="small muted">Python demasiado antiguo</td><td class="small">Instale Python 3.12 o superior, borre <code>.venv</code> y créelo de nuevo.</td></tr>
+        <tr><td class="small">Error de SSL o de conexión</td><td class="small muted">Red corporativa con proxy o certificado propio</td><td class="small">Pida al área de sistemas la configuración de proxy para pip, o use una red sin restricciones.</td></tr>
+        <tr><td class="small">La terminal no muestra <code>(.venv)</code></td><td class="small muted">El ambiente no está activado</td><td class="small">Repita el paso 4 desde la carpeta de entrega.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- 22 · Problemas de ejecución -->
+<section class="slide" data-titulo="Problemas de ejecución" data-sec="Problemas">
+  <div class="in">
+    <div class="kicker"><b>09</b> Problemas frecuentes</div>
+    <h2>Durante la ejecución</h2>
+    <div class="tw"><table>
+      <thead><tr><th>Síntoma</th><th>Causa probable</th><th>Solución</th></tr></thead>
+      <tbody>
+        <tr><td class="small"><code>FileNotFoundError</code> al leer un CSV o Excel</td><td class="small muted">Jupyter se abrió desde otra carpeta, o se movió un archivo</td><td class="small">Abra Jupyter desde la carpeta de entrega y restaure la estructura.</td></tr>
+        <tr><td class="small"><code>ModuleNotFoundError</code> (pvlib, pypsa…)</td><td class="small muted">El kernel no es el del ambiente</td><td class="small">Elija <i>Python (PV-BESS)</i> o <code>.venv</code>; si no aparece, haga el paso 7.</td></tr>
+        <tr><td class="small"><code>ModuleNotFoundError</code> de un módulo del proyecto</td><td class="small muted">Falta un <code>.py</code> o la carpeta <code>.build/</code></td><td class="small">Vuelva a copiar la carpeta de entrega completa.</td></tr>
+        <tr><td class="small"><code>RuntimeError</code> «no debe recalcular nada»</td><td class="small muted">La guarda detectó un intento de recálculo</td><td class="small">Faltan o se alteraron resultados ya calculados: restaure las carpetas <code>resultados_*</code>.</td></tr>
+        <tr><td class="small">El 02 parece detenido</td><td class="small muted">Es el cuaderno largo (15–35 min)</td><td class="small">Espere. Desde la terminal use <code>--ExecutePreprocessor.timeout=-1</code>.</td></tr>
+        <tr><td class="small">El 15 tarda unos 5 minutos</td><td class="small muted">Numba no está instalada</td><td class="small">Es normal; para acelerarlo instale Numba.</td></tr>
+        <tr><td class="small">«Kernel died» o falta memoria</td><td class="small muted">Poca RAM libre</td><td class="small">Cierre otros programas y ejecute un cuaderno a la vez.</td></tr>
+        <tr><td class="small">Error de permisos al guardar figuras</td><td class="small muted">Carpeta de solo lectura o sincronizándose en la nube</td><td class="small">Copie la carpeta a una ruta local con permisos de escritura.</td></tr>
+      </tbody>
+    </table></div>
+  </div>
+</section>
+
+<!-- 23 · Lista de verificación -->
+<section class="slide" data-titulo="Lista de verificación" data-sec="Cierre">
+  <div class="in">
+    <div class="kicker"><b>A</b> Lista de verificación</div>
+    <h2>Primera ejecución: marque cada paso</h2>
+    <p class="lead" style="margin-bottom:14px;">Las marcas se guardan en este navegador.</p>
+    <div class="check" id="check">
+      <label><input type="checkbox"><span>La carpeta de entrega (<code>baterias-main</code> o <code>baterias</code>) está completa, en una ruta local con permisos de escritura.</span></label>
+      <label><input type="checkbox"><span><code data-os="win">py --version</code><code data-os="mac">python3 --version</code> muestra 3.12 o superior.</span></label>
+      <label><input type="checkbox"><span>Existe la carpeta <code>.venv</code> dentro de la carpeta de entrega.</span></label>
+      <label><input type="checkbox"><span>Al activar el ambiente, la terminal muestra <code>(.venv)</code>.</span></label>
+      <label><input type="checkbox"><span><code>python -m pip install -r requirements.txt</code> terminó sin errores.</span></label>
+      <label><input type="checkbox"><span>La verificación del paso 6 imprime <code>Ambiente listo</code>.</span></label>
+      <label><input type="checkbox"><span>JupyterLab se abrió desde la carpeta de entrega y muestra los diez cuadernos.</span></label>
+      <label><input type="checkbox"><span>El cuaderno 01 se ejecutó completo y muestra las cifras de control.</span></label>
+      <label><input type="checkbox"><span>Los demás cuadernos se ejecutaron sin celdas de error.</span></label>
+    </div>
+    <div class="check-res"><span id="check-txt" class="small" aria-live="polite"></span><div class="barra-av" aria-hidden="true"><i id="check-bar"></i></div><button class="btn-txt" type="button" id="check-reset">Reiniciar</button></div>
+  </div>
+</section>
+
+<!-- 24 · Referencia rápida -->
+<section class="slide portada" data-titulo="Referencia rápida de comandos" data-sec="Cierre">
+  <div class="in">
+    <div class="kicker">B · Referencia rápida</div>
+    <h2>Todos los comandos, en un solo lugar</h2>
+    <div class="g2">
+      <div>
+        <div class="code" data-os="win"><pre data-t="Windows · PowerShell"><span class="c"># una vez</span>
+py -3.12 -m venv .venv
+.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m ipykernel install --user --name pv-bess --display-name "Python (PV-BESS)"
+<span class="c"># cada sesión</span>
+.venv\Scripts\Activate.ps1
+jupyter lab
+deactivate</pre></div>
+        <div class="code" data-os="mac"><pre data-t="macOS · Linux"><span class="c"># una vez</span>
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+python -m ipykernel install --user --name pv-bess --display-name "Python (PV-BESS)"
+<span class="c"># cada sesión</span>
+source .venv/bin/activate
+jupyter lab
+deactivate</pre></div>
+      </div>
+      <div>
+        <div class="code"><pre data-t="Ejecutar todos desde la terminal (el 02 al final)">jupyter nbconvert --to notebook --execute --inplace "01_Modelo base PV_BESS.ipynb"
+jupyter nbconvert --to notebook --execute --inplace 01B_Caracterizacion_dimensionamiento.ipynb
+jupyter nbconvert --to notebook --execute --inplace 08_Sensibilidad_5_sitios_CAPEX_curvas.ipynb
+jupyter nbconvert --to notebook --execute --inplace 09_Comparacion_reglas_operativas.ipynb
+jupyter nbconvert --to notebook --execute --inplace 11_Integracion_generacion_termica.ipynb
+jupyter nbconvert --to notebook --execute --inplace 12_Integracion_PV_termica.ipynb
+jupyter nbconvert --to notebook --execute --inplace 13_Integracion_PV_BESS_termica.ipynb
+jupyter nbconvert --to notebook --execute --inplace 14_Comparacion_anual_reglas_integradas.ipynb
+jupyter nbconvert --to notebook --execute --inplace 15_Sintesis_integral_tesis_V2.ipynb
+jupyter nbconvert --to notebook --execute --inplace --ExecutePreprocessor.timeout=-1 02_Optimizacion_portafolio_PV_BESS.ipynb</pre></div>
+      </div>
+    </div>
+    <div class="cta mt">
+      <a class="btn btn-claro" href="index.html"><svg class="i" aria-hidden="true"><use href="#i-casa"/></svg>Ir a la plataforma de consulta</a>
+      <a class="btn btn-borde" href="Manual_Ejecucion_Cuadernos_EIA.pdf"><svg class="i" aria-hidden="true"><use href="#i-doc"/></svg>Manual completo (PDF)</a>
+      <button class="btn btn-borde" type="button" data-ir="1"><svg class="i" aria-hidden="true"><use href="#i-izq"/></svg>Volver al inicio</button>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="ctrl">
+  <div class="ctrl-in">
+    <button class="nbtn" id="btn-ant" type="button" aria-label="Diapositiva anterior"><svg class="i" aria-hidden="true"><use href="#i-izq"/></svg><span class="lbl">Anterior</span></button>
+    <div class="pos-info">
+      <div class="pos-txt"><span class="cnt" id="cnt"></span><span class="tit" id="tit"></span></div>
+      <div class="prog" aria-hidden="true"><i id="prog"></i></div>
+    </div>
+    <button class="nbtn prim" id="btn-sig" type="button" aria-label="Diapositiva siguiente"><span class="lbl">Siguiente</span><svg class="i" aria-hidden="true"><use href="#i-der"/></svg></button>
+  </div>
+</footer>
+
+<dialog id="indice" aria-labelledby="ind-t">
+  <div class="ind-h"><h2 id="ind-t">Índice</h2><button class="nbtn" type="button" id="ind-cerrar" aria-label="Cerrar índice">Cerrar</button></div>
+  <ol class="ind-l" id="ind-l"></ol>
+</dialog>
+
+<div aria-live="polite" class="skip" style="top:-200px" id="anuncio"></div>
+
+<script>
+(() => {
+  const $ = s => document.querySelector(s);
+  const slides = [...document.querySelectorAll(".slide")];
+  const N = slides.length;
+  let actual = 0;
+  const leer = k => { try { return localStorage.getItem(k); } catch (e) { return null; } };
+  const guardar = (k, v) => { try { localStorage.setItem(k, v); } catch (e) {} };
+
+  // Tema compartido con index.html
+  const t = leer("tema-bess"); if (t) document.documentElement.dataset.theme = t;
+  const oscuro = () => document.documentElement.dataset.theme ? document.documentElement.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches;
+  $("#btn-tema").addEventListener("click", () => { document.documentElement.dataset.theme = oscuro() ? "light" : "dark"; guardar("tema-bess", document.documentElement.dataset.theme); });
+
+  // Sistema operativo para los comandos
+  const osIni = leer("manual-os") || (/Mac|iPhone|iPad|Linux/i.test(navigator.platform || navigator.userAgent) ? "mac" : "win");
+  function ponerOS(os) {
+    document.body.dataset.os = os;
+    document.querySelectorAll("[data-set-os]").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.setOs === os)));
+    guardar("manual-os", os);
+  }
+  document.querySelectorAll("[data-set-os]").forEach(b => b.addEventListener("click", () => ponerOS(b.dataset.setOs)));
+  ponerOS(osIni);
+
+  // Bloques de código con encabezado y botón Copiar
+  document.querySelectorAll(".code > pre").forEach(pre => {
+    const h = document.createElement("div"); h.className = "code-h";
+    const et = document.createElement("span"); et.textContent = pre.dataset.t || "Terminal";
+    const b = document.createElement("button"); b.type = "button"; b.className = "copiar";
+    b.innerHTML = '<svg class="i i-sm" aria-hidden="true"><use href="#i-copiar"/></svg><span>Copiar</span>';
+    b.setAttribute("aria-label", "Copiar comandos: " + et.textContent);
+    b.addEventListener("click", () => {
+      const txt = pre.innerText.split("\n").filter(l => !/^\s*#/.test(l)).join("\n").trim();
+      const listo = () => { b.classList.add("ok"); b.querySelector("span").textContent = "Copiado"; b.querySelector("use").setAttribute("href", "#i-ok");
+        setTimeout(() => { b.classList.remove("ok"); b.querySelector("span").textContent = "Copiar"; b.querySelector("use").setAttribute("href", "#i-copiar"); }, 1800); };
+      const respaldo = () => { const ta = document.createElement("textarea"); ta.value = txt; ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); listo(); } catch (e) {} ta.remove(); };
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(txt).then(listo, respaldo); else respaldo();
+    });
+    h.append(et, b); pre.before(h);
+  });
+
+  // Índice
+  const ind = $("#ind-l"); let secPrev = "";
+  slides.forEach((s, i) => {
+    s.id = "d" + (i + 1);
+    s.setAttribute("aria-roledescription", "diapositiva");
+    s.setAttribute("aria-label", `${i + 1} de ${N}: ${s.dataset.titulo}`);
+    if (s.dataset.sec !== secPrev) { secPrev = s.dataset.sec; const li = document.createElement("li"); li.className = "sec"; li.textContent = secPrev; ind.appendChild(li); }
+    const li = document.createElement("li");
+    li.innerHTML = `<a href="#${i + 1}" data-ir="${i + 1}"><span class="n">${i + 1}</span><span>${s.dataset.titulo}</span></a>`;
+    ind.appendChild(li);
+  });
+  const dlg = $("#indice");
+  const abrirIndice = () => { if (!dlg.open) { dlg.showModal(); const a = ind.querySelector('[aria-current="true"]'); if (a) a.focus(); } };
+  $("#btn-indice").addEventListener("click", abrirIndice);
+  $("#ind-cerrar").addEventListener("click", () => dlg.close());
+  dlg.addEventListener("click", e => { if (e.target === dlg) dlg.close(); });
+
+  // Navegación
+  function ir(n, foco) {
+    n = Math.max(0, Math.min(N - 1, n));
+    actual = n;
+    slides.forEach((s, i) => { s.classList.toggle("activa", i === n); s.classList.toggle("antes", i < n); if (i === n) s.scrollTop = 0; });
+    $("#cnt").textContent = `${n + 1} / ${N}`;
+    $("#tit").textContent = slides[n].dataset.titulo;
+    $("#prog").style.width = ((n + 1) / N * 100) + "%";
+    $("#btn-ant").disabled = n === 0;
+    $("#btn-sig").disabled = n === N - 1;
+    ind.querySelectorAll("a").forEach(a => a.setAttribute("aria-current", String(+a.dataset.ir === n + 1)));
+    if (location.hash !== "#" + (n + 1)) history.replaceState(null, "", "#" + (n + 1));
+    document.title = `${slides[n].dataset.titulo} · Manual de ejecución`;
+    if (foco) slides[n].focus({preventScroll: true});
+  }
+  slides.forEach(s => s.tabIndex = -1);
+  $("#btn-ant").addEventListener("click", () => ir(actual - 1));
+  $("#btn-sig").addEventListener("click", () => ir(actual + 1));
+  document.addEventListener("click", e => {
+    const a = e.target.closest("[data-ir]"); if (!a) return;
+    e.preventDefault(); if (dlg.open) dlg.close(); ir(+a.dataset.ir - 1, true);
+  });
+  addEventListener("hashchange", () => { const n = parseInt(location.hash.slice(1), 10); if (n && n - 1 !== actual) ir(n - 1); });
+  addEventListener("keydown", e => {
+    if (dlg.open || e.altKey || e.ctrlKey || e.metaKey) return;
+    const tag = (e.target.tagName || "").toLowerCase();
+    const enControl = ["input", "textarea", "select", "button", "a"].includes(tag);
+    if (e.key === "ArrowRight" || e.key === "PageDown" || (e.key === " " && !enControl)) { e.preventDefault(); ir(actual + 1); }
+    else if (e.key === "ArrowLeft" || e.key === "PageUp") { e.preventDefault(); ir(actual - 1); }
+    else if (e.key === "Home" && !enControl) { e.preventDefault(); ir(0); }
+    else if (e.key === "End" && !enControl) { e.preventDefault(); ir(N - 1); }
+    else if (e.key === "i" || e.key === "I") { abrirIndice(); }
+    else if (e.key === "f" || e.key === "F") { pantalla(); }
+  });
+  // Deslizar en pantallas táctiles (horizontal y claro, para no confundir con el desplazamiento vertical)
+  let x0 = null, y0 = null;
+  $("#deck").addEventListener("touchstart", e => { if (e.touches.length === 1) { x0 = e.touches[0].clientX; y0 = e.touches[0].clientY; } }, {passive: true});
+  $("#deck").addEventListener("touchend", e => {
+    if (x0 === null) return;
+    const dx = e.changedTouches[0].clientX - x0, dy = e.changedTouches[0].clientY - y0; x0 = null;
+    if (e.target.closest(".code, .tw, .arbol")) return;
+    if (Math.abs(dx) > 70 && Math.abs(dx) > Math.abs(dy) * 1.8) ir(actual + (dx < 0 ? 1 : -1));
+  }, {passive: true});
+
+  // Pantalla completa
+  function pantalla() {
+    if (!document.fullscreenEnabled) return;
+    if (document.fullscreenElement) document.exitFullscreen(); else document.documentElement.requestFullscreen().catch(() => {});
+  }
+  $("#btn-pantalla").addEventListener("click", pantalla);
+  if (!document.fullscreenEnabled) $("#btn-pantalla").hidden = true;
+
+  // Lista de verificación
+  const cajas = [...document.querySelectorAll("#check input")];
+  let est = []; try { est = JSON.parse(leer("manual-checklist") || "[]"); } catch (e) {}
+  cajas.forEach((c, i) => { c.checked = !!est[i]; c.addEventListener("change", resumen); });
+  function resumen() {
+    const n = cajas.filter(c => c.checked).length;
+    $("#check-txt").textContent = n === cajas.length ? "Todo listo: la instalación quedó completa." : `${n} de ${cajas.length} pasos completados`;
+    $("#check-bar").style.width = (n / cajas.length * 100) + "%";
+    guardar("manual-checklist", JSON.stringify(cajas.map(c => c.checked)));
+  }
+  $("#check-reset").addEventListener("click", () => { cajas.forEach(c => c.checked = false); resumen(); });
+  resumen();
+
+  ir((parseInt(location.hash.slice(1), 10) || 1) - 1);
+})();
+</script>
+</body>
+</html>
