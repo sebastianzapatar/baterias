@@ -444,7 +444,7 @@ table.hoja td.gap { text-align: center; color: var(--ink-3); }
   <div class="in">
     <div class="kicker"><b>02</b> Conceptos clave</div>
     <h2>El sistema estudiado</h2>
-    <p class="lead">Un usuario industrial en Colombia con demanda de <b>158.742,57 MWh/año</b> (pico de 23,23 MW) se abastece de la red y, según la etapa, de un campo solar (PV), una batería (BESS) y cuatro unidades a gas (G1–G4, 25,2 MW disponibles). Se simulan las 8.760 horas de 2025 y se evalúa a 20 años con WACC de 10 %.</p>
+    <p class="lead">Un usuario industrial en Colombia con demanda de <b>158.742,57 MWh/año</b> (pico de 23,23 MW) se abastece de la red y, según la etapa, de un parque solar (PV), una batería (BESS) y cuatro unidades a gas (G1–G4, 25,2 MW disponibles). Se simulan las 8.760 horas de 2025 y se evalúa a 20 años con WACC de 10 %.</p>
     <div class="etapas">
       <div class="etapa"><div class="nb">01 · 01B · 02</div><h3 style="margin-top:6px;">Base</h3><p class="small muted">Cómo se modela la operación horaria de PV + BESS + red y qué tamaños tienen sentido.</p></div>
       <div class="etapa"><div class="nb">08 · 09</div><h3 style="margin-top:6px;">Etapa I</h3><p class="small muted">Sin térmica, ¿cuánto vale la batería y de qué depende? ¿Qué tan cerca están las reglas de la previsión perfecta?</p></div>
@@ -460,14 +460,14 @@ table.hoja td.gap { text-align: center; color: var(--ink-3); }
     <div class="kicker"><b>02</b> Conceptos clave</div>
     <h2>Glosario mínimo</h2>
     <dl class="glos">
-      <div><dt>PV · BESS</dt><dd>Campo solar (MWp DC) y batería (MW de potencia, MWh de energía).</dd></div>
+      <div><dt>PV · BESS</dt><dd>Parque solar (MWp DC) y batería (MW de potencia, MWh de energía).</dd></div>
       <div><dt>SOC · EFC</dt><dd>Estado de carga [MWh] y ciclos equivalentes completos, que miden el desgaste por uso.</dd></div>
       <div><dt>Reglas A, B, D</dt><dd>A: autoconsumo. B: mérito diario (horas más caras). D: como B, con exportación.</dd></div>
       <div><dt>Reglas C, F</dt><dd>Reglas de mercado orientadas al precio de bolsa; se comparan por separado.</dd></div>
       <div><dt>Sufijo _INT</dt><dd>Versión de la regla integrada con la flota térmica (Etapas II y III).</dd></div>
       <div><dt>OPT_*</dt><dd>Benchmarks con previsión perfecta (MILP). Cotas de referencia, no reglas operables.</dd></div>
       <div><dt>T0 · T1</dt><dd>T0: tarifa regulada N3 casi plana. T1: tarifa indexada al precio de bolsa 2025.</dd></div>
-      <div><dt>K1–K4 · M01–M12</dt><dd>Configuraciones de referencia (K3 es la principal) y malla de doce tamaños de la Etapa III.</dd></div>
+      <div><dt>K1–K4 · M01–M12</dt><dd>Configuraciones de referencia (K3 es la principal) y grilla de doce tamaños de la Etapa III.</dd></div>
       <div><dt>VPN · ΔVPN</dt><dd>Valor presente neto a 20 años; el ΔVPN compara con batería frente al mismo PV sin batería.</dd></div>
       <div><dt>VPN ajustado</dt><dd>VPN financiero más el valor de las emisiones evitadas al precio de carbono elegido. No es caja.</dd></div>
       <div><dt>H_B4 · H_B3</dt><dd>Dos hipótesis de CAPEX local de la batería; H_B4 es la base.</dd></div>
@@ -674,8 +674,8 @@ jupyter lab</pre></div>
       <thead><tr><th>N.º</th><th>Cuaderno</th><th>Tipo</th><th>Duración</th><th>Qué mirar</th></tr></thead>
       <tbody>
         <tr><td class="num">01</td><td>Modelo base PV + BESS</td><td>Cálculo</td><td><span class="pill p-rapido">≈ 11 s</span></td><td class="small muted">Tabla «¿Se paga la batería?»</td></tr>
-        <tr><td class="num">01B</td><td>Caracterización para el dimensionamiento</td><td>Análisis</td><td><span class="pill p-rapido">≈ 5 s</span></td><td class="small muted">Cuatro figuras y la malla propuesta</td></tr>
-        <tr><td class="num">02</td><td>Optimización de portafolio PV + BESS</td><td>Cálculo</td><td><span class="pill p-largo">15–35 min</span></td><td class="small muted">«Mejor configuración encontrada en la malla»</td></tr>
+        <tr><td class="num">01B</td><td>Caracterización para el dimensionamiento</td><td>Análisis</td><td><span class="pill p-rapido">≈ 5 s</span></td><td class="small muted">Cuatro figuras y la grilla propuesta</td></tr>
+        <tr><td class="num">02</td><td>Optimización de portafolio PV + BESS</td><td>Cálculo</td><td><span class="pill p-largo">15–35 min</span></td><td class="small muted">«Mejor configuración encontrada en la grilla»</td></tr>
         <tr><td class="num">08</td><td>Sensibilidad en 5 regiones (Etapa I)</td><td>Lectura</td><td><span class="pill p-rapido">≈ 4 s</span></td><td class="small muted">Contribuciones del subconjunto A/B/D</td></tr>
         <tr><td class="num">09</td><td>Reglas frente a previsión perfecta</td><td>Lectura</td><td><span class="pill p-rapido">≈ 3 s</span></td><td class="small muted">Tabla de brechas</td></tr>
         <tr><td class="num">11</td><td>Integración de generación térmica</td><td>Lectura</td><td><span class="pill p-rapido">≈ 4 s</span></td><td class="small muted">Figuras 11_*</td></tr>
@@ -716,7 +716,7 @@ jupyter lab</pre></div>
         <div class="cadena"><span class="c">copia</span><span class="fl">→</span><span class="c">datos</span><span class="fl">→</span><span class="c">01</span><span class="fl">→</span><span class="c">01B</span><span class="fl">→</span><span class="c">02</span></div>
         <p class="small muted">Copie la carpeta, cambie los archivos de entrada (diapositivas 15 a 21) y corra solo estos tres.
           <span class="cadena" style="display:inline-flex;"><span class="c no">08–14</span> <span class="c no">15</span></span> no recalculan, y el 15 se detiene a propósito.</p>
-        <div class="ok"><b>Funciona si</b> el 02 termina e imprime «Mejor configuración encontrada en la malla».</div>
+        <div class="ok"><b>Funciona si</b> el 02 termina e imprime «Mejor configuración encontrada en la grilla».</div>
       </div>
     </div>
   </div>
@@ -952,7 +952,7 @@ jupyter lab</pre></div>
         <ul class="lst small"><li>Con A, B y D la batería crea valor en los 120 casos: ΔVPN de <b>+14,71 a +43,92 MUSD</b>.</li><li>Dentro de A/B/D, el tamaño K explica el 66,38 % y la señal el 28,02 %; la regla, 0,07 %.</li><li>La brecha de flexibilidad es 2,33 a 5,83 veces la de decisión.</li></ul></div>
       <div class="etapa"><div class="nb">Cuadernos 11 a 14</div><h3 style="margin-top:6px;">Etapa II · con gas</h3>
         <ul class="lst small"><li>En K3, A_INT tiene el menor costo: <b>4,74 MUSD/año</b> en T0, ≈ 3,2 % sobre OPT_AB.</li><li>578 arranques en T0 y 245 en T1, frente a 678 y 414 de C/F_INT.</li><li>VPN incremental del BESS: <b>+26,06 MUSD</b> (T0) y +19,24 MUSD (T1).</li></ul></div>
-      <div class="etapa"><div class="nb">Cuaderno 15</div><h3 style="margin-top:6px;">Etapa III · carbono y malla</h3>
+      <div class="etapa"><div class="nb">Cuaderno 15</div><h3 style="margin-top:6px;">Etapa III · carbono y grilla</h3>
         <ul class="lst small"><li><b>M01</b> (114,4 MWp + 45 MW / 280 MWh) queda primero en los ocho contextos, con ambos CAPEX.</li><li>Gana A_INT en seis contextos y B_INT en T0 con 20 y 50 USD/t.</li><li>Con 20 USD/t y T0: 93,60 MUSD (H_B4) y 102,09 MUSD (H_B3).</li></ul></div>
     </div>
     <div class="cta mt"><a class="btn btn-sec" href="index.html#decidir"><svg class="i" aria-hidden="true"><use href="#i-casa"/></svg>Explorar en la plataforma interactiva</a></div>
@@ -970,12 +970,12 @@ jupyter lab</pre></div>
       <tbody>
         <tr><td class="num">01</td><td class="small">Tabla «¿Se paga la batería?»</td><td class="small">Costo sin BESS <b>94,12</b> mil MM COP/año; ahorro E1 <b>16,16</b> y óptimo PyPSA <b>16,29</b></td></tr>
         <tr><td class="num">01B</td><td class="small">Final del cuaderno</td><td class="small">Sin errores y cuatro figuras regeneradas</td></tr>
-        <tr><td class="num">02</td><td class="small">«Mejor configuración encontrada en la malla»</td><td class="small">PV 150 MW + BESS 40 MW / 320 MWh, regla B; VPN <b>315,5</b> (T0) y <b>325,0</b> (T1) mil MM COP</td></tr>
+        <tr><td class="num">02</td><td class="small">«Mejor configuración encontrada en la grilla»</td><td class="small">PV 150 MW + BESS 40 MW / 320 MWh, regla B; VPN <b>315,5</b> (T0) y <b>325,0</b> (T1) mil MM COP</td></tr>
         <tr><td class="num">08</td><td class="small">Resumen de 200 casos y contribuciones A/B/D</td><td class="small">ΔVPN máximo <b>43,92 MUSD</b>; escala K 66,38 % y señal 28,02 %</td></tr>
         <tr><td class="num">09</td><td class="small">Brechas, contexto R1 (Oriente, T0, K3)</td><td class="small">Decisión <b>0,67 %</b>; flexibilidad <b>2,24 %</b></td></tr>
         <tr><td class="num">11–13</td><td class="small">Final del cuaderno</td><td class="small">Sin errores y figuras regeneradas</td></tr>
         <tr><td class="num">14</td><td class="small">Comparación conjunta, K3</td><td class="small">A_INT <b>4,74 MUSD/año</b>, 578 arranques (T0) y 245 (T1); VPN total 259,49 y 209,49 mil MM COP</td></tr>
-        <tr><td class="num">15</td><td class="small">Malla M01–M12, 20 USD/t, T0, H_B4</td><td class="small">M01 con B_INT: VPN ajustado <b>93,60 MUSD</b></td></tr>
+        <tr><td class="num">15</td><td class="small">Grilla M01–M12, 20 USD/t, T0, H_B4</td><td class="small">M01 con B_INT: VPN ajustado <b>93,60 MUSD</b></td></tr>
       </tbody>
     </table></div>
   </div>

@@ -539,7 +539,7 @@ table.hoja td.txt { white-space: normal; min-width: 200px; }
   <ul id="menu-lista">
     <li><a href="#inicio" data-vista="inicio"><span class="n">0</span>Inicio</a></li>
     <li><a href="#decidir" data-vista="decidir"><span class="n">1</span>Asistente</a></li>
-    <li><a href="#malla" data-vista="malla"><span class="n">2</span>Malla M01–M12</a></li>
+    <li><a href="#malla" data-vista="malla"><span class="n">2</span>Grilla M01–M12</a></li>
     <li><a href="#termica" data-vista="termica"><span class="n">3</span>Con térmica</a></li>
     <li><a href="#sin-termica" data-vista="sin-termica"><span class="n">4</span>Sin térmica</a></li>
     <li><a href="#carbono" data-vista="carbono"><span class="n">5</span>Carbono</a></li>
@@ -582,9 +582,9 @@ table.hoja td.txt { white-space: normal; min-width: 200px; }
       <div><dt>C / F · Reglas de mercado</dt><dd>Arbitraje orientado a precios de bolsa; se comparan por separado.</dd></div>
       <div><dt>OPT_* · Benchmarks</dt><dd>Despacho con previsión perfecta (MILP). Son cotas de referencia, no reglas operables.</dd></div>
       <div><dt>T0 / T1 · Señal tarifaria</dt><dd>T0: tarifa regulada N3 casi plana. T1: tarifa indexada al precio de bolsa 2025.</dd></div>
-      <div><dt>114 MWp · Campo solar</dt><dd>Potencia pico de los paneles (DC). 114,4 MWp generan en un año lo mismo que consume la demanda (f_PV = 1).</dd></div>
+      <div><dt>114 MWp · Parque solar</dt><dd>Potencia pico de los paneles (DC). 114,4 MWp generan en un año lo mismo que consume la demanda (f_PV = 1).</dd></div>
       <div><dt>45 / 280 · Batería</dt><dd>Potencia en MW / energía en MWh. 280 ÷ 45 = 6,2 h de descarga a plena potencia.</dd></div>
-      <div><dt>M01–M12 · Malla</dt><dd>Doce tamaños de planta: parten de M01 y cambian una sola cosa a la vez (energía, potencia o PV).</dd></div>
+      <div><dt>M01–M12 · Grilla</dt><dd>Doce tamaños de planta: parten de M01 y cambian una sola cosa a la vez (energía, potencia o PV).</dd></div>
       <div><dt>K1–K4 · Escalas</dt><dd>Cuatro tamaños de la Etapa I. K3 = M01 = 45 MW / 280 MWh con f_PV = 1.</dd></div>
       <div><dt>H_B4 / H_B3 · CAPEX BESS</dt><dd>Dos hipótesis de costos locales de la batería; H_B4 es la base.</dd></div>
       <div><dt>VPN ajustado</dt><dd>VPN financiero a 20 años más el valor de las emisiones evitadas al precio interno de carbono elegido.</dd></div>
@@ -654,7 +654,7 @@ table.hoja td.txt { white-space: normal; min-width: 200px; }
 
 <!-- ======================= MALLA ======================= -->
 <section class="view" id="v-malla" aria-labelledby="h-malla">
-  <h2 id="h-malla">Malla de dimensionamiento M01–M12</h2>
+  <h2 id="h-malla">Grilla de dimensionamiento M01–M12</h2>
   <p class="lead">Doce tamaños de planta en ocho contextos (dos señales × cuatro precios de carbono). Cada celda muestra la regla de mayor
     VPN ajustado y la métrica elegida. <b>Haga clic en una celda</b> para abrirla en el asistente de decisión.</p>
   <details class="card cfg-guia guia-desp" data-guia="M"></details>
@@ -752,7 +752,7 @@ table.hoja td.txt { white-space: normal; min-width: 200px; }
             <td class="q">Sin PV ni batería: toda la demanda la cubren la red y G1–G4 con despacho óptimo.</td>
             <td class="q">—</td><td class="q">—</td><td class="q">Todo el año</td><td class="q">Base del VPN total</td></tr>
           <tr><td><b>PV_SIN_BESS</b></td>
-            <td class="q">El mismo campo solar de 114 MWp, sin batería: PV directo, exportación del sobrante y red + gas para el resto.</td>
+            <td class="q">El mismo parque solar de 114 MWp, sin batería: PV directo, exportación del sobrante y red + gas para el resto.</td>
             <td class="q">—</td><td class="q">—</td><td class="q">Todo el año</td><td class="q">Base del VPN incremental de la batería</td></tr>
         </tbody>
       </table></div>
@@ -999,7 +999,7 @@ python -m pip install -r requirements.txt</pre></div></div>
         <div class="cadena"><span class="c">copia</span><span class="fl">→</span><span class="c">datos</span><span class="fl">→</span><span class="c">01</span><span class="fl">→</span><span class="c">01B</span><span class="fl">→</span><span class="c">02</span></div>
         <p>Haga una copia de la carpeta, cambie los archivos de <code>datos/</code> como se indica en <a href="#datos">Cambiar datos</a> y corra solo estos tres.</p>
         <p><span class="cadena" style="display:inline-flex;"><span class="c no">08–14</span> <span class="c no">15</span></span> no recalculan: siguen mostrando la tesis, y el 15 se detiene a propósito con <code>AssertionError</code>.</p>
-        <div class="ok"><b>Funciona si</b> el 02 termina e imprime «Mejor configuración encontrada en la malla».</div>
+        <div class="ok"><b>Funciona si</b> el 02 termina e imprime «Mejor configuración encontrada en la grilla».</div>
       </div>
     </div>
   </div>
@@ -1029,7 +1029,7 @@ python -m pip install -r requirements.txt</pre></div></div>
     <div class="tabla-wrap"><table class="archivos"><thead><tr><th>Archivo</th><th>Qué contiene</th><th>Qué hacer</th><th>Lo leen</th></tr></thead><tbody>
       <tr><td>load variable.csv</td><td class="des">Demanda horaria de 2025 en MW (columna <code>Porvenir</code>), 8.760 filas.</td><td class="acc"><span class="pill p-editar">Editar</span></td><td>01 · 01B · 02</td></tr>
       <tr><td>Precio_Bolsa_Nacional_($kwh)_2025.xlsx</td><td class="des">Precio de bolsa de XM en COP/kWh: un día por fila y una hora por columna.</td><td class="acc"><span class="pill p-editar">Editar</span></td><td>01 · 01B · 02</td></tr>
-      <tr><td>CurvasCapexPVBESS.xlsx</td><td class="des">Costos de inversión del campo solar y de la batería. Solo se leen algunas celdas amarillas.</td><td class="acc"><span class="pill p-editar">Editar celdas</span></td><td>01 · 01B · 02</td></tr>
+      <tr><td>CurvasCapexPVBESS.xlsx</td><td class="des">Costos de inversión del parque solar y de la batería. Solo se leen algunas celdas amarillas.</td><td class="acc"><span class="pill p-editar">Editar celdas</span></td><td>01 · 01B · 02</td></tr>
       <tr><td>Oriental_tmy-2025.csv y otros cuatro *_tmy-2025.csv</td><td class="des">Clima típico horario de cada región (NSRDB): radiación, temperatura, viento.</td><td class="acc"><span class="pill p-reempl">Reemplazar</span></td><td>01 · 01B · 02</td></tr>
       <tr><td>NREL_TP-6A40-93281_tabla2.csv</td><td class="des">Trayectoria publicada del costo de las baterías hasta 2050; fija la reposición.</td><td class="acc"><span class="pill p-notocar">No tocar</span></td><td>02</td></tr>
       <tr><td>Oriente.xlsx</td><td class="des">Serie solar histórica anterior. Ya no alimenta el modelo; el 02 la usa solo como contraste, así que <b>no la borre</b>.</td><td class="acc"><span class="pill p-notocar">No tocar</span></td><td>02</td></tr>
@@ -1149,7 +1149,7 @@ const RESUMEN = {
   OPT_B: "Etapa I: previsión perfecta con las acciones de B (carga solo con sol, sin exportar desde la batería).",
   OPT_FULL: "Etapa I: previsión perfecta con todas las acciones (carga con red y exportación desde la batería).",
   RED_TERMICA: "Referencia sin PV ni batería: la red y G1–G4 cubren toda la demanda.",
-  PV_SIN_BESS: "Referencia con el mismo campo solar pero sin batería.",
+  PV_SIN_BESS: "Referencia con el mismo parque solar pero sin batería.",
 };
 function chipRegla(r, grande = false) {
   const t = RESUMEN[r] ? ` title="${esc(RESUMEN[r])}"` : "";
@@ -1434,16 +1434,16 @@ const CFG_QUE = {
   M05: "Menos potencia, misma energía.",
   M06: "Mucha menos potencia, misma energía.",
   M07: "Batería más pequeña en potencia y en energía.",
-  M08: "La batería más pequeña de la malla.",
-  M09: "Campo solar al 75 %, con la batería de M01.",
-  M10: "Campo solar al 75 %, con la batería de M07.",
-  M11: "Campo solar a la mitad, con la batería de M01.",
-  M12: "Campo solar a la mitad, con la batería de M08."
+  M08: "La batería más pequeña de la grilla.",
+  M09: "Parque solar al 75 %, con la batería de M01.",
+  M10: "Parque solar al 75 %, con la batería de M07.",
+  M11: "Parque solar a la mitad, con la batería de M01.",
+  M12: "Parque solar a la mitad, con la batería de M08."
 };
 const CFG_GRUPOS = [
-  [["M01", "M02", "M03", "M04"], "Campo solar completo (f_PV = 1) y 45 MW: cambia la energía de la batería"],
-  [["M05", "M06", "M07", "M08"], "Campo solar completo (f_PV = 1): baja la potencia de la batería"],
-  [["M09", "M10", "M11", "M12"], "Campo solar reducido (f_PV = 0,75 y 0,5)"]
+  [["M01", "M02", "M03", "M04"], "Parque solar completo (f_PV = 1) y 45 MW: cambia la energía de la batería"],
+  [["M05", "M06", "M07", "M08"], "Parque solar completo (f_PV = 1): baja la potencia de la batería"],
+  [["M09", "M10", "M11", "M12"], "Parque solar reducido (f_PV = 0,75 y 0,5)"]
 ];
 const KQUE = {K1: "Batería grande y larga (8 h).", K2: "Batería corta (4 h) con PV algo menor.", K3: "Tamaño representativo; es la misma planta que M01.", K4: "Batería de 2 h, potente y con poca energía; PV menor."};
 function guiaConfig(caja) {
@@ -1454,8 +1454,8 @@ function guiaConfig(caja) {
   const anat = `<div class="anat" role="img" aria-label="Ejemplo: ${modoK ? "K3" : "M01"}, ${fmtEs(base.pv_mwp, 1)} megavatios pico de PV, batería de ${fmtEs(base.p_mw, 0)} megavatios y ${fmtEs(base.e_mwh, 0)} megavatios hora">
       <span class="t">${modoK ? "K3" : "M01"}</span><span class="sep">·</span><span class="t pv">${fmtEs(base.pv_mwp, 0)} MWp</span><span class="sep">·</span><span class="t p">${fmtEs(base.p_mw, 0)}</span><span class="sep">/</span><span class="t e">${fmtEs(base.e_mwh, 0)}</span></div>
     <dl class="anat-dl">
-      <div class="pv"><dt>${fmtEs(base.pv_mwp, 0)} MWp · campo solar</dt><dd>Potencia pico de los paneles en DC; con DC/AC de 1,20 son unos ${fmtEs(base.pv_mwp / 1.2, 0)} MW de inversores.
-        ${fmtEs(base.pv_mwp, 1)} MWp es el tamaño que en Oriente genera en un año lo mismo que consume la demanda (${fmtEs(dem, 1)} GWh): eso es <b>f_PV = 1</b>. Con f_PV = 0,5 el campo solar es la mitad.</dd></div>
+      <div class="pv"><dt>${fmtEs(base.pv_mwp, 0)} MWp · parque solar</dt><dd>Potencia pico de los paneles en DC; con DC/AC de 1,20 son unos ${fmtEs(base.pv_mwp / 1.2, 0)} MW de inversores.
+        ${fmtEs(base.pv_mwp, 1)} MWp es el tamaño que en Oriente genera en un año lo mismo que consume la demanda (${fmtEs(dem, 1)} GWh): eso es <b>f_PV = 1</b>. Con f_PV = 0,5 el parque solar es la mitad.</dd></div>
       <div class="p"><dt>${fmtEs(base.p_mw, 0)} · potencia de la batería [MW]</dt><dd>Cuánto puede cargar o descargar a la vez. Como referencia, el pico de la demanda es de ${fmtEs(DATA.meta.pico_mw, 1)} MW.</dd></div>
       <div class="e"><dt>${fmtEs(base.e_mwh, 0)} · energía de la batería [MWh]</dt><dd>Cuánto almacena. Se usa el 80 % (profundidad de descarga): ${fmtEs(util, 0)} MWh útiles.</dd></div>
       <div><dt>Duración = energía ÷ potencia</dt><dd>${fmtEs(base.e_mwh, 0)} ÷ ${fmtEs(base.p_mw, 0)} = ${fmtEs(base.dur_h, 1)} h descargando a plena potencia. Más horas: más energía para la noche; más MW: atiende picos más altos.</dd></div>
@@ -1472,7 +1472,7 @@ function guiaConfig(caja) {
       }
     }
     det = `<details class="ver" open><summary>Qué cambia en cada configuración M01–M12</summary>
-      <p class="small muted" style="margin-top:0;">La malla parte de M01 y cambia una sola cosa a la vez, para ver qué pesa más en el resultado. En negrilla, lo que difiere de M01.</p>
+      <p class="small muted" style="margin-top:0;">La grilla parte de M01 y cambia una sola cosa a la vez, para ver qué pesa más en el resultado. En negrilla, lo que difiere de M01.</p>
       <div class="tabla-wrap"><table class="cfg-t"><thead><tr><th>Config.</th><th class="n">PV [MWp]</th><th class="n">f_PV</th><th class="n">Potencia [MW]</th><th class="n">Energía [MWh]</th><th class="n">Duración [h]</th><th>Qué cambia frente a M01</th></tr></thead><tbody>${filas}</tbody></table></div>
       <p class="nota">Todas están en Oriente, con la flota térmica G1–G4 fija y las mismas reglas A_INT, B_INT y D_INT.</p></details>`;
   } else {
@@ -1485,11 +1485,11 @@ function guiaConfig(caja) {
     }
     const k1 = sitios.map(s => caso("K1", s).pv_mwp);
     det = `<details class="ver" open><summary>Qué es cada escala K1–K4</summary>
-      <p class="small muted" style="margin-top:0;">La batería es la misma en las cinco regiones. El campo solar en MWp sí cambia, porque f_PV se fija en energía y cada región tiene distinta radiación:
+      <p class="small muted" style="margin-top:0;">La batería es la misma en las cinco regiones. El parque solar en MWp sí cambia, porque f_PV se fija en energía y cada región tiene distinta radiación:
         con f_PV = 1 va de ${fmtEs(Math.min(...k1), 1)} a ${fmtEs(Math.max(...k1), 1)} MWp.</p>
       <div class="tabla-wrap"><table class="cfg-t"><thead><tr><th rowspan="2">Escala</th><th class="n" rowspan="2">f_PV</th><th class="n" rowspan="2">Potencia [MW]</th><th class="n" rowspan="2">Energía [MWh]</th><th class="n" rowspan="2">Duración [h]</th><th colspan="5" style="text-align:center;">PV por región [MWp]</th><th rowspan="2">Lectura</th></tr><tr>${sitios.map(s => `<th class="n">${s}</th>`).join("")}</tr></thead><tbody>${filas}</tbody></table></div></details>`;
   }
-  caja.innerHTML = cabeceraGuia("Cómo leer una configuración", `${modoK ? "K1–K4" : "M01–M12"} · ¿Qué significa «${modoK ? "K3" : "M01"} · ${fmtEs(base.pv_mwp, 0)} MWp · ${fmtEs(base.p_mw, 0)}/${fmtEs(base.e_mwh, 0)}»? Campo solar, potencia y energía de la batería`) + anat + det;
+  caja.innerHTML = cabeceraGuia("Cómo leer una configuración", `${modoK ? "K1–K4" : "M01–M12"} · ¿Qué significa «${modoK ? "K3" : "M01"} · ${fmtEs(base.pv_mwp, 0)} MWp · ${fmtEs(base.p_mw, 0)}/${fmtEs(base.e_mwh, 0)}»? Parque solar, potencia y energía de la batería`) + anat + det;
 }
 document.querySelectorAll(".cfg-guia").forEach(guiaConfig);
 
@@ -1532,7 +1532,7 @@ function guiaReglas(caja) {
           <div><dt>C_INT · F_INT</dt><dd>Reglas de mercado que también compran a la red para cargar. Solo se evaluaron en la planta K3 de la Etapa II.</dd></div>
           <div><dt>OPT_AB · OPT_D · OPT_CF</dt><dd>Benchmarks con previsión perfecta de todo el año (MILP). No son reglas operables: marcan lo mejor posible. OPT_AB es la cota de A_INT y B_INT; OPT_D, de D_INT; OPT_CF, de C_INT y F_INT.</dd></div>
           <div><dt>RED_TERMICA</dt><dd>Sin PV ni batería: la red y G1–G4 cubren toda la demanda. Es la base del VPN total.</dd></div>
-          <div><dt>PV_SIN_BESS</dt><dd>El mismo campo solar sin batería. Es la base del VPN incremental (ΔVPN) de la batería.</dd></div>
+          <div><dt>PV_SIN_BESS</dt><dd>El mismo parque solar sin batería. Es la base del VPN incremental (ΔVPN) de la batería.</dd></div>
         </dl>
       </details>`;
   } else {
@@ -1608,7 +1608,7 @@ document.querySelectorAll("[data-archivo]").forEach(a => { if (location.protocol
   const vT0 = DATA.etapa2.vpn_k3.find(r => r.senal === "T0" && r.caso === "A_INT" && r.referencia === "PV_SIN_BESS");
   const vT1 = DATA.etapa2.vpn_k3.find(r => r.senal === "T1" && r.caso === "A_INT" && r.referencia === "PV_SIN_BESS");
   const stats = [
-    ["Mejor diseño evaluado", "M01", `${diseno("M01")}. Primero en ${victorias} de ${total} contextos de la malla.`],
+    ["Mejor diseño evaluado", "M01", `${diseno("M01")}. Primero en ${victorias} de ${total} contextos de la grilla.`],
     ["Valor de la batería con térmica", `+${fmtEs(vT0.vpn_musd, 2)} MUSD`, `K3 con A_INT en T0 (${signo(vT1.vpn_musd, 2)} MUSD en T1), a 20 años.`],
     ["Valor de la batería sin térmica", `${fmtEs(mnE1, 1)}–${fmtEs(mxE1, 1)}`, "MUSD de ΔVPN en los 120 casos con reglas A, B y D."],
     ["Sistema estudiado", "158,74 GWh", "Demanda anual (pico 23,23 MW); flota a gas de 25,2 MW disponibles."],
@@ -1619,7 +1619,7 @@ document.querySelectorAll("[data-archivo]").forEach(a => { if (location.protocol
       `Sí con las reglas A, B y D: ΔVPN entre ${fmtEs(mnE1, 1)} y ${fmtEs(mxE1, 1)} MUSD. El tamaño (K) y la señal explican casi todo ese valor.`],
     ["#termica", "Etapa II · Con térmica", "Cuadernos 11 a 14", "¿Cambia el valor cuando la batería evita encendidos de gas?",
       `En K3, A_INT logra el menor costo de las reglas y un VPN incremental de ${signo(vT0.vpn_musd, 2)} MUSD (T0).`],
-    ["#malla", "Etapa III · Carbono y malla", "Cuaderno 15", "¿Qué tamaño y qué regla convienen con precio de carbono y dos CAPEX?",
+    ["#malla", "Etapa III · Carbono y grilla", "Cuaderno 15", "¿Qué tamaño y qué regla convienen con precio de carbono y dos CAPEX?",
       `M01 (${diseno("M01")}) queda primero en ${victorias} de ${total} contextos; la regla ganadora cambia con la señal y el carbono.`],
   ];
   $("#ini-etapas").innerHTML = etapas.map(([h, t, nb, q, r]) => `<a class="etapa" href="${h}"><span class="tag">${nb}</span><h3 style="margin-top:8px;">${t}</h3>
@@ -1662,10 +1662,10 @@ RENDER.decidir = function () {
   if (dec.modo === "C") {
     const rk = [...porCfg].sort((a, b) => b.mejor[k.adj] - a.mejor[k.adj]);
     gan = rk[0].mejor; alt = rk[1].mejor;
-    pregunta = "C · Mejor planta y regla de la malla";
+    pregunta = "C · Mejor planta y regla de la grilla";
     explica = `Con <b>${senal}</b>, <b>${co2} USD/t</b> y <b>H_${dec.hip}</b>, <b>${gan.config}</b> operada con <b>${gan.regla}</b> tiene el mayor VPN ajustado:
       <b>${fmtEs(gan[k.adj], 2)} MUSD</b>, <b>${signo(gan[k.adj] - alt[k.adj], 2)} MUSD</b> por encima de la siguiente planta (${alt.config} con ${alt.regla}).
-      Frente a instalar solo el PV, la batería aporta <b>${signo(gan[k.inc], 2)} MUSD</b>. Es el mejor punto de la malla evaluada, no un óptimo global.`;
+      Frente a instalar solo el PV, la batería aporta <b>${signo(gan[k.inc], 2)} MUSD</b>. Es el mejor punto de la grilla evaluada, no un óptimo global.`;
   } else if (dec.modo === "A") {
     const o = porCfg.find(x => x.c === dec.cfgFijo);
     gan = o.mejor; alt = o.segunda;
@@ -2202,7 +2202,7 @@ TEMAS.capex.hoja =
     [6, [H("B2"), X("1 – 20"), I("141,8"), I("5"), I("43,5"), I("200.000"), I("0,054"), I("0,015"), I("0,2"), G, N("1")]],
     [7, [H("B3"), X("20 – 100"), I("93,4"), I("5,35"), I("86,6"), I("526.263"), I("0,054"), I("0,015"), I("0,2"), G, N("1")]],
     [8, [H("B4"), X("> 100"), I("93,4"), I("5,35"), I("203,4"), I("900.000"), I("0,054"), I("0,015"), I("0,2"), G, N("1")]],
-  ], ["Cada fila es un tamaño de batería por energía. Las de más de 100 MWh, como todas las de la malla M01–M12, usan B4; el análisis H_B3 las costea con B3.",
+  ], ["Cada fila es un tamaño de batería por energía. Las de más de 100 MWh, como todas las de la grilla M01–M12, usan B4; el análisis H_B3 las costea con B3.",
       "Los rangos de la columna C son informativos: los límites de 1, 20 y 100 MWh están fijos en el código.",
       "Porcentajes como fracción: 5,4 % se escribe <code>0,054</code>."]) +
   hojaX("Suministro_BESS", "prima por C-rate", ["A", "B", "C", "D"], [
