@@ -294,6 +294,35 @@ table.hoja td.gap { text-align: center; color: var(--ink-3); }
 @media (max-width: 900px) { .rutas { grid-template-columns: minmax(0, 1fr); } }
 
 /* Impresión: todas las diapositivas una tras otra */
+/* Ajustes de proyección (nov. 2026): los comandos largos se parten en vez de
+   quedar ocultos y, en pantallas bajas (proyectores de 768 o 720 px), las
+   diapositivas se compactan para caber sin desplazamiento. */
+.code pre { white-space: pre-wrap; overflow-wrap: anywhere; }
+@media (max-height: 900px) {
+  .slide { padding-top: 12px; padding-bottom: 12px; }
+  h2 { font-size: clamp(1.35rem, 2.5vw, 2.05rem); margin-bottom: .25em; }
+  .kicker { margin-bottom: 4px; }
+  .lead { font-size: 1rem; line-height: 1.45; margin-bottom: 12px; }
+  table { font-size: .84rem; }
+  th, td { padding: 5px 10px; }
+  table.hoja th, table.hoja td { padding: 3px 7px; }
+  .check { gap: 5px; }
+  .check label { padding: 6px 12px; }
+  .code pre { font-size: .8rem; line-height: 1.45; padding: 8px 12px; }
+  .card { padding: 14px 18px; }
+  ul.lst li { margin: .2em 0; }
+}
+@media (max-height: 740px) {
+  h2 { font-size: clamp(1.25rem, 2.2vw, 1.8rem); }
+  .lead { font-size: .95rem; margin-bottom: 8px; }
+  table { font-size: .8rem; }
+  th, td { padding: 4px 9px; }
+  .check label { padding: 4px 12px; }
+  .code pre { font-size: .76rem; line-height: 1.38; }
+  .card { padding: 11px 16px; }
+  ul.lst li { margin: .12em 0; line-height: 1.4; }
+}
+
 @media print {
   body { display: block; height: auto; overflow: visible; }
   .bar, .ctrl, .skip, dialog, .copiar { display: none !important; }
