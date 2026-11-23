@@ -97,8 +97,6 @@ baterias/
 ├── datos/                             datos de entrada
 │   ├── Datos_entrada.xlsx             EL LIBRO QUE SE EDITA: demanda, precio de bolsa, tarifas,
 │   │                                  batería, costos y tamaños a evaluar
-│   ├── load variable.csv              fuente original de la demanda (ya no se lee)
-│   ├── Precio_Bolsa_Nacional_($kwh)_2025.xlsx   fuente original del precio de bolsa (ya no se lee)
 │   ├── CurvasCapexPVBESS.xlsx         curvas de CAPEX solar y del BESS
 │   ├── *_tmy-2025.csv                 año meteorológico típico NSRDB de las 5 regiones
 │   ├── NREL_TP-6A40-93281_tabla2.csv  trayectoria publicada del costo de la batería
