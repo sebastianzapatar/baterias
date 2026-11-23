@@ -612,7 +612,6 @@ nav.tabs li.sep { width: 1px; align-self: stretch; margin: 12px 4px; background:
     <li><a href="#figuras" data-vista="figuras" title="Figuras del cuaderno 15"><span class="n">7</span>Figuras</a></li>
     <li class="sep" aria-hidden="true"></li>
     <li><a href="#cuadernos" data-vista="cuadernos" title="Cómo ejecutar los cuadernos"><span class="n">8</span>Cuadernos</a></li>
-    <li><a href="#datos" data-vista="datos" title="Cómo estudiar otro caso con datos propios"><span class="n">9</span>Cambiar datos</a></li>
   </ul>
 </nav>
 
@@ -1277,7 +1276,7 @@ python -m pip install -r requirements.txt</pre></div></div>
         <li>Los cuadernos 08, 09 y 11 a 14 <b>solo leen resultados</b>. Los 08, 09, 11, 12 y 13 tienen además una guarda: si algo intenta recalcular, se detienen a propósito con un <code>RuntimeError</code>.</li>
         <li>El 02 tarda entre 6 y 15 minutos según el equipo con los tamaños del libro entregado (más si se agregan tamaños). El 15 tarda unos 5 minutos, o 2 si se instala la aceleración opcional Numba; el resultado es el mismo.</li>
         <li>Ejecutar un cuaderno sobrescribe sus figuras y tablas de salida. Si una corrida anterior importa, cópiela antes.</li>
-        <li>Para estudiar otro caso con datos propios, vea <a href="#datos">Cambiar datos</a>: solo el 01, el 01B y el 02 recalculan.</li>
+        <li>Para estudiar otro caso con datos propios, cambie el libro <code>datos/Datos_entrada.xlsx</code> como explica la sección 6 del <a data-archivo="Manual_Ejecucion_Cuadernos_EIA.pdf" href="Manual_Ejecucion_Cuadernos_EIA.pdf">manual (PDF)</a> o las <a href="presentacion.html#15">diapositivas 15 a 21 de la presentación</a>: solo el 01, el 01B y el 02 recalculan.</li>
       </ul>
       <div class="aviso mt">Esta página no necesita instalación: es un archivo HTML con los datos incluidos. Está en la raíz de la entrega como <code>index.html</code>.</div>
     </div>
@@ -1308,7 +1307,7 @@ python -m pip install -r requirements.txt</pre></div></div>
         <div class="r-top"><span class="r-n">Ruta 3 · 20–40 min</span><span class="pill p-largo">Datos propios</span></div>
         <h4>Estudiar un caso con datos propios</h4>
         <div class="cadena"><span class="c">copia</span><span class="fl">→</span><span class="c">datos</span><span class="fl">→</span><span class="c">01</span><span class="fl">→</span><span class="c">01B</span><span class="fl">→</span><span class="c">02</span></div>
-        <p>Haga una copia de la carpeta, cambie los archivos de <code>datos/</code> como se indica en <a href="#datos">Cambiar datos</a> y corra solo estos tres.</p>
+        <p>Haga una copia de la carpeta, cambie el libro <code>datos/Datos_entrada.xlsx</code> como se indica en la sección 6 del <a data-archivo="Manual_Ejecucion_Cuadernos_EIA.pdf" href="Manual_Ejecucion_Cuadernos_EIA.pdf">manual (PDF)</a> o las <a href="presentacion.html#15">diapositivas 15 a 21 de la presentación</a> y corra solo estos tres.</p>
         <p><span class="cadena" style="display:inline-flex;"><span class="c no">08–14</span> <span class="c no">15</span></span> no recalculan: siguen mostrando la tesis, y el 15 se detiene a propósito con <code>AssertionError</code>.</p>
         <div class="ok"><b>Funciona si</b> el 02 termina e imprime «Mejor configuración encontrada en la grilla».</div>
       </div>
@@ -1323,77 +1322,6 @@ python -m pip install -r requirements.txt</pre></div></div>
 </section>
 
 <!-- ======================= CAMBIAR DATOS ======================= -->
-<section class="view" id="v-datos" aria-labelledby="h-datos">
-  <h2 id="h-datos">Cambiar los datos de entrada</h2>
-  <p class="lead">Para estudiar otro caso (otra demanda, otros precios de bolsa, otras tarifas, otros tamaños) se cambian valores en un
-    solo libro, <code>Datos_entrada.xlsx</code>, que está en la carpeta <code>datos/</code>. No hace falta abrir ni editar los cuadernos ni los <code>.py</code>.
-    Solo el sitio solar (archivos TMY) sigue en sus propios archivos; los costos de inversión están en las hojas de CAPEX del mismo libro. El detalle está en la sección 6 del
-    <a data-archivo="Manual_Ejecucion_Cuadernos_EIA.pdf" href="Manual_Ejecucion_Cuadernos_EIA.pdf">manual (PDF)</a>
-    y en las <a href="presentacion.html#15">diapositivas de la presentación</a>.</p>
-  <div class="aviso ambar"><b>Antes de cambiar nada, haga una copia de seguridad.</b> Copie la carpeta de entrega completa con otro nombre,
-    o al menos los archivos que va a modificar. Para volver a los resultados de la tesis basta con restaurarlos.
-    Conserve el nombre del libro y el de sus hojas. En las hojas de parámetros, el código busca cada dato por la columna <i>Clave</i>.</div>
-
-  <div class="card mt">
-    <h3>Los archivos de la carpeta <code>datos/</code></h3>
-    <p class="small muted" style="margin-top:0;">Casi todo se cambia en <code>Datos_entrada.xlsx</code>. Los demás archivos se editan en celdas puntuales, se reemplazan completos o no se tocan.</p>
-    <div class="tabla-wrap"><table class="archivos"><thead><tr><th>Archivo</th><th>Qué contiene</th><th>Qué hacer</th><th>Lo leen</th></tr></thead><tbody>
-      <tr><td>Datos_entrada.xlsx</td><td class="des">El libro de datos: año y región, demanda (plana, perfil de 24 h o serie anual), precio de bolsa, tarifas, batería, parámetros financieros, tamaños a evaluar y las curvas de costo de inversión (hojas de CAPEX).</td><td class="acc"><span class="pill p-editar">Editar</span></td><td>01 · 01B · 02</td></tr>
-      <tr><td>Oriental_tmy-2025.csv y otros cuatro *_tmy-2025.csv</td><td class="des">Clima típico horario de cada región (NSRDB): radiación, temperatura, viento.</td><td class="acc"><span class="pill p-reempl">Reemplazar</span></td><td>01 · 01B · 02</td></tr>
-      <tr><td>NREL_TP-6A40-93281_tabla2.csv</td><td class="des">Trayectoria publicada del costo de las baterías hasta 2050; fija la reposición.</td><td class="acc"><span class="pill p-notocar">No tocar</span></td><td>02</td></tr>
-      <tr><td>Oriente.xlsx</td><td class="des">Serie solar histórica anterior. Ya no alimenta el modelo; el 02 la usa solo como contraste, así que <b>no la borre</b>.</td><td class="acc"><span class="pill p-notocar">No tocar</span></td><td>02</td></tr>
-    </tbody></table></div>
-    <p class="nota">«Editar»: se cambian valores dentro del archivo. «Reemplazar»: se cambia el archivo entero por otro del mismo formato, con el mismo nombre.</p>
-  </div>
-
-  <div class="card mt">
-    <h3>¿Qué cuadernos responden a un cambio?</h3>
-    <div class="resp" id="dat-resp"></div>
-  </div>
-
-  <div class="filtros mt">
-    <div class="filtro"><span class="et">¿Qué quiere cambiar?</span><div class="seg" id="dat-tema"></div></div>
-  </div>
-  <div class="grid g-7-5">
-    <div class="card">
-      <h3 id="dat-titulo"></h3>
-      <div class="archivo" id="dat-archivo"></div>
-      <div class="usan" id="dat-usan"></div>
-      <ol class="dat" id="dat-pasos"></ol>
-      <div id="dat-extra"></div>
-    </div>
-    <div class="card">
-      <h3 id="dat-mtit"></h3>
-      <div id="dat-muestra"></div>
-      <h3 class="mt">Si aparece un error</h3>
-      <ul class="err" id="dat-err"></ul>
-    </div>
-  </div>
-  <div class="card mt" id="dat-hoja-card" hidden>
-    <h3 id="dat-htit"></h3>
-    <div class="hoja-ley">
-      <span><i class="in"></i>Se cambia (amarillo con letra azul, como en el libro)</span>
-      <span><i class="no"></i>Amarilla, pero los cuadernos no la leen</span>
-      <span><i class="fx"></i>Fórmula o cálculo: no la toque</span>
-      <span><i class="ig"></i>Se ignora</span>
-    </div>
-    <div id="dat-hoja"></div>
-  </div>
-
-  <div class="card mt">
-    <h3>Después de cambiar: orden de ejecución</h3>
-    <div class="pasos">
-      <div class="paso"><div><b>Guarde y cierre</b> los archivos que editó (Excel o editor de texto).</div></div>
-      <div class="paso"><div><b>Ejecute el 01</b> con <i>Kernel → Restart Kernel and Run All Cells</i> y guárdelo con <code>Ctrl+S</code>.
-        Reiniciar el kernel es necesario: los cuadernos guardan en memoria los datos y el CAPEX leídos durante la sesión.
-        El 01B ejecuta por dentro las celdas del 01 tal como están guardadas en disco.</div></div>
-      <div class="paso"><div><b>Ejecute el 01B y luego el 02</b> (6–15 min), también reiniciando el kernel. El 02 sobrescribe
-        <code>resultados_nb02/C3B_multianual.csv</code>.</div></div>
-      <div class="paso"><div><b>Revise que no haya celdas de error.</b> Las cifras de control del manual ya no aplican porque
-        corresponden a los datos originales; las validaciones físicas hora a hora siguen activas y avisan si algo no cuadra.</div></div>
-    </div>
-  </div>
-</section>
 </main>
 
 <footer><div class="in">
@@ -1867,7 +1795,7 @@ document.querySelectorAll(".reglas-guia").forEach(guiaReglas);
 document.querySelectorAll("th").forEach(th => { const r = RESUMEN[th.textContent.trim()]; if (r) th.title = r; });
 
 // ===================== Navegación =====================
-const VISTAS = ["inicio", "decidir", "comparar", "malla", "sin-termica", "termica", "carbono", "figuras", "cuadernos", "datos"];
+const VISTAS = ["inicio", "decidir", "comparar", "malla", "sin-termica", "termica", "carbono", "figuras", "cuadernos"];
 const RENDER = {};
 function mostrarVista() {
   const v = VISTAS.includes(location.hash.slice(1)) ? location.hash.slice(1) : "inicio";
@@ -2267,287 +2195,6 @@ $("#lista-nb").innerHTML = NB.map(([n, arch, t, d, tiempo, c]) => `<div class="n
   <span class="pill ${c === "r" ? "p-rapido" : c === "m" ? "p-medio" : "p-largo"}">${tiempo}</span></div>`).join("") +
   `<p class="nota">* Unos 5 minutos sin la aceleración opcional Numba y unos 2 con ella; el resultado es el mismo.</p>`;
 
-// ===================== CAMBIAR DATOS =====================
-const RESPUESTA = [
-  ["01", "s", "Recalcula todo con los datos nuevos de Datos_entrada.xlsx."],
-  ["01B", "s", "Recalcula. Toma los datos y parámetros del 01 guardado."],
-  ["02", "s", "Recalcula el barrido completo (6–15 min con el libro entregado)."],
-  ["08 y 09", "n", "Leen resultados ya calculados: siguen mostrando la tesis."],
-  ["11 a 13", "n", "Leen resultados ya calculados: siguen mostrando la tesis."],
-  ["14", "n", "Lee resultados ya calculados: sigue mostrando la tesis."],
-  ["15", "x", "Compara una muestra con las tablas ya calculadas y se detiene con «AssertionError: Discrepancia…». Es lo esperado."],
-];
-const ESTADO = {s: ["p-rapido", "✓ Recalcula"], n: ["p-igual", "= No cambia"], x: ["p-largo", "✕ Se detiene"]};
-$("#dat-resp").innerHTML = RESPUESTA.map(([n, e, t]) => `<div class="r"><div style="display:flex;justify-content:space-between;gap:8px;align-items:center;">
-  <span class="num">${n}</span><span class="pill ${ESTADO[e][0]}">${ESTADO[e][1]}</span></div><p>${t}</p></div>`).join("");
-
-const tabla = (cab, filas) => `<div class="tabla-wrap"><table class="ficha"><thead><tr>${cab.map(c => `<th>${c}</th>`).join("")}</tr></thead>
-  <tbody>${filas.map(f => `<tr>${f.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody></table></div>`;
-const TEMAS = {
-  demanda: {
-    nombre: "Demanda", titulo: "Cambiar la demanda", archivo: "Datos_entrada.xlsx · hojas Demanda y Demanda_anual", usan: ["01", "01B", "02"],
-    pasos: [
-      "En la hoja <b>Demanda</b> elija el modo en la lista desplegable: <code>plana</code>, <code>perfil_24h</code> o <code>serie_anual</code>.",
-      "<b>plana</b>: escriba la potencia en MW en <i>Demanda plana</i>. Se usa la misma en las 8.760 horas.",
-      "<b>perfil_24h</b>: complete la tabla de 24 horas con la demanda en MW de un día laborable (lunes a viernes) y de un día de fin de semana (sábado y domingo). Si no distingue, ponga los mismos valores en las dos columnas.",
-      "<b>serie_anual</b>: pegue en la hoja <b>Demanda_anual</b>, desde la fila 4, las 8.760 horas del año de la hoja General: fecha y hora en la columna A y MW en la B.",
-      "Guarde el libro con el mismo nombre y ejecute 01 → 01B → 02.",
-    ],
-    extra: `<p class="small mt">Las celdas verdes de la hoja muestran la demanda anual, la diaria media y el pico que resultan del modo elegido.
-      En modo «factores» de la hoja Dimensionamiento, los tamaños del PV y de la batería se recalculan con esa demanda.</p>
-      <p class="small">En <code>serie_anual</code>, las horas en exactamente 0 MW y las horas bajas que siguen a cada corte se tratan como cortes
-      de medidor y se rellenan con la mediana de la misma hora en los días cercanos (±7 días). El cuaderno informa cuántas imputó.
-      En los otros dos modos no se toca ningún valor.</p>`,
-    mtit: "Así se ve la hoja Demanda",
-    muestra: tabla(["Celda", "Qué va", "Ejemplo"], [
-      ["C5", "Modo de demanda", "<code>perfil_24h</code>"],
-      ["C6", "Demanda plana [MW]", "18,12"],
-      ["A10:C33", "Hora · laborable [MW] · fin de semana [MW]", "0 · 18,36 · 18,09 … 23 · 18,46 · 18,49"],
-      ["F10:F13", "Vista previa: anual, diaria, media y pico", "158.743 MWh · 434,9 MWh/día · 18,1 MW · 23,2 MW"],
-    ]) + `<p class="nota">Los valores iniciales del perfil son el promedio horario de 2025 por tipo de día.</p>`,
-    errores: [
-      ["hoja «Demanda»: el modo debe ser uno de …", "El modo está mal escrito: elíjalo de la lista desplegable."],
-      ["hoja «Demanda»: el perfil debe tener las 24 horas …", "Falta un valor en la tabla de 24 horas."],
-      ["hoja «Demanda_anual»: se esperaban las 8.760 horas de …", "Faltan horas o las fechas no son del año de la hoja General."],
-      ["La demanda de 02 no es identica a la de 01B", "El 01 no se volvió a ejecutar después de cambiar el libro."],
-    ],
-  },
-  precio: {
-    nombre: "Precio de bolsa", titulo: "Cambiar el precio de bolsa", archivo: "Datos_entrada.xlsx · hoja Precio_bolsa", usan: ["01", "02"],
-    pasos: [
-      "Pegue el reporte de precio de bolsa nacional de XM desde la fila 4: la fecha en la columna A y las horas 0 a 23 en las columnas B a Y.",
-      "Una fila por día: los 365 días del año de la hoja General, en COP/kWh y sin celdas vacías.",
-      "Guarde el libro con el mismo nombre y ejecute 01 → 01B → 02.",
-    ],
-    extra: `<p class="small mt">El precio de bolsa define el ingreso por exportar excedentes y la señal T1. T1 se recalibra sola: es el precio
-      de bolsa más un margen constante, calculado para que el costo anual de la demanda sin proyecto sea igual bajo T0 y T1.</p>`,
-    mtit: "Así se ve la hoja Precio_bolsa",
-    muestra: tabla(["Fila", "A", "B", "C", "…", "Y"], [
-      ["3", "<b>Fecha</b>", "<b>0</b>", "<b>1</b>", "…", "<b>23</b>"],
-      ["4", "2025-01-01", "202,28", "202,28", "…", "…"],
-      ["5", "2025-01-02", "440,17", "253,85", "…", "…"],
-    ]) + `<p class="nota">Una fila por día · precio en COP/kWh de la hora que empieza en cada columna.</p>`,
-    errores: [
-      ["hoja «Precio_bolsa»: se esperaban 365 días × 24 horas …", "Faltan días, hay celdas vacías o las fechas no son del año de la hoja General."],
-    ],
-  },
-  sitio: {
-    nombre: "Sitio solar", titulo: "Cambiar el sitio o el recurso solar", archivo: "datos/Oriental_tmy-2025.csv (y los otros cuatro *_tmy-2025.csv)", usan: ["01", "01B", "02"],
-    pasos: [
-      "<b>Una de las cinco regiones:</b> elíjala en la hoja <b>General</b> de <code>Datos_entrada.xlsx</code> (lista desplegable). Opciones: <code>'Caribe'</code>, <code>'Antioquia'</code>, <code>'Suroccidente'</code>, <code>'Oriente'</code> y <code>'Nordeste'</code>.",
-      "<b>Un sitio nuevo:</b> descargue el TMY del punto en el <a href=\"https://nsrdb.nrel.gov/data-viewer\" target=\"_blank\" rel=\"noopener\">visor de NSRDB</a> (CSV, horario).",
-      "Reemplace con él uno de los cinco archivos <b>conservando el nombre</b> y elija esa región en la hoja General del libro. No edite el CSV.",
-      "Ejecute 01 → 01B → 02.",
-    ],
-    extra: `<p class="small mt">La latitud, la longitud y la elevación se toman de las filas de metadatos del propio archivo. La generación se simula
-      con pvlib con la orientación, la relación DC/AC y las pérdidas del estudio; el tamaño de la planta se expresa en MWp (DC).</p>`,
-    mtit: "Así empieza el archivo de NSRDB",
-    muestra: `<pre class="cmd">Source,Location ID,…,Latitude,Longitude,…,Elevation,…
-NSRDB,1304604,…,3.01,-72.14,…,207,…
-Year,Month,Day,Hour,Minute,Temperature,…,DHI,DNI,…,GHI,…
-2004,1,1,0,30,23.2,…</pre><p class="nota">Dos filas de metadatos, encabezados en la fila 3 y 8.760 filas horarias en UTC. Columnas necesarias:
-      Month, Day, Hour, Minute, GHI, DNI, DHI, Temperature, Wind Speed, Surface Albedo y Pressure.</p>`,
-    errores: [
-      ["Se esperaban 8.760 registros horarios…", "El TMY no es horario o se recortó."],
-      ["El archivo no contiene las columnas requeridas", "No es el CSV de NSRDB o se editó."],
-      ["Región desconocida", "El nombre de la región en la hoja General no es uno de los cinco."],
-    ],
-  },
-  capex: {
-    nombre: "Costos de inversión", titulo: "Cambiar los costos de inversión", archivo: "Datos_entrada.xlsx · hojas Parametros_PV, Parametros_BESS, Suministro_BESS y Trayectorias", usan: ["01", "01B", "02"],
-    pasos: [
-      "Abra el libro en Excel y cambie solo las celdas de la tabla de la derecha. Las demás hojas son cálculos y gráficas de consulta.",
-      "En <code>Parametros_PV</code> cambie las líneas del desglose (C6 a C15), <b>no C16 ni C17</b>: son fórmulas que las suman.",
-      "No inserte ni borre filas o columnas ni cambie el nombre de las hojas: el modelo lee cada celda por su posición.",
-      "Guarde como <code>.xlsx</code> con el mismo nombre (Excel recalcula las fórmulas al guardar), cierre Excel y ejecute 01 y 02.",
-    ],
-    extra: `<p class="small mt">El OPEX se deriva del CAPEX (2 % anual del solar y 1,5 % anual del BESS), así que cambia junto con él.
-      No modifique <code>NREL_TP-6A40-93281_tabla2.csv</code>, que es la trayectoria publicada del costo de la batería.</p>`,
-    mtit: "Celdas que leen los cuadernos",
-    muestra: tabla(["Hoja", "Celdas", "Qué son"], [
-      ["Parametros_PV", "C6–C15", "Desglose del costo solar a 8 MWp [USD/kWp], marcado Global o Local en la columna B"],
-      ["", "C18", "Interconexión, subestación y bahía (48,8 USD/kWp)"],
-      ["", "C20", "Factor de indirectos, IVA y AIU (1,2719)"],
-      ["", "C33 · C34", "Exponentes de escala (−0,0906 y −0,06)"],
-      ["Parametros_BESS", "D5:J8", "Segmentos B1–B4 por energía (&lt;1, 1–20, 20–100, &gt;100 MWh). D suministro [USD/kWh]; E local energía [USD/kWh]; F local potencia [USD/kW]; G fijo [USD]; H–J indirectos, EPC y margen"],
-      ["Suministro_BESS", "A13 · B13", "Prima por C-rate: quiebre 0,5 y pendiente 0,22"],
-    ]),
-    errores: [
-      ["Parametros_BESS!D7: se esperaba un número…", "Una celda quedó con texto o vacía."],
-      ["No se encontró datos/Datos_entrada.xlsx", "Se cambió el nombre del libro o Jupyter se abrió desde otra carpeta."],
-    ],
-  },
-  tamanos: {
-    nombre: "Tamaños", titulo: "Definir los tamaños a evaluar", archivo: "Datos_entrada.xlsx · hoja Dimensionamiento", usan: ["01", "01B", "02"],
-    pasos: [
-      "Elija el modo: <code>factores</code> (los tamaños salen de la demanda) o <code>fijos</code> (se escriben en MWp, MWh y MW).",
-      "<b>Factores</b>: el PV en veces la demanda anual (1,0 = el PV produce en el año lo mismo que consume la planta), la energía de la batería en % de la demanda diaria y la potencia en veces la demanda pico.",
-      "El caso base del 01 usa tres factores (celdas C6 a C8). El barrido del 02 combina cada PV de la tabla A con cada par potencia/energía; el 01B caracteriza los PV de su columna. Las celdas verdes muestran los MWp, MWh y MW que resultan.",
-      "Se descartan los pares con duración (energía ÷ potencia) fuera del rango de la hoja: de 1 a 8 h por defecto, que es el dominio de las curvas de CAPEX.",
-      "<b>Fijos</b>: la tabla B trae la grilla de la tesis. Con ella y la demanda en <code>serie_anual</code> se reproducen los resultados de la tesis.",
-    ],
-    extra: `<p class="small mt"><b>Ejemplo con la demanda de 2025:</b> 434,9 MWh/día, pico de 23,2 MW, y 1 MWp produce 1.387 MWh al año en Oriente.
-      Los factores 1,0 · 65 % · 2,0 dan un caso base de 114,4 MWp de PV y una batería de 46,5 MW / 282,7 MWh (6,1 h).</p>
-      <p class="small">Cada opción adicional alarga el 02 en proporción: el cuaderno imprime cuántas configuraciones va a simular antes de empezar.</p>`,
-    mtit: "Cómo se calcula cada tamaño",
-    muestra: tabla(["Tamaño", "Factor", "Fórmula"], [
-      ["PV [MWp]", "veces la demanda anual", "factor × demanda anual ÷ MWh por MWp de la región"],
-      ["Energía [MWh]", "% de la demanda diaria", "% ÷ 100 × demanda anual ÷ 365"],
-      ["Potencia [MW]", "veces la demanda pico", "factor × demanda máxima horaria"],
-    ]) + `<p class="nota">La producción de 1 MWp sale del TMY de la región elegida en la hoja General.</p>`,
-    errores: [
-      ["Pares fuera del dominio de las curvas CAPEX (1 a 8 h)", "Se amplió la duración mínima o máxima más allá de 1–8 h."],
-      ["hoja «Dimensionamiento»: el modo debe ser uno de …", "Elija factores o fijos en la lista desplegable."],
-    ],
-  },
-  parametros: {
-    nombre: "Tarifas y parámetros", titulo: "Cambiar tarifas, batería y parámetros financieros", archivo: "Datos_entrada.xlsx · hojas Tarifas, Bateria y Costos", usan: ["01", "01B", "02"],
-    pasos: [
-      "Cambie solo la columna <i>Valor</i> (amarilla). La columna <i>Clave</i> la usa el código para encontrar cada dato: no la modifique.",
-      "<b>Tarifas</b>: tarifa de la banda cara y de la barata con sus horas, o la opción monomia; PPA solar, cargos a la exportación y CND/ASIC.",
-      "<b>Bateria</b>: profundidad de descarga y eficiencia de ida y vuelta.",
-      "<b>Costos</b>: TRM, WACC, horizonte, O&M, degradación del PV y vida de la batería.",
-      "Guarde el libro con el mismo nombre y ejecute 01 → 01B → 02.",
-    ],
-    extra: `<div class="aviso mt"><b>Un solo lugar.</b> El 01 y el 02 leen las mismas tarifas y la misma batería del libro: ya no hay que repetir
-      los valores en dos cuadernos ni editar <code>costos.py</code>.</div>
-      <div class="aviso ambar mt">Si cambia la TRM, la WACC o el horizonte, el cuaderno 15 se detendrá al comparar con las tablas de la tesis. Es lo esperado.</div>`,
-    mtit: "Parámetros disponibles",
-    muestra: tabla(["Hoja", "Parámetro (valor inicial)", "Qué controla"], [
-      ["Tarifas", "Banda cara y barata (659,95 · 653,22 COP/kWh), de 6 a 21 h", "Señal T0 (T1 se recalibra sola)"],
-      ["Tarifas", "PPA solar (300 COP/kWh)", "Precio del contrato solar del 01"],
-      ["Tarifas", "CERE, FAZNI, arranque y parada", "Cargos a la exportación"],
-      ["Bateria", "DoD (0,80) · RTE (0,90)", "Energía útil y pérdidas"],
-      ["Costos", "TRM (3.126,08) · WACC (10 %) · horizonte (20 años)", "Evaluación financiera"],
-      ["Costos", "O&M (2 % PV · 1,5 % batería) · ciclos (7.200) · vida (20 años)", "Costos anuales y renovación de la batería"],
-    ]),
-    errores: [
-      ["hoja «…»: falta el valor de «…»", "Se borró un valor de la columna Valor."],
-      ["hoja «…», «…»: se esperaba un número …", "Hay texto en una celda numérica."],
-      ["la opción tarifaria debe ser …", "Elija opciones_horarias o monomia en la lista desplegable."],
-    ],
-  },
-};
-// --- Hojas de Excel simuladas: cada celda es "texto" o [texto, clase] ---
-function hojaX(nombre, sub, cols, filas, notas) {
-  const celda = c => { const [t, k] = Array.isArray(c) ? c : [c, ""]; return `<td class="${k}">${t}</td>`; };
-  return `<div class="hoja-tab">${nombre}${sub ? ` <span class="muted">${sub}</span>` : ""}</div>
-    <div class="tabla-wrap hoja-wrap"><table class="hoja"><thead><tr><th class="rn"></th>${cols.map(c => `<th>${c}</th>`).join("")}</tr></thead>
-    <tbody>${filas.map(([n, cs]) => `<tr><th class="rn">${n}</th>${cs.map(celda).join("")}</tr>`).join("")}</tbody></table></div>
-    ${notas ? `<ul class="hoja-nota">${notas.map(n => `<li>${n}</li>`).join("")}</ul>` : ""}`;
-}
-const G = ["…", "gap"];
-const I = v => [v, "in"], N = v => [v, "no"], F = v => [v, "fx"], H = v => [v, "hd"], X = v => [v, "ig"];
-
-TEMAS.demanda.htit = "Así se ve la hoja Demanda en Excel";
-TEMAS.demanda.hoja = hojaX("Datos_entrada.xlsx", "hoja Demanda", ["A", "B", "C", "D", "E", "F"], [
-  [4, [H("Clave"), H("Parámetro"), H("Valor"), H("Unidad"), H("Qué es"), X("")]],
-  [5, [X("modo"), X("Modo de demanda"), I("perfil_24h"), X(""), X("plana · perfil_24h · serie_anual"), X("")]],
-  [6, [X("demanda_plana_MW"), X("Demanda plana"), I("18,12"), X("MW"), X("Solo en modo plana"), X("")]],
-  [9, [H("Hora"), H("Laborable [MW]"), H("Fin de semana [MW]"), X(""), H("Vista previa"), X("")]],
-  [10, [X("0"), I("18,36"), I("18,09"), X(""), X("Demanda anual [MWh]"), F("158.744")]],
-  [11, [X("1"), I("18,41"), I("18,14"), X(""), X("Diaria media [MWh/día]"), F("434,9")]],
-  ["…", [G, G, G, G, G, G]],
-  [33, [X("23"), I("18,46"), I("18,49"), X(""), X(""), X("")]],
-], ["Cambie solo las celdas amarillas. La columna A (Clave) la usa el código para encontrar cada dato.",
-    "La tabla de 24 horas solo se usa con el modo <code>perfil_24h</code>; la hoja <b>Demanda_anual</b>, solo con <code>serie_anual</code>.",
-    "Las celdas verdes se recalculan al abrir o guardar el libro en Excel."]);
-
-TEMAS.precio.htit = "Así se ve la hoja Precio_bolsa en Excel";
-TEMAS.precio.hoja = hojaX("Datos_entrada.xlsx", "hoja Precio_bolsa", ["A", "B", "C", "D", "…", "Y"], [
-  [3, [H("Fecha"), H("0"), H("1"), H("2"), G, H("23")]],
-  [4, [I("2025-01-01"), I("202,28"), I("202,28"), I("202,28"), G, I("228,78")]],
-  [5, [I("2025-01-02"), I("440,17"), I("253,85"), I("440,17"), G, I("501,30")]],
-  ["…", [G, G, G, G, G, G]],
-  [368, [I("2025-12-31"), I("271,26"), I("271,26"), I("271,26"), G, I("271,26")]],
-], ["La columna A debe ser una fecha de Excel. La hora la da la columna: 0 a 23.",
-    "Los encabezados de la fila 3 pueden ser números o texto.",
-    "El reporte de precio de bolsa nacional de XM trae esta disposición: puede pegar el de otro periodo desde la fila 4."]);
-
-TEMAS.tamanos.htit = "Así se ve la hoja Dimensionamiento en Excel";
-TEMAS.tamanos.hoja = hojaX("Datos_entrada.xlsx", "hoja Dimensionamiento", ["A", "B", "C", "D", "E", "F", "G", "H"], [
-  [5, [X("modo_tamanos"), X("Modo"), I("factores"), X(""), X(""), X(""), X("PV [MWp]"), F("114,4")]],
-  [6, [X("base_pv_factor"), X("Caso base: PV"), I("1,00"), X("veces la demanda anual"), X(""), X(""), X("Energía [MWh]"), F("282,7")]],
-  [7, [X("base_energia_pct"), X("Caso base: energía"), I("65"), X("% de la demanda diaria"), X(""), X(""), X("Potencia [MW]"), F("46,5")]],
-  [8, [X("base_potencia_factor"), X("Caso base: potencia"), I("2,00"), X("veces la demanda pico"), X(""), X(""), X("Duración [h]"), F("6,1")]],
-  [16, [H("PV 02 [veces]"), H("PV 01B [veces]"), H("Energía [%]"), H("Potencia [veces]"), H("→ PV 02 [MWp]"), H("→ PV 01B [MWp]"), H("→ Energía [MWh]"), H("→ Potencia [MW]")]],
-  [17, [I("0,25"), I("0,25"), I("10"), I("0,50"), F("28,6"), F("28,6"), F("43,5"), F("11,6")]],
-  [18, [I("0,50"), I("0,50"), I("25"), I("1,00"), F("57,2"), F("57,2"), F("108,7"), F("23,2")]],
-  ["…", [G, G, G, G, G, G, G, G]],
-], ["El caso base lo usa el cuaderno 01; la tabla A, el barrido del 02 y la caracterización del 01B.",
-    "Deje en blanco las celdas que no use. El 02 agrega siempre PV = 0 y el caso sin batería.",
-    "La tabla B (más abajo, filas 30 y siguientes) tiene la grilla de la tesis para el modo <code>fijos</code>."]);
-
-TEMAS.capex.usan = ["01", "01B", "02"];
-TEMAS.precio.usan = ["01", "01B", "02"];
-TEMAS.capex.pasos = [
-  "Abra <code>Datos_entrada.xlsx</code> en Excel o LibreOffice Calc y vaya a las hojas de costos. Las celdas que se pueden editar están en <b>amarillo con letra azul</b>, pero <b>no todas las amarillas cambian los resultados</b>: abajo se marcan las que leen los cuadernos.",
-  "Cambie solo números. No escriba unidades ni deje celdas vacías, y no inserte ni borre filas o columnas: se leen por su posición (por ejemplo, <code>Parametros_PV!C18</code>).",
-  "En <code>Parametros_PV</code> cambie las líneas del desglose (C6 a C15), <b>no C16 ni C17</b>: son sumas. La columna B (Global o Local) decide en cuál de las dos suma entra cada línea.",
-  "Guarde el libro con el mismo nombre, ciérrelo y corra 01 → 01B → 02. Las sumas C16 y C17 y los índices de <code>Trayectorias</code> son fórmulas: el cuaderno usa el valor guardado y, si falta, lo calcula con la misma fórmula.",
-];
-TEMAS.capex.muestra = tabla(["Hoja", "Celdas", "Qué son"], [
-  ["Parametros_PV", "C6–C15", "Desglose del costo solar a 8 MWp [USD/kWp]"],
-  ["", "C18 · C20", "Interconexión [USD/kWp] y factor de indirectos, IVA y AIU"],
-  ["", "C33 · C34", "Exponentes de escala del hardware y del contenido local"],
-  ["Parametros_BESS", "D5:J8", "Costos por segmento de energía B1–B4"],
-  ["Suministro_BESS", "A13 · B13", "Prima por C-rate: quiebre y pendiente"],
-  ["Trayectorias", "D8 · G8", "Variación anual del contenido local (escenario Medio), para la reposición de la batería"],
-]);
-TEMAS.capex.extra += `<div class="aviso ambar mt"><b>Amarillas que no cambian los resultados.</b> Estas celdas son editables en el libro pero los cuadernos
-  no las leen; cambiarlas solo mueve las gráficas y tablas de consulta del propio Excel:
-  <code>Parametros_BESS</code> N5:N8 (el sobredimensionamiento está fijo en 1,0 en el código) y C14:G15 ·
-  <code>Suministro_BESS</code> D5:I7 y B19:B21 · <code>Parametros_PV</code> B27:D30 y C35 ·
-  <code>Trayectorias</code> filas 5 a 7 y las columnas Bajo y Alto de la fila 8 (la batería toma su trayectoria del CSV de NREL) ·
-  y todas las de <code>Curva_BESS</code>, <code>Curva_PV</code>, <code>Curva_Hibrido</code> y <code>Validacion</code>.</div>`;
-TEMAS.capex.htit = "Las cuatro hojas que leen los cuadernos";
-TEMAS.capex.hoja =
-  hojaX("Parametros_PV", "costo solar", ["A", "B", "C"], [
-    [5, [H("Componente"), H("Contenido"), H("USD/kWp")]],
-    [6, [X("Módulos"), "Global", I("154,3")]],
-    [7, [X("Estructura, hincas, correas y omegas"), "Global", I("67,1")]],
-    [8, [X("Inversores string"), "Global", I("21,9")]],
-    [9, [X("Transformación MT"), "Global", I("61,8")]],
-    [10, [X("BOP eléctrico"), "Global", I("41,8")]],
-    [11, [X("Montaje electromecánico"), "Local", I("87,1")]],
-    [12, [X("Obra civil y eléctrica"), "Local", I("92,1")]],
-    [13, [X("Ingeniería y estudios"), "Local", I("13,3")]],
-    [14, [X("Comisionamiento y puesta en marcha"), "Local", I("16,3")]],
-    [15, [X("Repuestos, pólizas, cerramiento y otros"), "Local", I("34,7")]],
-    [16, [X("Hardware global (HW)"), X(""), F("=SUMA.SI(… Global)")]],
-    [17, [X("Contenido local (LOC)"), X(""), F("=SUMA.SI(… Local)")]],
-    [18, [X("Línea de interconexión, subestación y bahía"), X(""), I("48,8")]],
-    [20, [X("Factor de indirectos, IVA no descontable y AIU"), X(""), I("1,2719")]],
-    ["…", [G, G, G]],
-    [33, [X("Exponente de escala del hardware (bHW)"), X(""), I("−0,0906")]],
-    [34, [X("Exponente de escala del contenido local (bLOC)"), X(""), I("−0,06")]],
-  ], ["Precios de una planta de 8 MWp, en USD/kWp DC sin IVA ni AIU. El modelo los escala al tamaño de cada caso con los exponentes de C33 y C34.",
-      "Para mover una línea de «Global» a «Local» cambie el texto de la columna B; la suma de C16 o C17 se ajusta sola."]) +
-  hojaX("Parametros_BESS", "costo de la batería por segmento", ["A", "C", "D", "E", "F", "G", "H", "I", "J", "…", "N"], [
-    [4, [H("Seg."), H("Rango (MWh)"), H("cSUP USD/kWh"), H("cE local USD/kWh"), H("cP local USD/kW"), H("cF USD"), H("Indir."), H("EPC"), H("Margen"), G, H("Sobredim.")]],
-    [5, [H("B1"), X("0,1 – 1"), I("320,1"), I("5"), I("20"), I("15.000"), I("0,054"), I("0,015"), I("0,2"), G, N("1")]],
-    [6, [H("B2"), X("1 – 20"), I("141,8"), I("5"), I("43,5"), I("200.000"), I("0,054"), I("0,015"), I("0,2"), G, N("1")]],
-    [7, [H("B3"), X("20 – 100"), I("93,4"), I("5,35"), I("86,6"), I("526.263"), I("0,054"), I("0,015"), I("0,2"), G, N("1")]],
-    [8, [H("B4"), X("> 100"), I("93,4"), I("5,35"), I("203,4"), I("900.000"), I("0,054"), I("0,015"), I("0,2"), G, N("1")]],
-  ], ["Cada fila es un tamaño de batería por energía. Las de más de 100 MWh, como todas las de la grilla M01–M12, usan B4; el análisis H_B3 las costea con B3.",
-      "Los rangos de la columna C son informativos: los límites de 1, 20 y 100 MWh están fijos en el código.",
-      "Porcentajes como fracción: 5,4 % se escribe <code>0,054</code>."]) +
-  hojaX("Suministro_BESS", "prima por C-rate", ["A", "B", "C", "D"], [
-    [12, [H("C-rate de quiebre"), H("Pendiente de la prima"), H("Prima a 0,60C"), H("Prima a 1,00C")]],
-    [13, [I("0,5"), I("0,22"), F("=1+MAX(…)"), F("=1+MAX(…)")]],
-  ], ["Por encima del C-rate de quiebre (potencia ÷ energía) el suministro se encarece según la pendiente. Las cotizaciones de las filas 5 a 7 son de consulta."]) +
-  hojaX("Trayectorias", "variación anual de costos", ["A", "C", "D", "E", "F", "G", "H"], [
-    [4, [H("Componente"), H("Bajo 26–35"), H("Medio 26–35"), H("Alto 26–35"), H("Bajo 35–50"), H("Medio 35–50"), H("Alto 35–50")]],
-    [5, [X("Suministro de baterías"), N("−0,0745"), N("−0,029"), N("−0,0084"), N("−0,0662"), N("−0,021"), N("−0,0068")]],
-    [6, [X("Hardware solar — utility"), N("−0,1234"), N("−0,0788"), N("−0,0394"), N("−0,0206"), N("−0,0287"), N("−0,0302")]],
-    [7, [X("Hardware solar — comercial"), N("−0,0958"), N("−0,0531"), N("−0,0121"), N("−0,0215"), N("−0,03"), N("−0,0316")]],
-    [8, [X("Contenido local"), N("−0,0317"), I("−0,0199"), N("−0,0098"), N("−0,0051"), I("−0,0071"), N("−0,0075")]],
-    ["15…", [X("2026, 2027…"), F("=SI(…)"), F("=SI(…)"), F("=SI(…)"), F("=SI(…)"), F("=SI(…)"), F("=SI(…)")]],
-  ], ["Tasas anuales reales: <code>−0,0199</code> es una baja de 1,99 % por año. El modelo usa el escenario Medio.",
-      "Solo la fila 8 entra al cálculo, en el costo de reponer la batería. La parte de suministro de esa reposición sale del CSV de NREL, no de la fila 5.",
-      "Los índices anuales desde la fila 15 son fórmulas que se recalculan al guardar."]);
-
-TEMAS.sitio.htit = "";
 // Enlaces internos que no cambian de vista (la navegación usa el hash).
 document.addEventListener("click", e => {
   const a = e.target.closest("[data-ancla]");
@@ -2556,24 +2203,6 @@ document.addEventListener("click", e => {
   const destino = document.getElementById(a.dataset.ancla);
   if (destino) destino.scrollIntoView({behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start"});
 });
-TEMAS.parametros.htit = "";
-
-const datos = {tema: "demanda"};
-segmentado($("#dat-tema"), Object.entries(TEMAS).map(([k, t]) => [k, t.nombre]), datos.tema, v => { datos.tema = v; RENDER.datos(); });
-RENDER.datos = function () {
-  const t = TEMAS[datos.tema];
-  $("#dat-titulo").textContent = t.titulo;
-  $("#dat-archivo").textContent = t.archivo;
-  $("#dat-usan").innerHTML = `Lo usan: ${t.usan.map(u => `<span class="pill">${u}</span>`).join("")}`;
-  $("#dat-pasos").innerHTML = t.pasos.map(p => `<li>${p}</li>`).join("");
-  $("#dat-extra").innerHTML = t.extra;
-  $("#dat-mtit").textContent = t.mtit;
-  $("#dat-muestra").innerHTML = t.muestra;
-  $("#dat-err").innerHTML = t.errores.map(([m, d]) => `<li><b>${m}</b>${d}</li>`).join("");
-  $("#dat-hoja-card").hidden = !t.hoja;
-  $("#dat-htit").textContent = t.htit || "";
-  $("#dat-hoja").innerHTML = t.hoja || "";
-};
 
 // ===================== COMPARAR =====================
 // Compara dos combinaciones tamaño + regla de la grilla M01–M12 en el mismo contexto (señal, carbono, CAPEX).

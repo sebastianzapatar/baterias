@@ -130,8 +130,8 @@ Para estudiar otro caso se cambian valores en un solo libro, `datos/Datos_entrad
 En el modo *factores* de la hoja *Dimensionamiento*, el PV se expresa en veces la demanda
 anual, la energía de la batería en % de la demanda diaria y su potencia en veces la
 demanda pico; los MWp, MWh y MW que resultan se ven en el propio libro. El modo *fijos*
-trae la grilla de la tesis. El detalle está en la sección 6 del manual, en la
-presentación y en la pestaña *Cambiar datos* de la plataforma.
+trae la grilla de la tesis. El detalle está en la sección 6 del manual y en la
+presentación (diapositivas 15 a 21).
 
 ## 6. Aceleración opcional del cuaderno 15
 
