@@ -191,7 +191,9 @@ TRM_FECHA_REFERENCIA = "2026-09-05"
 
 # Nombre histórico, conservado para no romper los módulos que ya lo importan.
 # Es el mismo valor: hay una sola TRM productiva en el proyecto.
-TRM_COP_USD = TRM_REFERENCIA_COP_USD
+# Datos_entrada.xlsx, hoja Costos (sin el libro quedan los valores escritos aquí).
+import entradas as _ENT  # noqa: E402
+TRM_COP_USD = _ENT.parametro("TRM_COP_USD", TRM_REFERENCIA_COP_USD)
 
 # CVOM por unidad de la línea térmica integrada, instrucción del usuario (18/09/2026).
 # Orden explícito G1, G2, G3, G4; USD por MWh eléctrico generado.
@@ -242,8 +244,8 @@ CAPEX_BESS_ENERGIA_USD_KWH = 220.0  # celdas, módulos, contenedor, BMS
 CAPEX_BESS_POTENCIA_USD_KW = 120.0  # PCS, transformador, obra civil, conexión
 
 OPEX_BESS_USD_KWH_ANIO = 3.0  # HISTÓRICO: hoy el OPEX es 1,5 % del CAPEX
-OPEX_BESS_FRACCION_CAPEX = 0.015  # 1,5 % del CAPEX del BESS al año
-OPEX_PV_FRACCION_CAPEX = 0.020  # 2 % del CAPEX solar al año
+OPEX_BESS_FRACCION_CAPEX = _ENT.parametro("OPEX_BESS_FRACCION_CAPEX", 0.015)  # 1,5 % del CAPEX del BESS al año
+OPEX_PV_FRACCION_CAPEX = _ENT.parametro("OPEX_PV_FRACCION_CAPEX", 0.020)  # 2 % del CAPEX solar al año
 
 # Baseline técnico de trabajo, respaldado por una fuente comercial confidencial
 # de fabricante de sistemas BESS, 2026: término contractual de 20 años y
@@ -252,8 +254,8 @@ OPEX_PV_FRACCION_CAPEX = 0.020  # 2 % del CAPEX solar al año
 # magnitud, no una cifra textual del documento. La fuente NO
 # respalda el criterio de fin de vida, la capacidad retenida, la degradación
 # anual, la política de reposición ni el valor residual: ver el docstring.
-CICLOS_VIDA_BESS = 7_200  # ciclos equivalentes a DoD nominal
-VIDA_CALENDARIO_BESS = 20  # años
+CICLOS_VIDA_BESS = _ENT.parametro("CICLOS_VIDA_BESS", 7_200)  # ciclos equivalentes a DoD nominal
+VIDA_CALENDARIO_BESS = _ENT.parametro("VIDA_CALENDARIO_BESS", 20)  # años
 # A ~326 ciclos/año el límite por ciclos daría 22,1 años, así que manda el
 # calendario: el BESS dura el horizonte completo y no hay reposición. El
 # límite por ciclos sigue mordiendo por encima de 360 ciclos/año.
@@ -269,9 +271,9 @@ OPEX_PV_USD_KW_ANIO = 14.0
 # Financieros
 # ============================================================
 
-HORIZONTE_ANIOS = 20
-WACC = 0.10  # tasa de descuento real en COP
-DEGRADACION_PV_ANUAL = 0.005  # 0,5 %/año
+HORIZONTE_ANIOS = _ENT.parametro("HORIZONTE_ANIOS", 20)
+WACC = _ENT.parametro("WACC", 0.10)  # tasa de descuento real en COP
+DEGRADACION_PV_ANUAL = _ENT.parametro("DEGRADACION_PV_ANUAL", 0.005)  # 0,5 %/año
 # Pérdida de capacidad útil del BESS. No confundir con `costo_degradacion`
 # de `estrategias_avanzadas`, que es un precio sombra para el despacho
 # DENTRO del año: esto es el desvanecimiento a lo largo del horizonte.

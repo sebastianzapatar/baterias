@@ -70,7 +70,7 @@ jupyter nbconvert --to notebook --execute --inplace "01_Modelo base PV_BESS.ipyn
 |---|---|---|
 | `01_Modelo base PV_BESS` | Caso de referencia: sin batería, tres reglas heurísticas y despacho óptimo con previsión perfecta | ≈ 15 s |
 | `01B_Caracterizacion_dimensionamiento` | Mira las series horarias para acotar tamaños de PV y batería. No optimiza | ≈ 5 s |
-| `02_Optimizacion_portafolio_PV_BESS` | Define la demanda y las señales tarifarias T0/T1 y dimensiona el portafolio. **Es el único cuaderno largo** | 15–35 min |
+| `02_Optimizacion_portafolio_PV_BESS` | Define la demanda y las señales tarifarias T0/T1 y dimensiona el portafolio. **Es el único cuaderno largo** | 6–15 min con los tamaños del libro entregado |
 | `08_Sensibilidad_5_sitios_CAPEX_curvas` | Etapa I · de qué depende el valor de la batería sin generación térmica (200 casos) | segundos |
 | `09_Comparacion_reglas_operativas` | Etapa I · distancia de las reglas heurísticas a los benchmarks óptimos | segundos |
 | `11_Integracion_generacion_termica` | Etapa II · red + cuatro unidades a gas, mínimos técnicos y arranques | segundos |
@@ -95,8 +95,10 @@ baterias/
 ├── requirements-vpn.txt               aceleración opcional del cuaderno 15
 ├── 01_…ipynb … 15_…ipynb              los diez cuadernos
 ├── datos/                             datos de entrada
-│   ├── load variable.csv              demanda horaria [MW], separada por «;»
-│   ├── Precio_Bolsa_Nacional_($kwh)_2025.xlsx   precio de bolsa horario (XM)
+│   ├── Datos_entrada.xlsx             EL LIBRO QUE SE EDITA: demanda, precio de bolsa, tarifas,
+│   │                                  batería, costos y tamaños a evaluar
+│   ├── load variable.csv              fuente original de la demanda (ya no se lee)
+│   ├── Precio_Bolsa_Nacional_($kwh)_2025.xlsx   fuente original del precio de bolsa (ya no se lee)
 │   ├── CurvasCapexPVBESS.xlsx         curvas de CAPEX solar y del BESS
 │   ├── *_tmy-2025.csv                 año meteorológico típico NSRDB de las 5 regiones
 │   ├── NREL_TP-6A40-93281_tabla2.csv  trayectoria publicada del costo de la batería
@@ -114,19 +116,25 @@ No mueva ni renombre los cuadernos, los `.py`, `.build/` ni las carpetas `datos/
 
 ## 5. Cambiar los datos de entrada
 
-Para estudiar otro caso se reemplazan los archivos de `datos/` **conservando su
-nombre, sus hojas y el orden de filas y columnas**, y se ejecutan de nuevo 01, 01B
-y 02. Antes de cambiar nada, haga una copia de la carpeta.
+Para estudiar otro caso se cambian valores en un solo libro, `datos/Datos_entrada.xlsx`
+(solo las celdas amarillas con letra azul), se guarda y se ejecutan de nuevo 01, 01B y
+02. Antes de cambiar nada, haga una copia de la carpeta.
 
-| Para cambiar… | Archivo | Lo usan |
+| Para cambiar… | Dónde | Lo usan |
 |---|---|---|
-| La demanda | `datos/load variable.csv` (columna `Porvenir`) | 01, 01B, 02 |
-| El precio de bolsa | `datos/Precio_Bolsa_Nacional_($kwh)_2025.xlsx` | 01, 02 |
-| El sitio o recurso solar | `datos/<Región>_tmy-2025.csv` | 01, 01B, 02 |
-| Los costos de inversión | `datos/CurvasCapexPVBESS.xlsx` | 01 (secc. 9), 02 |
+| La demanda: plana, perfil de 24 h (laborable y fin de semana) o serie anual | `Datos_entrada.xlsx`, hojas *Demanda* y *Demanda_anual* | 01, 01B, 02 |
+| El precio de bolsa | `Datos_entrada.xlsx`, hoja *Precio_bolsa* | 01, 02 |
+| Tarifas, batería, TRM, WACC, horizonte y O&M | `Datos_entrada.xlsx`, hojas *Tarifas*, *Bateria* y *Costos* | 01, 01B, 02 |
+| Los tamaños a evaluar (calculados desde la demanda o fijos) | `Datos_entrada.xlsx`, hoja *Dimensionamiento* | 01, 01B, 02 |
+| La región solar | `Datos_entrada.xlsx`, hoja *General* | 01, 01B, 02 |
+| Un sitio solar nuevo | reemplazar `datos/<Región>_tmy-2025.csv` | 01, 01B, 02 |
+| Los costos de inversión | `datos/CurvasCapexPVBESS.xlsx` | 01, 01B, 02 |
 
-El formato exacto de cada archivo y las celdas que se leen están en la sección 6 del
-manual y en la pestaña *Cambiar datos* de la plataforma.
+En el modo *factores* de la hoja *Dimensionamiento*, el PV se expresa en veces la demanda
+anual, la energía de la batería en % de la demanda diaria y su potencia en veces la
+demanda pico; los MWp, MWh y MW que resultan se ven en el propio libro. El modo *fijos*
+trae la grilla de la tesis. El detalle está en la sección 6 del manual, en la
+presentación y en la pestaña *Cambiar datos* de la plataforma.
 
 ## 6. Aceleración opcional del cuaderno 15
 

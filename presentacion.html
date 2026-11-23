@@ -436,7 +436,7 @@ table.hoja td.gap { text-align: center; color: var(--ink-3); }
   requirements-vpn.txt    <span class="d"># Numba opcional (NB 15)</span>
   01_ … 15_*.ipynb        <span class="d"># 10 cuadernos, ejecutados</span>
   *.py  ·  .build/        <span class="d"># biblioteca interna</span>
-  datos/                  <span class="d"># entradas: CSV y Excel</span>
+  datos/                  <span class="d"># Datos_entrada.xlsx, TMY, CAPEX</span>
   resultados_*/           <span class="d"># resultados ya calculados</span>
   figuras_*/              <span class="d"># figuras que se regeneran</span></div>
       </div>
@@ -458,10 +458,10 @@ table.hoja td.gap { text-align: center; color: var(--ink-3); }
         <p class="small">Leen datos o resultados ya calculados, los presentan y regeneran sus figuras. Los 08, 09, 11, 12 y 13 tienen una <b>guarda</b>: si algo intentara recalcular una optimización larga, se detienen con un <code>RuntimeError</code>.</p>
       </div>
       <div class="card">
-        <span class="pill p-largo">Segundos a 35 min</span>
+        <span class="pill p-largo">Segundos a 15 min</span>
         <h3 style="margin-top:10px;">De cálculo</h3>
         <p class="muted"><code>01</code> <code>02</code> <code>15</code></p>
-        <p class="small">Simulan la operación horaria. El 01 tarda segundos; el 15, entre 2 y 5 minutos; el <b>02 es el único largo</b> (15–35 min).</p>
+        <p class="small">Simulan la operación horaria. El 01 tarda segundos; el 15, entre 2 y 5 minutos; el <b>02 es el único largo</b> (6–15 min).</p>
       </div>
     </div>
     <div class="aviso mt"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><p>Solo <b>01, 01B y 02</b> recalculan cuando se cambian los datos de entrada. La plataforma <code>index.html</code> muestra los mismos resultados de forma interactiva, se abre con doble clic y no requiere instalación ni conexión.</p></div>
@@ -704,7 +704,7 @@ jupyter lab</pre></div>
       <tbody>
         <tr><td class="num">01</td><td>Modelo base PV + BESS</td><td>Cálculo</td><td><span class="pill p-rapido">≈ 11 s</span></td><td class="small muted">Tabla «¿Se paga la batería?»</td></tr>
         <tr><td class="num">01B</td><td>Caracterización para el dimensionamiento</td><td>Análisis</td><td><span class="pill p-rapido">≈ 5 s</span></td><td class="small muted">Cuatro figuras y la grilla propuesta</td></tr>
-        <tr><td class="num">02</td><td>Optimización de portafolio PV + BESS</td><td>Cálculo</td><td><span class="pill p-largo">15–35 min</span></td><td class="small muted">«Mejor configuración encontrada en la grilla»</td></tr>
+        <tr><td class="num">02</td><td>Optimización de portafolio PV + BESS</td><td>Cálculo</td><td><span class="pill p-largo">6–15 min</span></td><td class="small muted">«Mejor configuración encontrada en la grilla»</td></tr>
         <tr><td class="num">08</td><td>Sensibilidad en 5 regiones (Etapa I)</td><td>Lectura</td><td><span class="pill p-rapido">≈ 4 s</span></td><td class="small muted">Contribuciones del subconjunto A/B/D</td></tr>
         <tr><td class="num">09</td><td>Reglas frente a previsión perfecta</td><td>Lectura</td><td><span class="pill p-rapido">≈ 3 s</span></td><td class="small muted">Tabla de brechas</td></tr>
         <tr><td class="num">11</td><td>Integración de generación térmica</td><td>Lectura</td><td><span class="pill p-rapido">≈ 4 s</span></td><td class="small muted">Figuras 11_*</td></tr>
@@ -736,7 +736,7 @@ jupyter lab</pre></div>
         <h3>Revisar los resultados de la tesis</h3>
         <div class="cadena"><span class="c">01</span><span class="fl">→</span><span class="c">01B</span><span class="fl">→</span><span class="c">08</span><span class="fl">→</span><span class="c">09</span><span class="fl">→</span><span class="c">11</span><span class="fl">→</span><span class="c">12</span><span class="fl">→</span><span class="c">13</span><span class="fl">→</span><span class="c">14</span><span class="fl">→</span><span class="c">15</span></div>
         <p class="small muted">Recorre las tres etapas. El 15 tarda 2–5 min; los demás, segundos.
-          <span class="cadena" style="display:inline-flex;"><span class="c opc">02</span></span> es opcional (15–35 min): con los datos originales vuelve a obtener lo ya guardado. Si lo corre, déjelo para el final.</p>
+          <span class="cadena" style="display:inline-flex;"><span class="c opc">02</span></span> es opcional (6–15 min): con los datos originales vuelve a obtener lo ya guardado. Si lo corre, déjelo para el final.</p>
         <div class="ok"><b>Funciona si</b> las cifras coinciden con las <a href="#23">cifras de control</a>.</div>
       </div>
       <div class="card">
@@ -756,34 +756,36 @@ jupyter lab</pre></div>
   <div class="in">
     <div class="kicker"><b>06</b> Cambiar los datos de entrada</div>
     <h2>¿Qué cuadernos responden a un cambio?</h2>
-    <p class="lead">Para estudiar otro caso se reemplazan los Excel y CSV de la carpeta <code>datos/</code> o se cambian unos pocos parámetros en una celda. No hace falta abrir los <code>.py</code>.</p>
+    <p class="lead">Para estudiar otro caso se cambian valores en un solo libro, <code>datos/Datos_entrada.xlsx</code>. No hace falta abrir los cuadernos ni los <code>.py</code>.</p>
     <div class="resp">
-      <div class="card"><div class="nbs">01 · 01B · 02</div><h3 style="margin-top:6px;">Recalculan todo</h3><p class="small muted">El 01 usa demanda, bolsa, recurso solar y costos. El 01B ejecuta por dentro las celdas del 01 guardadas en disco. El 02 (15–35 min) sobrescribe <code>resultados_nb02/C3B_multianual.csv</code>.</p></div>
+      <div class="card"><div class="nbs">01 · 01B · 02</div><h3 style="margin-top:6px;">Recalculan todo</h3><p class="small muted">El 01 lee el libro e imprime la demanda y los tamaños que resultan. El 01B ejecuta por dentro las celdas del 01 guardadas en disco. El 02 sobrescribe <code>resultados_nb02/C3B_multianual.csv</code>.</p></div>
       <div class="card igual"><div class="nbs">08 · 09 · 11–14</div><h3 style="margin-top:6px;">No cambian</h3><p class="small muted">Leen los resultados ya calculados, que vienen de horas de cómputo. Con datos nuevos siguen mostrando las cifras originales, sin error.</p></div>
       <div class="card error"><div class="nbs">15</div><h3 style="margin-top:6px;">Se detiene con un error</h3><p class="small muted">Recalcula una muestra y la compara con las tablas ya calculadas: <code>AssertionError: Discrepancia…</code> es la señal esperada, no una falla.</p></div>
     </div>
-    <div class="aviso ambar mt"><svg class="i" aria-hidden="true"><use href="#i-alerta"/></svg><p><b>Antes de cambiar nada, haga una copia de seguridad.</b> Copie la carpeta completa con otro nombre (p. ej. <code>baterias-main_original</code>) o, como mínimo, los archivos que va a modificar.</p></div>
+    <div class="aviso ambar mt"><svg class="i" aria-hidden="true"><use href="#i-alerta"/></svg><p><b>Antes de cambiar nada, haga una copia de seguridad.</b> Copie la carpeta completa con otro nombre (p. ej. <code>baterias-main_original</code>) o, como mínimo, <code>datos/Datos_entrada.xlsx</code>.</p></div>
   </div>
 </section>
 
 <!-- 15 · Archivos de entrada -->
-<section class="slide" data-titulo="Los archivos de entrada" data-sec="Cambiar datos">
+<section class="slide" data-titulo="El libro de datos" data-sec="Cambiar datos">
   <div class="in">
     <div class="kicker"><b>06</b> Cambiar los datos de entrada</div>
-    <h2>Los archivos de entrada</h2>
-    <p class="lead" style="margin-bottom:14px;">Se leen <b>por nombre y por posición</b>: conserve el nombre del archivo, el de sus hojas y el orden de filas y columnas. Cambie solo los valores.</p>
+    <h2>El libro de datos: <code>datos/Datos_entrada.xlsx</code></h2>
+    <p class="lead" style="margin-bottom:14px;">Cambie solo las celdas <b>amarillas con letra azul</b>; las verdes se calculan solas. En las hojas de parámetros, la columna <i>Clave</i> la usa el código: no la toque.</p>
     <div class="tw"><table>
-      <thead><tr><th>Archivo</th><th>Contenido</th><th>Formato que se debe respetar</th><th>Lo usan</th></tr></thead>
+      <thead><tr><th>Hoja</th><th>Qué contiene</th><th>Lo usan</th></tr></thead>
       <tbody>
-        <tr><td><code>datos/load variable.csv</code></td><td class="small">Demanda horaria [MW]</td><td class="small muted">Separado por <code>;</code>. Columnas <code>period</code> (día primero: <code>1/01/2025 0:00</code>) y <code>Porvenir</code> (punto decimal). 8.760 filas.</td><td class="nw small">01, 01B, 02</td></tr>
-        <tr><td><code>datos/Precio_Bolsa_Nacional_($kwh)_2025.xlsx</code></td><td class="small">Precio de bolsa XM [COP/kWh]</td><td class="small muted">Primera hoja. Título en filas 1–2; encabezados en la fila 3: <code>Fecha</code> y horas 0 a 23 <b>como texto</b>. Una fila por día.</td><td class="nw small">01, 01B, 02</td></tr>
-        <tr><td><code>datos/*_tmy-2025.csv</code></td><td class="small">Año meteorológico típico (NSRDB)</td><td class="small muted">CSV de NSRDB sin editar: dos filas de metadatos, encabezados en la fila 3 y 8.760 filas en hora UTC.</td><td class="nw small">01, 01B, 02</td></tr>
-        <tr><td><code>datos/CurvasCapexPVBESS.xlsx</code></td><td class="small">Curvas de CAPEX [USD 2026]</td><td class="small muted">Hojas <code>Parametros_PV</code>, <code>Parametros_BESS</code> y <code>Suministro_BESS</code> y <code>Trayectorias</code>; solo ciertas celdas amarillas (diapositiva 19).</td><td class="nw small">01, 01B, 02</td></tr>
+        <tr><td class="nw"><code>General</code></td><td class="small muted">Año (no bisiesto) y región solar, con lista desplegable.</td><td class="nw small">01, 01B, 02</td></tr>
+        <tr><td class="nw"><code>Demanda</code></td><td class="small muted">Modo <code>plana</code>, <code>perfil_24h</code> (laborable y fin de semana) o <code>serie_anual</code>; vista previa de demanda anual, diaria y pico.</td><td class="nw small">01, 01B, 02</td></tr>
+        <tr><td class="nw"><code>Demanda_anual</code></td><td class="small muted">8.760 horas: fecha en A, MW en B. Solo con <code>serie_anual</code>.</td><td class="nw small">01, 01B, 02</td></tr>
+        <tr><td class="nw"><code>Precio_bolsa</code></td><td class="small muted">Reporte de XM: una fila por día, horas 0 a 23 [COP/kWh].</td><td class="nw small">01, 02</td></tr>
+        <tr><td class="nw"><code>Tarifas</code> · <code>Bateria</code> · <code>Costos</code></td><td class="small muted">Tarifa N3 o monomia, PPA y cargos; DoD y RTE; TRM, WACC, horizonte, O&amp;M y vida de la batería.</td><td class="nw small">01, 01B, 02</td></tr>
+        <tr><td class="nw"><code>Dimensionamiento</code></td><td class="small muted">Tamaños calculados desde la demanda (<code>factores</code>) o escritos en MWp, MWh y MW (<code>fijos</code>).</td><td class="nw small">01, 01B, 02</td></tr>
       </tbody>
     </table></div>
     <div class="g2 mt">
-      <div class="aviso"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><p class="small"><b>Un solo año de 8.760 horas, etiquetado 2025.</b> Si sus datos son de otro año, cambie el año a 2025 y, si es bisiesto, elimine el 29 de febrero.</p></div>
-      <div class="aviso ambar"><svg class="i" aria-hidden="true"><use href="#i-alerta"/></svg><p class="small"><b>No modifique</b> <code>datos/Oriente.xlsx</code>, <code>datos/NREL_TP-6A40-93281_tabla2.csv</code> ni las carpetas <code>resultados_*</code>. Tampoco borre <code>Oriente.xlsx</code>: ya no alimenta el modelo, pero el 02 lo busca para un contraste.</p></div>
+      <div class="aviso"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><p class="small"><b>Otros archivos de <code>datos/</code>.</b> Los <code>*_tmy-2025.csv</code> se reemplazan para un sitio nuevo y <code>CurvasCapexPVBESS.xlsx</code> se edita en celdas puntuales (diapositiva 19). <code>load variable.csv</code> y el Excel de bolsa son las fuentes originales: ya no se leen.</p></div>
+      <div class="aviso ambar"><svg class="i" aria-hidden="true"><use href="#i-alerta"/></svg><p class="small"><b>No modifique</b> <code>datos/Oriente.xlsx</code>, <code>datos/NREL_TP-6A40-93281_tabla2.csv</code> ni las carpetas <code>resultados_*</code>. Use un año no bisiesto: el modelo trabaja con 8.760 horas.</p></div>
     </div>
   </div>
 </section>
@@ -795,28 +797,25 @@ jupyter lab</pre></div>
     <h2>Cómo cambiar cada dato</h2>
     <div class="g2">
       <div class="card">
-        <h3>Demanda · <code>datos/load variable.csv</code></h3>
+        <h3>Demanda · hoja <code>Demanda</code></h3>
         <ul class="lst small">
-          <li>Edite con un editor de texto o pegue la serie en la columna <code>Porvenir</code>.</li>
-          <li>8.760 filas, día antes que el mes, MW sin negativos y con punto decimal (<code>22.84</code>).</li>
-          <li><b>Excel en español guarda coma decimal</b>: desmarque <i>Usar separadores del sistema</i> antes de guardar y verifique en el Bloc de notas.</li>
-          <li>Las horas en 0 MW se tratan como cortes de medidor y se imputan con la mediana (±7 días).</li>
+          <li>Elija el modo en la celda C5: <code>plana</code>, <code>perfil_24h</code> o <code>serie_anual</code>.</li>
+          <li><b>plana</b>: un valor en MW en C6. <b>perfil_24h</b>: 24 horas de un día laborable y de uno de fin de semana (filas 10 a 33).</li>
+          <li><b>serie_anual</b>: pegue las 8.760 horas en la hoja <code>Demanda_anual</code>. Las horas en 0 MW se tratan como cortes de medidor y se imputan.</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Precio de bolsa · <code>.xlsx</code></h3>
+        <h3>Precio de bolsa · hoja <code>Precio_bolsa</code></h3>
         <ul class="lst small">
-          <li>Pegue el reporte de XM de otro periodo con la misma disposición: una fila por día, horas 0 a 23.</li>
-          <li>Conserve las dos filas de título y los encabezados en la fila 3. Fechas de 2025.</li>
-          <li>Los encabezados <code>0</code> a <code>23</code> deben quedar <b>como texto</b>; si los escribe, use <code>'0</code>, <code>'1</code>… (diapositiva 18).</li>
-          <li>Guarde como <code>.xlsx</code> con el mismo nombre y cierre Excel. T1 se recalibra sola.</li>
+          <li>Pegue el reporte de XM desde la fila 4: fecha en A y las horas 0 a 23 en B a Y, en COP/kWh.</li>
+          <li>Los 365 días del año de la hoja <code>General</code>, sin celdas vacías. T1 se recalibra sola.</li>
         </ul>
       </div>
       <div class="card">
-        <h3>Sitio o recurso solar · TMY</h3>
+        <h3>Sitio o recurso solar · hoja <code>General</code></h3>
         <ul class="lst small">
-          <li>Región incluida: cambie <code>sitio = 'Oriente'</code> (01, secc. 3) y <code>REGION_SOLAR = 'Oriente'</code> (02, secc. 2). Opciones: Caribe, Antioquia, Suroccidente, Oriente, Nordeste.</li>
-          <li>Sitio nuevo: descargue el TMY horario del <a href="https://nsrdb.nrel.gov/data-viewer" target="_blank" rel="noopener">visor de NSRDB</a> y reemplace uno de los cinco archivos de <code>datos/</code> conservando el nombre.</li>
+          <li>Región incluida: elíjala en la celda C6 (Oriente, Caribe, Antioquia, Suroccidente o Nordeste).</li>
+          <li>Sitio nuevo: descargue el TMY horario del <a href="https://nsrdb.nrel.gov/data-viewer" target="_blank" rel="noopener">visor de NSRDB</a>, reemplace uno de los cinco archivos de <code>datos/</code> conservando el nombre y elija esa región.</li>
         </ul>
       </div>
       <div class="card">
@@ -824,8 +823,7 @@ jupyter lab</pre></div>
         <ul class="lst small">
           <li><code>Parametros_PV</code>: C6–C15, C18, C20, C33–C34 (no edite C16 ni C17, son fórmulas).</li>
           <li><code>Parametros_BESS</code>: filas 5 a 8, columnas D a J. <code>Suministro_BESS</code>: A13 y B13. <code>Trayectorias</code>: D8 y G8.</li>
-          <li><b>No todas las celdas amarillas cuentan</b> y hay que guardar desde Excel o LibreOffice (diapositiva 19).</li>
-          <li>No inserte ni borre filas o columnas. El OPEX se deriva del CAPEX (2 % PV, 1,5 % BESS).</li>
+          <li>Guarde desde Excel o LibreOffice (diapositiva 19). El O&amp;M sale del CAPEX con los porcentajes de la hoja <code>Costos</code>.</li>
         </ul>
       </div>
     </div>
@@ -833,47 +831,46 @@ jupyter lab</pre></div>
 </section>
 
 <!-- · Cómo deben verse la demanda y el precio -->
-<section class="slide" data-titulo="Cómo deben verse la demanda y el precio" data-sec="Cambiar datos">
+<section class="slide" data-titulo="Cómo se ven las hojas Demanda y Dimensionamiento" data-sec="Cambiar datos">
   <div class="in">
     <div class="kicker"><b>06</b> Cambiar los datos de entrada</div>
-    <h2>Cómo deben verse la demanda y el precio de bolsa</h2>
-    <div class="hoja-ley"><span><i class="ed"></i>Se cambia (amarillo, letra azul)</span><span><i class="fx"></i>Fórmula: no la toque</span><span><i class="ig"></i>Se ignora</span></div>
+    <h2>Las hojas <code>Demanda</code> y <code>Dimensionamiento</code></h2>
+    <div class="hoja-ley"><span><i class="ed"></i>Se cambia (amarillo, letra azul)</span><span><i class="fx"></i>Se calcula sola: no la toque</span><span><i class="ig"></i>Referencia del código</span></div>
     <div class="g2">
       <div>
-        <span class="hoja-tab">load variable.csv · abierto en Excel</span>
+        <span class="hoja-tab">Datos_entrada.xlsx · hoja Demanda</span>
         <div class="tw"><table class="hoja">
-          <thead><tr><th class="rn"></th><th>A</th><th>B</th></tr></thead>
+          <thead><tr><th class="rn"></th><th>A</th><th>B</th><th>C</th></tr></thead>
           <tbody>
-            <tr><th class="rn">1</th><td class="hd">period</td><td class="hd">Porvenir</td></tr>
-            <tr><th class="rn">2</th><td class="ed">1/01/2025 0:00</td><td class="ed">20.76</td></tr>
-            <tr><th class="rn">3</th><td class="ed">1/01/2025 1:00</td><td class="ed">20.94</td></tr>
-            <tr><th class="rn">…</th><td class="gap">…</td><td class="gap">…</td></tr>
-            <tr><th class="rn">8761</th><td class="ed">31/12/2025 23:00</td><td class="ed">19.74</td></tr>
+            <tr><th class="rn">5</th><td class="ig">modo</td><td class="ig">Modo de demanda</td><td class="ed">perfil_24h</td></tr>
+            <tr><th class="rn">6</th><td class="ig">demanda_plana_MW</td><td class="ig">Demanda plana</td><td class="ed">18,12</td></tr>
+            <tr><th class="rn">9</th><td class="hd">Hora</td><td class="hd">Laborable [MW]</td><td class="hd">Fin de semana [MW]</td></tr>
+            <tr><th class="rn">10</th><td class="ig">0</td><td class="ed">18,36</td><td class="ed">18,09</td></tr>
+            <tr><th class="rn">11</th><td class="ig">1</td><td class="ed">18,41</td><td class="ed">18,14</td></tr>
+            <tr><th class="rn">…</th><td class="gap">…</td><td class="gap">…</td><td class="gap">…</td></tr>
+            <tr><th class="rn">33</th><td class="ig">23</td><td class="ed">18,46</td><td class="ed">18,49</td></tr>
           </tbody>
         </table></div>
         <ul class="lst small mt">
-          <li>8.760 horas, de la fila 2 a la 8761, sin huecos ni repetidas. Día antes que el mes; MW con <b>punto</b> decimal.</li>
-          <li>Si todo queda en la columna A, su Excel usa otro separador: edite el archivo con un editor de texto.</li>
-          <li>Después de guardar, ábralo en el Bloc de notas: debe verse <code>1/01/2025 0:00;20.76</code>.</li>
+          <li>El perfil inicial es el promedio horario de 2025 de cada tipo de día. Las celdas verdes F10 a F13 muestran la demanda anual, diaria, media y pico.</li>
+          <li>Con <code>serie_anual</code> se usa la hoja <code>Demanda_anual</code> y esta tabla se ignora.</li>
         </ul>
       </div>
       <div>
-        <span class="hoja-tab">Precio_Bolsa_Nacional_($kwh)_2025.xlsx · primera hoja</span>
+        <span class="hoja-tab">Datos_entrada.xlsx · hoja Dimensionamiento</span>
         <div class="tw"><table class="hoja">
-          <thead><tr><th class="rn"></th><th>A</th><th>B</th><th>C</th><th>…</th><th>Y</th><th>Z</th></tr></thead>
+          <thead><tr><th class="rn"></th><th>B</th><th>C</th><th>D</th><th>G</th><th>H</th></tr></thead>
           <tbody>
-            <tr><th class="rn">2</th><td class="ig">Precio Bolsa Nacional…</td><td class="ig"></td><td class="ig"></td><td class="gap">…</td><td class="ig"></td><td class="ig"></td></tr>
-            <tr><th class="rn">3</th><td class="hd">Fecha</td><td class="hd">0</td><td class="hd">1</td><td class="gap">…</td><td class="hd">23</td><td class="ig">Versión</td></tr>
-            <tr><th class="rn">4</th><td class="ed">1/01/2025</td><td class="ed">202,28</td><td class="ed">202,28</td><td class="gap">…</td><td class="ed">228,78</td><td class="ig">TX4</td></tr>
-            <tr><th class="rn">5</th><td class="ed">2/01/2025</td><td class="ed">440,17</td><td class="ed">253,85</td><td class="gap">…</td><td class="ed">501,30</td><td class="ig">TX4</td></tr>
-            <tr><th class="rn">…</th><td class="gap">…</td><td class="gap">…</td><td class="gap">…</td><td class="gap">…</td><td class="gap">…</td><td class="gap">…</td></tr>
-            <tr><th class="rn">368</th><td class="ed">31/12/2025</td><td class="ed">271,26</td><td class="ed">271,26</td><td class="gap">…</td><td class="ed">271,26</td><td class="ig">TX3</td></tr>
+            <tr><th class="rn">5</th><td class="ig">Modo</td><td class="ed">factores</td><td class="ig"></td><td class="ig">PV [MWp]</td><td class="fx">114,4</td></tr>
+            <tr><th class="rn">6</th><td class="ig">Caso base: PV</td><td class="ed">1,00</td><td class="ig">× demanda anual</td><td class="ig">Energía [MWh]</td><td class="fx">282,7</td></tr>
+            <tr><th class="rn">7</th><td class="ig">Caso base: energía</td><td class="ed">65</td><td class="ig">% demanda diaria</td><td class="ig">Potencia [MW]</td><td class="fx">46,5</td></tr>
+            <tr><th class="rn">8</th><td class="ig">Caso base: potencia</td><td class="ed">2,00</td><td class="ig">× demanda pico</td><td class="ig">Duración [h]</td><td class="fx">6,1</td></tr>
           </tbody>
         </table></div>
         <ul class="lst small mt">
-          <li>Fila 3: <code>Fecha</code> y las horas <code>0</code> a <code>23</code> <b>como texto</b>. Si quedan como número, el cuaderno falla con <code>KeyError</code>.</li>
-          <li>Columna A: fecha real de Excel, no texto. Precios de B a Y en COP/kWh; Z y las filas 1–2 se ignoran.</li>
-          <li>El reporte de XM trae esta disposición: puede pegar el de otro periodo desde la fila 3.</li>
+          <li><b>PV</b> = factor × demanda anual ÷ producción de 1 MWp en la región. <b>Energía</b> = % × demanda diaria. <b>Potencia</b> = factor × demanda pico.</li>
+          <li>La tabla A (filas 17 y siguientes) define los tamaños del barrido del 02 y del 01B. En modo <code>fijos</code>, la tabla B trae la grilla de la tesis.</li>
+          <li>Se descartan los pares con duración fuera de 1 a 8 h (dominio de las curvas de CAPEX).</li>
         </ul>
       </div>
     </div>
@@ -917,32 +914,31 @@ jupyter lab</pre></div>
 <section class="slide" data-titulo="Parámetros y orden de ejecución" data-sec="Cambiar datos">
   <div class="in">
     <div class="kicker"><b>06</b> Cambiar los datos de entrada</div>
-    <h2>Parámetros en los cuadernos y orden de ejecución</h2>
+    <h2>Tarifas, batería, costos y orden de ejecución</h2>
     <div class="g-6-4">
       <div>
         <div class="tw"><table>
-          <thead><tr><th>Dónde</th><th>Variable (valor actual)</th><th>Qué controla</th></tr></thead>
+          <thead><tr><th>Hoja</th><th>Parámetro (valor inicial)</th><th>Qué controla</th></tr></thead>
           <tbody>
-            <tr><td class="nw small">01 · secc. 3</td><td><code>pv_nominal_MW</code> (100.0)</td><td class="small muted">Tamaño del PV [MWp DC]</td></tr>
-            <tr><td class="nw small">01 · secc. 3</td><td><code>power_MW</code>, <code>capacity_MWh</code> (30, 120)</td><td class="small muted">Potencia y energía de la batería</td></tr>
-            <tr><td class="nw small">01 · secc. 3</td><td><code>DoD</code>, <code>eff_rt</code> (0.80, 0.90)</td><td class="small muted">Profundidad de descarga y eficiencia</td></tr>
-            <tr><td class="nw small">02 · secc. 3</td><td><code>TARIFA_CARA_COP_kWh</code>, …</td><td class="small muted">Señal T0 (T1 se recalibra sola)</td></tr>
-            <tr><td class="nw small">02 · secc. 7</td><td><code>PV_OPCIONES</code>, <code>PARES_MW_MWH</code></td><td class="small muted">Tamaños que recorre el barrido</td></tr>
+            <tr><td class="nw small">Tarifas</td><td>Banda cara y barata (659,95 · 653,22 COP/kWh), de 6 a 21 h</td><td class="small muted">Señal T0 (T1 se recalibra sola)</td></tr>
+            <tr><td class="nw small">Tarifas</td><td>PPA solar (300), CERE, FAZNI, arranque y parada</td><td class="small muted">Contrato solar y cargos a la exportación</td></tr>
+            <tr><td class="nw small">Bateria</td><td>DoD (0,80) · RTE (0,90)</td><td class="small muted">Energía útil y pérdidas</td></tr>
+            <tr><td class="nw small">Costos</td><td>TRM (3.126,08) · WACC (10 %) · horizonte (20 años)</td><td class="small muted">Evaluación financiera</td></tr>
+            <tr><td class="nw small">Costos</td><td>O&amp;M (2 % · 1,5 %) · ciclos (7.200) · vida (20 años)</td><td class="small muted">Costos anuales y renovación de la batería</td></tr>
           </tbody>
         </table></div>
         <ul class="lst small mt">
-          <li>Use punto decimal de Python (<code>0.90</code>, no <code>0,90</code>) y mantenga iguales en el 01 y el 02 los parámetros compartidos.</li>
-          <li>En <code>PARES_MW_MWH</code> la duración debe quedar entre 1 y 8 h; conserve los pares 20/40, 20/80, 20/120, 30/120 y 40/80.</li>
-          <li>Horizonte, WACC y TRM se cambian en <code>costos.py</code>, no en el 02.</li>
+          <li>El 01 y el 02 leen los mismos valores: ya no hay que repetirlos en dos cuadernos ni editar <code>costos.py</code>.</li>
+          <li>Si cambia la TRM, la WACC o el horizonte, el 15 se detiene al compararse con la tesis. Es lo esperado.</li>
         </ul>
       </div>
       <div class="card">
         <h3>Después de cambiar</h3>
         <div class="pasos">
-          <div class="paso"><div><b>Guarde y cierre</b> los archivos editados (Excel o editor).</div></div>
-          <div class="paso"><div><b>Ejecute el 01</b> con <i>Restart Kernel and Run All Cells</i> y guárdelo con <kbd>Ctrl</kbd>+<kbd>S</kbd>.</div></div>
+          <div class="paso"><div><b>Guarde y cierre</b> <code>Datos_entrada.xlsx</code>.</div></div>
+          <div class="paso"><div><b>Ejecute el 01</b> con <i>Restart Kernel and Run All Cells</i>, revise el resumen de la sección 3 y guárdelo con <kbd>Ctrl</kbd>+<kbd>S</kbd>.</div></div>
           <div class="paso"><div><b>Ejecute el 01B y luego el 02</b>, reiniciando el kernel.</div></div>
-          <div class="paso"><div><b>Revise que no haya errores.</b> Las cifras de control ya no aplican; las validaciones físicas siguen activas.</div></div>
+          <div class="paso"><div><b>Revise que no haya errores.</b> Las cifras de control son las del libro entregado; las validaciones físicas siguen activas.</div></div>
         </div>
       </div>
     </div>
@@ -957,14 +953,15 @@ jupyter lab</pre></div>
     <div class="tw"><table>
       <thead><tr><th>Mensaje</th><th>Qué revisar</th></tr></thead>
       <tbody>
-        <tr><td><code>Faltan … horas de demanda</code></td><td class="small">Faltan horas, decimales con coma, fechas que no son de 2025 o mes antes que el día.</td></tr>
-        <tr><td><code>Hay horas sin precio de bolsa</code></td><td class="small">Faltan días en el Excel de precios o sus fechas no son de 2025.</td></tr>
-        <tr><td><code>Faltan columnas horarias en el precio de bolsa</code></td><td class="small">Los encabezados 0 a 23 no están en la fila 3.</td></tr>
-        <tr><td><code>KeyError: … value_vars are not present</code></td><td class="small">Los encabezados 0 a 23 quedaron como número: escríbalos como texto (<code>'0</code>, <code>'1</code>…).</td></tr>
+        <tr><td><code>No se encontró datos/Datos_entrada.xlsx</code></td><td class="small">Se cambió el nombre del libro o JupyterLab se abrió desde otra carpeta.</td></tr>
+        <tr><td><code>hoja «Demanda»: el modo debe ser uno de …</code></td><td class="small">El modo está mal escrito: elíjalo de la lista desplegable.</td></tr>
+        <tr><td><code>hoja «Demanda»: el perfil debe tener las 24 horas …</code></td><td class="small">Falta un valor en la tabla de 24 horas.</td></tr>
+        <tr><td><code>hoja «Demanda_anual»: se esperaban las 8.760 horas …</code></td><td class="small">Faltan horas o las fechas no son del año de la hoja General.</td></tr>
+        <tr><td><code>hoja «Precio_bolsa»: se esperaban 365 días × 24 horas …</code></td><td class="small">Faltan días, hay celdas vacías o las fechas no son de ese año.</td></tr>
+        <tr><td><code>… falta el valor de …</code> o <code>se esperaba un número</code></td><td class="small">Se borró un valor o hay texto en una celda numérica (del libro de datos o del de CAPEX).</td></tr>
         <tr><td><code>Se esperaban 8.760 registros horarios</code></td><td class="small">El TMY no es el CSV horario de NSRDB o se editó.</td></tr>
-        <tr><td><code>…: se esperaba un número</code></td><td class="small">Una celda del libro de CAPEX quedó con texto o vacía. Si termina en <code>se obtuvo None</code> en C16 o C17, abra el libro en Excel y guárdelo de nuevo.</td></tr>
-        <tr><td><code>La demanda de 02 no es identica a la de 01B</code></td><td class="small">La columna o el archivo de demanda difieren entre 01 y 02, o el 01 no se guardó.</td></tr>
-        <tr><td><code>Pares fuera del dominio CAPEX</code></td><td class="small">Un par del barrido del 02 dura menos de 1 h o más de 8 h.</td></tr>
+        <tr><td><code>La demanda de 02 no es identica a la de 01B</code></td><td class="small">El 01 no se volvió a ejecutar y guardar después de cambiar el libro.</td></tr>
+        <tr><td><code>Pares fuera del dominio de las curvas CAPEX</code></td><td class="small">La duración mínima o máxima de la hoja Dimensionamiento quedó fuera de 1–8 h.</td></tr>
         <tr><td><code>AssertionError: Discrepancia</code> en el 15</td><td class="small">Esperado con datos nuevos: el 15 se compara con las tablas ya calculadas.</td></tr>
       </tbody>
     </table></div>
@@ -997,9 +994,9 @@ jupyter lab</pre></div>
     <div class="tw"><table>
       <thead><tr><th>N.º</th><th>Dónde mirar</th><th>Valor esperado</th></tr></thead>
       <tbody>
-        <tr><td class="num">01</td><td class="small">Tabla «¿Se paga la batería?»</td><td class="small">Costo sin BESS <b>94,12</b> mil MM COP/año; ahorro E1 <b>16,16</b> y óptimo PyPSA <b>16,29</b></td></tr>
+        <tr><td class="num">01</td><td class="small">Tabla «¿Se paga la batería?»</td><td class="small">Costo sin BESS <b>96,42</b> mil MM COP/año; ahorro E1 <b>32,77</b> y óptimo PyPSA <b>33,03</b> (modo <code>fijos</code>: 94,12 · 16,16 · 16,29)</td></tr>
         <tr><td class="num">01B</td><td class="small">Final del cuaderno</td><td class="small">Sin errores y cuatro figuras regeneradas</td></tr>
-        <tr><td class="num">02</td><td class="small">«Mejor configuración encontrada en la grilla»</td><td class="small">PV 150 MW + BESS 40 MW / 320 MWh, regla B; VPN <b>315,5</b> (T0) y <b>325,0</b> (T1) mil MM COP</td></tr>
+        <tr><td class="num">02</td><td class="small">«Mejor configuración encontrada en la grilla»</td><td class="small">PV 143,0 MWp + BESS 46,5 MW / 347,9 MWh, regla B; VPN <b>311,9</b> (T0) y <b>321,1</b> (T1) mil MM COP (modo <code>fijos</code>: PV 150 + BESS 40/320; 315,5 y 325,0)</td></tr>
         <tr><td class="num">08</td><td class="small">Resumen de 200 casos y contribuciones A/B/D</td><td class="small">ΔVPN máximo <b>43,92 MUSD</b>; escala K 66,38 % y señal 28,02 %</td></tr>
         <tr><td class="num">09</td><td class="small">Brechas, contexto R1 (Oriente, T0, K3)</td><td class="small">Decisión <b>0,67 %</b>; flexibilidad <b>2,24 %</b></td></tr>
         <tr><td class="num">11–13</td><td class="small">Final del cuaderno</td><td class="small">Sin errores y figuras regeneradas</td></tr>
@@ -1040,7 +1037,7 @@ jupyter lab</pre></div>
         <tr><td class="small"><code>ModuleNotFoundError</code> (pvlib, pypsa…)</td><td class="small muted">El kernel no es el del ambiente</td><td class="small">Elija <i>Python (PV-BESS)</i> o <code>.venv</code>; si no aparece, haga el paso 7.</td></tr>
         <tr><td class="small"><code>ModuleNotFoundError</code> de un módulo del proyecto</td><td class="small muted">Falta un <code>.py</code> o la carpeta <code>.build/</code></td><td class="small">Vuelva a copiar la carpeta de entrega completa.</td></tr>
         <tr><td class="small"><code>RuntimeError</code> «no debe recalcular nada»</td><td class="small muted">La guarda detectó un intento de recálculo</td><td class="small">Faltan o se alteraron resultados ya calculados: restaure las carpetas <code>resultados_*</code>.</td></tr>
-        <tr><td class="small">El 02 parece detenido</td><td class="small muted">Es el cuaderno largo (15–35 min)</td><td class="small">Espere. Desde la terminal use <code>--ExecutePreprocessor.timeout=-1</code>.</td></tr>
+        <tr><td class="small">El 02 parece detenido</td><td class="small muted">Es el cuaderno largo (6–15 min)</td><td class="small">Espere. Desde la terminal use <code>--ExecutePreprocessor.timeout=-1</code>.</td></tr>
         <tr><td class="small">El 15 tarda unos 5 minutos</td><td class="small muted">Numba no está instalada</td><td class="small">Es normal; para acelerarlo instale Numba.</td></tr>
         <tr><td class="small">«Kernel died» o falta memoria</td><td class="small muted">Poca RAM libre</td><td class="small">Cierre otros programas y ejecute un cuaderno a la vez.</td></tr>
         <tr><td class="small">Error de permisos al guardar figuras</td><td class="small muted">Carpeta de solo lectura o sincronizándose en la nube</td><td class="small">Copie la carpeta a una ruta local con permisos de escritura.</td></tr>
