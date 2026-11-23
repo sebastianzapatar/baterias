@@ -24,7 +24,27 @@ from openpyxl import load_workbook
 import costos
 
 
-LIBRO_CAPEX = Path("datos/CurvasCapexPVBESS.xlsx")
+def _ubicar_libro_capex() -> Path:
+    """Libro con las hojas de CAPEX (Parametros_PV, Parametros_BESS, Suministro_BESS, Trayectorias).
+
+    Desde el 23/11/2026 esas hojas vienen dentro de ``datos/Datos_entrada.xlsx``. Si el libro de datos no las
+    trae (o no existe), se usa ``datos/CurvasCapexPVBESS.xlsx``, el libro original.
+    """
+    import entradas
+    for ruta in (entradas.LIBRO, Path("datos/CurvasCapexPVBESS.xlsx")):
+        if ruta.exists():
+            try:
+                wb = load_workbook(ruta, read_only=True)
+                tiene = "Parametros_PV" in wb.sheetnames
+                wb.close()
+            except Exception:
+                tiene = False
+            if tiene:
+                return ruta
+    return Path("datos/CurvasCapexPVBESS.xlsx")
+
+
+LIBRO_CAPEX = _ubicar_libro_capex()
 ANIO_COSTOS = 2026
 OPEX_PV_FRACCION = costos.OPEX_PV_FRACCION_CAPEX      # Datos_entrada.xlsx, hoja Costos
 OPEX_BESS_FRACCION = costos.OPEX_BESS_FRACCION_CAPEX
@@ -37,21 +57,39 @@ def _numero(valor, etiqueta):
     return float(valor)
 
 
+def _suma_desglose(hoja, celda: str, etiqueta: str) -> float:
+    """C16 (Global) o C17 (Local) de Parametros_PV.
+
+    Son fórmulas ``SUMIF($B$6:$B$15, etiqueta, $C$6:$C$15)``. Se usa el valor que guardó Excel; si el libro se
+    escribió sin calcular (por ejemplo, con openpyxl), se suma el desglose en el mismo orden que Excel.
+    """
+    valor = hoja[celda].value
+    if isinstance(valor, (int, float)):
+        return float(valor)
+    # Suma simple, de arriba abajo, como Excel. No se usa sum(): desde Python 3.12 compensa el error de redondeo
+    # y su resultado puede diferir de Excel en el último decimal.
+    total = 0.0
+    for i, (b, c) in enumerate(hoja.iter_rows(min_row=6, max_row=15, min_col=2, max_col=3, values_only=True)):
+        if str(b).strip() == etiqueta:
+            total += _numero(c, f"Parametros_PV!C{6 + i}")
+    return total
+
+
 @lru_cache(maxsize=4)
 def _parametros(ruta: str | Path = LIBRO_CAPEX):
     """Lee las celdas fuente del libro; no depende de sus fórmulas calculadas."""
     ruta = Path(ruta)
     if not ruta.exists():
         raise FileNotFoundError(
-            f"No se encontró {ruta}. Ejecute el análisis desde la raíz de OperacionBESS."
+            f"No se encontró {ruta}. Ejecute el análisis desde la raíz de la carpeta (la que contiene datos/)."
         )
 
     wb = load_workbook(ruta, read_only=True, data_only=True)
 
     pv = wb["Parametros_PV"]
     parametros_pv = {
-        "hardware": _numero(pv["C16"].value, "Parametros_PV!C16"),
-        "local": _numero(pv["C17"].value, "Parametros_PV!C17"),
+        "hardware": _suma_desglose(pv, "C16", "Global"),
+        "local": _suma_desglose(pv, "C17", "Local"),
         "conexion": _numero(pv["C18"].value, "Parametros_PV!C18"),
         "factor": _numero(pv["C20"].value, "Parametros_PV!C20"),
         "b_hardware": _numero(pv["C33"].value, "Parametros_PV!C33"),
@@ -240,14 +278,28 @@ def _trayectorias(ruta: str | Path = LIBRO_CAPEX):
     """
     wb = load_workbook(Path(ruta), read_only=True, data_only=True)
     hoja = wb["Trayectorias"]
+    # Tasas de las filas 5 a 8 (batería, solar utility, solar comercial, local): columnas C-E para 2026-2035 y
+    # F-H para 2035-2050, en los escenarios Bajo, Medio y Alto. Los índices de las filas 15 en adelante son
+    # fórmulas: se usa el valor que guardó Excel y, si falta, se calcula con la misma fórmula del libro.
+    tasas = [r[2:8] for r in hoja.iter_rows(min_row=5, max_row=8, max_col=8, values_only=True)]
     tabla = {}
     for fila in hoja.iter_rows(min_row=15, max_row=60, max_col=13, values_only=True):
         if not fila or not isinstance(fila[0], (int, float)):
             continue
-        tabla[int(fila[0])] = tuple(
-            float(v) if isinstance(v, (int, float)) else float("nan")
-            for v in fila[1:13]
-        )
+        anio = int(fila[0])
+        valores = []
+        for k, v in enumerate(fila[1:13]):
+            if isinstance(v, (int, float)):
+                valores.append(float(v))
+                continue
+            t = tasas[k // 3]
+            r1, r2 = t[k % 3], t[3 + k % 3]
+            if isinstance(r1, (int, float)) and isinstance(r2, (int, float)):
+                valores.append((1 + r1) ** (anio - 2026) if anio <= 2035
+                               else (1 + r1) ** 9 * (1 + r2) ** (anio - 2035))
+            else:
+                valores.append(float("nan"))
+        tabla[anio] = tuple(valores)
     wb.close()
     if not tabla:
         raise ValueError("La hoja Trayectorias no devolvió ningún año.")

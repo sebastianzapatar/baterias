@@ -436,7 +436,7 @@ table.hoja td.gap { text-align: center; color: var(--ink-3); }
   requirements-vpn.txt    <span class="d"># Numba opcional (NB 15)</span>
   01_ … 15_*.ipynb        <span class="d"># 10 cuadernos, ejecutados</span>
   *.py  ·  .build/        <span class="d"># biblioteca interna</span>
-  datos/                  <span class="d"># Datos_entrada.xlsx, TMY, CAPEX</span>
+  datos/                  <span class="d"># Datos_entrada.xlsx y clima TMY</span>
   resultados_*/           <span class="d"># resultados ya calculados</span>
   figuras_*/              <span class="d"># figuras que se regeneran</span></div>
       </div>
@@ -784,7 +784,7 @@ jupyter lab</pre></div>
       </tbody>
     </table></div>
     <div class="g2 mt">
-      <div class="aviso"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><p class="small"><b>Otros archivos de <code>datos/</code>.</b> Los <code>*_tmy-2025.csv</code> se reemplazan para un sitio nuevo y <code>CurvasCapexPVBESS.xlsx</code> se edita en celdas puntuales (diapositiva 19). Todo lo demás está en el libro.</p></div>
+      <div class="aviso"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><p class="small"><b>Otros archivos de <code>datos/</code>.</b> Los <code>*_tmy-2025.csv</code> se reemplazan para un sitio nuevo. Todo lo demás está en el libro, incluidas las hojas de costos de inversión (diapositiva 19).</p></div>
       <div class="aviso ambar"><svg class="i" aria-hidden="true"><use href="#i-alerta"/></svg><p class="small"><b>No modifique</b> <code>datos/Oriente.xlsx</code>, <code>datos/NREL_TP-6A40-93281_tabla2.csv</code> ni las carpetas <code>resultados_*</code>. Use un año no bisiesto: el modelo trabaja con 8.760 horas.</p></div>
     </div>
   </div>
@@ -819,11 +819,11 @@ jupyter lab</pre></div>
         </ul>
       </div>
       <div class="card">
-        <h3>Costos de inversión · <code>datos/CurvasCapexPVBESS.xlsx</code></h3>
+        <h3>Costos de inversión · hojas de CAPEX del libro</h3>
         <ul class="lst small">
           <li><code>Parametros_PV</code>: C6–C15, C18, C20, C33–C34 (no edite C16 ni C17, son fórmulas).</li>
           <li><code>Parametros_BESS</code>: filas 5 a 8, columnas D a J. <code>Suministro_BESS</code>: A13 y B13. <code>Trayectorias</code>: D8 y G8.</li>
-          <li>Guarde desde Excel o LibreOffice (diapositiva 19). El O&amp;M sale del CAPEX con los porcentajes de la hoja <code>Costos</code>.</li>
+          <li>Detalle en la diapositiva 19. El O&amp;M sale del CAPEX con los porcentajes de la hoja <code>Costos</code>.</li>
         </ul>
       </div>
     </div>
@@ -878,11 +878,11 @@ jupyter lab</pre></div>
 </section>
 
 <!-- · Libro de costos: qué celdas cuentan -->
-<section class="slide" data-titulo="Libro de costos: qué celdas cuentan" data-sec="Cambiar datos">
+<section class="slide" data-titulo="Hojas de costos: qué celdas cuentan" data-sec="Cambiar datos">
   <div class="in">
     <div class="kicker"><b>06</b> Cambiar los datos de entrada</div>
-    <h2>El libro de costos: qué celdas cuentan</h2>
-    <p class="lead" style="margin-bottom:14px;"><code>CurvasCapexPVBESS.xlsx</code> marca en amarillo con letra azul las celdas editables, pero <b>los cuadernos solo leen estas</b>.</p>
+    <h2>Las hojas de costos: qué celdas cuentan</h2>
+    <p class="lead" style="margin-bottom:14px;">Las hojas de CAPEX de <code>Datos_entrada.xlsx</code> marcan en amarillo con letra azul las celdas editables, pero <b>los cuadernos solo leen estas</b>.</p>
     <div class="g-6-4">
       <div>
         <div class="tw"><table>
@@ -902,9 +902,9 @@ jupyter lab</pre></div>
           Solo mueven las gráficas del libro: <code>Parametros_BESS</code> N5:N8 (el sobredimensionamiento está fijo en 1,0 en el código) y C14:G15;
           <code>Suministro_BESS</code> D5:I7 y B19:B21; <code>Parametros_PV</code> B27:D30 y C35; <code>Trayectorias</code> filas 5–7 y las columnas Bajo y Alto de la fila 8;
           y las hojas <code>Curva_*</code> y <code>Validacion</code>.</p></div>
-        <div class="aviso"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><p class="small"><b>Guarde desde Excel o LibreOffice</b>
-          Los cuadernos leen el valor ya calculado de las fórmulas. Si el libro se guarda con un programa que no recalcula, aparece
-          <code>Parametros_PV!C16: se esperaba un número y se obtuvo None</code>.</p></div>
+        <div class="aviso"><svg class="i" aria-hidden="true"><use href="#i-info"/></svg><p class="small"><b>Fórmulas</b>
+          <code>Parametros_PV</code> C16 y C17 y los índices de <code>Trayectorias</code> son fórmulas. El cuaderno usa el valor que guardó Excel y,
+          si falta, lo calcula con la misma fórmula.</p></div>
       </div>
     </div>
   </div>

@@ -44,7 +44,7 @@ import termica_carbono_malla_informe as I
 import termica_carbono_vpn as V
 
 MALLA = Path('resultados_carbono_v2/malla_20260926')
-LIBRO = Path('datos/CurvasCapexPVBESS.xlsx')
+LIBRO = CC.LIBRO_CAPEX   # hojas de CAPEX: datos/Datos_entrada.xlsx o, si no las trae, datos/CurvasCapexPVBESS.xlsx
 HIPOTESIS = {'H_B4': 'B4', 'H_B3': 'B3'}
 COLUMNAS_LIBRO = {'c_sup': 'D', 'c_e_local': 'E', 'c_p_local': 'F', 'fijo': 'G', 'indirectos': 'H', 'epc': 'I',
                   'margen': 'J'}

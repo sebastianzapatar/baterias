@@ -1327,7 +1327,7 @@ python -m pip install -r requirements.txt</pre></div></div>
   <h2 id="h-datos">Cambiar los datos de entrada</h2>
   <p class="lead">Para estudiar otro caso (otra demanda, otros precios de bolsa, otras tarifas, otros tamaños) se cambian valores en un
     solo libro, <code>Datos_entrada.xlsx</code>, que está en la carpeta <code>datos/</code>. No hace falta abrir ni editar los cuadernos ni los <code>.py</code>.
-    Solo el sitio solar (archivos TMY) y las curvas de CAPEX siguen en sus propios archivos. El detalle está en la sección 6 del
+    Solo el sitio solar (archivos TMY) sigue en sus propios archivos; los costos de inversión están en las hojas de CAPEX del mismo libro. El detalle está en la sección 6 del
     <a data-archivo="Manual_Ejecucion_Cuadernos_EIA.pdf" href="Manual_Ejecucion_Cuadernos_EIA.pdf">manual (PDF)</a>
     y en las <a href="presentacion.html#15">diapositivas de la presentación</a>.</p>
   <div class="aviso ambar"><b>Antes de cambiar nada, haga una copia de seguridad.</b> Copie la carpeta de entrega completa con otro nombre,
@@ -1338,8 +1338,7 @@ python -m pip install -r requirements.txt</pre></div></div>
     <h3>Los archivos de la carpeta <code>datos/</code></h3>
     <p class="small muted" style="margin-top:0;">Casi todo se cambia en <code>Datos_entrada.xlsx</code>. Los demás archivos se editan en celdas puntuales, se reemplazan completos o no se tocan.</p>
     <div class="tabla-wrap"><table class="archivos"><thead><tr><th>Archivo</th><th>Qué contiene</th><th>Qué hacer</th><th>Lo leen</th></tr></thead><tbody>
-      <tr><td>Datos_entrada.xlsx</td><td class="des">El libro de datos: año y región, demanda (plana, perfil de 24 h o serie anual), precio de bolsa, tarifas, batería, parámetros financieros y tamaños a evaluar.</td><td class="acc"><span class="pill p-editar">Editar</span></td><td>01 · 01B · 02</td></tr>
-      <tr><td>CurvasCapexPVBESS.xlsx</td><td class="des">Costos de inversión del parque solar y de la batería. Solo se leen algunas celdas amarillas.</td><td class="acc"><span class="pill p-editar">Editar celdas</span></td><td>01 · 01B · 02</td></tr>
+      <tr><td>Datos_entrada.xlsx</td><td class="des">El libro de datos: año y región, demanda (plana, perfil de 24 h o serie anual), precio de bolsa, tarifas, batería, parámetros financieros, tamaños a evaluar y las curvas de costo de inversión (hojas de CAPEX).</td><td class="acc"><span class="pill p-editar">Editar</span></td><td>01 · 01B · 02</td></tr>
       <tr><td>Oriental_tmy-2025.csv y otros cuatro *_tmy-2025.csv</td><td class="des">Clima típico horario de cada región (NSRDB): radiación, temperatura, viento.</td><td class="acc"><span class="pill p-reempl">Reemplazar</span></td><td>01 · 01B · 02</td></tr>
       <tr><td>NREL_TP-6A40-93281_tabla2.csv</td><td class="des">Trayectoria publicada del costo de las baterías hasta 2050; fija la reposición.</td><td class="acc"><span class="pill p-notocar">No tocar</span></td><td>02</td></tr>
       <tr><td>Oriente.xlsx</td><td class="des">Serie solar histórica anterior. Ya no alimenta el modelo; el 02 la usa solo como contraste, así que <b>no la borre</b>.</td><td class="acc"><span class="pill p-notocar">No tocar</span></td><td>02</td></tr>
@@ -2355,7 +2354,7 @@ Year,Month,Day,Hour,Minute,Temperature,…,DHI,DNI,…,GHI,…
     ],
   },
   capex: {
-    nombre: "Costos (Excel)", titulo: "Cambiar los costos de inversión", archivo: "datos/CurvasCapexPVBESS.xlsx", usan: ["01 (secc. 9)", "02"],
+    nombre: "Costos de inversión", titulo: "Cambiar los costos de inversión", archivo: "Datos_entrada.xlsx · hojas Parametros_PV, Parametros_BESS, Suministro_BESS y Trayectorias", usan: ["01", "01B", "02"],
     pasos: [
       "Abra el libro en Excel y cambie solo las celdas de la tabla de la derecha. Las demás hojas son cálculos y gráficas de consulta.",
       "En <code>Parametros_PV</code> cambie las líneas del desglose (C6 a C15), <b>no C16 ni C17</b>: son fórmulas que las suman.",
@@ -2375,7 +2374,7 @@ Year,Month,Day,Hour,Minute,Temperature,…,DHI,DNI,…,GHI,…
     ]),
     errores: [
       ["Parametros_BESS!D7: se esperaba un número…", "Una celda quedó con texto o vacía."],
-      ["No se encontró CurvasCapexPVBESS.xlsx", "Se cambió el nombre del archivo o Jupyter se abrió desde otra carpeta."],
+      ["No se encontró datos/Datos_entrada.xlsx", "Se cambió el nombre del libro o Jupyter se abrió desde otra carpeta."],
     ],
   },
   tamanos: {
@@ -2482,10 +2481,10 @@ TEMAS.tamanos.hoja = hojaX("Datos_entrada.xlsx", "hoja Dimensionamiento", ["A", 
 TEMAS.capex.usan = ["01", "01B", "02"];
 TEMAS.precio.usan = ["01", "01B", "02"];
 TEMAS.capex.pasos = [
-  "Abra el libro en Excel o LibreOffice Calc. Las celdas que se pueden editar están en <b>amarillo con letra azul</b>, pero <b>no todas las amarillas cambian los resultados</b>: abajo se marcan las que leen los cuadernos.",
+  "Abra <code>Datos_entrada.xlsx</code> en Excel o LibreOffice Calc y vaya a las hojas de costos. Las celdas que se pueden editar están en <b>amarillo con letra azul</b>, pero <b>no todas las amarillas cambian los resultados</b>: abajo se marcan las que leen los cuadernos.",
   "Cambie solo números. No escriba unidades ni deje celdas vacías, y no inserte ni borre filas o columnas: se leen por su posición (por ejemplo, <code>Parametros_PV!C18</code>).",
   "En <code>Parametros_PV</code> cambie las líneas del desglose (C6 a C15), <b>no C16 ni C17</b>: son sumas. La columna B (Global o Local) decide en cuál de las dos suma entra cada línea.",
-  "Guarde como <code>.xlsx</code> con el mismo nombre <b>desde Excel o LibreOffice</b>: los cuadernos leen el valor ya calculado de las fórmulas. Cierre el libro y corra 01 → 01B → 02.",
+  "Guarde el libro con el mismo nombre, ciérrelo y corra 01 → 01B → 02. Las sumas C16 y C17 y los índices de <code>Trayectorias</code> son fórmulas: el cuaderno usa el valor guardado y, si falta, lo calcula con la misma fórmula.",
 ];
 TEMAS.capex.muestra = tabla(["Hoja", "Celdas", "Qué son"], [
   ["Parametros_PV", "C6–C15", "Desglose del costo solar a 8 MWp [USD/kWp]"],
@@ -2501,8 +2500,6 @@ TEMAS.capex.extra += `<div class="aviso ambar mt"><b>Amarillas que no cambian lo
   <code>Suministro_BESS</code> D5:I7 y B19:B21 · <code>Parametros_PV</code> B27:D30 y C35 ·
   <code>Trayectorias</code> filas 5 a 7 y las columnas Bajo y Alto de la fila 8 (la batería toma su trayectoria del CSV de NREL) ·
   y todas las de <code>Curva_BESS</code>, <code>Curva_PV</code>, <code>Curva_Hibrido</code> y <code>Validacion</code>.</div>`;
-TEMAS.capex.errores.push(["Parametros_PV!C16: se esperaba un número y se obtuvo None",
-  "El libro se guardó con un programa que no recalcula las fórmulas. Ábralo en Excel o LibreOffice, guárdelo de nuevo y cierre."]);
 TEMAS.capex.htit = "Las cuatro hojas que leen los cuadernos";
 TEMAS.capex.hoja =
   hojaX("Parametros_PV", "costo solar", ["A", "B", "C"], [

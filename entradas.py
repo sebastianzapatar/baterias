@@ -7,8 +7,8 @@ escrito en el código: demanda, precio de bolsa, tarifas, batería, parámetros 
 Cada hoja de parámetros tiene una columna ``Clave`` (columna A) que el código busca por nombre; el usuario solo
 cambia la columna ``Valor``. Las filas pueden moverse sin romper la lectura.
 
-Las curvas de CAPEX siguen en ``CurvasCapexPVBESS.xlsx`` porque son un modelo con fórmulas encadenadas, y el recurso
-solar sigue en los ``datos/*_tmy-2025.csv`` de NSRDB; en el libro se elige la región. Todos están en ``datos/``.
+El libro también trae las hojas de CAPEX (Parametros_PV, Parametros_BESS, Suministro_BESS, Trayectorias), que lee
+``costos_curvas``. El recurso solar sigue en los ``datos/*_tmy-2025.csv`` de NSRDB; en el libro se elige la región.
 """
 from __future__ import annotations
 

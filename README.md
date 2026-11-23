@@ -96,8 +96,7 @@ baterias/
 ├── 01_…ipynb … 15_…ipynb              los diez cuadernos
 ├── datos/                             datos de entrada
 │   ├── Datos_entrada.xlsx             EL LIBRO QUE SE EDITA: demanda, precio de bolsa, tarifas,
-│   │                                  batería, costos y tamaños a evaluar
-│   ├── CurvasCapexPVBESS.xlsx         curvas de CAPEX solar y del BESS
+│   │                                  batería, costos, tamaños y curvas de CAPEX
 │   ├── *_tmy-2025.csv                 año meteorológico típico NSRDB de las 5 regiones
 │   ├── NREL_TP-6A40-93281_tabla2.csv  trayectoria publicada del costo de la batería
 │   └── Oriente.xlsx                   serie solar histórica (solo contraste en el 02)
@@ -126,7 +125,7 @@ Para estudiar otro caso se cambian valores en un solo libro, `datos/Datos_entrad
 | Los tamaños a evaluar (calculados desde la demanda o fijos) | `Datos_entrada.xlsx`, hoja *Dimensionamiento* | 01, 01B, 02 |
 | La región solar | `Datos_entrada.xlsx`, hoja *General* | 01, 01B, 02 |
 | Un sitio solar nuevo | reemplazar `datos/<Región>_tmy-2025.csv` | 01, 01B, 02 |
-| Los costos de inversión | `datos/CurvasCapexPVBESS.xlsx` | 01, 01B, 02 |
+| Los costos de inversión | `Datos_entrada.xlsx`, hojas *Parametros_PV*, *Parametros_BESS*, *Suministro_BESS* y *Trayectorias* | 01, 01B, 02 |
 
 En el modo *factores* de la hoja *Dimensionamiento*, el PV se expresa en veces la demanda
 anual, la energía de la batería en % de la demanda diaria y su potencia en veces la
